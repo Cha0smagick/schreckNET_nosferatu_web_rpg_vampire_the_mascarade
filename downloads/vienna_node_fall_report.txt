@@ -1,0 +1,33 @@
+====================================================================
+NODE REPORT: VIE-0 (VIENNA) — FINAL
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — the only clean archive, carried out by hand in a coat
+CLASSIFICATION : EYES ONLY — FINAL — node burned
+VERIFICATION   : FINAL — BURNED. Do not attempt recovery.
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/vienna_node_fall_report.txt
+--------------------------------------------------------------------
+
+  The relay is presumed physical. That is a sentence that means we are not going to look. What survived is this file and what it does not say.
+
+1. SEQUENCE
+
+Eleven weeks. It did not look like an assault. It looked like an audit, then a correction, then a very polite request to hand over the keys, then nothing.
+
+The last relay log is four lines long and all four are the same line. Whatever happened, it happened on the node and it did not need the network.
+
+2. THE LETTERS
+
+The Vienna letters were carried out in a coat by one person and are the reason this node has anything at all. They contain the only surviving account of a Talmaeon ritual and they are the reason there is an open question about what the Second Inquisition was actually looking for.
+
+They also contain a seal two sizes too large. That is in baba_yaga_dossier.txt and it is the only physical link between the two files, and it is not enough to build a case on.
+
+3. WHAT WE WILL NOT WRITE
+
+We will not name the custodian. We will not list the hosts. We will not reproduce the ritual, because a ritual reproduced badly on a node with a compromised mirror is how a Rite of Construct gets started.
+
+The file ends here because the archive ends here. Everything after this sentence is reconstruction, and reconstruction on this network is how a comfortable lie gets filed as a fact.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

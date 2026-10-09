@@ -1,0 +1,47 @@
+====================================================================
+RED ROOM INDEX
+====================================================================
+SOURCE NODE    : NYC-2 (New York) — Annex
+CLASSIFICATION : DO NOT INDEX
+VERIFICATION   : VERIFIED — Annex, continuously maintained
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/redroom_index.txt
+--------------------------------------------------------------------
+
+  Six rooms that are not clubs, are not courts, and are not a network. They are places where blood is served and nothing else is traded.
+
+1. THE ANNEX RULE
+
+No regalia. No ghouls in the deep rooms. Leave the way you came. The Red Rooms take no sides.
+
+Nothing done in a Red Room is ever reported to a Prince. That is not neutrality. It is the only guarantee the rooms have and the only reason anybody still uses them.
+
+2. HOW TO KNOCK
+
+Post the room, the night, and nothing about yourself. Silence is a complete answer and you will not be told which kind.
+
+State a clan and you will be answered by a lobby. State how many and you will be answered at all.
+
+3. ON DIABLERIE
+
+The request arrives once a month, in the same shape, from a different address. The Annex has never confirmed one and has never denied one.
+
+Write down what you were about to do before you do it, and read anatemy_of_the_kiss.txt first. The reason diablerie is nearly unspeakable is not a law. It is anatomy, and the anatomy does not care who you are.
+
+4. THE SIX ROOMS
+
+THE ABATTOIR (prague-sever) — sub-level behind the meat market, nine vaults, a ledger that has never been balanced and a vault count that has never been nine.
+
+CARRION CHOIR (new-york-two) — nine chairs and a gramophone. They trade in what the Second Inquisition knows versus what it believes, and they are right more often than anyone would like.
+
+THE LONG TABLE (los-angeles-five) — the Free Blooms source. The building has been in custody since March; the table has not stopped being set.
+
+KAMIANETS (ukraine) — nine crates, medical grade, no manifest. The route is a roadblock, a doctor who owes a debt, and a toll road that has never once asked for cash. That is not secrecy. That is architecture.
+
+THE SIXTH FLOOR ABOVE THE HARDWARE STORE (prague-seven) — a punk crew, no flag, eleven of them. The best-informed people in this city, and the only room in Prague that a prince has never been able to explain away.
+
+LOW CARNAGE (berlin-six) — free, no cost, no cover. It attracts exactly the traffic you would expect and nobody has ever bought anything.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

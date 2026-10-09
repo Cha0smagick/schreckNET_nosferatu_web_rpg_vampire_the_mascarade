@@ -1,0 +1,43 @@
+====================================================================
+SECOND INQUISITION — FIELD MANUAL (RECOVERED)
+====================================================================
+SOURCE NODE    : BER-6 (Berlin) — recovered from a hunter safe in Leipzig, 2019
+CLASSIFICATION : EYES ONLY — do not read aloud where a ghoul can hear
+VERIFICATION   : VERIFIED — three copies, contents identical
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/second_inquisition_field_manual.txt
+--------------------------------------------------------------------
+
+  Not our document. Ours now. It tells us exactly how they are organised, and it is the most reassuring thing we have ever read.
+
+1. STRUCTURE
+
+Four standing orders per hunter team, issued in writing before deployment. KOSTA intercepted one set during the Praha-Sever sweep in April and posted the text to the boards within the hour.
+
+Order one: establish the relay before touching the host. Order two: take the archive before the bloodline — they will talk eventually, archives do not. Order three: no collateral, on the theory that a clean operation stays covert. Order four: file everything, in writing, by morning.
+
+This is why we burn our addresses before we burn our ledgers. They are thorough and they are bureaucratic and both of those things are predictable.
+
+2. METHOD
+
+They arrive during the day. Every team we have watched works the daylight hours: locate a Masquerade breach through municipal records, walk the tower from the bottom, and find the ground by subtraction.
+
+A hunter does not fight. A hunter manages a fight. They want the bloodline awake, isolated, and aware that it has been outnumbered. When it surrenders, they take the sire and the archive and let the childer go.
+
+That last clause is deliberate. It is a recruitment strategy and it has worked twice on this network.
+
+3. WEAPONS
+
+Firearms, blades, incendiaries, and a discipline of their own that we cannot reproduce from the files. Their equipment is legal, serialised and dull, which is the most frightening thing about them.
+
+Their vehicles are the real tell. A Second Inquisition team moves in unmarked white vans and they always park facing the exit.
+
+4. WHAT THEY DO NOT KNOW
+
+They do not know about the old net. They have never found it, and every lead they have chased onto it has been fed to them by somebody who wanted them looking elsewhere.
+
+NULLPOINTER keeps two files on the boards full of things that will be found. The archive stays full. An empty archive is an invitation and a full one is a curtain.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

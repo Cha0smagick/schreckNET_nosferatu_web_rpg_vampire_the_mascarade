@@ -1,0 +1,57 @@
+====================================================================
+THE NINE DISCIPLINES — FIELD REFERENCE
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — Compact study circle, revised 2021
+CLASSIFICATION : INTERNAL — study material
+VERIFICATION   : WORD SIGNED — 9 of 9, one per discipline
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/disciplines_reference.txt
+--------------------------------------------------------------------
+
+  Nine disciplines, what they cost, and the two of them that will get a childe killed before they get him useful.
+
+1. DOMINATE
+
+Level one: a suggestion that sticks. Level two: a command. Level three: an order, obeyed in the moment and resented for a week. Level four: an order obeyed while the subject knows it is wrong, which is the level where the Masquerade starts to leak.
+
+Dominate is the discipline that makes a Masquerade possible and the discipline that most often ends one. Every Venue on this network has a floor plan and every floor plan has a Dominate in it.
+
+2. FORTITUDE
+
+Hit harder, heal faster, ignore the cold. A Nosferatu at Fortitude four can be shot and continue, which is a mixed blessing in a city with a Second Inquisition in it.
+
+The one rule: Fortitude does not stop pain, it postpones accounting for it. Push too far and you will finish a conversation you can no longer hear.
+
+3. PROTEGE
+
+Speed, and the reflex to stop a knife. Useful. Overused. A childer at Protege four and one discipline has a very short shelf life, because everybody in the building can see the hands.
+
+4. MEMBERSHIP
+
+Ghouls. Wards. Lookouts. Nothing glamorous and nothing more valuable. A Warren without Membership is a room with a door, and a room with a door belongs to whoever comes down the stairs.
+
+5. AUGURY
+
+Ask the blood a question. It answers in shapes, never in words. It is the single most misused discipline in the Compact: people ask what they want to know, forget which of their thoughts was the question, and act on the neighbour.
+
+6. OBFUSCATION
+
+Be somewhere you were not. Harder than it sounds and the cheapest survival in this list. If you have it, use it before the second question is asked.
+
+7. COMMAND
+
+Order by rank without speaking. You will not have rank for years. In the meantime, Command is wasted on anyone below you, which in this Compact is everyone, which is why the discipline sits unused and resented.
+
+8. DEATH
+
+Extinguish a creature. It costs you a piece of yourself and it takes an hour you will not get back. On this node it has been used eleven times since 1974 and each use is written down by name.
+
+9. BLOODBOND
+
+Not taught here. Not written here. Not remotely. Every file server that carries a bloodbond description is carrying a guess, and the guess has killed people.
+
+What we will say: it is the strongest thing we can make, it cannot be broken by anything we know, and the mechanism that makes it unbreakable is also the mechanism that makes it permanent.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

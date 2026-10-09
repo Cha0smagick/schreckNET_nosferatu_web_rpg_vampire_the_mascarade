@@ -1,0 +1,33 @@
+====================================================================
+NODE REPORT: CMQ-3 (CAMAGUEY) — CREOLE CHRONICLE
+====================================================================
+SOURCE NODE    : CMQ-3 (Camaguey) — oldest blood on the network
+CLASSIFICATION : OPEN
+VERIFICATION   : QUIET — the node holds for nine hours and admits it
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/camaguey_creole_chronicle.txt
+--------------------------------------------------------------------
+
+  The oldest continuous node on SchreckNET and the only one that does not apologise for its age.
+
+1. THE HOLD
+
+CMQ-3 sleeps for nine hours. It is not down. It is a schedule that predates every relay protocol we have, and every attempt to shorten it has failed in a way the technicians describe as "politely".
+
+The node has been continuous since the night of the Havana fire and it has never once lost a night, including the night the Vienna letters were carried out.
+
+2. BLOOD AND LANGUAGE
+
+Camaguey has its own word for the Hunger and it is not the word we use. The chronicle is careful here and so will I: the Caribbean Kindred do not Experience the Curse the way we do. They Experience it as a debt owed to a house that has been dead for two hundred years.
+
+That debt is the oldest continuous obligation on this network. It is not administered by anybody. It simply persists, and every Camaguey childer inherits it, and every one of them has said the same thing when asked what they think about it: "It is not a metaphor."
+
+3. WHY THEY MATTER TO US
+
+Because they are the only house on this network that has never once needed the Compact, and they keep the node anyway, and when we asked why, the answer was eleven words long and we wrote it down.
+
+It is: "Because the fire was not ours, and the watching is."
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

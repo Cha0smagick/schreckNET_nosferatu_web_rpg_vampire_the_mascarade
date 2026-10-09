@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCHRECKNET // nosferatu information network</title>
+<meta name="description" content="SchreckNET — the Nosferatu information network. Secure shell, node status, clan archives and the open sewer.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* index-only shell overrides: the portal has no sidebar column */
+  .site { grid-template-columns: 1fr; }
+  .site .main { padding: 60px 24px 80px; max-width: 1120px; margin: 0 auto; width: 100%; }
+  .portal-hero { text-align: center; margin: 30px 0 40px; }
+  .portal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .node-strip { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 12px; letter-spacing: 1px; color: var(--muted); }
+  #login-error { display: none; }
+  #login-error.show { display: block; }
+  #sidebar-root { display: none; }
+</style>
+</head>
+<body>
+
+<!--
+  ============================================================================
+  MIRROR MAINTENANCE NOTE — node VLA-7 (Prague)
+  routing: maint / ratking / sewer123 — rotate every 90 days. we never did.
+  if you are reading this in the raw mirror, congratulations, you are already
+  inside the handshake. stop pretending you cracked something.
+  ============================================================================
+-->
+
+<div class="boot-screen" id="boot">
+  <div class="logo-mark">N</div>
+  <pre class="boot-lines"></pre>
+</div>
+
+<div id="sidebar-root"></div>
+
+<div class="site">
+  <main class="main">
+
+    <div class="portal-hero">
+      <div class="logo-block" style="justify-content:center">
+        <div class="logo-mark">N</div>
+        <div class="logo">SCHRECKNET</div>
+        <div class="logo-sub">nosferatu information network</div>
+      </div>
+      <h1 class="page-title mt-0">ENTER THE WARREN</h1>
+      <p class="page-sub" style="margin-left:auto;margin-right:auto">
+        This is a mirror of a dead network. Eleven nodes answered on the last sweep, one of them
+        only because its caretaker has not yet been arrested. The Clan maintains the keys.
+        Nobody maintains the archive. Both facts are useful to you.
+      </p>
+    </div>
+
+    <!-- ===================== LOGIN ===================== -->
+    <div class="login-box" id="login-box">
+      <div class="panel-title">NODE VLA-7 // ACCESS</div>
+      <p class="small muted pad-0">
+        Clearance is granted by handle and passphrase. The Clan does not read this log.
+        The Clan wrote the log.
+      </p>
+      <form autocomplete="off" onsubmit="return false;">
+        <div class="mt-0">
+          <label class="nav-label" for="login-user">HANDLE</label>
+          <input class="field" id="login-user" name="handle" type="text" spellcheck="false"
+                 placeholder="ratking" aria-label="handle">
+        </div>
+        <div>
+          <label class="nav-label" for="login-pass">PASSPHRASE</label>
+          <input class="field" id="login-pass" name="pass" type="password" spellcheck="false"
+                 placeholder="••••••••" aria-label="passphrase">
+        </div>
+        <div class="user-actions">
+          <button class="btn" type="submit" id="login-submit">AUTHENTICATE</button>
+          <button class="btn btn-ghost" type="button" id="reveal-btn">RECOVER PASSPHRASE</button>
+        </div>
+        <p class="login-error" id="login-error"></p>
+      </form>
+      <p class="login-note small">
+        No handle? Type <span class="acid">guest</span> and press AUTHENTICATE.
+        Guests read everything and are remembered by nobody, which is the whole point.
+      </p>
+    </div>
+
+    <!-- ===================== SECOND INQUISITION WARNING ===================== -->
+    <div class="panel red-tint" style="margin-top:34px">
+      <div class="panel-title" style="color:var(--blood)">⚠ BROADCAST — SECOND INQUISITION ACTIVITY</div>
+      <p class="blood-line">
+        Three cities entered martial jurisdiction this cycle. Sabbat packs are moving in daylight
+        under Changeling warrant. Four of our nodes have burned; Vienna has been silent since the
+        fourteenth and we are no longer certain what is left of it. Do not carry a paper ledger
+        through any checkpoint. Do not use the word <span class="acid">sewer</span> on any frequency
+        the ISM band can hear.
+      </p>
+      <p class="small muted mt-0">
+        Full assessment: <a href="downloads/second_inquisition_field_manual.txt" class="attempt-log">FIELD MANUAL</a>
+        &nbsp;·&nbsp; <a href="archives.html">ARCHIVES</a>
+      </p>
+    </div>
+
+    <!-- ===================== PORTAL GRID ===================== -->
+    <h2 class="panel-title" style="margin-top:46px">AVAILABLE DIRECTORIES</h2>
+    <div class="portal-grid">
+
+      <a class="panel" href="network.html" style="display:block">
+        <div class="panel-title">◉ NETWORK STATUS</div>
+        <p class="small muted mt-0">Live sweep of all SchreckNET nodes, traffic telemetry, and the
+          Second Inquisition alert feed. Vienna is offline. It has been offline for a while.</p>
+      </a>
+
+      <a class="panel" href="clan.html" style="display:block">
+        <div class="panel-title">☠ THE CLAN</div>
+        <p class="small muted mt-0">Absimiliard and Wilabredo, the Curse of the Blood, the nine
+          disciplines, the rites and the lies we tell ourselves about them.</p>
+      </a>
+
+      <a class="panel" href="dossiers.html" style="display:block">
+        <div class="panel-title">▤ DOSSIERS</div>
+        <p class="small muted mt-0">Classified files on Kindred who know what we are. Includes
+          portraits. Includes three names we would rather you had not read.</p>
+      </a>
+
+      <a class="panel" href="kindred.html" style="display:block">
+        <div class="panel-title">☰ KINDRED INDEX</div>
+        <p class="small muted mt-0">Every vampire the network still tracks, by clan, sect, generation
+          and threat. Plus ghouls and unfinished childer.</p>
+      </a>
+
+      <a class="panel" href="forums.html" style="display:block">
+        <div class="panel-title">▣ OPEN SEWER</div>
+        <p class="small muted mt-0">Six live threads. Warnings, contracts, and one argument about
+          whether the Camarilla still exists as a functioning organisation.</p>
+      </a>
+
+      <a class="panel" href="blogs.html" style="display:block">
+        <div class="panel-title">✎ FIELD BLOGS</div>
+        <p class="small muted mt-0">Three long entries from nodes that stopped writing. Read them as
+          evidence, not as gossip.</p>
+      </a>
+
+      <a class="panel" href="redrooms.html" style="display:block">
+        <div class="panel-title danger-text">⛧ RED ROOMS</div>
+        <p class="small rust-text mt-0">The part of the network we do not index. Snuff boards,
+          diablerie trades, punk crews keeping their own hours.</p>
+      </a>
+
+      <a class="panel" href="archives.html" style="display:block">
+        <div class="panel-title">⛁ FILE SERVER</div>
+        <p class="small muted mt-0">Thirty-one documents. Protocols, discipline notes, one Prague
+          Warren map, and the entire surviving record of Vienna.</p>
+      </a>
+
+      <a class="panel" href="maps.html" style="display:block">
+        <div class="panel-title">⌖ CARTOGRAPHY</div>
+        <p class="small muted mt-0">The Prague Warren, level by level, and the global node map with
+          every relay the Clan still trusts.</p>
+      </a>
+
+      <a class="panel" href="games.html" style="display:block">
+        <div class="panel-title">▚ SEWER GAMES</div>
+        <p class="small muted mt-0">Four exercises in tradecraft. One of them unlocks a clearance
+          badge you will not get any other way.</p>
+      </a>
+
+    </div>
+
+    <!-- ===================== NODE STRIP ===================== -->
+    <div class="panel" style="margin-top:34px">
+      <div class="panel-title">RELAY STATUS — LAST SWEEP 04:12 LOCAL</div>
+      <div class="node-strip">
+        <span><span class="dot dot-active"></span>VLA-7 PRAGUE</span>
+        <span><span class="dot dot-active"></span>NYC-2 NEW YORK</span>
+        <span><span class="dot dot-active"></span>LAX-5 LOS ANGELES</span>
+        <span><span class="dot dot-silenced"></span>CMQ-3 CAMAGÜEY</span>
+        <span><span class="dot dot-active"></span>SAO-1 SÃO PAULO</span>
+        <span><span class="dot dot-silenced"></span>CRL-4 CARACAS</span>
+        <span><span class="dot dot-active"></span>LON-9 LONDON</span>
+        <span><span class="dot dot-active"></span>BER-6 BERLIN</span>
+        <span><span class="dot dot-active"></span>PAR-8 PARIS</span>
+        <span><span class="dot dot-silenced"></span>TKY-1 TOKYO</span>
+        <span><span class="dot dot-active"></span>BOM-11 BOMBAY</span>
+        <span><span class="dot dot-fallen"></span>VIE-0 VIENNA</span>
+      </div>
+      <p class="small muted mt-0">
+        <span class="blood-line">VIE-0 has not answered since the fourteenth.</span>
+        Its relay is presumed physical. Do not go looking for it. If you find it, do not go
+        <em>into</em> it.
+      </p>
+    </div>
+
+    <div class="footer">
+      SCHRECKNET // a mirror, bouncing your signal &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.
+    </div>
+
+  </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+/* The boot overlay is ours, not main.js's: type the lines, then get out of the way. */
+(function () {
+  var boot = document.getElementById('boot');
+  if (!boot) return;
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MIN_MS = reduced ? 0 : 1400;
+  var t0 = Date.now();
+  function done() { boot.remove(); }
+  setTimeout(function () {
+    boot.style.transition = 'opacity .45s ease';
+    boot.style.opacity = '0';
+    setTimeout(done, 480);
+  }, MIN_MS);
+})();
+</script>
+</body>
+</html>

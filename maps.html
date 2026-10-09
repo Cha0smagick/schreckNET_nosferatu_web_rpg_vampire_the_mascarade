@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CARTOGRAPHY — SchreckNET</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .map-shell{position:relative;background:#040705;border:1px solid var(--line);padding:8px}
+  .map-shell svg{display:block;width:100%;height:auto}
+  .land{fill:#0B1510;stroke:#16241C;stroke-width:1}
+  .grat{stroke:#12201A;stroke-width:.5;fill:none}
+  .link{fill:none;stroke:#1E3729;stroke-width:1.1;stroke-dasharray:3 4}
+  .link.hot{stroke:var(--green-dim);stroke-dasharray:none;stroke-width:1.6;filter:drop-shadow(0 0 3px var(--glow))}
+  .mn{cursor:pointer}
+  .mn .hit{fill:transparent}
+  .mn .core{fill:var(--green);filter:drop-shadow(0 0 4px var(--glow))}
+  .mn.quiet .core{fill:var(--bile);filter:none}
+  .mn.fallen .core{fill:#3A1616;stroke:var(--blood);stroke-width:1.4;filter:none}
+  .mn.ghost .core{fill:none;stroke:var(--blood);stroke-width:1.2;stroke-dasharray:2 2;filter:none}
+  .mn .ring{fill:none;stroke:var(--green);stroke-width:1.2;opacity:0;transition:opacity .15s}
+  .mn:hover .ring,.mn:focus .ring,.mn.sel .ring{opacity:1}
+  .mn:hover .core,.mn:focus .core,.mn.sel .core{stroke:#fff;stroke-width:1.4}
+  .mn-label{fill:var(--muted);font:9px 'IBM Plex Mono',Consolas,monospace;letter-spacing:1px;pointer-events:none}
+  .mn.sel .mn-label{fill:var(--acid)}
+  .chamber{fill:#0E1A13;stroke:#27402F;stroke-width:1}
+  .chamber.core{fill:#15251A}
+  .tunnel{fill:none;stroke:#22392C;stroke-width:2.4;stroke-linecap:round}
+  .tunnel.stealth{fill:none;stroke:#1A2B21;stroke-width:1.2;stroke-dasharray:2 6}
+  .depth-label{fill:#3D4F43;font:8px Consolas,monospace;letter-spacing:2px;pointer-events:none}
+  .water{fill:#08140F;stroke:#142A20;stroke-width:.8}
+  .map-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+  .map-legend{display:flex;flex-wrap:wrap;gap:16px;font-size:10.5px;letter-spacing:1px;color:var(--muted);margin-top:12px}
+  .map-legend b{color:var(--bone-dim);font-weight:400}
+  .detail{min-height:210px}
+  .detail-id{font-size:24px;color:var(--acid);letter-spacing:3px;margin:0 0 4px}
+  .detail-city{font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:16px}
+  .detail-line{display:flex;gap:14px;font-size:12.5px;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .detail-line span:first-child{color:var(--muted);min-width:112px;letter-spacing:1px}
+  .detail-line span:last-child{color:var(--bone-dim)}
+  .hint{font-size:11px;letter-spacing:1px;color:var(--muted);margin-top:14px}
+  .tabmap{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+
+    <header class="page-head">
+      <div class="page-kicker">node vla-7 // cartography division</div>
+      <h1 class="page-title">CARTOGRAPHY</h1>
+      <p class="page-sub">Two charts. The first is a warren — a hole in the ground, drawn to scale because a warren is the only place on this network where the map <em>is</em> the territory. The second is the mesh itself, drawn as relative position only, because the moment a relay can be located it stops being a relay.</p>
+    </header>
+
+    <div class="tabmap">
+      <button class="tab active" id="tab-warren" type="button">PLATE I — THE PRAGUE WARREN</button>
+      <button class="tab" id="tab-mesh" type="button">PLATE II — RELAY TOPOLOGY</button>
+    </div>
+
+    <!-- ===================== PLATE I ===================== -->
+    <section id="plate-warren">
+      <div class="panel">
+        <div class="panel-title">PLATE I — THE PRAGUE WARREN · SURVEY SHEET 11 · SHEETED BY THE WARDEN'S OFFICE</div>
+        <p class="page-sub" style="margin-top:-4px;margin-bottom:18px">Depth is given below datum in metres. Markings were corrected after the Prague-sever sweep; the strike-through entries are places that no longer exist as we understood them.</p>
+
+        <div class="grid-2" style="gap:28px">
+          <div>
+            <div class="map-shell">
+              <svg viewBox="0 0 640 420" role="img" aria-label="Schematic plan of the Prague warren showing chambers, tunnels and entrances">
+                <rect x="0" y="0" width="640" height="420" fill="#040705"/>
+
+                <!-- water table / river cut -->
+                <path class="water" d="M0,392 L640,392 L640,404 L0,404 Z"/>
+                <text class="depth-label" x="12" y="400">VLTAVA — HIGH WATER MARK</text>
+
+                <!-- hard boundary -->
+                <path d="M40,368 L40,150 L96,96 L268,54 L444,60 L556,120 L604,214 L586,330 L470,376 L206,378 Z"
+                      fill="none" stroke="#1B2E23" stroke-width="1.2" stroke-dasharray="6 5"/>
+
+                <!-- tunnels -->
+                <path class="tunnel" d="M72,344 L150,300 L230,252 L332,206 L430,232 L516,158"/>
+                <path class="tunnel" d="M332,206 L400,96 L516,158"/>
+                <path class="tunnel" d="M400,96 L250,120 L120,172 L150,300"/>
+                <path class="tunnel" d="M230,252 L300,330 L470,330 L430,232"/>
+                <path class="tunnel stealth" d="M120,172 L64,246 L72,344"/>
+                <path class="tunnel stealth" d="M470,330 L556,318 L586,240"/>
+                <path class="tunnel stealth" d="M300,330 L356,368"/>
+
+                <!-- chambers -->
+                <rect class="chamber" x="54" y="330" width="36" height="28"/>
+                <rect class="chamber core" x="132" y="284" width="36" height="32"/>
+                <rect class="chamber core" x="212" y="236" width="36" height="32"/>
+                <rect class="chamber" x="314" y="188" width="36" height="36"/>
+                <rect class="chamber core" x="412" y="216" width="36" height="32"/>
+                <rect class="chamber" x="498" y="140" width="36" height="36"/>
+                <rect class="chamber" x="382" y="80" width="36" height="32"/>
+                <rect class="chamber" x="232" y="104" width="36" height="32"/>
+                <rect class="chamber" x="102" y="156" width="36" height="32"/>
+                <rect class="chamber" x="282" y="314" width="36" height="32"/>
+                <rect class="chamber" x="452" y="314" width="36" height="32"/>
+
+                <text class="depth-label" x="36" y="146">WARDEN LIMIT — DO NOT EXCAVATE BEYOND</text>
+                <text class="depth-label" x="286" y="176">-18 m</text>
+                <text class="depth-label" x="478" y="208">-14 m</text>
+                <text class="depth-label" x="382" y="70">-24 m</text>
+
+                <!-- interactive markers -->
+                <g class="mn sel" data-key="w-drop" tabindex="0" role="button" aria-label="Chamber A, the Zlábání drop">
+                  <circle class="hit" cx="72" cy="344" r="16"/>
+                  <circle class="ring" cx="72" cy="344" r="22"/>
+                  <circle class="core" cx="72" cy="344" r="4.5"/>
+                  <text class="mn-label" x="92" y="338">A · ZLÁBÁNÍ DROP</text>
+                  <text class="mn-label" x="92" y="348">-6 m</text>
+                </g>
+                <g class="mn" data-key="w-halda" tabindex="0" role="button" aria-label="Chamber B, the Halda junction">
+                  <circle class="hit" cx="150" cy="300" r="16"/>
+                  <circle class="ring" cx="150" cy="300" r="22"/>
+                  <circle class="core" cx="150" cy="300" r="4.5"/>
+                  <text class="mn-label" x="30" y="284">B · HALDA</text>
+                  <text class="mn-label" x="30" y="294">-9 m</text>
+                </g>
+                <g class="mn" data-key="w-confluence" tabindex="0" role="button" aria-label="Chamber C, the sewage confluence">
+                  <circle class="hit" cx="230" cy="252" r="16"/>
+                  <circle class="ring" cx="230" cy="252" r="22"/>
+                  <circle class="core" cx="230" cy="252" r="4.5"/>
+                  <text class="mn-label" x="248" y="248">C · CONFLUENCE</text>
+                  <text class="mn-label" x="248" y="258">-11 m</text>
+                </g>
+                <g class="mn" data-key="w-fondery" tabindex="0" role="button" aria-label="Chamber D, the old foundry">
+                  <circle class="hit" cx="332" cy="206" r="16"/>
+                  <circle class="ring" cx="332" cy="206" r="22"/>
+                  <circle class="core" cx="332" cy="206" r="5"/>
+                  <text class="mn-label" x="292" y="240">D · THE OLD FOUNDRY</text>
+                  <text class="mn-label" x="292" y="250">-18 m</text>
+                </g>
+                <g class="mn" data-key="w-chapel" tabindex="0" role="button" aria-label="Chamber E, the chapel cellar">
+                  <circle class="hit" cx="430" cy="232" r="16"/>
+                  <circle class="ring" cx="430" cy="232" r="22"/>
+                  <circle class="core" cx="430" cy="232" r="5"/>
+                  <text class="mn-label" x="410" y="268">E · CHAPEL CELLAR</text>
+                  <text class="mn-label" x="410" y="278">-14 m</text>
+                </g>
+                <g class="mn" data-key="w-shaft" tabindex="0" role="button" aria-label="Chamber F, the observation shaft">
+                  <circle class="hit" cx="516" cy="158" r="16"/>
+                  <circle class="ring" cx="516" cy="158" r="22"/>
+                  <circle class="core" cx="516" cy="158" r="4.5"/>
+                  <text class="mn-label" x="530" y="142">F · SHAFT</text>
+                  <text class="mn-label" x="530" y="152">-12 m</text>
+                </g>
+                <g class="mn" data-key="w-overflow" tabindex="0" role="button" aria-label="Chamber G, the overflow hall">
+                  <circle class="hit" cx="400" cy="96" r="16"/>
+                  <circle class="ring" cx="400" cy="96" r="22"/>
+                  <circle class="core" cx="400" cy="96" r="5"/>
+                  <text class="mn-label" x="410" y="70">G · OVERFLOW HALL</text>
+                  <text class="mn-label" x="410" y="80">-24 m</text>
+                </g>
+                <g class="mn" data-key="w-bone" tabindex="0" role="button" aria-label="Chamber H, the bone store">
+                  <circle class="hit" cx="250" cy="120" r="16"/>
+                  <circle class="ring" cx="250" cy="120" r="22"/>
+                  <circle class="core" cx="250" cy="120" r="4.5"/>
+                  <text class="mn-label" x="160" y="94">H · BONE STORE</text>
+                  <text class="mn-label" x="160" y="104">-19 m</text>
+                </g>
+                <g class="mn" data-key="w-cistern" tabindex="0" role="button" aria-label="Chamber I, the cistern">
+                  <circle class="hit" cx="120" cy="172" r="16"/>
+                  <circle class="ring" cx="120" cy="172" r="22"/>
+                  <circle class="core" cx="120" cy="172" r="4.5"/>
+                  <text class="mn-label" x="34" y="164">I · CISTERN</text>
+                  <text class="mn-label" x="34" y="174">-16 m</text>
+                </g>
+                <g class="mn" data-key="w-rats" tabindex="0" role="button" aria-label="Chamber J, the rat warren">
+                  <circle class="hit" cx="300" cy="330" r="16"/>
+                  <circle class="ring" cx="300" cy="330" r="22"/>
+                  <circle class="core" cx="300" cy="330" r="4.5"/>
+                  <text class="mn-label" x="228" y="362">J · RAT WARREN</text>
+                  <text class="mn-label" x="228" y="372">-21 m</text>
+                </g>
+                <g class="mn" data-key="w-road" tabindex="0" role="button" aria-label="Chamber K, the Kamianets road exit">
+                  <circle class="hit" cx="470" cy="330" r="16"/>
+                  <circle class="ring" cx="470" cy="330" r="22"/>
+                  <circle class="core" cx="470" cy="330" r="4.5"/>
+                  <text class="mn-label" x="482" y="326">K · ROAD EXIT</text>
+                  <text class="mn-label" x="482" y="336">-15 m</text>
+                </g>
+              </svg>
+            </div>
+            <div class="map-legend">
+              <span><b>SOLID</b> — sanctioned tunnel, lit at the far end</span>
+              <span><b>DASHED</b> — unsanctioned, do not walk alone</span>
+              <span><b>DOTTED BOUNDARY</b> — warden limit</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="panel" style="margin-bottom:0">
+              <div class="panel-title">SURVEY NOTE — SELECT A CHAMBER</div>
+              <div class="detail" id="warren-detail"></div>
+              <div class="hint">Click a marker on the plate, or tab through them. The sheet updates from the Warden's ledger — nothing here is guessed.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel red-tint">
+        <div class="panel-title">HANDLING — THIS PLATE IS A LIST OF ROOMS</div>
+        <p class="page-sub" style="margin-top:0">A warren plate is the single most dangerous document this network produces. It is not forbidden, because a warren nobody can draw is a warren nobody can reach when the sweeps come. It is <em>restricted</em>, and it leaves this page only as a burned impression, and the burned copy is never current. If you are reading a copy of this sheet, assume the copy is older than the tunnels.</p>
+        <p class="page-sub" style="margin-bottom:0">Chambers F and K were re-surveyed after the sweep. Chamber F is no longer a chamber. The mark remains because removing a mark is how you lie to yourself about a hole.</p>
+      </div>
+    </section>
+
+    <!-- ===================== PLATE II ===================== -->
+    <section id="plate-mesh" style="display:none">
+      <div class="panel">
+        <div class="panel-title">PLATE II — RELAY TOPOLOGY · RELATIVE POSITION ONLY · NOT AN ADDRESS LIST</div>
+        <p class="page-sub" style="margin-top:-4px;margin-bottom:18px">Twelve tracked positions. Positions are drawn where the cities are; the lines are drawn where trust is. A solid line means two relays have exchanged a handshake within the hour. Where the burned node sat, the line is struck through, because the network has not yet agreed to pretend it was never there.</p>
+
+        <div class="grid-2" style="gap:28px">
+          <div>
+            <div class="map-shell">
+              <svg viewBox="0 0 720 380" role="img" aria-label="World map showing twelve SchreckNET relay positions and their handshake links">
+                <rect x="0" y="0" width="720" height="380" fill="#040705"/>
+
+                <g class="grat">
+                  <path d="M0,66 H720 M0,134 H720 M0,202 H720 M0,270 H720 M0,338 H720"/>
+                  <path d="M120,0 V380 M240,0 V380 M360,0 V380 M480,0 V380 M600,0 V380"/>
+                </g>
+
+                <path class="land" d="M52,72 L124,54 L172,80 L166,124 L124,132 L86,114 L54,104 Z"/>
+                <path class="land" d="M112,178 L146,188 L142,238 L118,272 L102,232 Z"/>
+                <path class="land" d="M286,64 L352,50 L368,78 L332,94 L292,86 Z"/>
+                <path class="land" d="M300,114 L360,108 L374,158 L338,208 L308,180 Z"/>
+                <path class="land" d="M374,58 L474,46 L556,72 L582,102 L514,124 L436,102 L380,90 Z"/>
+                <path class="land" d="M462,124 L496,128 L494,162 L468,158 Z"/>
+                <path class="land" d="M534,192 L598,186 L610,218 L566,228 L538,214 Z"/>
+
+                <text class="depth-label" x="380" y="372">SCHEMATIC — HANDSHAKE GRAPH OVER EQUIRECTANGULAR GRATICULE</text>
+
+                <!-- links -->
+                <path class="link hot" d="M322,62 L338,52"/>
+                <path class="link hot" d="M322,62 L348,72"/>
+                <path class="link hot" d="M338,52 L348,72"/>
+                <path class="link" d="M348,72 L338,52"/>
+                <path class="link" d="M322,62 L128,92"/>
+                <path class="link hot" d="M128,92 L66,112"/>
+                <path class="link" d="M128,92 L140,122"/>
+                <path class="link" d="M140,122 L128,200"/>
+                <path class="link" d="M128,92 L296,58"/>
+                <path class="link hot" d="M296,58 L300,72"/>
+                <path class="link hot" d="M322,62 L296,58"/>
+                <path class="link hot" d="M322,62 L600,96"/>
+                <path class="link" d="M66,112 L128,200"/>
+                <path class="link dead" d="M348,72 L128,200" style="stroke:#3A1616;stroke-width:1.2"/>
+                <path class="link" d="M600,96 L128,200" style="stroke-dasharray:1 7"/>
+
+                <!-- relays -->
+                <g class="mn sel" data-key="n-vla" tabindex="0" role="button" aria-label="VLA-7 Prague, active">
+                  <circle class="hit" cx="322" cy="62" r="14"/><circle class="ring" cx="322" cy="62" r="19"/><circle class="core" cx="322" cy="62" r="5"/>
+                  <text class="mn-label" x="300" y="44">VLA-7</text>
+                </g>
+                <g class="mn" data-key="n-nyc" tabindex="0" role="button" aria-label="NYC-2 New York, active">
+                  <circle class="hit" cx="128" cy="92" r="14"/><circle class="ring" cx="128" cy="92" r="19"/><circle class="core" cx="128" cy="92" r="4.5"/>
+                  <text class="mn-label" x="146" y="86">NYC-2</text>
+                </g>
+                <g class="mn" data-key="n-lax" tabindex="0" role="button" aria-label="LAX-5 Los Angeles, active">
+                  <circle class="hit" cx="66" cy="112" r="14"/><circle class="ring" cx="66" cy="112" r="19"/><circle class="core" cx="66" cy="112" r="4.5"/>
+                  <text class="mn-label" x="20" y="98">LAX-5</text>
+                </g>
+                <g class="mn quiet" data-key="n-cmq" tabindex="0" role="button" aria-label="CMQ-3 Camaguey, quiet">
+                  <circle class="hit" cx="140" cy="122" r="14"/><circle class="ring" cx="140" cy="122" r="19"/><circle class="core" cx="140" cy="122" r="4"/>
+                  <text class="mn-label" x="158" y="128">CMQ-3</text>
+                </g>
+                <g class="mn" data-key="n-sao" tabindex="0" role="button" aria-label="SAO-1 Sao Paulo, active">
+                  <circle class="hit" cx="128" cy="200" r="14"/><circle class="ring" cx="128" cy="200" r="19"/><circle class="core" cx="128" cy="200" r="4.5"/>
+                  <text class="mn-label" x="146" y="204">SAO-1</text>
+                </g>
+                <g class="mn quiet" data-key="n-crl" tabindex="0" role="button" aria-label="CRL-4 Caracas, quiet">
+                  <circle class="hit" cx="140" cy="148" r="14"/><circle class="ring" cx="140" cy="148" r="19"/><circle class="core" cx="140" cy="148" r="4"/>
+                  <text class="mn-label" x="158" y="146">CRL-4</text>
+                </g>
+                <g class="mn" data-key="n-lon" tabindex="0" role="button" aria-label="LON-9 London, active">
+                  <circle class="hit" cx="296" cy="58" r="14"/><circle class="ring" cx="296" cy="58" r="19"/><circle class="core" cx="296" cy="58" r="4.5"/>
+                  <text class="mn-label" x="262" y="48">LON-9</text>
+                </g>
+                <g class="mn" data-key="n-par" tabindex="0" role="button" aria-label="PAR-8 Paris, active">
+                  <circle class="hit" cx="300" cy="72" r="14"/><circle class="ring" cx="300" cy="72" r="19"/><circle class="core" cx="300" cy="72" r="4.5"/>
+                  <text class="mn-label" x="264" y="86">PAR-8</text>
+                </g>
+                <g class="mn" data-key="n-ber" tabindex="0" role="button" aria-label="BER-6 Berlin, active">
+                  <circle class="hit" cx="338" cy="52" r="14"/><circle class="ring" cx="338" cy="52" r="19"/><circle class="core" cx="338" cy="52" r="4.5"/>
+                  <text class="mn-label" x="348" y="40">BER-6</text>
+                </g>
+                <g class="mn" data-key="n-vie" tabindex="0" role="button" aria-label="VIE-0 Vienna, fallen">
+                  <circle class="hit" cx="348" cy="72" r="14"/><circle class="ring" cx="348" cy="72" r="19" style="stroke:var(--blood)"/><circle class="core" cx="348" cy="72" r="5"/>
+                  <text class="mn-label" x="362" y="72" fill="#B0562F">VIE-0</text>
+                </g>
+                <g class="mn ghost" data-key="n-vier" tabindex="0" role="button" aria-label="VIE-R Vienna Remnant, ghost">
+                  <circle class="hit" cx="330" cy="90" r="13"/><circle class="ring" cx="330" cy="90" r="18" style="stroke:var(--blood)"/><circle class="core" cx="330" cy="90" r="4"/>
+                  <text class="mn-label" x="286" y="106" fill="#7A3A2A">VIE-R</text>
+                </g>
+                <g class="mn quiet" data-key="n-tky" tabindex="0" role="button" aria-label="TKY-1 Tokyo, quiet">
+                  <circle class="hit" cx="600" cy="96" r="14"/><circle class="ring" cx="600" cy="96" r="19"/><circle class="core" cx="600" cy="96" r="4"/>
+                  <text class="mn-label" x="616" y="100">TKY-1</text>
+                </g>
+              </svg>
+            </div>
+            <div class="map-legend">
+              <span><b>SOLID GREEN</b> — ACTIVE</span>
+              <span><b>BILE</b> — QUIET, no handshake inside the window</span>
+              <span><b style="color:var(--blood)">DARK RING</b> — FALLEN</span>
+              <span><b style="color:var(--blood)">DASHED RING</b> — GHOST, rumour only</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="panel" style="margin-bottom:0">
+              <div class="panel-title">RELAY RECORD — SELECT A NODE</div>
+              <div class="detail" id="mesh-detail"></div>
+              <div class="hint">Records are pulled from the live census on the network page. The twelfth position is not a relay; it is a number we keep assigning to a rumour.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel tint">
+        <div class="panel-title">WHY THE LINES CROSS THE ATLANTIC FOURTEEN TIMES</div>
+        <p class="page-sub" style="margin-top:0;margin-bottom:0">Because we built the mesh to survive the loss of a continent, and then lost a city instead. The Vienna burn severed the eastern spine; the reconstruction runs the traffic the long way round, and every long way round is a place a hunter learns to watch. The graph is ugly because the alternative was a graph that ends in an ash box in the Operngasse.</p>
+      </div>
+    </section>
+
+    <div class="footer">
+      SCHRECKNET // node VLA-7 mirror &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.
+    </div>
+
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var WARREN = {
+    'w-drop': { id: 'CHAMBER A', name: 'Zlábání Drop', depth: '−6 m', use: 'Single entrance. Grated, rusted, technically public. Nobody has ever been stopped there, which is the point.', note: 'Rain runs down the walls in November. If you hear splashing from below the grate, it is not rain — check the tide table before you descend.', tag: 'SANCTIONED ENTRANCE', tone: 'ok' },
+    'w-halda': { id: 'CHAMBER B', name: 'The Halda', depth: '−9 m', use: 'Junction and muster. Every guest who enters the warren is counted here, whether or not they were counted anywhere else.', note: 'The Warden keeps the tally in chalk on a slate and rewrites it every night so that anyone who copies it learns nothing. A chalk slate is not a ledger; it is a rumour with numbers on it.', tag: 'WATCH POST', tone: 'ok' },
+    'w-confluence': { id: 'CHAMBER C', name: 'The Confluence', depth: '−11 m', use: 'Three separate inflows meet here. The only chamber where you can be heard from three directions at once.', note: 'We hold no Word here. That is deliberate — a chamber that can be overheard by three directions is a chamber where the Word becomes evidence.', tag: 'OPEN GROUND — NO WORD', tone: 'warn' },
+    'w-fondery': { id: 'CHAMBER D', name: 'The Old Fondery', depth: '−18 m', use: 'The warren\'s heart. Foundry floor, two furnaces still cold since 1911, and the only chamber with a door that closes.', note: 'The door is the reason it exists. Everything else about the warren is a corridor; this is the one room you can be held in. The Bite Deepers use it for the discipline, not the cellar.', tag: 'SANCTIONED CORE', tone: 'ok' },
+    'w-chapel': { id: 'CHAMBER E', name: 'Chapel Cellar', depth: '−14 m', use: 'The Warrens That Sing hold services here. Attendance is optional; silence is compulsory.', note: 'Two hundred years of singing has damp-proofed the vaulting by vibration alone, or so the Sexton claims, and the Sexton has been dead since the Occupation.', tag: 'FAITH — NEVER WEAPONISED', tone: 'ok' },
+    'w-shaft': { id: 'CHAMBER F', name: 'Observation Shaft', depth: '−12 m', use: 'STRUCK FROM THE LEDGER 14 DAYS AGO. Re-survey after the sweep found the shaft open to daylight for eleven metres.', note: 'It was not a shaft. It was a collapse that nobody re-surveyed for two years because re-surveying costs a name and a week. Eleven people were living above an empty hole and calling it a floor. The mark stays on the plate. Removing marks is how you lie to yourself about holes.', tag: 'STRUCK — NO LONGER EXIST', tone: 'bad' },
+    'w-overflow': { id: 'CHAMBER G', name: 'Overflow Hall', depth: '−24 m', use: 'Deepest sanctioned ground. Bone store above, hall below, and a ceiling that sweats in summer.', note: 'The Hall is where the warren breathes. Two hundred and forty people have sheltered here for a week and come out thinner and quieter, which is the only sacrament the Nosferatu have ever accepted.', tag: 'DEEPEST SANCTIONED', tone: 'ok' },
+    'w-bone': { id: 'CHAMBER H', name: 'The Bone Store', depth: '−19 m', use: 'Not a metaphor. Not a habit. We bury our own, and the ground above the Overflow Hall is where they go.', note: 'The discipline of Memory and the discipline of the Ground are the same discipline here. We do not preserve the dead as objects. We preserve them as a count. The store is dry because we keep it dry. That is the entire theology.', tag: 'BURIAL — DISCIPLINE OF MEMORY', tone: 'ok' },
+    'w-cistern': { id: 'CHAMBER I', name: 'The Cistern', depth: '−16 m', use: 'Standing water, waist-deep in the middle, still enough to reflect a lamp. Used for the discipline of Augury.', note: 'The discipline of Augury was born in a room like this: the still surface holds a reflection, the reflection is not there when the room is observed, and the observer never learns which of the two facts was the vision.', tag: 'AUGURY', tone: 'ok' },
+    'w-rats': { id: 'CHAMBER J', name: 'The Rat Warren', depth: '−21 m', use: 'Unsanctioned. Occupied by a crew of eleven who took the floor without asking and whom we have declined to evict.', note: 'They knock on a pattern. Anyone who knocks the countersign gets the same answer as the countersign. Their leader has offered us the road to Kamianets in exchange for exactly one night of standing down, and the offer is still on the table, which is rarer than it sounds.', tag: 'UNSANCTIONED — CONTESTED', tone: 'warn' },
+    'w-road': { id: 'CHAMBER K', name: 'Kamianets Road Exit', depth: '−15 m', use: 'The only sanctioned exit that leaves the city. Requires a written count of who is going and who is not coming back.', note: 'The count is the door. A tunnel with no count is a tunnel with a secret in it, and the Second Inquisition has never once failed to find a secret by asking the same question twice.', tag: 'SANCTIONED EXIT', tone: 'ok' }
+  };
+
+  var MESH = {
+    'n-vla':  { id: 'VLA-7', city: 'PRAGUE', state: 'ACTIVE', cls: '',        hs: '00:04:11', cust: 'ratking', note: 'Source mirror. Holds the only clean archive of the Vienna material — the only clean archive there will ever be.' },
+    'n-nyc':  { id: 'NYC-2', city: 'NEW YORK', state: 'ACTIVE', cls: '',      hs: '00:03:58', cust: '—', note: 'Highest throughput on the mesh. Reasons unknown, and the reasons are worse than the throughput. Traffic that high means either a very good custodian or a very good copy, and we cannot tell which from the outside.' },
+    'n-lax':  { id: 'LAX-5', city: 'LOS ANGELES', state: 'ACTIVE', cls: '',    hs: '00:04:04', cust: '—', note: 'Custodian in custody since March. The relay is running unattended, which means it is running by whatever the relay runs on when nobody is there to feed it. Treat as compromised, not as quiet.' },
+    'n-cmq':  { id: 'CMQ-3', city: 'CAMAGÜEY', state: 'QUIET', cls: 'quiet',   hs: '19:41:00', cust: '—', note: 'Held for nine hours at a stretch. The oldest continuous blood on the network and the least dramatic custodian any of us has ever met. A full creole chronicle is in the archive; read it before you read anything else on this page.' },
+    'n-sao':  { id: 'SAO-1', city: 'SÃO PAULO', state: 'ACTIVE', cls: '',       hs: '00:03:47', cust: '—', note: 'Single-hop relay. It knows nobody\'s neighbour except VLA-7, which is either the safest topology on the mesh or the most fragile. Nobody has argued the point successfully yet.' },
+    'n-crl':  { id: 'CRL-4', city: 'CARACAS', state: 'QUIET', cls: 'quiet',    hs: '11:02:00', cust: '—', note: 'Down to a trickle. Custodial silence or surveillance, undetermined — and the honest answer is that we have been unable to distinguish the two since February, which is worse than either.' },
+    'n-lon':  { id: 'LON-9', city: 'LONDON', state: 'ACTIVE', cls: '',        hs: '00:04:09', cust: '—', note: 'Firmly Anarch. Warns about the mesh constantly, at length, in bad handwriting. Is right about most of it, which has not improved anybody\'s mood.' },
+    'n-ber':  { id: 'BER-6', city: 'BERLIN', state: 'ACTIVE', cls: '',        hs: '00:04:00', cust: '—', note: 'Carries three Tzimisce signatures it has never authenticated and passes them on anyway. Whatever Berlin is forwarding, it has stopped asking. See the technical thread on the board.' },
+    'n-par':  { id: 'PAR-8', city: 'PARIS', state: 'ACTIVE', cls: '',         hs: '00:03:51', cust: '—', note: 'Publishes a Camarilla communiqué nobody asked for, on a schedule, in a font. Nobody has stopped it. Several people have started reading it, which is the actual concern.' },
+    'n-tky':  { id: 'TKY-1', city: 'TOKYO', state: 'QUIET', cls: 'quiet',     hs: '06:15:00', cust: '—', note: 'Gangrel territory. The local pack audits every relay in its district, politely, quarterly, and the audit is better documented than anything we have produced in a decade.' },
+    'n-vie':  { id: 'VIE-0', city: 'VIENNA', state: 'FALLEN', cls: 'fallen',  hs: 'never again', cust: '—', note: 'Burned. Relay presumed physical. Do not attempt recovery, do not route through the address, do not write to the custodian. The reconstruction is filed under the network protocol; the fact that we can route around Vienna is not the same as the fact that Vienna is fine.' },
+    'n-vier': { id: 'VIE-R', city: 'VIENNA (remnant)', state: 'GHOST', cls: 'ghost', hs: '—', cust: '—', note: 'Not a relay. A rumour with a good headcount, which is the definition of a rumour in our tradition. We keep the twelfth position on the plate because a map that quietly deletes its dead is how you lose the ability to tell which gaps are new.' }
+  };
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function rows(pairs) {
+    return pairs.map(function (p) {
+      return '<div class="detail-line"><span>' + esc(p[0]) + '</span><span>' + p[1] + '</span></div>';
+    }).join('');
+  }
+
+  function renderWarren(el, key) {
+    var d = WARREN[key];
+    if (!d) { el.innerHTML = '<p class="muted">NO RECORD</p>'; return; }
+    var badge = d.tone === 'bad' ? 'badge badge-blood' : (d.tone === 'warn' ? 'badge badge-acid' : 'badge badge-verified');
+    el.innerHTML =
+      '<p class="detail-id">' + esc(d.id) + '</p>' +
+      '<p class="detail-city">' + esc(d.name) + ' &middot; ' + esc(d.depth) + ' below datum</p>' +
+      '<p><span class="' + badge + '">' + esc(d.tag) + '</span></p>' +
+      rows([['FUNCTION', esc(d.use)], ['LEDGER NOTE', esc(d.note)]]);
+  }
+
+  function renderMesh(el, key) {
+    var d = MESH[key];
+    if (!d) { el.innerHTML = '<p class="muted">NO RECORD</p>'; return; }
+    var dotCls = d.cls === 'fallen' ? 'dot-fallen' : (d.cls === 'quiet' ? 'dot-silenced' : 'dot-active');
+    var badge = d.cls === 'fallen' ? 'badge badge-blood' : (d.cls === 'ghost' ? 'badge badge-blood' : (d.cls === 'quiet' ? 'badge' : 'badge badge-verified'));
+    el.innerHTML =
+      '<p class="detail-id">' + esc(d.id) + '</p>' +
+      '<p class="detail-city">' + esc(d.city) + ' &middot; <span class="dot ' + dotCls + '"></span>' + esc(d.state) + '</p>' +
+      '<p><span class="' + badge + '">' + esc(d.cls === 'ghost' ? 'RUMOUR ONLY' : 'CENSUS ' + d.state) + '</span></p>' +
+      rows([['LAST HANDSHAKE', esc(d.hs)], ['CUSTODIAN', esc(d.cust)], ['ASSESSMENT', esc(d.note)]]);
+  }
+
+  function wire(containerId, detailId, data, render, initial) {
+    var container = document.getElementById(containerId);
+    var detail = document.getElementById(detailId);
+    if (!container || !detail) { return; }
+    var marks = container.querySelectorAll('.mn');
+    if (!marks.length) { return; }
+
+    function select(key) {
+      for (var i = 0; i < marks.length; i++) {
+        marks[i].classList.toggle('sel', marks[i].getAttribute('data-key') === key);
+      }
+      render(detail, key);
+    }
+
+    for (var j = 0; j < marks.length; j++) {
+      (function (mark) {
+        var key = mark.getAttribute('data-key');
+        mark.addEventListener('click', function () { select(key); });
+        mark.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Enter' || ev.key === ' ' || ev.key === 'Spacebar') {
+            ev.preventDefault();
+            select(key);
+          }
+        });
+        mark.addEventListener('focus', function () { select(key); });
+      })(marks[j]);
+    }
+
+    render(detail, initial);
+    if (data) { return; }
+  }
+
+  wire('plate-warren', 'warren-detail', WARREN, renderWarren, 'w-drop');
+  wire('plate-mesh', 'mesh-detail', MESH, renderMesh, 'n-vla');
+
+  var tA = document.getElementById('tab-warren');
+  var tB = document.getElementById('tab-mesh');
+  var pA = document.getElementById('plate-warren');
+  var pB = document.getElementById('plate-mesh');
+
+  function show(warren) {
+    pA.style.display = warren ? '' : 'none';
+    pB.style.display = warren ? 'none' : '';
+    tA.classList.toggle('active', warren);
+    tB.classList.toggle('active', !warren);
+  }
+
+  if (tA && tB && pA && pB) {
+    tA.addEventListener('click', function () { show(true); });
+    tB.addEventListener('click', function () { show(false); });
+  }
+})();
+</script>
+</body>
+</html>

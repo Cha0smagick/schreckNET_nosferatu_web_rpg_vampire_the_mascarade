@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OPEN SEWER — SchreckNET</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .thread-anchor{scroll-margin-top:20px}
+  .board-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:26px}
+  .board-bar .btn{padding:7px 13px;font-size:11px}
+  .thread-head{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between}
+  .thread-head .thread-title{font-size:17px;color:var(--green);letter-spacing:1px}
+  .thread-meta{font-size:11px;letter-spacing:1px;color:var(--muted);margin:8px 0 14px;padding-bottom:10px;border-bottom:1px dashed var(--line)}
+  .post-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:9px}
+  .post-handle{color:var(--acid);font-size:12px;letter-spacing:1px}
+  .post-rank{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+  .post-time{margin-left:auto;font-size:10px;letter-spacing:1px;color:var(--muted)}
+  .post-body{font-size:13.5px;color:var(--bone-dim);line-height:1.7}
+  .post-body code{color:var(--acid)}
+  .pinned{border-left:3px solid var(--bile)}
+  .locked-post .post-body{color:var(--muted)}
+  .signal-note{border-left:3px solid var(--green-dim);padding:10px 14px;background:rgba(70,232,131,.04);font-size:12px;color:var(--bone-dim);margin-top:16px}
+  .modnote{border:1px dashed var(--line);padding:12px 14px;font-size:11.5px;letter-spacing:1px;color:var(--muted);margin-bottom:26px}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+
+    <header class="page-head">
+      <div class="page-kicker">node vla-7 // discussion layer</div>
+      <h1 class="page-title">OPEN SEWER</h1>
+      <p class="page-sub">The board nobody moderates and everybody reads. Handle names are given freely; kinders learn fast that a name on this sewer is a debt, not a gift. Sign your posts with the Word or the feed will not carry them past the first node.</p>
+    </header>
+
+    <div class="board-bar">
+      <span class="badge badge-active"><span class="dot dot-active"></span>12 THREADS OPEN</span>
+      <span class="badge badge-blood"><span class="dot dot-fallen"></span>3 THREADS SEALED BY WARDEN</span>
+      <span class="badge">MIRRORED FROM 4 NODES</span>
+      <span class="badge badge-silenced">NO INDEXING — NO ARCHIVE</span>
+    </div>
+
+    <div class="modnote">
+      POSTING RULES, CONDENSED: (1) no human names, no real addresses, no photographs of the living; (2) no open recruitment posts — we do not advertise, we are found; (3) do not paste Second Inquisition material here, this board is read by more ears than ours; (4) anything signed without the Word is assumed to be bait, and bait gets answered with teeth.
+    </div>
+
+    <!-- THREAD 1 -->
+    <article class="thread thread-anchor" id="t-vienna">
+      <div class="pinned">
+        <div class="thread-head">
+          <span class="thread-title">VIENNA NODE IS GONE — WHO STILL HOLDS THE RELAY MAP?</span>
+          <span class="badge badge-blood">PINNED</span>
+        </div>
+      </div>
+      <div class="thread-meta">
+        <span class="handle">RATKING</span> &middot; NO SECT, THE DEEP WARRENS &middot; 7 REPLIES &middot; 3 DAYS SINCE THE BURN &middot; THREAD SEVERED ON NODES VIE-0, VIE-1, VIE-2
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">RATKING</span>
+          <span class="post-rank">clearance — verified signal</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">03:11 CET</span>
+        </div>
+        <div class="post-body">
+          Vienna went dark eleven days ago. Not a node fault — a fault with a heartbeat. Three relays inside the Ringstrasse bunker stopped answering the handshake, and then the physical addresses stopped answering anyone. Whatever the Second Inquisition burned there, they burned it with the lights still on.
+          <br><br>
+          What I need is not sympathy. What I need is <strong>the relay map</strong> — the one that says which mirror answers which mirror when the chain breaks. Vienna held the eastern spine. Without it, everything from Istanbul to Tallinn is running on a chain of mirrors we can only <em>hope</em> is honest.
+          <br><br>
+          If you hold even a fragment, post it. If you hold nothing, say so and say so loudly, because a gap in the map is better than a lie in the map.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">SEWER_WITCH</span>
+          <span class="post-rank">anarch, sector 4</span>
+          <span class="post-time">03:58 CET</span>
+        </div>
+        <div class="post-body">
+          Nothing. I say that plainly so nobody wastes a night looking. Vienna was ours for six years and the map lived in a wax cylinder in a box under a table in the Operngasse. The box is ash and the table is a police exhibit.
+          <br><br>
+          What survives is the <em>hash chain</em>, not the addresses. If anyone has a copy of the Prague node's ledger from before the split, the reconstruction is mechanical. Write to the Warden if you hold fragments. Do not post them here.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">NULLPOINTER</span>
+          <span class="post-rank">warden's clerk</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">07:40 CET</span>
+        </div>
+        <div class="post-body">
+          Reconstructed from the Tallinn fragments and the Kraków ledger: the eastern spine is intact, merely orphaned. Practical effect — no relay answers Vienna, but Vienna's neighbours already have each other. The network is uglier and more honest than it was.
+          <br><br>
+          Full reconstruction attached to the archive under <code>schrecknet_protocol</code>. The Warden will not be thanked and does not expect it.
+        </div>
+      </div>
+    </article>
+
+    <!-- THREAD 2 -->
+    <article class="thread thread-anchor" id="t-sweep">
+      <div class="thread-head">
+        <span class="thread-title">SECOND INQUISITION SWEEP — PRAHA-SEVER, 04:00 TO 06:20</span>
+        <span class="badge badge-danger">ACTIVE THREAT</span>
+      </div>
+      <div class="thread-meta">
+        <span class="handle">WARDEN KOSTA</span> &middot; PRAGUE COMPACT &middot; 4 REPLIES &middot; 9 HOURS SINCE POSTED &middot; LAST MIRROR 6 MINUTES AGO
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">WARDEN KOSTA</span>
+          <span class="post-rank">warden, prague compact</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">04:40 CET</span>
+        </div>
+        <div class="post-body">
+          Countersign sweep, not a hunt. Two teams, eight visible, four folded into the crowd at the Letná side of the bridge. They are not improvising; the questions are identical and the order of them is identical. That is a rehearsed list.
+          <br><br>
+          Standing orders for the next twelve hours:
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">WARDEN KOSTA</span>
+          <span class="post-rank">continuation</span>
+          <span class="post-time">04:41 CET</span>
+        </div>
+        <div class="post-body">
+          1. <strong>No regalia.</strong> No signet, no regalia worn where it can be read, no colours older than the current season.<br>
+          2. <strong>No new ground.</strong> Nobody learns a new discipline tonight. Every discipline you can already use, you can use perfectly.<br>
+          3. <strong>Guest-right over pride.</strong> If you are hosting and the countersign reaches you, you offer the Word as though it costs you nothing, because it costs you nothing, and you learn something worth the price.<br>
+          4. <strong>Leave no breadcrumb.</strong> Every safehouse empties tonight. Not one room, every room. Take what you can carry. Burn the rest in a grill, never in a file.
+          <br><br>
+          Those who do not have a room for tonight: the Warrens That Sing have beds. Use the phrase from the archive. If nobody answers by third knock, go to the river and wait. Do not come back to this node for six hours.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">STITCHES</span>
+          <span class="post-rank">no sect — crew</span>
+          <span class="post-time">05:15 CET</span>
+        </div>
+        <div class="post-body">
+          My crew has eleven bodies and a floor above a shuttered hardware store. We do not ask who anyone is when it gets loud, we ask what they can hold. Bring the ones who can hold things.
+          <br><br>
+          No handshake words with us. Knock pattern is on the panel, third shutter from the left. Anyone who knocks the Inquisition's pattern gets the same answer as the Inquisition.
+        </div>
+      </div>
+    </article>
+
+    <!-- THREAD 3 -->
+    <article class="thread thread-anchor" id="t-baba-yaga">
+      <div class="thread-head">
+        <span class="thread-title">SIGNET FORGERY — LETTERHEAD RECOVERED FROM THE VIENNA LETTERS</span>
+        <span class="badge badge-blood">EVIDENCE</span>
+      </div>
+      <div class="thread-meta">
+        <span class="handle">ARCHIVIST HOLT</span> &middot; BITE DEEPERS &middot; 5 REPLIES &middot; 2 DAYS SINCE POSTED
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">ARCHIVIST HOLT</span>
+          <span class="post-rank">archivist, bite deepers</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">19:20 CET</span>
+        </div>
+        <div class="post-body">
+          I burned four letters that should not exist. I burn most things; this one sat on my desk for two days because I could not explain why it bothered me.
+          <br><br>
+          The Baba Yaga signet is old and it is <em>wrong</em>. Not forged — forged is lazy and I can smell lazy. This is the right impression taken off a genuine die, then set at a size two millimetres too large for the wax it must seat in. The stress lines in the wax are inconsistent with the metal. Someone had the original. Someone handled the original and did not return it damaged, which is the part I cannot stop thinking about.
+          <br><br>
+          Full plate, wax stress analysis and the letter itself are in the archive as <code>baba_yaga_dossier</code>. Read it and then decide with me whether this is theft, tribute, or a message written in a language only a very old thing speaks.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">MR. HOLLOWAY</span>
+          <span class="post-rank">old net, mirror only</span>
+          <span class="post-time">22:05 CET</span>
+        </div>
+        <div class="post-body">
+          Neither. Tribute would come with a name on it. Theft would not bother to seat the wax correctly. A message implies a recipient with the literacy to read it — and a replica two sizes large is a message delivered to <em>everyone at once</em>.
+          <br><br>
+          Somebody is telling every signet-holder on this network that their security has been read. That is not theft and it is not tribute. It is a summons dressed as a warning. I advise we all assume we have been counted.
+        </div>
+      </div>
+    </article>
+
+    <!-- THREAD 4 -->
+    <article class="thread thread-anchor" id="t-word-bond">
+      <div class="thread-head">
+        <span class="thread-title">WORD-BOND ETIQUETTE — BEFORE YOU ANCHOR YOUR CHILDE'S NAME TO YOURS</span>
+        <span class="badge badge-verified">LONGFORM</span>
+      </div>
+      <div class="thread-meta">
+        <span class="handle">SEWER_WITCH</span> &middot; ANARCH, SECTOR 4 &middot; 6 REPLIES &middot; 5 DAYS SINCE POSTED
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">SEWER_WITCH</span>
+          <span class="post-rank">anarch, sector 4</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">23:48 CET</span>
+        </div>
+        <div class="post-body">
+          A word-bond is not a promise. Everyone says it as though it were, and then they are astonished, thirty years later, by what it does.
+          <br><br>
+          The Word is freely given, once, and unbreakable for the life of both. If you give it to your childe to anchor their regalia, you have told the universe exactly where to look when someone wants to know who holds your loyalty. You have not protected them. You have published a map with your own name on it.
+          <br><br>
+          The discipline we use instead is <strong>Obfuscation</strong> — the same working, but the name it binds is yours, not theirs. Your childe learns to be looked through. It is slower work, and it is the only work that survives a sweep. The formal notes are in the archive under <code>disciplines_reference</code>; read that one before you decide, not after.
+          <br><br>
+          I am not against bonds. I am against bonds given because they felt like love at the time.
+        </div>
+      </div>
+
+      <div class="post locked-post">
+        <div class="post-head">
+          <span class="post-handle">NULLPOINTER</span>
+          <span class="post-rank">warden's clerk</span>
+          <span class="post-time">00:12 CET</span>
+        </div>
+        <div class="post-body">
+          Accurate, and I will add the part people leave out. A word-bond also binds <em>them</em>. If you are destroyed, that bond does not break — it goes quiet. Their regalia will start answering a frequency that answers to nobody, and hunters read silence louder than noise.
+          <br><br>
+          This thread is sealed. It is not sealed because anyone was wrong. It is sealed because the next three replies were getting better by the hour and that is exactly how a good conversation becomes a good trap.
+        </div>
+      </div>
+    </article>
+
+    <!-- THREAD 5 -->
+    <article class="thread thread-anchor" id="t-free-blooms">
+      <div class="thread-head">
+        <span class="thread-title">[ANARCH] FREE BLOOMS — MANIFEST, KAMIANETS, THURSDAY</span>
+        <span class="badge badge-acid">CAMARILLA PROSPECT</span>
+      </div>
+      <div class="thread-meta">
+        <span class="handle">STITCHES</span> &middot; NO SECT — CREW &middot; 3 REPLIES &middot; 1 DAY SINCE POSTED &middot; VIEWED ON 6 MIRRORS
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">STITCHES</span>
+          <span class="post-rank">no sect — crew</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">16:02 CET</span>
+        </div>
+        <div class="post-body">
+          Manifest posted because it is honest and because the alternative is somebody posting a manifest that is not.
+          <br><br>
+          Nine crates. Medical grade, sealed, cool chain intact — the whole point of the week. Escorted by eleven of us, arriving Thursday on the west road, sleeping in the Kamianets foundry, gone by Sunday. We are not selling to a Camarilla. We are not selling to an Anarch either. We are selling once, to whoever can keep it cold, and we will not be handing out the route on this board.
+          <br><br>
+          What I will say: if a Ventrue prince comes with a counteroffer, he is welcome to it, provided he can tell me how a refrigerated truck survives a roadblock. Mine cannot. I want to hear somebody solve that problem before Thursday rather than on Thursday.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">COUNCILLOR ILSE BRANDT</span>
+          <span class="post-rank">ventrue — twice-removed, counted twice</span>
+          <span class="post-time">17:30 CET</span>
+        </div>
+        <div class="post-body">
+          I can solve your roadblock. I can also solve it for you, which is the only reason you should be suspicious of me offering.
+          <br><br>
+          The west road has three checkpoints and one of them is manned by a man who answers to a Tremere who has been asking about crate manifests since Tuesday. He is asking because he is being asked. Meanwhile your foundry has been on a Ventrue survey sheet since spring, and the sheet is in my hand, and nobody has done anything with it yet — which is a courtesy I extend until Friday morning.
+          <br><br>
+          Bring the manifest to the meeting. I will bring an escort of eleven that are mine rather than yours, a doctor who does not ask questions, and a route that uses a toll road the Inquisition believes only exists north of Pilsen. In exchange: your crew stands down for the night and nobody's ghoul ends up in a report. Those are my terms and I am being more honest with you than I am with my own council.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">STITCHES</span>
+          <span class="post-rank">no sect — crew</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">17:44 CET</span>
+        </div>
+        <div class="post-body">
+          Accepted. Doctor, escort, route, and my crew stands down and does not touch a crate.
+          <br><br>
+          Councilwoman — you told me you have been counting me since spring and that the courtesy expires Friday. I appreciate the arithmetic. I want you to notice one thing, because you are the kind that notices things: you did not take the manifest, and you could have.
+          <br><br>
+          Whatever you are collecting on the west road, it is not crates. I have my own suspicions. Post them here and I will tell you whether I am right, with nothing held back.
+        </div>
+      </div>
+    </article>
+
+    <!-- THREAD 6 -->
+    <article class="thread thread-anchor" id="t-berlin">
+      <div class="thread-head">
+        <span class="thread-title">SOMEONE IS SIPHONING THAUMATURGY IN BERLIN — AND BILLING IT TO US</span>
+        <span class="badge badge-danger">TECHNICAL</span>
+      </div>
+      <div class="thread-meta">
+        <span class="handle">ARCHIVIST HOLT</span> &middot; BITE DEEPERS &middot; 4 REPLIES &middot; 12 HOURS SINCE POSTED
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">ARCHIVIST HOLT</span>
+          <span class="post-rank">archivist, bite deepers</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">08:26 CET</span>
+        </div>
+        <div class="post-body">
+          Three of our people in Berlin have come back from a blood-bond with a headache and a gap. Not a discipline gap — a <em>memory</em> gap, one to four hours, cleanly excised, no scar tissue. That is not trauma. Trauma leaves a shape.
+          <br><br>
+          What is left behind in the wound is a signature: a working laid over the top of memory, cold, methodical, and it draws on a table we recognise because <strong>we published it</strong>. Our own <code>tremere_blood_magic_notes</code> are in the archive. Someone used a diagram from our archive as a template and did not bother to hide that they did.
+          <br><br>
+          I can see two readings. Either a Tremere has decided our archive is a lending library. Or something worse: someone has been systematically using every document we have ever posted as a survey, mapping which disciplines are documented well enough to steal. If it is the second, then we have been feeding them for years, politely, and I would like someone to tell me I am wrong before Thursday.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-head">
+          <span class="post-handle">NULLPOINTER</span>
+          <span class="post-rank">warden's clerk</span>
+          <span class="badge badge-verified">WORD SIGNED</span>
+          <span class="post-time">09:02 CET</span>
+        </div>
+        <div class="post-body">
+          You are not wrong, and I cannot tell you that you are.
+          <br><br>
+          The survey hypothesis fits the date distribution better than the theft hypothesis does. The first excisions coincide with our disciplines reference being mirrored onto four nodes in a single week. That is not somebody who found a good diagram. That is somebody measuring our reach.
+          <br><br>
+          Recommendation from the Warden's office, and it costs us: leave the archive full. Feed them the disciplines we already believe are burned. Let them take the diagram and discover, on their own, in their own city, that the working requires an anchor we removed from the text three years ago.
+        </div>
+      </div>
+    </article>
+
+    <div class="signal-note">
+      SIGNAL INTEGRITY: this thread set mirrored through <strong>PRG-1, PRG-2, KRA-1, KZN-1</strong>. A copy of this exchange was observed on the old net eleven minutes after posting, unsigned, with four posts removed. Treat the old-net copy as compromised. The version with six threads and no deletions is the one we wrote.
+    </div>
+
+    <div class="footer">
+      SCHRECKNET // node VLA-7 mirror &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.
+    </div>
+
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

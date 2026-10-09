@@ -1,0 +1,37 @@
+====================================================================
+THE CURSE OF THE BLOOD
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — teaching copy, amended 2019
+CLASSIFICATION : INTERNAL — teaching material
+VERIFICATION   : WORD SIGNED — see clan.html, "The Curse"
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/the_curse_of_the_blood.txt
+--------------------------------------------------------------------
+
+  Two facts, both of them cheap to state and expensive to live. Everything else written about the Curse is either decoration or a lie told kindly.
+
+1. WHAT IS ACTUALLY TRUE
+
+First: the Hunger. It is not hunger. It is arithmetic. Blood is the only thing that answers a question the body asks every night, and the body asks in the only language it has left. A Nosferatu who has not fed in a week is not being polite about it. They are solving.
+
+Second: the sun. It does not kill us. It makes us legible. Daylight strips away the mask in a way that no discipline in this Compact can repair, and it does it to everybody at once, which is why we sleep through it and why the Warrens below the tram lines are older than any of our claims.
+
+2. WHAT PEOPLE SAY, AND WHY THEY SAY IT
+
+The oldest comfort in the old net is the claim that the Embrace burns the memory away entirely, that somewhere behind every Nosferatu there is a person walking in the sun who has simply forgotten us. It is a beautiful story. It has been traced to a Toreador salon in Vienna in the 1740s and it has never once been true.
+
+We do not forget. We remember everything, which is why we write things down and then burn them. That is not a curse. It is an archive with a temper.
+
+3. THE ARITHMETIC, IN PRACTICE
+
+Cold makes the calculation harder, not easier. Fear makes it easier, which is why the Warrens have a standing rule about never hunting within a mile of a domain and never taking from a frightened host. Hungry and cold and afraid is not a stronger vampire. It is a slower one with worse judgement.
+
+A host who is willing is worth more than a host who is not, and every house on this network has lost someone to that arithmetic.
+
+4. RETIRED LORE — DO NOT REPEAT
+
+The claim that our kind cannot cross a threshold uninvited was a Toreador comfort story with a Prague accent. It is false. It has been tested on this node. The threshold holds; what fails is the invitation held afterwards.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

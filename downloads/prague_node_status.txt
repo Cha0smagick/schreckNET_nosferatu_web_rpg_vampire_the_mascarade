@@ -1,0 +1,33 @@
+====================================================================
+NODE REPORT: VLA-7 (PRAGUE) — CURRENT
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — source node, live
+CLASSIFICATION : EYES ONLY
+VERIFICATION   : LIVE — this file is written by hand and is true as of today
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/prague_node_status.txt
+--------------------------------------------------------------------
+
+  The source node, reporting on itself, which is the only honest kind of status report.
+
+1. THE RELAY
+
+Eleven relays on the census, one fallen, one quiet for nine hours. Source mirror holds the only clean copy of Vienna and the only copy of this sentence.
+
+Throughput is 34.1% of the theoretical maximum of a network that should not exist. The census is on network.html and it is the same table you are reading, because we do not maintain two versions of anything.
+
+2. THE WARREN
+
+Eleven chambers on the current plate, one struck, one contested by a pack that has not filed a claim in nine years. Depth markings are current to March and the Bone Store has moved twice since.
+
+Wardens: four assigned, one active at any time. Kosta has run the Praha-Sever sweep eleven times and lost four wardens, and has said in writing that he will run it a twelfth.
+
+3. THE LOAD
+
+Three hunter teams are working the city above the tram lines. All three are working days. Two of the three were fed here, on purpose, by files that were true and pointed somewhere else.
+
+The archive stays full. An empty archive is an invitation. NULLPOINTER is right about this and I would like it minuted.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

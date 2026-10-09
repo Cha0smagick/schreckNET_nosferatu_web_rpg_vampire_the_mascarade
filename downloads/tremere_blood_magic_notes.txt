@@ -1,0 +1,33 @@
+====================================================================
+TREMERE — BLOOD MAGIC NOTES
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — contested, filed as contested
+CLASSIFICATION : INTERNAL — CONTESTED
+VERIFICATION   : CONTESTED — two sources disagree, both signed
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/tremere_blood_magic_notes.txt
+--------------------------------------------------------------------
+
+  There are two schools of thought about the Tremere and both schools are run by Tremere, which should tell you something about the reliability of both.
+
+1. THE CENSURE
+
+The Tremere lost their Thaumaturgy in the Second Darkening and rebuilt it, which is the only reason they remain relevant. The rebuilding produced a Chantry and the Chantry produced a Method, and the Method is a tool that eats its user.
+
+Our position: what they rebuilt is real, what they charge for it is worse than what they charge, and every Tremere on this network agrees with the first clause and none of them will sign the second.
+
+2. THE GRIMOIRE
+
+Blood magic as practised by the Tremere is real and it is not magic. It is sympathetic resonance run through a prepared medium, and the medium is a person, and the person is always willing.
+
+Someone who is always willing is either very brave, very desperate, or has been told the wrong thing about what is on the other end.
+
+3. WHERE WE DISAGREE
+
+The Prague chapter wants a permanent seat at the Compact table. The Berlin chapter wants them burned out entirely. Both positions have been minuted. Neither has been acted on.
+
+This file is filed as contested because it is contested, and a mirror that pretends its disagreements are settled is worse than a mirror that has nothing at all.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

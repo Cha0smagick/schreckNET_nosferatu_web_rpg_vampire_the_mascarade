@@ -1,0 +1,49 @@
+name: Deploy SchreckNET to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+          # The repo is a static site with no build step. Only ship what a
+          # browser actually needs; node_modules and the .env file must never
+          # reach the artifact.
+          ignore: |
+            node_modules
+            .env
+            .git
+            .github
+            .codegraph
+            .omo
+            .opencode
+            scripts
+            image_prompts.json
+            package.json
+            package-lock.json
+            PLAN.md
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

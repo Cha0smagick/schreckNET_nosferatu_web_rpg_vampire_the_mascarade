@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MINIGAMES // SchreckNET</title>
+<meta name="description" content="Four dead-end terminals salvaged from the Prague node's recreational stack. Play them, or let them play you.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .handout{font-size:13px;line-height:1.7;color:var(--bone-dim);margin:0 0 12px}
+  .handout strong{color:var(--acid)}
+  .handout em{color:var(--bile);font-style:normal}
+  .recluse{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}
+  .recluse ul{margin:0;padding-left:18px;font-size:13px;line-height:1.75;color:var(--bone-dim)}
+  .recluse li{margin-bottom:8px}
+  .recluse b{color:var(--green)}
+  .prize{margin-top:8px;padding:14px 16px;border:1px dashed var(--line);background:var(--bg-panel-2);font-size:13px;line-height:1.7}
+  .prize .badge{margin-right:8px}
+  .rec-note{font-size:12px;color:var(--muted);line-height:1.7;margin-top:12px;letter-spacing:1px}
+  @media (max-width:900px){ .recluse{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+
+    <header class="page-head">
+      <div class="page-kicker">PRAGUE NODE VLA-7 // RECREATIONAL STACK</div>
+      <h1 class="page-title">MINIGAMES</h1>
+      <p class="page-sub">Four terminals were left running when the node's steward stopped answering mail. Nobody has powered them down because powering them down would require entering the room, and the room is behind the laundry. They are, functionally, immortal. We have made peace with this.</p>
+    </header>
+
+    <section class="panel">
+      <div class="panel-title">HOUSE RULES AT THE RECREATION STACK</div>
+      <div class="recluse">
+        <div>
+          <p class="handout">Every game on this page was written by a <strong>second-generation</strong> programmer who has not been outside since the Hayes embargo. She signed them all <em>NUL</em> and refused to say what that stood for. The Second Inquisition recovered three of her notebooks from a Vienna relay in March. <strong>None of them contain this code.</strong> That is either excellent news or a very precise lie.</p>
+          <p class="handout">Scores are not transmitted anywhere. There is nowhere to transmit them to. The stack keeps a local high-water mark in a file called <em>sewer.log</em> that nobody has been able to locate, which we choose to read as a metaphor.</p>
+        </div>
+        <div>
+          <ul>
+            <li><b>WIRE CRACKER</b> — brute-force a four-digit salt. Slower than it should be, on purpose.</li>
+            <li><b>CIPHER LOCK</b> — a Caesar shift. The plaintext is a discipline you already know.</li>
+            <li><b>WARDEN'S GLYPHS</b> — match the sequence. It changes every time you blink.</li>
+            <li><b>PACKET RIVER</b> — route the traffic. It will not stay routed.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="prize">
+        <span class="badge badge-acid">DECRYPTION VERIFIED</span>
+        Complete <strong>CIPHER LOCK</strong>. A verification mark is written into your session and appears on your sidebar on every subsequent page of this node. It proves nothing to anyone. You will still want it.
+      </div>
+      <p class="rec-note">No blood is consumed by any of these games. Several of our guests have found this disappointing.</p>
+    </section>
+
+    <div id="game-tabs" class="game-tabs"></div>
+    <div id="game-panels"></div>
+
+    <section class="panel" style="margin-top:28px">
+      <div class="panel-title">FOR THE RECORD</div>
+      <p class="handout">The high-water marks currently standing on the stack, as last read by <strong>RATKING</strong> from the floor above the hardware store:</p>
+      <table class="tbl" style="margin-top:12px">
+        <thead>
+          <tr><th>GAME</th><th>RECORD</th><th>HELD SINCE</th><th>HELD BY</th><th>STATUS</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>WIRE CRACKER</td><td>4 CRACKED / 11 ATTEMPTS</td><td>2019</td><td>NUL</td>
+            <td><span class="dot dot-silenced"></span>ABANDONED</td>
+          </tr>
+          <tr>
+            <td>CIPHER LOCK</td><td>SHIFT 3 / 3 ATTEMPTS</td><td>2021</td><td>NUL</td>
+            <td><span class="dot dot-fallen"></span>SHIFT 4 NEVER FOUND</td>
+          </tr>
+          <tr>
+            <td>WARDEN'S GLYPHS</td><td>6 PAIRS</td><td>UNKNOWN</td><td>UNKNOWN</td>
+            <td><span class="dot dot-silenced"></span>NO WITNESSES</td>
+          </tr>
+          <tr>
+            <td>PACKET RIVER</td><td>0 ROUTED</td><td>—</td><td>—</td>
+            <td><span class="dot dot-silenced"></span>WON BY THE MACHINE</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="rec-note">CIPHER LOCK, row two. Shift four exists. She left it behind on purpose and the rest of the network has spent four years failing to find it. If you solve it, the network would very much like to know.</p>
+    </section>
+
+    <div class="footer">SCHRECKNET // node VLA-7 mirror &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.</div>
+
+  </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/games.js"></script>
+</body>
+</html>

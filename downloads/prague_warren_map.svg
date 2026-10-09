@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="Plate I — Prague Warren, eleven chambers, schematic">
+  <title>Plate I — Prague Warren (schematic, not to scale)</title>
+  <desc>Schematic of eleven chambers beneath Prague. Depths in metres below datum. One chamber struck, one contested.</desc>
+  <rect width="640" height="420" fill="#060A08"/>
+  <defs>
+    <pattern id="gr" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#46E883" stroke-opacity="0.06"/>
+    </pattern>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#46E883" fill-opacity="0.5"/>
+    </marker>
+  </defs>
+  <rect width="640" height="420" fill="url(#gr)"/>
+
+  <!-- warden limit -->
+  <rect x="18" y="34" width="604" height="368" fill="none" stroke="#B0562F" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="7 6"/>
+  <text x="26" y="26" fill="#B0562F" font-family="monospace" font-size="11" letter-spacing="2">WARDEN LIMIT — UNSURVEYED WATER BEYOND THIS LINE IS NOT GROUND</text>
+
+  <!-- Vltava high water -->
+  <path d="M18 300 C 120 286, 210 316, 320 302 C 430 288, 520 314, 622 300 L622 402 L18 402 Z"
+        fill="#35C4D9" fill-opacity="0.07" stroke="#35C4D9" stroke-opacity="0.35" stroke-dasharray="4 4"/>
+  <text x="30" y="318" fill="#35C4D9" fill-opacity="0.8" font-family="monospace" font-size="10" letter-spacing="1.5">VLTAVA — HIGH WATER MARK</text>
+
+  <!-- tunnels -->
+  <g stroke="#46E883" stroke-opacity="0.45" stroke-width="2.5" fill="none" marker-end="url(#ar)">
+    <path d="M96 92 H300 V150"/>
+    <path d="M300 150 H470 V196"/>
+    <path d="M150 214 H300 V258"/>
+    <path d="M300 258 H452 V262"/>
+    <path d="M96 92 V214 H150"/>
+    <path d="M470 196 V300 H560"/>
+    <path d="M214 336 V262"/>
+  </g>
+  <g stroke="#A3B945" stroke-opacity="0.35" stroke-width="2" fill="none" stroke-dasharray="5 6">
+    <path d="M452 262 H560 V336"/>
+    <path d="M214 336 H380"/>
+    <path d="M380 336 V196 H470"/>
+  </g>
+
+  <!-- chambers -->
+  <g font-family="monospace">
+    <g fill="#0F1A14" stroke="#46E883" stroke-opacity="0.75">
+      <rect x="60" y="72" width="72" height="40"/>
+      <rect x="264" y="132" width="72" height="40"/>
+      <rect x="434" y="176" width="72" height="40"/>
+      <rect x="114" y="194" width="72" height="40"/>
+      <rect x="264" y="238" width="72" height="40"/>
+      <rect x="416" y="242" width="72" height="40"/>
+      <rect x="178" y="316" width="72" height="40"/>
+      <rect x="344" y="316" width="72" height="40"/>
+      <rect x="524" y="316" width="72" height="40"/>
+    </g>
+    <g fill="#0F1A14" stroke="#8E2A2A" stroke-opacity="0.8" stroke-dasharray="4 3">
+      <rect x="416" y="186" width="72" height="40" transform="translate(0,60)"/>
+    </g>
+
+    <g fill="#C6F24E" font-size="12">
+      <text x="68" y="90">A</text><text x="68" y="105" font-size="9" fill="#6B7A6E">−6m</text>
+      <text x="272" y="150">B</text><text x="272" y="165" font-size="9" fill="#6B7A6E">−9m</text>
+      <text x="442" y="194">C</text><text x="442" y="209" font-size="9" fill="#6B7A6E">−11m</text>
+      <text x="122" y="212">D</text><text x="122" y="227" font-size="9" fill="#6B7A6E">−14m</text>
+      <text x="272" y="256">E</text><text x="272" y="271" font-size="9" fill="#6B7A6E">−16m</text>
+      <text x="424" y="260">F</text><text x="424" y="275" font-size="9" fill="#8E2A2A">STRUCK</text>
+      <text x="186" y="334">G</text><text x="186" y="349" font-size="9" fill="#6B7A6E">−24m</text>
+      <text x="352" y="334">H</text><text x="352" y="349" font-size="9" fill="#6B7A6E">−19m</text>
+      <text x="532" y="334">J</text><text x="532" y="349" font-size="9" fill="#A3B945">CONTESTED</text>
+    </g>
+
+    <text x="26" y="52" fill="#8A93B8" font-size="11" letter-spacing="2">PLATE I — PRAGUE WARREN (SCHEMATIC, NOT TO SCALE)</text>
+    <text x="26" y="70" fill="#6B7A6E" font-size="10">Source: VLA-7 cartography cante · depths below datum · eleven chambers, one struck, one contested</text>
+    <text x="26" y="392" fill="#6B7A6E" font-size="10">Solid = surveyed. Dashed = inferred. This plate is a list of rooms, and a list of rooms can be wrong.</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+====================================================================
+WARREN SURVIVAL GUIDE — PRACTICAL
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — Deep Warrens cante
+CLASSIFICATION : OPEN — but read it and then put it back
+VERIFICATION   : VERIFIED — four copies held, all agree
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/warren_survival_guide.txt
+--------------------------------------------------------------------
+
+  Not lore. A list. Everything below has been tested by somebody who is no longer available for questions.
+
+1. LIGHT AND AIR
+
+Bring none. Carry a chemical light, never a flame — flame announces you to everybody above and you do not know who is listening. If you must burn something, burn it in the one chamber on the list where the smoke has nowhere to go, which is not a phrase to say out loud.
+
+Air is the resource people kill each other over. Count your hours underground the way other people count money, and do not assume the next chamber has air because you can breathe in the last one.
+
+2. WATER
+
+High water marks are not guidelines. The Vltava takes the lower tunnels on a bad week and the upper tunnels on a worse one. Learn the mark before you learn the route.
+
+Standing water carries more than water. If you have to wade, wade shallow and wade fast.
+
+3. THE THIRD RING
+
+Do not answer the third ring. That is not superstition, it is observation: the first ring is a call, the second is a confirmation, and the third is a question that has already been answered for you.
+
+If somebody is asking you to answer it, they are not asking. They are being polite about what they want.
+
+4. SALT, WARDENS, AND THE THIRD DAWN
+
+Salt a chamber when you leave it and never when you enter it. Salt is a message with one meaning and no room for negotiation.
+
+The Warden comes at dawn and does not care who you are. If you need to stay in a tenancy past the fourth night, do not stay. Move, and move before you are told to.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

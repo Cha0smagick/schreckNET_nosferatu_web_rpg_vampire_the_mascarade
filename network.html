@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NETWORK STATUS // SCHRECKNET</title>
+<meta name="description" content="Live SchreckNET node sweep, traffic telemetry and the Second Inquisition alert feed.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+  .kpi-value { font-size: 30px; font-weight: 700; color: var(--acid); letter-spacing: 1px; line-height: 1.1; }
+  .kpi-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+  .spark-wrap { border: 1px solid var(--line); background: var(--bg-panel-2); padding: 14px 10px 6px; }
+  .spark-legend { display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 1px; color: var(--muted); padding: 6px 4px 2px; }
+  .alert { border-left: 3px solid var(--rust); padding: 0 0 0 14px; margin-bottom: 18px; }
+  .alert.crit { border-left-color: var(--blood); }
+  .alert-time { font-size: 10px; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
+  .steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
+  .steps li { counter-increment: step; position: relative; padding-left: 44px; margin-bottom: 16px; }
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute; left: 0; top: 0;
+    font-size: 12px; color: var(--acid); letter-spacing: 1px;
+    border: 1px solid var(--line); padding: 3px 7px;
+  }
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+
+    <div class="page-head">
+      <div class="page-kicker">◉ RELAY SWEEP / 04:12 LOCAL</div>
+      <h1 class="page-title">NETWORK STATUS</h1>
+      <p class="page-sub">SchreckNET is a mesh, not a hierarchy. No node knows more than two of its
+        neighbours, and every third relay rotates its address on the Sabbat. What follows is the
+        most complete census the Clan has been able to take since Vienna.</p>
+    </div>
+
+    <!-- ===================== KPIs ===================== -->
+    <div class="kpi-row" style="margin-bottom:24px">
+      <div class="panel" style="margin:0">
+        <div class="kpi-value">11<span style="font-size:16px;color:var(--muted)">/12</span></div>
+        <div class="kpi-label">Nodes answering</div>
+      </div>
+      <div class="panel" style="margin:0">
+        <div class="kpi-value">4</div>
+        <div class="kpi-label">Nodes burned since spring</div>
+      </div>
+      <div class="panel" style="margin:0">
+        <div class="kpi-value rust-text">34.1<span style="font-size:16px">%</span></div>
+        <div class="kpi-label">Traffic spike, 24h baseline</div>
+      </div>
+      <div class="panel" style="margin:0">
+        <div class="kpi-value danger-text">3</div>
+        <div class="kpi-label">Hunter teams on our scent</div>
+      </div>
+    </div>
+
+    <!-- ===================== TRAFFIC ===================== -->
+    <div class="panel">
+      <div class="panel-title">PACKET VOLUME — 24H MIRROR TRAFFIC</div>
+      <div class="spark-wrap">
+        <svg viewBox="0 0 608 120" width="100%" height="150" preserveAspectRatio="none"
+             role="img" aria-label="Line chart of mirror traffic over 24 hours">
+          <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+            <line x1="0" y1="30"  x2="608" y2="30"></line>
+            <line x1="0" y1="60"  x2="608" y2="60"></line>
+            <line x1="0" y1="90"  x2="608" y2="90"></line>
+            <line x1="0" y1="120" x2="608" y2="120"></line>
+          </g>
+          <polyline fill="none" stroke="var(--green)" stroke-width="1.6"
+            stroke-linejoin="round" stroke-linecap="round"
+            points="10,26 22.5,44 35,52 47.5,37 60,60 72.5,74 85,66 97.5,48 110,22 122.5,30 135,56 147.5,69 160,80 172.5,74 185,58 197.5,45 210,59 222.5,77 235,83 247.5,66 260,50 272.5,34 285,39 297.5,60 310,72 322.5,81 335,89 347.5,74 360,57 372.5,41 385,28 397.5,46 410,63 422.5,75 435,87 447.5,79 460,61 472.5,44 485,32 497.5,49 510,67 522.5,78 535,92 547.5,80 560,63 572.5,47 585,54 597.5,71"></polyline>
+          <g fill="var(--acid)">
+            <circle cx="110"  cy="22"  r="2.4"></circle>
+            <circle cx="272.5" cy="34" r="2.4"></circle>
+            <circle cx="385" cy="28" r="2.4"></circle>
+            <circle cx="485" cy="32" r="2.4"></circle>
+          </g>
+        </svg>
+      </div>
+      <div class="spark-legend"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+      <p class="small muted mt-0">
+        Four spikes, evenly spaced and never at a full hour. That is a schedule, not a coincidence.
+        Somebody is polling the mirror on the Sabbat and we do not know who is reading the answers.
+      </p>
+    </div>
+
+    <!-- ===================== NODE TABLE ===================== -->
+    <div class="panel">
+      <div class="panel-title">RELAY CENSUS</div>
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>NODE</th><th>CITY</th><th>STATE</th><th>CUSTODIAN</th>
+            <th>LAST HANDSHAKE</th><th>NOTE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="acid">VLA-7</td><td>PRAGUE</td><td><span class="dot dot-active"></span>ACTIVE</td><td>ratking</td><td>00:04:11</td><td>source mirror. holds the only clean archive of Vienna.</td></tr>
+          <tr><td class="acid">NYC-2</td><td>NEW YORK</td><td><span class="dot dot-active"></span>ACTIVE</td><td>—</td><td>00:03:58</td><td>highest throughput on the mesh. reasons unknown.</td></tr>
+          <tr><td class="acid">LAX-5</td><td>LOS ANGELES</td><td><span class="dot dot-active"></span>ACTIVE</td><td>—</td><td>00:04:04</td><td>custodian in custody since March. relay is running unattended.</td></tr>
+          <tr><td class="acid">CMQ-3</td><td>CAMAGÜEY</td><td><span class="dot dot-silenced"></span>QUIET</td><td>—</td><td>19:41:00</td><td>held for 9 hours. creole node, oldest blood on the network.</td></tr>
+          <tr><td class="acid">SAO-1</td><td>SÃO PAULO</td><td><span class="dot dot-active"></span>ACTIVE</td><td>—</td><td>00:03:47</td><td>single-hop relay. knows nobody's neighbour but VLA-7.</td></tr>
+          <tr><td class="acid">CRL-4</td><td>CARACAS</td><td><span class="dot dot-silenced"></span>QUIET</td><td>—</td><td>11:02:00</td><td>down to a trickle. custodial silence or surveillance, undetermined.</td></tr>
+          <tr><td class="acid">LON-9</td><td>LONDON</td><td><span class="dot dot-active"></span>ACTIVE</td><td>—</td><td>00:04:09</td><td>firmly Anarch. warns about the mesh constantly. is right about most of it.</td></tr>
+          <tr><td class="acid">BER-6</td><td>BERLIN</td><td><span class="dot dot-active"></span>ACTIVE</td><td>—</td><td>00:04:00</td><td>carries three Tzimisce signatures it has never authenticated.</td></tr>
+          <tr><td class="acid">PAR-8</td><td>PARIS</td><td><span class="dot dot-active"></span>ACTIVE</td><td>—</td><td>00:03:51</td><td>publishes a Camarilla communiqué nobody asked for.</td></tr>
+          <tr><td class="acid">TKY-1</td><td>TOKYO</td><td><span class="dot dot-silenced"></span>QUIET</td><td>—</td><td>06:15:00</td><td>Gangrel territory. the local pack audits every relay in its district.</td></tr>
+          <tr><td class="acid">BOM-11</td><td>BOMBAY</td><td><span class="dot dot-active"></span>ACTIVE</td><td>—</td><td>00:04:06</td><td>Assamite node. locks the archive for hours at a time, without explanation.</td></tr>
+          <tr><td class="acid">VIE-0</td><td>VIENNA</td><td><span class="dot dot-fallen"></span>FALLEN</td><td class="danger-text">—</td><td class="danger-text">never again</td><td class="blood-line">burned. relay presumed physical. do not attempt recovery.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===================== SECOND INQUISITION FEED ===================== -->
+    <div class="panel">
+      <div class="panel-title">⚠ SECOND INQUISITION ALERT FEED</div>
+
+      <div class="alert crit">
+        <div class="alert-time">03:41 // BER-6</div>
+        <div class="blood-line">Two Hunter teams entered the Berlin relay's district at 03:40. They
+          carried a Prince's warrant for a name that does not appear in our files, which means
+          somebody handed them a file we never wrote.</div>
+      </div>
+
+      <div class="alert crit">
+        <div class="alert-time">02:58 // VLA-7</div>
+        <div class="blood-line">Warrant sweep on four addresses within the Prague Warren. Two
+          confirmed clean. The other two are our problem and they are closing tonight.</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-time">01:12 // NYC-2</div>
+        <div class="rust-text">Consistory escalated New York to a sweep on suspicion of a Tremere
+          blood-bond anomaly. No arrests made. Two buildings burned on their way out.</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-time">23:50 // TKY-1</div>
+        <div class="rust-text">Tokyo pack reports the local Ventrue prince attempting to buy
+          three parcels of the Chōme district outright. Legally, apparently.</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-time">22:20 // PAR-8</div>
+        <div class="rust-text">Paris relay compromised. Whoever holds it now is running our
+          authentication and our vocabulary, but they are not signing with our keys.</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-time">20:04 // BOM-11</div>
+        <div class="rust-text">Assamite custodianship dispute at the Bombay relay. Three claims,
+          one signature, and a locked archive nobody will open. Oldest grudge on the mesh.</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-time">17:33 // LON-9</div>
+        <div class="rust-text">Anarch cell burned a safehouse in Whitechapel. Two of ours dead,
+          neither Embraced past the first night. We are no longer certain who killed them.</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-time">14:09 // SAO-1</div>
+        <div class="rust-text">São Paulo perimeter check on the V20 militia. Two survivors
+          described a Kindred who fought the militiamen and then let them go. Gangrel, per the
+          description. Unverified.</div>
+      </div>
+
+      <div class="alert">
+        <div class="alert-time">11:22 // LAX-5</div>
+        <div class="rust-text">Los Angeles relay running with no custodian and no audit. Public
+          knowledge of its location is, at this moment, the only thing protecting it.</div>
+      </div>
+
+      <p class="small muted mt-0">
+        Sources: relay logs, intercepted ISM traffic, and two witnesses who are now in custody.
+        Treat all of it as provisional. The Second Inquisition is patient. We are not.
+        &nbsp;<a href="downloads/second_inquisition_field_manual.txt" class="attempt-log">FIELD MANUAL →</a>
+      </p>
+    </div>
+
+    <!-- ===================== RECENT UPLOADS ===================== -->
+    <div class="panel">
+      <div class="panel-title">RECENT UPLOADS — FTP://SEWER</div>
+      <table class="tbl">
+        <thead>
+          <tr><th>FILE</th><th>ORIGIN</th><th>BYTES</th><th>ADDED</th><th>INTEGRITY</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="downloads/vienna_node_fall_report.txt" class="acid">vienna_node_fall_report.txt</a></td><td>VLA-7</td><td>11.4 KB</td><td>2d ago</td><td><span class="badge badge-verified">VERIFIED</span></td></tr>
+          <tr><td><a href="downloads/los_angeles_node_report.txt" class="acid">los_angeles_node_report.txt</a></td><td>LAX-5</td><td>6.1 KB</td><td>3d ago</td><td><span class="badge badge-verified">VERIFIED</span></td></tr>
+          <tr><td><a href="downloads/prague_node_status.txt" class="acid">prague_node_status.txt</a></td><td>VLA-7</td><td>4.8 KB</td><td>5d ago</td><td><span class="badge badge-verified">VERIFIED</span></td></tr>
+          <tr><td><a href="downloads/second_inquisition_field_manual.txt" class="acid">second_inquisition_field_manual.txt</a></td><td>BER-6</td><td>18.2 KB</td><td>1w ago</td><td><span class="badge badge-verified">VERIFIED</span></td></tr>
+          <tr><td><a href="downloads/camaguey_creole_chronicle.txt" class="acid">camaguey_creole_chronicle.txt</a></td><td>CMQ-3</td><td>9.0 KB</td><td>1w ago</td><td><span class="badge badge-silenced">HELD</span></td></tr>
+          <tr><td><a href="downloads/redroom_index.txt" class="acid">redroom_index.txt</a></td><td>NYC-2</td><td>7.7 KB</td><td>2w ago</td><td><span class="badge badge-blood">DO NOT INDEX</span></td></tr>
+          <tr><td><a href="downloads/blood_discipline_tome.txt" class="acid">blood_discipline_tome.txt</a></td><td>VLA-7</td><td>22.7 KB</td><td>3w ago</td><td><span class="badge badge-verified">VERIFIED</span></td></tr>
+          <tr><td><a href="downloads/nosferatu_manifesto.txt" class="acid">nosferatu_manifesto.txt</a></td><td>VLA-7</td><td>5.2 KB</td><td>1mo ago</td><td><span class="badge badge-verified">VERIFIED</span></td></tr>
+          <tr><td><a href="downloads/warren_survival_guide.txt" class="acid">warren_survival_guide.txt</a></td><td>VLA-7</td><td>8.3 KB</td><td>1mo ago</td><td><span class="badge badge-verified">VERIFIED</span></td></tr>
+          <tr><td><a href="archives.html" class="acid">all 31 files →</a></td><td>—</td><td>—</td><td>—</td><td><span class="badge">FTP://SEWER</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===================== PROTOCOL ===================== -->
+    <div class="panel">
+      <div class="panel-title">HANDSHAKE PROTOCOL — WHAT ACTUALLY HAPPENS</div>
+      <ol class="steps">
+        <li><strong>Broadcast a null request.</strong> Not your handle. A string with the shape of a
+          request and no content in it. Any node that answers is either ours or wants us to think it is.</li>
+        <li><strong>Wait exactly long enough to be wrong.</strong> Two seconds is standard. Answering
+          faster than two seconds is how the Inquisition traces a relay.</li>
+        <li><strong>Rotate the source header.</strong> Present the address of a node two hops away,
+          which is a node that does not exist. If the reply comes back signed by that address, someone
+          has been reading the mesh for months.</li>
+        <li><strong>Never authenticate first.</strong> A relay that asks for your credentials before it
+          has shown you a valid signature is a Hunter relay. Close the session and burn the address.</li>
+        <li><strong>Read the last packet, not the first.</strong> Our relays always append four bytes
+          of padding to the final block. Second Inquisition relays are tidy. Tidy is wrong.</li>
+        <li><strong>Assume the room is listening, then talk normally.</strong> The act of being careful
+          is louder than the thing you were careful about.</li>
+      </ol>
+      <p class="small muted mt-0">
+        Full specification: <a href="downloads/schrecknet_protocol.txt" class="attempt-log">schrecknet_protocol.txt</a>
+        &nbsp;·&nbsp; Recovery codes: <a href="downloads/network_codes.txt" class="attempt-log">network_codes.txt</a>
+        &nbsp;·&nbsp; Burn procedure: <a href="downloads/terminal_burn_protocol.txt" class="attempt-log">terminal_burn_protocol.txt</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      SCHRECKNET // node VLA-7 mirror &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.
+    </div>
+
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

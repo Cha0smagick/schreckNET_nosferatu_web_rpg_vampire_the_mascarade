@@ -1,0 +1,9 @@
+.env
+node_modules/
+.DS_Store
+Thumbs.db
+
+# agent tooling / telemetry
+.omo/
+.opencode/
+.codegraph/

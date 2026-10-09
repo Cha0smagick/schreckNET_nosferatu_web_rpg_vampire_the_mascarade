@@ -1,0 +1,39 @@
+====================================================================
+NETWORK CODES AND OLD-NET HANDSHAKE
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — protocol annex
+CLASSIFICATION : EYES ONLY
+VERIFICATION   : WORD SIGNED — protocol annex, 4 of 4 delegates
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/network_codes.txt
+--------------------------------------------------------------------
+
+  How a signal announces itself, and how to tell a friendly handshake from a very good imitation of one.
+
+1. THE CALL
+
+A legitimate node answers on the third ring, repeats the last two words of the call, and waits. It does not complete the phrase and it does not ask a question.
+
+Anything that completes the phrase for you is not a node. Anything that answers on the first ring is a node that has been listening too eagerly, which means a node with a second customer.
+
+2. THE THREE QUESTIONS
+
+Which relay? (Answer with the node code only, never the city.) How many are you? (Answer with a number, never a name.) What did you burn? (Answer with the file name, never the content.)
+
+A real node will refuse to answer the third question in full and will offer to verify it later. An imitation cannot, because it does not know what you burned. This is the whole of our authentication and it is not much.
+
+3. WORDLOCK
+
+The Word is never sent over the wire. It is never typed into a board, never written in a file, and never used to authenticate anything. If somebody offers you a Word-lock over the network, they are selling you something that was never theirs.
+
+The old net has its own handshake and it is worse and slower and it holds. Addresses for the old net change when the holder is burned, and the new one is spoken, never written.
+
+4. DORMANCY
+
+A relay that has been silent for more than eleven hours is not necessarily dead. A relay that has been silent for more than eleven hours should not be spoken to until it speaks first.
+
+This is the single most useful rule on the list and it is the one people break, because the alternative to breaking it is admitting somebody is dead.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

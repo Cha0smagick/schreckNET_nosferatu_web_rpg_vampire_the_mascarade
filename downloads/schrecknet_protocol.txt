@@ -1,0 +1,37 @@
+====================================================================
+SCHRECKNET PROTOCOL — OPERATING RULES
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — source node
+CLASSIFICATION : EYES ONLY
+VERIFICATION   : WORD SIGNED — source node, 7 of 7 delegates
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/schrecknet_protocol.txt
+--------------------------------------------------------------------
+
+  The rules by which this mirror exists. There are nine. The tenth is the reason the other nine are necessary, and it is not written down.
+
+1. SCOPE
+
+SchreckNET is a mirror. It is not a network, not a service, and not an organisation. It holds what its custodians choose to hand it and nothing else.
+
+Every relay is a person. When a relay goes quiet, it is not a server that went offline. Read the census again and remember that every row in it is somebody who agreed to keep a light on.
+
+2. CUSTODIANSHIP
+
+A custodian holds a relay. They do not hold the archive. They hold one node of it and they are responsible for what they forward and for what they refuse to forward.
+
+LAX-5 has been running unattended since March, which means a relay is currently being operated by no one and is still serving traffic. Nobody has taken it down, because the person who could authorise taking it down would have to admit they know who is doing it.
+
+3. PROHIBITIONS
+
+Do not name a sire on a public node. Do not carry a Word over any wire. Do not use the boards to settle a grudge. Do not index this network, and do not allow it to be indexed. Do not describe the Vienna burn in anything other than the words the Vienna letters actually contain.
+
+4. THE VIENNA RULE
+
+The Vienna node is gone. The relay is presumed physical, which is a sentence that means we are not going to look. The archive of Vienna survived because one person carried it out by hand in a coat, and that person is on this node now and has not been named in this file.
+
+If you find yourself reconstructing Vienna from rumour, stop. You will produce something that looks right and is wrong, and on this network that is the only unforgivable outcome.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

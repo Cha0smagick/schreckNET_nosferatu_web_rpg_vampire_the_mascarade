@@ -1,0 +1,116 @@
+{
+  "_rules": "No text, no letters, no numbers, no watermarks, no logos anywhere in the image. Photographic or painterly, dramatic, high contrast, dark cinematic lighting. 16:9 for plates, 4:5 for portraits.",
+  "_model": "black-forest-labs/flux.2-klein-4b",
+  "images": [
+    {
+      "file": "nergal.png",
+      "size": "1024x1280",
+      "prompt": "Dreadful vampiric plague doctor portrait, ancient gaunt face half-eaten by disease, sunken hollow eyes, waxed grey skin stretched over bone, black wide-brimmed hat with no emblem, high leather collar swallowing the jaw, holding a plague-doctor beak mask lowered in one hand, black cloak soaked with rain, standing in a flooded stone cellar lit by a single green lantern, thick candle smoke, cinematic chiaroscuro, muted bone and black with one cold green rim light, photorealistic, no text"
+    },
+    {
+      "file": "stitches.png",
+      "size": "1024x1280",
+      "prompt": "Portrait of a lean punk vampire woman in her thirties, shaved sides of the head, black leather jacket covered in hand-rolled patches and safety-pin scars, torn fishnet on one arm, hollow cheeks, black lipstick, cigarette smoke curling across her face, standing on the bare concrete floor of an empty hardware store at night, green failing fluorescent tube overhead, distrustful stare directly into the lens, documentary photography, gritty, no text"
+    },
+    {
+      "file": "thing_well.png",
+      "size": "1024x1280",
+      "prompt": "An indistinct humanoid silhouette rising out of a flooded stone cistern well, form obscured by mist and darkness, only two faint reflective eyes and the suggestion of long arms visible, water dripping, dark brick shaft descending into absolute blackness, cold cyan and black palette, heavy fog, unsettling found-footage photograph, face obscured, no text"
+    },
+    {
+      "file": "kosta.png",
+      "size": "1024x1280",
+      "prompt": "Portrait of an elderly warden vampire, thick grey beard, deep furrows, one clouded dead eye, heavy wool coat over old leather, flat cap, holding a small burn-schedule clipboard, standing in a brick sewer junction where water drips steadily, expression of tired bureaucratic authority, green phosphor glow mixed with warm lantern light, cinematic, no text"
+    },
+    {
+      "file": "sewer_witch.png",
+      "size": "1024x1280",
+      "prompt": "Portrait of an elderly vampiric woman in layered black shawls and a hood, wild grey hair, silver rings on every finger, a small bone tally held in one hand, standing in an underground archive lit by dozens of small candles, wax pooling, shadow of hanging dried herbs, green and bone tones, painterly chiaroscuro, no text"
+    },
+    {
+      "file": "ratking.png",
+      "size": "1024x1280",
+      "prompt": "Portrait of a middle-aged male vampire hacker, gaunt cheekbones, close-cropped black hair, thin wire-frame glasses reflecting a terminal, black technical jacket with cable loops, standing before a wall of old CRT monitors glowing phosphor green in a dark Prague cellar, cables everywhere, cold light on the face, cyberpunk chiaroscuro, no text"
+    },
+    {
+      "file": "holt.png",
+      "size": "1024x1280",
+      "prompt": "Portrait of a severe female archivist vampire, severe black bun, high-collared black coat, bone-white face, holding a heavy leather archive ledger with an oversized forged wax seal, standing in a filing room of steel shelves packed with folders, single bare bulb overhead, severe green cast, film-noir lighting, no text"
+    },
+    {
+      "file": "nullpointer.png",
+      "size": "1024x1280",
+      "prompt": "Portrait of a lean vampire technician in a cracked operator visor pushed up on the forehead, black jumpsuit stained with solder, gloves off, holding a half-destroyed relay circuit board, standing inside an equipment rack room blinking with amber and green indicator lights, dust in the air, technical dystopia, no text"
+    },
+    {
+      "file": "index_hero.png",
+      "size": "1920x1080",
+      "prompt": "A vast underground sewer junction in Prague at night, cathedral of dripping brick vaults and stalactites, a shallow channel of black water reflecting the arches, abandoned industrial pipes crossing overhead, a single shaft of pale light falling from a distant manhole far above, deep green phosphor haze, volumetric fog, absolute silence, cinematic wide establishing shot, no text"
+    },
+    {
+      "file": "network_nodes.png",
+      "size": "1920x1080",
+      "prompt": "Abstract visualisation of a dark global data network, thin glowing green filament lines connecting faint geometric nodes across an invisible sphere, one node in Europe glowing cold cyan, one node flashing dim red as if failing, vast black negative space, data topology, extremely dark, subtle grain, no text no numbers no labels"
+    },
+    {
+      "file": "clan_history.png",
+      "size": "1920x1080",
+      "prompt": "Enormous ancient stone crypt of a forgotten noble house, colossal carved sarcophagi in rows receding into fog, dust motes in shafts of pale green light, cracked tile floor covered in standing black water, ivy breaking through the ceiling, one wall collapsed into rubble, medieval burial chamber atmosphere, monumental, cinematic, no text"
+    },
+    {
+      "file": "redroom.png",
+      "size": "1920x1080",
+      "prompt": "A candlelit Victorian room converted into a private salon, blood-red damask wallpaper peeling, long wooden table laid with wine glasses and a ledger, floor covered in red wax, mirrors multiplied on one wall, heavy shadow, deep crimson and black palette, smoke and stillness, sinister elegance, no people, no text"
+    },
+    {
+      "file": "diablerie.png",
+      "size": "1920x1080",
+      "prompt": "An empty stone cellar with a circular chalk and salt ritual diagram half-constructed on the floor, candles guttering at the edge, a heavy iron drain grate, mud tracked across the flagstones, no figures present, dread of something that has just ended, black and bone tones with blood-red wax, cinematic horror, no text"
+    },
+    {
+      "file": "punk_gang.png",
+      "size": "1920x1080",
+      "prompt": "A dim derelict hardware store interior, bare concrete floor, empty shelving units, a crate of stolen medical supplies in the corner, torch beam sweeping the dusty air, boarded shopfront leaking street light, punk squat atmosphere, ten people implied only by cigarette smoke and abandoned sleeping bags, grim and warm, no text"
+    },
+    {
+      "file": "kindred_index.png",
+      "size": "1920x1080",
+      "prompt": "Endless rows of filing drawers and card-catalog cabinets receding into darkness, half-open drawers with index cards, a single card glowing faint green as if lit from within, dust and cobwebs, the archive of every name that matters, green and black, moody library lighting, no text no legible writing"
+    },
+    {
+      "file": "forum_open_sewer.png",
+      "size": "1920x1080",
+      "prompt": "Underground forum scene, a circle of mismatched chairs and folding tables on a concrete sewer floor, a single caged work lamp overhead, people in dark coats hunched over battered laptops with green screens, wet brick tunnel receding behind them, smoke, secrecy and conspiracy, cinematic, no text"
+    },
+    {
+      "file": "archive_vault.png",
+      "size": "1920x1080",
+      "prompt": "A cold data-vault chamber underground, rows of steel server cabinets half-swallowed by standing water on the floor, cable bundles dropping from the ceiling, one green status diode still lit in an otherwise dead rack, condensation and dust, harsh work light, industrial dread, no text"
+    },
+    {
+      "file": "maps_warren.png",
+      "size": "1920x1080",
+      "prompt": "Top-down aerial view of a labyrinthine flooded subterranean tunnel network beneath a European city, intersecting brick culverts and arched chambers, black water reflecting dim light, pale mineral stains on the walls, a few abandoned maintenance ladders, extreme darkness beyond the lit passages, atmospheric cartographic realism, no text no labels"
+    },
+    {
+      "file": "games_stack.png",
+      "size": "1920x1080",
+      "prompt": "A forgotten programmer's workspace in a flooded basement, a single old CRT terminal glowing green on a metal desk, mechanical keyboard, tangled cables, mugs, notes covered in illegible cipher squiggles, damp concrete wall behind, one bare bulb, retro computing loneliness, cinematic, no readable text"
+    },
+    {
+      "file": "blog_ember.png",
+      "size": "1920x1080",
+      "prompt": "A single candle burning on a stone ledge in a dark underground tunnel, warm flame the only light for twenty feet, black water reflecting the flame, soot on the ceiling, stillness and reflection, extreme contrast, cinematic, no text"
+    },
+    {
+      "file": "sewer_map_plate.png",
+      "size": "1920x1080",
+      "prompt": "Aged cartographer's plate of a European city sewer system drawn in dark ink and faded green wash, dashed boundary lines, hatched flooded districts, compass rose and scale bar rendered as pure abstract geometry with no legible characters, laid flat on a wet workbench, lamp raking across the paper, archival, no text"
+    },
+    {
+      "file": "inquisition_street.png",
+      "size": "1920x1080",
+      "prompt": "A deserted European city street at dawn, wet asphalt, unmarked grey van parked facing the exit with its rear doors slightly open, one distant figure in a long coat walking away, fog rolling between the buildings, cold desaturated blue-grey, the moment after something was taken, tense cinematic realism, no text"
+    }
+  ]
+}

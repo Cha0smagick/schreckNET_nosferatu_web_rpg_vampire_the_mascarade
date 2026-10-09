@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KINDRED INDEX // SchreckNET</title>
+<meta name="description" content="Every name the Prague node still holds. Thirteen clans, their sects, their generations, and the ghouls and childer attached to them.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:24px}
+  .stats-bar div{background:var(--bg-panel);padding:16px 18px}
+  .stats-bar .s-v{font-size:26px;color:var(--acid);line-height:1.15}
+  .stats-bar .s-k{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:5px}
+  .filter-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:16px}
+  .filter-bar label{font-size:11px;letter-spacing:2px;color:var(--bile);text-transform:uppercase}
+  .filter-bar input[type=text]{flex:1 1 240px;min-width:200px;background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:inherit;font-size:13px;padding:9px 12px;letter-spacing:1px}
+  .filter-bar select{background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:inherit;font-size:12px;padding:9px 12px;letter-spacing:1px;cursor:pointer}
+  .filter-bar input:focus,.filter-bar select:focus{outline:none;border-color:var(--green);box-shadow:0 0 10px var(--glow)}
+  .count-line{font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:14px}
+  .kind-table{width:100%;border-collapse:collapse;font-size:12px}
+  .kind-table th{text-align:left;font-size:10px;letter-spacing:2px;color:var(--bile);text-transform:uppercase;padding:8px 10px;border-bottom:1px solid var(--green-dim);font-weight:400;white-space:nowrap}
+  .kind-table td{padding:9px 10px;border-bottom:1px solid var(--line);color:var(--bone-dim);vertical-align:middle}
+  .kind-table tr:hover td{background:var(--bg-panel-2);color:var(--green)}
+  .kind-table .k-name{color:var(--green);letter-spacing:1px;white-space:nowrap}
+  .kind-table .k-alias{color:var(--rust);font-style:italic}
+  .kind-table .k-id{color:var(--muted);font-size:11px;white-space:nowrap}
+  .kind-table .k-portrait{width:34px;height:42px;object-fit:cover;filter:grayscale(.55) sepia(.18);border:1px solid var(--line);background:var(--bg-panel-2)}
+  .clan-block{margin-bottom:26px}
+  .clan-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .clan-name{font-size:14px;letter-spacing:3px;color:var(--acid);text-transform:uppercase}
+  .clan-note{font-size:12px;color:var(--muted);letter-spacing:1px}
+  .clan-bar{height:4px;background:var(--bg-panel-2);margin-top:8px;overflow:hidden}
+  .clan-bar i{display:block;height:100%;background:var(--green-dim)}
+  .clan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
+  .k-card{background:var(--bg-panel-2);border:1px solid var(--line);padding:12px 14px}
+  .k-card .kc-name{font-size:12px;color:var(--green);letter-spacing:1px}
+  .k-card .kc-sub{font-size:10px;color:var(--muted);letter-spacing:1px;margin-top:4px;line-height:1.6}
+  .ghoul-card .kc-name{color:var(--bone-dim)}
+  .childer-card .kc-name{color:var(--bile)}
+  .no-signal{border:1px dashed var(--line);padding:22px;text-align:center;color:var(--muted);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+  .legend-row{display:flex;flex-wrap:wrap;gap:18px;font-size:11px;letter-spacing:1px;color:var(--muted);margin-top:14px;text-transform:uppercase}
+  @media (max-width:900px){ .stats-bar{grid-template-columns:repeat(2,1fr)} }
+</style>
+</head>
+<body>
+
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+
+    <header class="page-head">
+      <div class="page-kicker">ARCHIVE // ALL CLANS // ALL SECTS</div>
+      <h1 class="page-title">KINDRED INDEX</h1>
+      <p class="page-sub">Every name the Prague node still holds on a Vampires sheet. Thirteen clans, their sects, their generations, and the servants and childer attached to them. This index is not a list of friends. It is a list of people we have confirmed, in one direction or the other, and it exists so that if one of us is destroyed the rest of us are not mistaken for strangers.</p>
+    </header>
+
+    <div class="stats-bar" id="stats-bar">
+      <div><div class="s-v" id="s-total">—</div><div class="s-k">Total files</div></div>
+      <div><div class="s-v" id="s-vamp">—</div><div class="s-k">Vampires</div></div>
+      <div><div class="s-v" id="s-ghoul">—</div><div class="s-k">Ghouls</div></div>
+      <div><div class="s-v" id="s-childe">—</div><div class="s-k">Childer</div></div>
+    </div>
+
+    <section class="panel">
+      <div class="panel-title">INDEX CONTROL</div>
+      <div class="game-tabs" style="margin-bottom:16px">
+        <button class="tab active" data-tab="vampires">VAMPIRES</button>
+        <button class="tab" data-tab="ghouls">GHOULS</button>
+        <button class="tab" data-tab="childer">CHILDER</button>
+        <button class="tab" data-tab="clans">BY CLAN</button>
+      </div>
+      <div class="filter-bar">
+        <label for="k-search">Filter</label>
+        <input type="text" id="k-search" placeholder="name, alias, city, sire, nature…" autocomplete="off" spellcheck="false">
+        <select id="k-clan" aria-label="Clan"><option value="">All clans</option></select>
+        <select id="k-gen" aria-label="Generation"><option value="">All generations</option></select>
+        <select id="k-status" aria-label="Status"><option value="">All statuses</option></select>
+        <select id="k-threat" aria-label="Threat"><option value="">All threats</option></select>
+        <button class="btn btn-ghost" id="k-reset" type="button">Reset</button>
+      </div>
+      <div class="count-line" id="k-count">loading index…</div>
+
+      <div id="view-vampires" class="game-panel active">
+        <div style="overflow-x:auto">
+          <table class="kind-table" id="vamp-table">
+            <thead><tr><th>ID</th><th></th><th>Name</th><th>Alias</th><th>Clan</th><th>Sect</th><th>Gen</th><th>City</th><th>Nature</th><th>Sire</th><th>Status</th><th>Threat</th></tr></thead>
+            <tbody id="vamp-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="view-ghouls" class="game-panel">
+        <div style="overflow-x:auto">
+          <table class="kind-table" id="ghoul-table">
+            <thead><tr><th>ID</th><th>Name</th><th>Servant of</th><th>Gen</th><th>City</th><th>Nature</th><th>Bonded to</th><th>Status</th></tr></thead>
+            <tbody id="ghoul-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="view-childer" class="game-panel">
+        <div style="overflow-x:auto">
+          <table class="kind-table" id="childe-table">
+            <thead><tr><th>ID</th><th>Name</th><th>Clan</th><th>Gen</th><th>City</th><th>Sire</th><th>Progress</th><th>Threat</th></tr></thead>
+            <tbody id="childe-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="view-clans" class="game-panel">
+        <div id="clan-blocks"></div>
+      </div>
+
+      <div class="legend-row">
+        <span><span class="dot dot-active"></span>Active</span>
+        <span><span class="dot dot-silenced"></span>Missing / Quiet</span>
+        <span><span class="dot dot-fallen"></span>Fallen / Destroyed</span>
+        <span>Threat 1 (forgettable) → 5 (do not approach)</span>
+      </div>
+    </section>
+
+    <section class="panel red-tint">
+      <div class="panel-title">HANDLING</div>
+      <p class="page-sub" style="margin-top:0">Names here are held under the Word. Reading a name on this node does not give you permission to speak it anywhere else, and it does not make you welcome at any address in this city. If you are looking for someone, you are looking in the wrong place — this index exists so that nobody has to.</p>
+      <p class="page-sub">Three files in this index are marked MOST WANTED in the <a href="dossiers.html">DOSSIERS</a>. They appear here because we will not delete our records of people to make a political gesture. Do not confuse being listed with being available.</p>
+    </section>
+
+    <div class="footer">SCHRECKNET // node VLA-7 mirror &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.</div>
+
+  </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/kindred_data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var DB = window.KINDRED_DB;
+  var CLANS = ['Ventrue','Tremere','Toreador','Nosferatu','Brujah','Gangrel','Malkavian','Ravnos','Tzimisce','Assamite','Followers of Set','Lasombra','Salubri'];
+  var STATUS_LABEL = { active:'ACTIVE', fallen:'FALLEN', destroyed:'DESTROYED', missing:'MISSING' };
+  var STATUS_DOT   = { active:'dot dot-active', fallen:'dot dot-fallen', destroyed:'dot dot-fallen', missing:'dot dot-silenced' };
+
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+  function noSignal(el, msg) { el.innerHTML = '<div class="no-signal">' + esc(msg) + '</div>'; }
+  function dot(status) { return '<span class="' + (STATUS_DOT[status] || 'dot dot-silenced') + '"></span>'; }
+  function label(status) { return STATUS_LABEL[status] || String(status || 'UNKNOWN').toUpperCase(); }
+  function portrait(v) {
+    if (!v || !v.portrait) return '';
+    return '<img class="k-portrait" loading="lazy" alt="" src="assets/img/' + esc(v.portrait) + '">';
+  }
+
+  // ---- fill stats -------------------------------------------------------
+  var S = {
+    total:  document.getElementById('s-total'),
+    vamp:   document.getElementById('s-vamp'),
+    ghoul:  document.getElementById('s-ghoul'),
+    childe: document.getElementById('s-childe')
+  };
+  if (DB && DB.meta) {
+    S.total.textContent  = DB.meta.total != null ? DB.meta.total : (DB.vampires || []).length;
+    S.vamp.textContent   = DB.meta.vampireCount != null ? DB.meta.vampireCount : (DB.vampires || []).length;
+    S.ghoul.textContent  = DB.meta.ghoulCount != null ? DB.meta.ghoulCount : (DB.ghouls || []).length;
+    S.childe.textContent = DB.meta.childerCount != null ? DB.meta.childerCount : (DB.childer || []).length;
+  } else {
+    ['total','vamp','ghoul','childe'].forEach(function (k) { S[k].textContent = '0'; });
+  }
+
+  // ---- populate filter options -----------------------------------------
+  var selClan = document.getElementById('k-clan');
+  var selGen  = document.getElementById('k-gen');
+  var selStat = document.getElementById('k-status');
+  var selThr  = document.getElementById('k-threat');
+  var inp     = document.getElementById('k-search');
+  var countEl = document.getElementById('k-count');
+
+  function fillSelects() {
+    var clans = {}, gens = {};
+    (DB ? DB.vampires || [] : []).concat(DB ? DB.ghouls || [] : [], DB ? DB.childer || [] : []).forEach(function (r) {
+      if (r.clan && !clans[r.clan]) { clans[r.clan] = 1; }
+      if (r.generation != null && !gens[r.generation]) { gens[r.generation] = 1; }
+    });
+    CLANS.forEach(function (c) { if (!clans[c]) delete clans[c]; });
+    Object.keys(clans).sort().forEach(function (c) {
+      var o = document.createElement('option'); o.value = c; o.textContent = c; selClan.appendChild(o);
+    });
+    Object.keys(gens).map(Number).sort(function (a, b) { return a - b; }).forEach(function (g) {
+      var o = document.createElement('option'); o.value = g; o.textContent = g + ' GEN'; selGen.appendChild(o);
+    });
+    ['active','missing','fallen','destroyed'].forEach(function (s) {
+      var o = document.createElement('option'); o.value = s; o.textContent = label(s); selStat.appendChild(o);
+    });
+    [1,2,3,4,5].forEach(function (t) {
+      var o = document.createElement('option'); o.value = t; o.textContent = 'THREAT ' + t; selThr.appendChild(o);
+    });
+  }
+
+  function filters() {
+    return {
+      q: inp.value.trim().toLowerCase(),
+      clan: selClan.value,
+      gen: selGen.value,
+      status: selStat.value,
+      threat: selThr.value
+    };
+  }
+
+  function matchVamp(v, f) {
+    if (f.clan && v.clan !== f.clan) return false;
+    if (f.gen && String(v.generation) !== f.gen) return false;
+    if (f.status && v.status !== f.status) return false;
+    if (f.threat && String(v.threat) !== f.threat) return false;
+    if (f.q) {
+      var hay = [v.id, v.name, v.alias, v.clan, v.sect, v.city, v.nature, v.sire, v.status].join(' ').toLowerCase();
+      if (hay.indexOf(f.q) === -1) return false;
+    }
+    return true;
+  }
+  function matchSimple(r, f) {
+    if (f.clan && r.clan !== f.clan) return false;
+    if (f.gen && String(r.generation) !== f.gen) return false;
+    if (f.status && r.status !== f.status) return false;
+    if (f.threat && String(r.threat) !== f.threat) return false;
+    if (f.q) {
+      var hay = [r.id, r.name, r.clan, r.city, r.nature, r.bondedTo, r.sire, r.progress, r.status].join(' ').toLowerCase();
+      if (hay.indexOf(f.q) === -1) return false;
+    }
+    return true;
+  }
+
+  var vampBody = document.getElementById('vamp-body');
+  var ghoulBody = document.getElementById('ghoul-body');
+  var childeBody = document.getElementById('childe-body');
+  var clanBlocks = document.getElementById('clan-blocks');
+
+  function renderVamps(f) {
+    var all = (DB && DB.vampires) || [];
+    var rows = all.filter(function (v) { return matchVamp(v, f); });
+    if (!all.length) { noSignal(vampBody, 'NO SIGNAL — index not loaded'); return; }
+    if (!rows.length) { vampBody.innerHTML = '<tr><td colspan="12"><div class="no-signal">NO MATCHING FILES</div></td></tr>'; return; }
+    vampBody.innerHTML = rows.map(function (v) {
+      return '<tr>' +
+        '<td class="k-id">' + esc(v.id) + '</td>' +
+        '<td>' + portrait(v) + '</td>' +
+        '<td class="k-name">' + esc(v.name) + (v.wanted ? ' <span class="badge badge-blood">WANTED</span>' : '') + '</td>' +
+        '<td class="k-alias">' + esc(v.alias || '—') + '</td>' +
+        '<td>' + esc(v.clan) + '</td>' +
+        '<td>' + esc(v.sect || '—') + '</td>' +
+        '<td>' + esc(v.generation) + '</td>' +
+        '<td>' + esc(v.city || '—') + '</td>' +
+        '<td>' + esc(v.nature || '—') + '</td>' +
+        '<td>' + esc(v.sire || '—') + '</td>' +
+        '<td>' + dot(v.status) + esc(label(v.status)) + '</td>' +
+        '<td>' + esc(v.threat) + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function renderGhouls(f) {
+    var all = (DB && DB.ghouls) || [];
+    var rows = all.filter(function (r) { return matchSimple(r, f); });
+    if (!all.length) { noSignal(ghoulBody, 'NO SIGNAL — index not loaded'); return; }
+    if (!rows.length) { ghoulBody.innerHTML = '<tr><td colspan="8"><div class="no-signal">NO MATCHING FILES</div></td></tr>'; return; }
+    ghoulBody.innerHTML = rows.map(function (r) {
+      return '<tr>' +
+        '<td class="k-id">' + esc(r.id) + '</td>' +
+        '<td class="k-name">' + esc(r.name) + '</td>' +
+        '<td>' + esc(r.clan) + '</td>' +
+        '<td>' + esc(r.generation) + '</td>' +
+        '<td>' + esc(r.city || '—') + '</td>' +
+        '<td>' + esc(r.nature || '—') + '</td>' +
+        '<td>' + esc(r.bondedTo || '—') + '</td>' +
+        '<td>' + dot(r.status) + esc(label(r.status)) + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function renderChilder(f) {
+    var all = (DB && DB.childer) || [];
+    var rows = all.filter(function (r) { return matchSimple(r, f); });
+    if (!all.length) { noSignal(childeBody, 'NO SIGNAL — index not loaded'); return; }
+    if (!rows.length) { childeBody.innerHTML = '<tr><td colspan="8"><div class="no-signal">NO MATCHING FILES</div></td></tr>'; return; }
+    childeBody.innerHTML = rows.map(function (r) {
+      return '<tr>' +
+        '<td class="k-id">' + esc(r.id) + '</td>' +
+        '<td class="k-name">' + esc(r.name) + '</td>' +
+        '<td>' + esc(r.clan) + '</td>' +
+        '<td>' + esc(r.generation) + '</td>' +
+        '<td>' + esc(r.city || '—') + '</td>' +
+        '<td>' + esc(r.sire || '—') + '</td>' +
+        '<td>' + esc(r.progress || '—') + '</td>' +
+        '<td>' + esc(r.threat) + '</td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function renderClans() {
+    var all = (DB && DB.vampires) || [];
+    if (!all.length) { noSignal(clanBlocks, 'NO SIGNAL — index not loaded'); return; }
+    var by = {};
+    all.forEach(function (v) { (by[v.clan] = by[v.clan] || []).push(v); });
+    var max = Math.max.apply(null, CLANS.map(function (c) { return (by[c] || []).length; }).concat([1]));
+    var total = all.length || 1;
+    clanBlocks.innerHTML = CLANS.map(function (c) {
+      var list = by[c] || [];
+      var pct = Math.round((list.length / max) * 100);
+      var shown = list.slice(0, 8).map(function (v) {
+        return '<div class="k-card">' +
+          '<div class="kc-name">' + esc(v.name) + '</div>' +
+          '<div class="kc-sub">GEN ' + esc(v.generation) + ' · ' + esc(v.city || '—') + '<br>' + dot(v.status) + esc(label(v.status)) + (v.threat >= 4 ? ' · THREAT ' + esc(v.threat) : '') + '</div>' +
+          '</div>';
+      }).join('');
+      return '<div class="clan-block">' +
+        '<div class="clan-head"><span class="clan-name">' + esc(c) + '</span><span class="clan-note">' + list.length + ' of ' + total + ' held (' + Math.round((list.length / total) * 100) + '%)</span></div>' +
+        '<div class="clan-bar"><i style="width:' + pct + '%"></i></div>' +
+        (list.length ? '<div class="clan-grid" style="margin-top:10px">' + shown + '</div>' : '<div class="no-signal" style="margin-top:10px">NO FILES FOR THIS CLAN</div>') +
+        '</div>';
+    }).join('');
+  }
+
+  function update() {
+    var f = filters();
+    renderVamps(f);
+    renderGhouls(f);
+    renderChilder(f);
+    renderClans();
+    var counts = {
+      vampires: ((DB && DB.vampires) || []).filter(function (v) { return matchVamp(v, f); }).length,
+      ghouls: ((DB && DB.ghouls) || []).filter(function (r) { return matchSimple(r, f); }).length,
+      childer: ((DB && DB.childer) || []).filter(function (r) { return matchSimple(r, f); }).length
+    };
+    if (!DB) { countEl.textContent = 'NO SIGNAL — kindred_data.js did not load'; }
+    else { countEl.textContent = 'SHOWING ' + counts.vampires + ' VAMPIRES · ' + counts.ghouls + ' GHOULS · ' + counts.childer + ' CHILDER'; }
+  }
+
+  fillSelects();
+  update();
+
+  inp.addEventListener('input', update);
+  [selClan, selGen, selStat, selThr].forEach(function (s) { s.addEventListener('change', update); });
+  document.getElementById('k-reset').addEventListener('click', function () {
+    inp.value = ''; selClan.value = ''; selGen.value = ''; selStat.value = ''; selThr.value = '';
+    update();
+  });
+
+  // tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.game-tabs .tab[data-tab]'));
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      ['vampires','ghouls','childer','clans'].forEach(function (k) {
+        document.getElementById('view-' + k).classList.toggle('active', k === tab.getAttribute('data-tab'));
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

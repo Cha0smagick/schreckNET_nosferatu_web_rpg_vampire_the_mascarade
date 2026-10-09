@@ -1,0 +1,39 @@
+====================================================================
+TERMINAL BURN PROTOCOL
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — Kosta's standing order, praha-sever
+CLASSIFICATION : OPEN — to Compact delegates only
+VERIFICATION   : WORD SIGNED — Warden Kosta
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/terminal_burn_protocol.txt
+--------------------------------------------------------------------
+
+  What to do with a document that cannot be carried and a host that cannot be left. Read once. Then stop thinking about it.
+
+1. CLASS ONE — THE LEDGER
+
+Ledgers do not burn well and they do not burn quietly. Paper remembers, and paper in a city with a Second Inquisition is a confession with a date on it.
+
+Use the incinerator at Hostivar and go alone and go at night. Do not carry the ledger and anything else at the same time. Two objects make a pattern and a pattern makes a story, and a story has a witness.
+
+2. CLASS TWO — THE MEDIA
+
+Notebooks, recorders, and anything with a battery go into water, not fire. A phone in a river is a phone. A phone in a burner is an invitation and an address.
+
+Remove the media, keep the casing. A casing says nothing. A recording says everything.
+
+3. CLASS THREE — THE BODY
+
+This section is deliberately short. Two methods only: the river, with a weight, at a crossing where the current has already taken something this month; or the tunnels, which will take it in three days and ask nothing.
+
+The tunnels are cleaner. The tunnels are also the Warren, and everything that happens in the Warren is eventually filed by somebody who owes you something.
+
+4. CLASS FOUR — THE PERSON
+
+Sometimes the safest witness is a living one who has been told a small false thing. This is a last resort and it has been used four times on this network, and twice it worked, and twice the person is still alive and still repeating it.
+
+It is not diablerie. It is not mercy. It is administration. Write that down somewhere you will find it when you are tempted to be proud of yourself.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

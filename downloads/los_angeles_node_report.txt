@@ -1,0 +1,31 @@
+====================================================================
+NODE REPORT: LAX-5 (LOS ANGELES)
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — received from LAX-5, unattended since March
+CLASSIFICATION : OPEN
+VERIFICATION   : UNATTENDED — the relay is still serving traffic and nobody is authorised to say why
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/los_angeles_node_report.txt
+--------------------------------------------------------------------
+
+  Six pages, one of them written by a relay to itself and logged automatically, which is the only honest sentence in the file.
+
+1. STATUS
+
+LAX-5 has been active and unmanned since March. Custodian in custody. Traffic is up. Nobody has taken it down and nobody will explain the decision, because the decision was made in a room by somebody who will deny it was made in a room.
+
+DO NOT ROUTE THROUGH LAX-5. This is not a security instruction. It is a favour asked by the room above the hardware store, and the room above the hardware store is worth more to this node than LAX-5 is.
+
+2. WHAT THE TRAFFIC SHOWS
+
+Volume is up 340% since March and the pattern is wrong: it spikes at 03:00 local and the payloads are short. Not encrypted. Short.
+
+Three analysts have said "telemetry". Nullpointer has said, twice, in writing, that it is not telemetry and that whoever is on that relay knows the difference.
+
+3. THE LONG TABLE
+
+The Annex room on this node is still being set. Somebody is still ordering the flowers. The Free Blooms source operates here and a source that operates inside an unattended relay in a building under custody is either the most resilient thing on this network or the loudest.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

@@ -1,0 +1,33 @@
+====================================================================
+CLAN DOSSIER: GAROU — PACK LAW
+====================================================================
+SOURCE NODE    : VLA-7 (Prague) — house study file
+CLASSIFICATION : INTERNAL — house study
+VERIFICATION   : WORD SIGNED — Compact delegates
+TRANSMITTED    : 2026-10-09
+FILE           : downloads/clan_garou_pack_laws.txt
+--------------------------------------------------------------------
+
+  They will kill us on principle, forget us on principle, and then fail to tell the difference, which is a worse problem than either.
+
+1. SHAPE
+
+Loyal to nothing but the pack, patient to a point that borders on geological, and unforgiving about an insult given in a language they have not bothered to learn.
+
+They are the only other clan on this network whose ground rights predate ours, and the only one whose claim is territorial rather than administrative. That has produced exactly one war in four hundred years and it was extremely short.
+
+2. RAGE AND THE WYLD
+
+The Wyld is the trick: something inside them that is not them, that can be bound and can be broken and can be betrayed by a sufficiently good offer. Every Garou pack runs on the same private argument about how much rope to give it.
+
+A pack at war is a pack that has stopped holding the argument properly. This is the single thing a Second Inquisition team looks for and the single thing we warn our childer about first.
+
+3. OUR STANDING POSITION
+
+Armistice. No ground disputes, no blood exchanges, no favours. The packs of Bohemia hold a border with our Warren and the border has not moved since the Compact was signed.
+
+There is a rumour that a pack near Brno has been asking, quietly, whether the old border is still defended. GRÄFIN VON HALL says the answer is yes. We have not asked the pack.
+
+====================================================================
+END OF FILE — verify against a second copy before you act on it.
+====================================================================

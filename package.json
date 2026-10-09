@@ -1,0 +1,13 @@
+﻿{
+  "name": "schrecknet-nosferatu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SchreckNET - the Nosferatu information network. A GitHub Pages site for VtM roleplay.",
+"scripts": {
+    "gen:images": "node scripts/gen_images.mjs",
+    "gen:lore": "node scripts/gen_network.mjs"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}

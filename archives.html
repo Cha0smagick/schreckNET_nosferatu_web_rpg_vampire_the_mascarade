@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARCHIVES // SchreckNET</title>
+<meta name="description" content="Every file mirrored on the Prague node. Field manuals, clan dossiers, node reports, and the annex index. Thirty documents, all held under the Word.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .arc-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:26px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .arc-head:first-of-type{margin-top:0}
+  .arc-title{font-size:14px;letter-spacing:3px;color:var(--acid);text-transform:uppercase}
+  .arc-desc{font-size:12px;color:var(--muted);letter-spacing:1px}
+  .arc-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+  .arc-item{background:var(--bg-panel);padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+  .arc-item a.arc-name{color:var(--green);font-size:13px;letter-spacing:1px;text-decoration:none;border-bottom:1px solid transparent}
+  .arc-item a.arc-name:hover{border-bottom-color:var(--green);text-shadow:0 0 10px var(--glow)}
+  .arc-item .arc-meta{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}
+  .arc-item .arc-note{font-size:12px;line-height:1.65;color:var(--bone-dim)}
+  .arc-item .arc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+  .tally-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:24px}
+  .tally-bar div{background:var(--bg-panel);padding:14px 16px}
+  .tally-bar .t-v{font-size:24px;color:var(--acid);line-height:1.2}
+  .tally-bar .t-k{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:4px}
+  .manifest{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+  .manifest th{text-align:left;font-size:10px;letter-spacing:2px;color:var(--bile);text-transform:uppercase;padding:8px 10px;border-bottom:1px solid var(--green-dim);font-weight:400}
+  .manifest td{padding:8px 10px;border-bottom:1px solid var(--line);color:var(--bone-dim)}
+  .manifest td:first-child{color:var(--green);letter-spacing:1px}
+  @media (max-width:900px){ .tally-bar{grid-template-columns:repeat(2,1fr)} }
+</style>
+</head>
+<body>
+
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+
+    <header class="page-head">
+      <div class="page-kicker">FILE SERVER // FTP://SEWER // READ-ONLY</div>
+      <h1 class="page-title">ARCHIVES</h1>
+      <p class="page-sub">Every document the Prague node still holds. Some of these are manuals. Some of these are reports about people who no longer exist. All of them are here because somebody kept a copy when it would have been easier not to.</p>
+    </header>
+
+    <div class="tally-bar">
+      <div><div class="t-v" id="t-files">30</div><div class="t-k">Files mirrored</div></div>
+      <div><div class="t-v">6</div><div class="t-k">Nodes contributed</div></div>
+      <div><div class="t-v">3</div><div class="t-k">Unverified sources</div></div>
+      <div><div class="t-v" id="t-total">30 files · 1 map</div><div class="t-k">Held on this node</div></div>
+    </div>
+
+    <section class="panel">
+      <div class="panel-title">SERVER NOTICE</div>
+      <p class="page-sub" style="margin-top:0">Downloads are free. There is no account, no key, no handshake, and nothing that runs when you open a file. That is unusual enough that people assume it is a trick. It is not a trick. It is a mirror that has given up on protecting itself and would rather be useful.</p>
+      <p class="page-sub">Burn what you read. Not because the files are dangerous — they are text — but because this network survives on nobody holding a complete copy of anything, including us.</p>
+    </section>
+
+    <div class="arc-head"><span class="arc-title">Survival &amp; Protocol</span><span class="arc-desc">read before the sweep reaches your district</span></div>
+    <div class="arc-list">
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/warren_survival_guide.txt">warren_survival_guide.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 4.2 KB · VERIFIED</div>
+        <div class="arc-note">Ventilation, waterlines, the four chambers that flood, and why you should never dig a new tunnel without counting the walls first.</div>
+        <div class="arc-tags"><span class="badge">SURVIVAL</span><span class="badge badge-active">READ FIRST</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/terminal_burn_protocol.txt">terminal_burn_protocol.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 3.8 KB · VERIFIED</div>
+        <div class="arc-note">What to do with a machine that must not be recovered. Read the section on cement before you read the section on fire.</div>
+        <div class="arc-tags"><span class="badge">PROTOCOL</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/schrecknet_protocol.txt">schrecknet_protocol.txt</a>
+        <div class="arc-meta">MIRRORED 4 NODES · 6.4 KB · VERIFIED</div>
+        <div class="arc-note">How a relay speaks to a relay, what a handshake actually proves, and why the Word-bond travels underneath and never on top.</div>
+        <div class="arc-tags"><span class="badge">PROTOCOL</span><span class="badge badge-verified">WORD SIGNED</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/network_codes.txt">network_codes.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 5.1 KB · VERIFIED</div>
+        <div class="arc-note">Node prefixes, mirror hashes, and the eight addresses that have been retired. If a prefix is not on this list, it is not a relay. It is somebody listening.</div>
+        <div class="arc-tags"><span class="badge">REFERENCE</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/prague_warren_map.svg">prague_warren_map.svg</a>
+        <div class="arc-meta">PRAGUE VLA-7 · SVG · VERIFIED</div>
+        <div class="arc-note">The same plate as the CARTOGRAPHY page, minus the warden's limit line. The limit is real. Its omission is not an oversight.</div>
+        <div class="arc-tags"><span class="badge">MAP</span><span class="badge badge-acid">SVG</span></div>
+      </div>
+    </div>
+
+    <div class="arc-head"><span class="arc-title">Second Inquisition Field Material</span><span class="arc-desc">the largest file on the node</span></div>
+    <div class="arc-list">
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/second_inquisition_field_manual.txt">second_inquisition_field_manual.txt</a>
+        <div class="arc-meta">BER-6 · 18.2 KB · VERIFIED</div>
+        <div class="arc-note">Sweep timings, the four questions they ask first, what a Thaumaturgy audit leaves behind, and why a memory excision is the signature of a very tired man.</div>
+        <div class="arc-tags"><span class="badge badge-danger">HUNTERS</span><span class="badge">SURVIVAL</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/baba_yaga_dossier.txt">baba_yaga_dossier.txt</a>
+        <div class="arc-meta">RECOVERED FROM VIENNA · 9.6 KB · UNVERIFIED</div>
+        <div class="arc-note">Everything the Prague node holds on the old house. Includes the letterhead forgery analysis and a signet impression that is two sizes too large.</div>
+        <div class="arc-tags"><span class="badge badge-silenced">UNVERIFIED</span><span class="badge">INTELLIGENCE</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/blood_discipline_tome.txt">blood_discipline_tome.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 7.3 KB · VERIFIED</div>
+        <div class="arc-note">The nine disciplines, written for people who already know what they are and have simply forgotten the order. Includes the value of Obfuscation, which is not "hiding."</div>
+        <div class="arc-tags"><span class="badge">DISCIPLINE</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/disciplines_reference.txt">disciplines_reference.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 6.0 KB · VERIFIED</div>
+        <div class="arc-note">Cross-clan comparison: who has which path, at what cost, and which two clans will absolutely not admit to sharing anything.</div>
+        <div class="arc-tags"><span class="badge">REFERENCE</span></div>
+      </div>
+    </div>
+
+    <div class="arc-head"><span class="arc-title">Nosferatu Archive</span><span class="arc-desc">the house's own records</span></div>
+    <div class="arc-list">
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/nosferatu_manifesto.txt">nosferatu_manifesto.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 4.9 KB · VERIFIED</div>
+        <div class="arc-note">Six hundred years of counting, condensed. The house position on ground, on oaths, and on what is owed to a guest who has not yet arrived.</div>
+        <div class="arc-tags"><span class="badge">HOUSE RECORD</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/the_curse_of_the_blood.txt">the_curse_of_the_blood.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 5.5 KB · VERIFIED</div>
+        <div class="arc-note">The Hunger, the daylight, and the arithmetic of what you will and will not eat. Includes the section correcting the Toreador version of our history.</div>
+        <div class="arc-tags"><span class="badge">HOUSE RECORD</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/ventrue_vs_nosferatu.txt">ventrue_vs_nosferatu.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 5.8 KB · VERIFIED</div>
+        <div class="arc-note">A candid comparison, written by a Ventrue who has been a guest in our Warren more times than he will admit. It is fairer than either house expected.</div>
+        <div class="arc-tags"><span class="badge">HOUSE RECORD</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/anatemy_of_the_kiss.txt">anatemy_of_the_kiss.txt</a>
+        <div class="arc-meta">PRAGUE VLA-7 · 4.4 KB · VERIFIED</div>
+        <div class="arc-note">The bloodbond, described exactly once and plainly. The only document on this node that is also the answer to the question nobody asks out loud.</div>
+        <div class="arc-tags"><span class="badge badge-blood">RESTRICTED</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/redroom_index.txt">redroom_index.txt</a>
+        <div class="arc-meta">NYC-2 · 7.7 KB · DO NOT INDEX</div>
+        <div class="arc-note">The annex index, mirrored once to a place nobody has named. Download it and read it somewhere that is not your own machine.</div>
+        <div class="arc-tags"><span class="badge badge-blood">DO NOT INDEX</span><span class="badge badge-silenced">UNVERIFIED</span></div>
+      </div>
+    </div>
+
+    <div class="arc-head"><span class="arc-title">Clan Dossiers — Nine Houses</span><span class="arc-desc">filed by the Prague node, written by guests</span></div>
+    <div class="arc-list">
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_ventrue_war_council.txt">clan_ventrue_war_council.txt</a>
+        <div class="arc-meta">FILED 11 MONTHS AGO · 3.9 KB</div>
+        <div class="arc-note">How a war council convenes, who may speak first, and the difference between a Ventrue Prince and a Ventrue with a following.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_toreador_seductress.txt">clan_toreador_seductress.txt</a>
+        <div class="arc-meta">FILED 9 MONTHS AGO · 3.6 KB</div>
+        <div class="arc-note">The Seductress path, the ruin it does to the practitioner, and why half the schemers in this city were once a poet.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_ravenous_night_watch.txt">clan_ravenous_night_watch.txt</a>
+        <div class="arc-meta">FILED 9 MONTHS AGO · 4.1 KB</div>
+        <div class="arc-note">The Ravnos at night: dignity as a discipline, the chains worn as a promise, and the hospitality of a very small family.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_garou_pack_laws.txt">clan_garou_pack_laws.txt</a>
+        <div class="arc-meta">FILED 8 MONTHS AGO · 4.7 KB</div>
+        <div class="arc-note">Garou custom and the three questions a pack asks a newcomer. What happens after is up to the pack, and the pack is not sentimental about it.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_setite_dreaming.txt">clan_setite_dreaming.txt</a>
+        <div class="arc-meta">FILED 8 MONTHS AGO · 3.8 KB</div>
+        <div class="arc-note">Dreaming, the vast dream, and why waking up certain something happened in Cairo is not evidence that it happened in Cairo.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_malkavian_trauma.txt">clan_malkavian_trauma.txt</a>
+        <div class="arc-meta">FILED 8 MONTHS AGO · 4.5 KB</div>
+        <div class="arc-note">The Madness, the Madness Ride, and why a Malkavian who tells you what they saw is telling you about themselves.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_brujah_chicory.txt">clan_brujah_chicory.txt</a>
+        <div class="arc-meta">FILED 7 MONTHS AGO · 3.4 KB</div>
+        <div class="arc-note">The old words, the old refusals, and what the Brujah have been keeping alive in the east while everyone watched the west.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_assamite_zeal.txt">clan_assamite_zeal.txt</a>
+        <div class="arc-meta">FILED 7 MONTHS AGO · 4.0 KB</div>
+        <div class="arc-note">Assamite discipline, the contempt that is not quite contempt, and the arithmetic of a promise that will outlive its maker.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/clan_followers_of_set.txt">clan_followers_of_set.txt</a>
+        <div class="arc-meta">FILED 7 MONTHS AGO · 3.5 KB</div>
+        <div class="arc-note">The art of fear, the cost of a miracle, and the standing instruction to never, under any circumstance, read this aloud in a Warren.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span><span class="badge badge-blood">HANDLE CAREFULLY</span></div>
+      </div>
+    </div>
+
+    <div class="arc-head"><span class="arc-title">Adjacent Houses</span><span class="arc-desc">filed because they have visited and left files behind</span></div>
+    <div class="arc-list">
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/tremere_blood_magic_notes.txt">tremere_blood_magic_notes.txt</a>
+        <div class="arc-meta">FILED 10 MONTHS AGO · 5.2 KB</div>
+        <div class="arc-note">Observations on blood magic from a house we do not trust, written by a guest we did trust. The disagreement is preserved deliberately.</div>
+        <div class="arc-tags"><span class="badge">CLAN</span><span class="badge badge-silenced">CONTESTED</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/sabbat_rites_of_construct.txt">sabbat_rites_of_construct.txt</a>
+        <div class="arc-meta">FILED 6 MONTHS AGO · 4.8 KB</div>
+        <div class="arc-note">What the Sabbat does to a city when it wins one. Written to be read once, by somebody who intends to stop one.</div>
+        <div class="arc-tags"><span class="badge badge-blood">SABBAT</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/anarch_free_blooms.txt">anarch_free_blooms.txt</a>
+        <div class="arc-meta">MANIFEST · INCOMPLETE · 2.6 KB</div>
+        <div class="arc-note">Nine crates, three chokepoints, one toll road. This manifest is missing four crates on purpose and the missing four are the interesting part.</div>
+        <div class="arc-tags"><span class="badge badge-acid">ANARCH</span><span class="badge badge-silenced">INCOMPLETE</span></div>
+      </div>
+    </div>
+
+    <div class="arc-head"><span class="arc-title">Node Reports</span><span class="arc-desc">one file per relay, submitted by the relay</span></div>
+    <div class="arc-list">
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/vienna_node_fall_report.txt">vienna_node_fall_report.txt</a>
+        <div class="arc-meta">VIE-0 · 11.4 KB · FINAL TRANSMISSION</div>
+        <div class="arc-note">The last thing the Vienna node sent. It was not a report. It was an apology, addressed to no one, transmitted four times.</div>
+        <div class="arc-tags"><span class="badge badge-blood">BURNED NODE</span><span class="badge badge-danger">FINAL</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/prague_node_status.txt">prague_node_status.txt</a>
+        <div class="arc-meta">VLA-7 · 6.7 KB · VERIFIED</div>
+        <div class="arc-note">Current state of the Warren: chambers, waterlines, who holds what, and which two tunnels are not on any map including ours.</div>
+        <div class="arc-tags"><span class="badge">STATUS</span><span class="badge badge-active">LIVE</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/los_angeles_node_report.txt">los_angeles_node_report.txt</a>
+        <div class="arc-meta">LAX-5 · 6.1 KB · VERIFIED</div>
+        <div class="arc-note">Submitted by a relay that has been running unattended since March. Whoever wrote it is not the custodian. It says so in the first line.</div>
+        <div class="arc-tags"><span class="badge">STATUS</span><span class="badge badge-silenced">UNATTENDED</span></div>
+      </div>
+      <div class="arc-item">
+        <a class="arc-name" href="downloads/camaguey_creole_chronicle.txt">camaguey_creole_chronicle.txt</a>
+        <div class="arc-meta">CMQ-3 · 8.9 KB · QUIET NODE</div>
+        <div class="arc-note">The oldest blood on the network, in a hand that predates most of the houses in this city by a century. Nine hours of silence and counting.</div>
+        <div class="arc-tags"><span class="badge">CHRONICLE</span><span class="badge badge-silenced">QUIET</span></div>
+      </div>
+    </div>
+
+    <section class="panel" style="margin-top:28px">
+      <div class="panel-title">FULL MANIFEST</div>
+      <div style="overflow-x:auto">
+        <table class="manifest">
+          <thead><tr><th>File</th><th>Source</th><th>Size</th><th>Verification</th><th>Category</th></tr></thead>
+          <tbody id="manifest-body">
+            <tr><td colspan="5"><div class="no-signal">checking server…</div></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="page-sub" style="margin-top:16px">Files marked <span class="badge badge-silenced">UNVERIFIED</span> reached us without a Word-bond. They are still here because being wrong about a document is better than being silent about one. The three <span class="badge badge-blood">DO NOT INDEX</span> entries are mirrored to a single unnamed location and should not be discussed on open channels.</p>
+    </section>
+
+    <div class="footer">SCHRECKNET // node VLA-7 mirror &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.</div>
+
+  </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+  var ROWS = [
+    ['warren_survival_guide.txt','VLA-7','4.2 KB','VERIFIED','Survival'],
+    ['terminal_burn_protocol.txt','VLA-7','3.8 KB','VERIFIED','Protocol'],
+    ['schrecknet_protocol.txt','4 nodes','6.4 KB','VERIFIED','Protocol'],
+    ['network_codes.txt','VLA-7','5.1 KB','VERIFIED','Reference'],
+    ['prague_warren_map.svg','VLA-7','SVG','VERIFIED','Map'],
+    ['second_inquisition_field_manual.txt','BER-6','18.2 KB','VERIFIED','Hunters'],
+    ['baba_yaga_dossier.txt','Vienna recovery','9.6 KB','UNVERIFIED','Intelligence'],
+    ['blood_discipline_tome.txt','VLA-7','7.3 KB','VERIFIED','Discipline'],
+    ['disciplines_reference.txt','VLA-7','6.0 KB','VERIFIED','Reference'],
+    ['nosferatu_manifesto.txt','VLA-7','4.9 KB','VERIFIED','House record'],
+    ['the_curse_of_the_blood.txt','VLA-7','5.5 KB','VERIFIED','House record'],
+    ['ventrue_vs_nosferatu.txt','VLA-7','5.8 KB','VERIFIED','House record'],
+    ['anatemy_of_the_kiss.txt','VLA-7','4.4 KB','VERIFIED','Restricted'],
+    ['redroom_index.txt','NYC-2','7.7 KB','DO NOT INDEX','Annex'],
+    ['clan_ventrue_war_council.txt','Prague','3.9 KB','VERIFIED','Clan'],
+    ['clan_toreador_seductress.txt','Prague','3.6 KB','VERIFIED','Clan'],
+    ['clan_ravenous_night_watch.txt','Prague','4.1 KB','VERIFIED','Clan'],
+    ['clan_garou_pack_laws.txt','Prague','4.7 KB','VERIFIED','Clan'],
+    ['clan_setite_dreaming.txt','Prague','3.8 KB','VERIFIED','Clan'],
+    ['clan_malkavian_trauma.txt','Prague','4.5 KB','VERIFIED','Clan'],
+    ['clan_brujah_chicory.txt','Prague','3.4 KB','VERIFIED','Clan'],
+    ['clan_assamite_zeal.txt','Prague','4.0 KB','VERIFIED','Clan'],
+    ['clan_followers_of_set.txt','Prague','3.5 KB','VERIFIED','Clan'],
+    ['tremere_blood_magic_notes.txt','Prague','5.2 KB','CONTESTED','Clan'],
+    ['sabbat_rites_of_construct.txt','Prague','4.8 KB','VERIFIED','Sabbat'],
+    ['anarch_free_blooms.txt','Manifest','2.6 KB','INCOMPLETE','Anarch'],
+    ['vienna_node_fall_report.txt','VIE-0','11.4 KB','FINAL / BURNED','Node report'],
+    ['prague_node_status.txt','VLA-7','6.7 KB','VERIFIED','Node report'],
+    ['los_angeles_node_report.txt','LAX-5','6.1 KB','VERIFIED','Node report'],
+    ['camaguey_creole_chronicle.txt','CMQ-3','8.9 KB','QUIET','Chronicle']
+  ];
+  var body = document.getElementById('manifest-body');
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  body.innerHTML = ROWS.map(function (r) {
+    return '<tr><td><a href="downloads/' + esc(r[0]) + '">' + esc(r[0]) + '</a></td>' +
+      '<td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td><td>' + esc(r[4]) + '</td></tr>';
+  }).join('');
+  document.getElementById('t-files').textContent = ROWS.length;
+})();
+</script>
+</body>
+</html>

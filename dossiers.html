@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOSSIERS // SCHRECKNET</title>
+<meta name="description" content="Classified dossiers on Kindred who know what we are: most wanted, famous, and the full indexed database.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .dossier-filter-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 18px; }
+  .dossier-filter-bar .field { margin: 0; }
+  .dossier-filter-bar label { display: block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
+  .stat-line { font-size: 12px; letter-spacing: 1px; color: var(--bile); margin-bottom: 14px; }
+  .db-photo { width: 46px; height: 58px; object-fit: cover; filter: grayscale(.6) sepia(.2); border: 1px solid #9A9378; background: #4A4636; vertical-align: middle; }
+  .no-signal { text-align: center; padding: 60px 20px; border: 1px dashed var(--line); color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  .famous-row { border-left: 3px solid var(--bile); padding-left: 16px; margin-bottom: 18px; }
+  .famous-row h3 { margin: 0 0 4px; font-size: 14px; color: var(--green); letter-spacing: 1px; }
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+
+    <div class="page-head">
+      <div class="page-kicker">▤ CLASSIFIED / CLEARANCE LEVEL 4 / NODE VLA-7</div>
+      <h1 class="page-title">DOSSIERS</h1>
+      <p class="page-sub">Every file here names a person who knows what we are. Some of them are
+        already dead and we have not yet removed them from the index. That is deliberate: the
+        archive is only useful while it is embarrassing.</p>
+    </div>
+
+    <div class="panel red-tint">
+      <div class="panel-title" style="color:var(--blood)">⚠ HANDLING NOTICE</div>
+      <p class="mb-0 blood-line">
+        Possession of this index is sufficient grounds for the Word in three Sabbat jurisdictions.
+        If you are reading a printed copy, you have already failed. Burn it and come back through
+        the mirror.
+      </p>
+    </div>
+
+    <!-- ===================== MOST WANTED ===================== -->
+    <div class="panel">
+      <div class="panel-title">MOST WANTED — SANCTION PENDING</div>
+      <p class="small muted mt-0">
+        Three files the Council has not formally published and the Node cannot stop circulating.
+        The Word is not on any of them yet. If you see them first, the courtesy is yours to extend.
+      </p>
+      <div id="wanted-list"></div>
+    </div>
+
+    <!-- ===================== FAMOUS ===================== -->
+    <div class="panel">
+      <div class="panel-title">FAMOUS — NOT WANTED</div>
+      <p class="small muted mt-0">
+        Kindred the mesh could not keep quiet about, either because they wanted it or because they
+        could not help it.
+      </p>
+      <div id="famous-list"></div>
+    </div>
+
+    <!-- ===================== FULL DATABASE ===================== -->
+    <div class="panel">
+      <div class="panel-title">FULL INDEX</div>
+      <div class="dossier-filter-bar">
+        <div style="flex:2 1 220px">
+          <label for="f-search">SEARCH</label>
+          <input class="field" id="f-search" type="search" placeholder="name, alias, grounds, city…" spellcheck="false">
+        </div>
+        <div style="flex:1 1 130px">
+          <label for="f-gen">GENERATION</label>
+          <select class="field" id="f-gen"><option value="">ALL</option></select>
+        </div>
+        <div style="flex:1 1 130px">
+          <label for="f-status">STATUS</label>
+          <select class="field" id="f-status">
+            <option value="">ALL</option>
+            <option value="active">ACTIVE</option>
+            <option value="fallen">FALLEN</option>
+            <option value="destroyed">DESTROYED</option>
+            <option value="missing">MISSING</option>
+          </select>
+        </div>
+        <div style="flex:1 1 130px">
+          <label for="f-threat">THREAT</label>
+          <select class="field" id="f-threat">
+            <option value="">ALL</option>
+            <option value="5">5 — CRITICAL</option>
+            <option value="4">4 — SEVERE</option>
+            <option value="3">3 — ELEVATED</option>
+            <option value="2">2 — MODERATE</option>
+            <option value="1">1 — MINOR</option>
+          </select>
+        </div>
+        <div>
+          <button class="btn btn-ghost" id="f-reset" type="button">RESET</button>
+        </div>
+      </div>
+      <div class="stat-line" id="db-count">—</div>
+      <div id="db-wrap">
+        <table class="tbl" id="db-table">
+          <thead>
+            <tr><th></th><th>ID</th><th>NAME</th><th>ALIAS</th><th>CLAN</th><th>SECT</th>
+                <th>GEN</th><th>STATUS</th><th>THREAT</th><th>LAST SEEN</th></tr>
+          </thead>
+          <tbody id="db-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===================== RELATED ===================== -->
+    <div class="panel">
+      <div class="panel-title">RELATED FILES</div>
+      <p class="mb-0">
+        <a href="downloads/second_inquisition_field_manual.txt" class="attempt-log">second_inquisition_field_manual.txt</a>
+        &nbsp;·&nbsp; <a href="downloads/baba_yaga_dossier.txt" class="attempt-log">baba_yaga_dossier.txt</a>
+        &nbsp;·&nbsp; <a href="redrooms.html">THE RED ROOMS</a>
+        &nbsp;·&nbsp; <a href="kindred.html">KINDRED INDEX</a>
+        &nbsp;·&nbsp; <a href="downloads/vienna_node_fall_report.txt" class="attempt-log">vienna_node_fall_report.txt</a>
+      </p>
+    </div>
+
+    <div class="footer">
+      SCHRECKNET // node VLA-7 mirror &nbsp;·&nbsp; TRUST NO NODE. BURN WHAT YOU READ.
+    </div>
+
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/dossiers_data.js"></script>
+<script>
+(function () {
+  "use strict";
+  var DB = window.NOSFERATU_DB;
+  var STATUS_LABEL = { active: "ACTIVE", fallen: "FALLEN", destroyed: "DESTROYED", missing: "MISSING" };
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function noSignal(el, msg) {
+    el.innerHTML = '<div class="no-signal">' + esc(msg || "NO SIGNAL — database did not load") + "</div>";
+  }
+  function dot(status) {
+    var cls = status === "fallen" ? "dot dot-fallen"
+            : status === "destroyed" ? "dot dot-fallen"
+            : status === "missing" ? "dot dot-silenced"
+            : "dot dot-active";
+    return '<span class="' + cls + '"></span>';
+  }
+  function photo(entry) {
+    if (!entry.portrait) {
+      return '<div class="dossier-photo missing">NO IMAGE</div>';
+    }
+    return '<img class="dossier-photo" src="assets/img/' + esc(entry.portrait) + '" alt="archive portrait of ' + esc(entry.name) + '"'
+         + ' onerror="this.outerHTML=\'<div class=&quot;dossier-photo missing&quot;>NO IMAGE</div>\'">';
+  }
+
+  if (!DB || !DB.entries || !DB.entries.length) {
+    noSignal(document.getElementById("wanted-list"));
+    noSignal(document.getElementById("famous-list"));
+    noSignal(document.getElementById("db-wrap"), "NO SIGNAL — database did not load");
+    document.getElementById("db-count").textContent = "0 FILES";
+    return;
+  }
+
+  var meta = document.querySelector(".page-sub");
+  if (DB.meta) {
+    meta.textContent = "Issuing authority: " + (DB.meta.issuingAuthority || "unattributed") + ". "
+      + (DB.meta.total || DB.entries.length) + " files, last revised " + (DB.meta.updated || "unknown")
+      + ". Every file here names a person who knows what we are. Some of them are already dead and "
+      + "we have not yet removed them from the index. That is deliberate: the archive is only useful "
+      + "while it is embarrassing.";
+  }
+
+  /* ---------- MOST WANTED ---------- */
+  var wanted = DB.entries.filter(function (e) { return e.wanted; });
+  var wl = document.getElementById("wanted-list");
+  if (!wanted.length) { noSignal(wl, "NO ACTIVE SANCTIONS"); }
+  wl.innerHTML = wanted.map(function (e) {
+    return '<article class="dossier">'
+      + '<div class="dossier-head">'
+      + photo(e)
+      + '<div style="flex:1 1 260px;min-width:240px">'
+      + '<div class="stamp">CLASSIFIED</div>'
+      + '<h2 style="margin:6px 0 4px;font-size:24px;letter-spacing:1px">' + esc(e.name) + "</h2>"
+      + '<div class="dossier-meta">FILE ' + esc(e.id) + " &nbsp;·&nbsp; " + esc(e.clan)
+      + (e.sect ? " &nbsp;·&nbsp; " + esc(e.sect) : "") + " &nbsp;·&nbsp; GENERATION " + esc(e.generation) + "</div>"
+      + '<div class="dossier-meta" style="margin-top:6px">' + dot(e.status) + " " + esc(STATUS_LABEL[e.status] || e.status)
+      + " &nbsp;·&nbsp; THREAT " + esc(e.threat) + "/5 &nbsp;·&nbsp; LAST SEEN " + esc(e.lastSeen) + "</div>"
+      + (e.alias ? '<div class="dossier-field">Alias: ' + esc(e.alias) + "</div>" : "")
+      + "</div></div>"
+      + '<div style="margin-top:20px">'
+      + '<div class="nav-label">GROUNDS FOR SANCTION</div><ol style="padding-left:22px">'
+      + (e.grounds || []).map(function (g) { return "<li>" + esc(g) + "</li>"; }).join("")
+      + "</ol>"
+      + '<div class="dossier-field">Disposition: ' + esc(e.disposition) + "</div>"
+      + '<p class="dossier-body">' + esc(e.notes) + "</p>"
+      + "</div></article>";
+  }).join("");
+
+  /* ---------- FAMOUS ---------- */
+  var famous = DB.entries.filter(function (e) { return e.famous && !e.wanted; });
+  var fl = document.getElementById("famous-list");
+  if (!famous.length) { noSignal(fl, "NO NOTABLE ENTRIES"); }
+  fl.innerHTML = famous.map(function (e) {
+    return '<div class="famous-row">'
+      + "<h3>" + esc(e.name) + (e.alias ? ' <span class="muted small">// "' + esc(e.alias) + '"</span>' : "") + "</h3>"
+      + '<div class="small muted">' + esc(e.clan) + (e.sect ? " · " + esc(e.sect) : "")
+      + " · GENERATION " + esc(e.generation) + " · " + esc(STATUS_LABEL[e.status] || e.status)
+      + " · THREAT " + esc(e.threat) + "/5</div>"
+      + '<p class="mt-0" style="font-size:13px;color:var(--bone-dim);margin:8px 0 0">' + esc(e.notes) + "</p>"
+      + '<div class="small muted" style="margin-top:6px">Last seen: ' + esc(e.lastSeen) + "</div>"
+      + "</div>";
+  }).join("");
+
+  /* ---------- FULL INDEX ---------- */
+  var body = document.getElementById("db-body");
+  var count = document.getElementById("db-count");
+  var sEl = document.getElementById("f-search");
+  var gEl = document.getElementById("f-gen");
+  var stEl = document.getElementById("f-status");
+  var tEl = document.getElementById("f-threat");
+
+  Array.from(new Set(DB.entries.map(function (e) { return e.generation; })))
+    .sort(function (a, b) { return parseInt(a, 10) - parseInt(b, 10); })
+    .forEach(function (g) {
+      var o = document.createElement("option");
+      o.value = String(g);
+      o.textContent = String(g);
+      gEl.appendChild(o);
+    });
+
+  function hay(e) {
+    return [e.id, e.name, e.alias, e.clan, e.sect, e.status, e.lastSeen, e.notes, e.disposition]
+      .concat(e.grounds || []).join(" ").toLowerCase();
+  }
+
+  function render() {
+    var q = sEl.value.trim().toLowerCase();
+    var gen = gEl.value, status = stEl.value, threat = tEl.value;
+    var rows = DB.entries.filter(function (e) {
+      if (q && hay(e).indexOf(q) === -1) return false;
+      if (gen && String(e.generation) !== gen) return false;
+      if (status && e.status !== status) return false;
+      if (threat && String(e.threat) !== threat) return false;
+      return true;
+    });
+
+    count.textContent = rows.length + " OF " + DB.entries.length + " FILES SHOWN";
+
+    if (!rows.length) {
+      body.innerHTML = '<tr><td colspan="10" class="center muted" style="padding:36px 0">'
+        + "NO MATCHING FILES — widen the filter or burn the archive.</td></tr>";
+      return;
+    }
+
+    body.innerHTML = rows.map(function (e) {
+      var p = e.portrait
+        ? '<img class="db-photo" src="assets/img/' + esc(e.portrait) + '" alt="" loading="lazy"'
+          + ' onerror="this.outerHTML=\'<span class=\'\'>—</span>\'">'
+        : '<span class="muted">—</span>';
+      return "<tr>"
+        + "<td>" + p + "</td>"
+        + '<td class="muted">' + esc(e.id) + "</td>"
+        + '<td class="acid">' + esc(e.name) + "</td>"
+        + '<td class="muted">' + esc(e.alias || "—") + "</td>"
+        + "<td>" + esc(e.clan) + "</td>"
+        + '<td class="muted">' + esc(e.sect || "—") + "</td>"
+        + '<td class="center">' + esc(e.generation) + "</td>"
+        + "<td>" + dot(e.status) + esc(STATUS_LABEL[e.status] || e.status) + "</td>"
+        + '<td class="center ' + (e.threat >= 4 ? "danger-text" : e.threat >= 3 ? "rust-text" : "muted") + '">' + esc(e.threat) + "</td>"
+        + '<td class="muted">' + esc(e.lastSeen) + "</td>"
+        + "</tr>";
+    }).join("");
+  }
+
+  sEl.addEventListener("input", render);
+  [gEl, stEl, tEl].forEach(function (el) { el.addEventListener("change", render); });
+  document.getElementById("f-reset").addEventListener("click", function () {
+    sEl.value = ""; gEl.value = ""; stEl.value = ""; tEl.value = "";
+    render();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
