@@ -301,7 +301,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Final Death authorised and carried out. File closed.",
    "notes": "Confirmed twice, then only once. The old net copy and the local copy disagree by one paragraph. Do not attempt contact.",
-   "lastSeen": "EDINBURGH — 69 days ago"
+   "lastSeen": "MONTREAL — 69 days ago"
   },
   {
    "id": "VLA-0015",
@@ -827,7 +827,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Ground rights suspended pending audit. Handle through the clerk.",
    "notes": "Ran quiet for four years, then answered a summons it should not have. Witnesses place them near the Smichov embankment on the nights the pumping station runs. If you find them, you did not find them.",
-   "lastSeen": "MUMBAI — 25 days ago"
+   "lastSeen": "LIMA — 25 days ago"
   },
   {
    "id": "VLA-0040",
@@ -889,7 +889,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Sanction suspended, conditional on producing the ledger.",
    "notes": "Confirmed twice, then only once. Moved a warren four times in one season and salted the tunnels each time. Observe and report. Do not speak the Word.",
-   "lastSeen": "NEW YORK — 90 days ago"
+   "lastSeen": "SAO PAULO — 90 days ago"
   },
   {
    "id": "VLA-0043",
@@ -1056,7 +1056,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Sanction suspended, conditional on producing the ledger.",
    "notes": "Confirmed twice, then only once. Attended three funerals for people who were not dead. Handle through the Compact clerk only.",
-   "lastSeen": "MONTREAL — 28 days ago"
+   "lastSeen": "SYDNEY — 28 days ago"
   },
   {
    "id": "VLA-0051",
@@ -1119,7 +1119,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Word-bond enforced. Surveillance indefinite.",
    "notes": "Ran quiet for four years, then answered a summons it should not have. Attended three funerals for people who were not dead. If you find them, you did not find them.",
-   "lastSeen": "DUBLIN — 6 days ago"
+   "lastSeen": "BOGOTA — 6 days ago"
   },
   {
    "id": "VLA-0054",
@@ -1294,7 +1294,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Revoked. Blood-bond forfeit. Watch for the third dawn.",
    "notes": "Held ground under the Bohnice settling tank for eleven years and lost it in a night. The bloodgoth ledger on file is complete and has never once balanced. Handle through the Compact clerk only.",
-   "lastSeen": "MEXICO CITY — 66 days ago"
+   "lastSeen": "NEW ORLEANS — 66 days ago"
   },
   {
    "id": "VLA-0062",
@@ -1586,7 +1586,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Final Death authorised and carried out. File closed.",
    "notes": "Confirmed twice, then only once. The bloodgoth ledger on file is complete and has never once balanced. The warden of the day signed this and left the city the same night.",
-   "lastSeen": "MADRID — 67 days ago"
+   "lastSeen": "GENOA — 67 days ago"
   },
   {
    "id": "VLA-0076",
@@ -1984,7 +1984,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Final Death authorised. Warden dispatched.",
    "notes": "Kept the ledger. Burned the names. The bloodgoth ledger on file is complete and has never once balanced. If you find them, you did not find them.",
-   "lastSeen": "MUMBAI — 71 days ago"
+   "lastSeen": "LIMA — 71 days ago"
   },
   {
    "id": "VLA-0095",
@@ -2178,7 +2178,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Sanction suspended, conditional on producing the ledger.",
    "notes": "Held ground under the Bohnice settling tank for eleven years and lost it in a night. Attended three funerals for people who were not dead. Do not attempt contact.",
-   "lastSeen": "MADRID — 1 day ago"
+   "lastSeen": "GENOA — 1 day ago"
   },
   {
    "id": "VLA-0104",
@@ -2533,7 +2533,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Word-bond enforced. Surveillance indefinite.",
    "notes": "Confirmed twice, then only once. Has never once spoken the Word to a childe and has four of them. Do not attempt contact.",
-   "lastSeen": "TOKYO — 32 days ago"
+   "lastSeen": "PRAGUE — 32 days ago"
   },
   {
    "id": "VLA-0121",
@@ -2620,7 +2620,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Ground rights suspended pending audit. Handle through the clerk.",
    "notes": "Confirmed twice, then only once. Has never once spoken the Word to a childe and has four of them. Observe and report. Do not speak the Word.",
-   "lastSeen": "NEW ORLEANS — 35 days ago"
+   "lastSeen": "MUMBAI — 35 days ago"
   },
   {
    "id": "VLA-0125",
@@ -2703,7 +2703,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Final Death authorised and carried out. File closed.",
    "notes": "Kept the ledger. Burned the names. The old net copy and the local copy disagree by one paragraph. Observe and report. Do not speak the Word.",
-   "lastSeen": "DUBLIN — 69 days ago"
+   "lastSeen": "BOGOTA — 69 days ago"
   },
   {
    "id": "VLA-0129",
@@ -3144,7 +3144,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Custody pending. Do not approach.",
    "notes": "Kept the ledger. Burned the names. Moved a warren four times in one season and salted the tunnels each time. The warden of the day signed this and left the city the same night.",
-   "lastSeen": "LIMA — 78 days ago"
+   "lastSeen": "BOGOTA — 78 days ago"
   },
   {
    "id": "VLA-0150",
@@ -3206,7 +3206,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Custody pending. Do not approach.",
    "notes": "Kept the ledger. Burned the names. Attended three funerals for people who were not dead. Handle through the Compact clerk only.",
-   "lastSeen": "PRAGUE — 73 days ago"
+   "lastSeen": "EDINBURGH — 73 days ago"
   },
   {
    "id": "VLA-0153",
@@ -3377,7 +3377,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Sanction suspended, conditional on producing the ledger.",
    "notes": "Kept the ledger. Burned the names. The bloodgoth ledger on file is complete and has never once balanced. If you find them, you did not find them.",
-   "lastSeen": "LIMA — 62 days ago"
+   "lastSeen": "BOGOTA — 62 days ago"
   },
   {
    "id": "VLA-0161",
@@ -3462,7 +3462,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Revoked. Blood-bond forfeit. Watch for the third dawn.",
    "notes": "Signed for the Warren three times and filed nothing. Every relay that has seen them reports the same thing: a call answered on the third ring. Handle through the Compact clerk only.",
-   "lastSeen": "PORTO — 73 days ago"
+   "lastSeen": "LIMA — 73 days ago"
   },
   {
    "id": "VLA-0165",
@@ -3589,7 +3589,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Custody pending. Do not approach.",
    "notes": "Held ground under the Letna embankment for eleven years and lost it in a night. Moved a warren four times in one season and salted the tunnels each time. Handle through the Compact clerk only.",
-   "lastSeen": "LIMA — 30 days ago"
+   "lastSeen": "BOGOTA — 30 days ago"
   },
   {
    "id": "VLA-0171",
@@ -3796,7 +3796,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Sanction doubled. The Compact does not ask twice.",
    "notes": "Third sighting since the Vienna burn. The only photograph recovered is nine seconds long and shows nothing. Observe and report. Do not speak the Word.",
-   "lastSeen": "MEXICO CITY — 14 days ago"
+   "lastSeen": "NEW ORLEANS — 14 days ago"
   },
   {
    "id": "VLA-0181",
@@ -3818,7 +3818,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Custody pending. Do not approach.",
    "notes": "Kept the ledger. Burned the names. Attended three funerals for people who were not dead. Burn this page after reading it.",
-   "lastSeen": "DUBLIN — 96 days ago"
+   "lastSeen": "BOGOTA — 96 days ago"
   },
   {
    "id": "VLA-0182",
@@ -3882,7 +3882,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Sanction doubled. The Compact does not ask twice.",
    "notes": "Held ground under the Hostivar incinerator for eleven years and lost it in a night. Witnesses place them near the Hostivar incinerator on the nights the pumping station runs. Handle through the Compact clerk only.",
-   "lastSeen": "MADRID — 3 days ago"
+   "lastSeen": "GENOA — 3 days ago"
   },
   {
    "id": "VLA-0185",
@@ -3965,7 +3965,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Custody pending. Do not approach.",
    "notes": "Signed for the Warren three times and filed nothing. The bloodgoth ledger on file is complete and has never once balanced. Handle through the Compact clerk only.",
-   "lastSeen": "ATLANTA — 41 days ago"
+   "lastSeen": "PORTO — 41 days ago"
   },
   {
    "id": "VLA-0189",
@@ -4155,7 +4155,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Struck from the Compact. Ground rights suspended seven years.",
    "notes": "Held ground under the Overflow Hall for eleven years and lost it in a night. The only photograph recovered is nine seconds long and shows nothing. Observe and report. Do not speak the Word.",
-   "lastSeen": "MUMBAI — 2 days ago"
+   "lastSeen": "LIMA — 2 days ago"
   },
   {
    "id": "VLA-0198",
@@ -4283,7 +4283,7 @@ window.NOSFERATU_DB = {
    ],
    "disposition": "Final Death authorised and carried out. File closed.",
    "notes": "Signed for the Warren three times and filed nothing. The bloodgoth ledger on file is complete and has never once balanced. Handle through the Compact clerk only.",
-   "lastSeen": "DUBLIN — 50 days ago"
+   "lastSeen": "BOGOTA — 50 days ago"
   },
   {
    "id": "VLA-0204",

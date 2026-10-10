@@ -13,10 +13,12 @@
   var PAGES = [
     { file: 'index.html',    label: 'PORTAL',     icon: '⌂' },
     { file: 'network.html',  label: 'NETWORK',    icon: '◉' },
+    { file: 'news.html',     label: 'WIRE',       icon: '⚡' },
     { file: 'clan.html',     label: 'THE CLAN',   icon: '☠' },
     { file: 'dossiers.html', label: 'DOSSIERS',   icon: '▤' },
     { file: 'redrooms.html', label: 'RED ROOMS',  icon: '⛧', blood: true },
     { file: 'kindred.html',  label: 'KINDRED',    icon: '☰' },
+    { file: 'wod.html',      label: 'GREATER DARK', icon: '✦' },
     { file: 'forums.html',   label: 'FORUMS',     icon: '▣' },
     { file: 'blogs.html',    label: 'BLOGS',      icon: '✎' },
     { file: 'archives.html', label: 'ARCHIVES',   icon: '⛁' },
@@ -80,7 +82,7 @@
     root.innerHTML =
       '<div class="logo-block">' +
         '<a class="logo" href="index.html">' +
-          '<span class="logo-mark">N</span>' +
+          '<span class="logo-mark"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g stroke="currentColor" stroke-width="2.5" fill="none"><circle cx="50" cy="50" r="13"/><circle cx="50" cy="50" r="29"/><circle cx="50" cy="50" r="46"/><line x1="50" y1="4" x2="50" y2="96"/><line x1="4" y1="50" x2="96" y2="50"/><line x1="17" y1="17" x2="83" y2="83"/><line x1="83" y1="17" x2="17" y2="83"/></g><circle cx="50" cy="50" r="4.5" fill="currentColor"/></svg></span>' +
           '<span>SCHRECKNET<span class="logo-sub">nosferatu information network // node VLA-7</span></span>' +
         '</a>' +
       '</div>' +

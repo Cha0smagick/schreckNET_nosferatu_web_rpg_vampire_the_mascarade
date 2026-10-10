@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE GREATER DARK // SCHRECKNET</title>
+<meta name="description" content="Cross-shroud index: mages, demons, wraiths, changelings, hunters and fringe phenomena. Canon factions, registry attributions.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .wd-hero{margin-bottom:24px}
+  .wd-hero img{width:100%;max-height:340px;object-fit:cover;border:1px solid var(--line);filter:saturate(.7) contrast(1.15)}
+  .wd-photo{width:46px;height:58px;object-fit:cover;border:1px solid var(--line);filter:sepia(.4) grayscale(.5) contrast(1.1);flex:none}
+  .wd-photo.nosignal{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:9px;text-align:center;line-height:1.2;background:var(--bg-panel-2)}
+  .wd-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .wd-row:last-child{border-bottom:none}
+  .wd-main{flex:1;min-width:0}
+  .wd-name{color:var(--bone);font-weight:700;letter-spacing:.5px}
+  .wd-alias{color:var(--acid);font-size:11px;letter-spacing:2px;margin-left:8px}
+  .wd-faction{color:var(--muted);font-size:12px;margin:4px 0 6px;font-style:italic}
+  .wd-notes{font-size:13px;line-height:1.55;color:var(--green-dim)}
+  .wd-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:2px}
+  .badge-threat{border:1px solid var(--danger);color:var(--danger);font-size:10px;padding:1px 6px;letter-spacing:1px}
+  .wanted-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:14px 0 22px}
+  .wanted-card{border:1px solid var(--blood);background:var(--bg-panel-2);padding:12px;display:flex;gap:10px}
+  .wanted-card img{width:64px;height:80px;object-fit:cover;border:1px solid var(--line);filter:sepia(.4) grayscale(.5) contrast(1.1);flex:none}
+  .wanted-card img.nosignal{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:8px;text-align:center;line-height:1.2}
+  .wc-name{color:var(--bone);font-weight:700;font-size:13px}
+  .wc-alias{color:var(--acid);font-size:10px;letter-spacing:2px}
+  .wc-faction{color:var(--muted);font-size:10px;font-style:italic;margin:3px 0}
+  .wc-notes{font-size:11px;line-height:1.45;color:var(--green-dim)}
+  .wd-legend{font-size:11px;color:var(--muted);margin-bottom:20px;line-height:1.6}
+  @media(max-width:700px){.wanted-strip{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main>
+    <h1 class="page-title">THE GREATER DARK</h1>
+    <p class="page-sub">BEYOND THE BLOOD — cross-shroud index of everything the clans pretend not to believe in</p>
+
+    <div class="wd-hero"><img src="assets/img/hive_web.png" alt="the greater dark — the web under the web" onerror="this.style.display='none'"></div>
+
+    <div class="panel">
+      <div class="panel-title">SCOPE // READ FIRST</div>
+      <p class="wd-legend">
+        The Greater Dark is everything that is not Kindred and is still hungry. Mages who rewrite what is possible.
+        Fallen things wearing mortal jobs. The dead who did not finish dying. The dreaming things behind the walls.
+        Hunters with ledgers and no sense of humor. This index consolidates registry attributions across six desks.
+        Factions below are canon at the desks that filed them; identities are attributions, not gospel.
+        <span class="badge-acid">VERIFY BEFORE TRUSTING</span> — cross-shroud material ages like blood in a glass.
+        For clan-level Kindred intel, see <a href="dossiers.html">DOSSIERS</a> and <a href="kindred.html">THE KINDRED INDEX</a>.
+        For what the mages call consensus, see <a href="clan.html">CLAN</a> — the Curse is the one law we can verify locally.
+      </p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">MOST WANTED — GREATER DARK REGISTRY</div>
+      <p class="page-sub" style="font-size:12px">SEVENTEEN NAMES THE DESKS WANT ALIVE — OR AT LEAST ACCOUNTED FOR</p>
+      <div id="wanted-strip" class="wanted-strip"></div>
+    </div>
+
+    <div id="wd-sections"></div>
+
+    <footer>
+      <div class="terminal">SCHRECKNET GREATER-DARK DESK &nbsp;·&nbsp; EVERYTHING IS REAL UNTIL IT EATS YOU</div>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/wod_data.js"></script>
+<script>
+  var DB = window.WOD_DB;
+  function esc(s){ var A=String.fromCharCode(38); return String(s==null?'':s).replace(/[&<>"']/g, function(c){ return {'&':A+'amp;','<':A+'lt;','>':A+'gt;','"':A+'quot;',"'":'&#39;'}[c]; }); }
+  function dot(status){
+    var map = { ACTIVE:'dot active', BOUND:'dot warn', UNKNOWN:'dot stale', MISSING:'dot danger' };
+    return '<span class="' + (map[status]||'dot stale') + '" title="' + esc(status) + '"></span>';
+  }
+  function noSignal(msg){
+    return '<div class="wd-photo nosignal">NO<br>SIGNAL</div>';
+  }
+  function photo(entry){
+    if(!entry.portrait) return noSignal();
+    return '<img class="wd-photo" src="assets/img/' + esc(entry.portrait) + '" alt="' + esc(entry.alias) + '" onerror="this.outerHTML=\'<div class="wd-photo nosignal">NO<br>SIGNAL</div>\'">';
+  }
+  function threatBadge(t){
+    var color = t>=5?'var(--danger)':(t>=4?'var(--blood)':(t>=3?'var(--bile)':'var(--green-dim)'));
+    return '<span class="badge-threat" style="border-color:' + color + ';color:' + color + '">THREAT ' + t + '</span>';
+  }
+
+  var SECTIONS = [
+    ['mages','MAGES — THE TRADITIONS, THE TECHNOCRACY, THE INVERTED','Nine Traditions, five Technocracy conventions, the Nephandi below the bottom, the Marauders who do not agree with reality. If the rules stop applying, log the node and leave.'],
+    ['demons','DEMONS — THE FALLEN AND THE EARTHBOUND','Six Houses of the fallen and the Earthbound under the city. They buy with favors, heal with receipts, and fund with smiles. Read every lease twice.'],
+    ['wraiths','WRAITHS — STYGIA, THE LEGIONS, THE GUILDS','The Hierarchy, its eight Legions, the guilds, and what lives under the Shroud. The dead keep better records than we do. That is not a compliment we give lightly.'],
+    ['changelings','CHANGELINGS — THE DREAMING, THE COURTS, THE KITH','The dreaming things behind the walls: kiths, courts, freeholds and Banality. Their prophecy binds. Their gossip is the cheapest intelligence in the city.'],
+    ['hunters','HUNTERS — THE IMBUED AND THE SECOND INQUISITION','Imbued creeds and the agencies hunting us with ledgers, thermals and metadata. The Vienna breach was theirs. Prague is next on the paperwork.'],
+    ['fringe','FRINGE — GAROU, APHOCRYPHA, BYGONES, THE UNCLAIMED','Garou packs, apocryphal courts, Bygones in the rivers, and the unclaimed dead. Registered as rumor. Rumored as real. Fed twice by persons unknown.']
+  ];
+
+  function wantedCard(e){
+    var img = e.portrait
+      ? '<img src="assets/img/' + esc(e.portrait) + '" alt="' + esc(e.alias) + '" onerror="this.outerHTML=\'<div class="wd-photo nosignal" style="width:64px;height:80px">NO<br>SIGNAL</div>\'">'
+      : '<div class="wd-photo nosignal" style="width:64px;height:80px">NO<br>SIGNAL</div>';
+    return '<div class="wanted-card">' + img
+      + '<div><div class="wc-name">' + esc(e.name) + '</div>'
+      + '<div class="wc-alias">' + esc(e.alias) + '</div>'
+      + '<div class="wc-faction">' + esc(e.faction) + '</div>'
+      + '<div class="wc-notes">' + esc(e.notes) + '</div>'
+      + '<div class="wd-meta" style="margin-top:6px">' + threatBadge(e.threat) + ' <span class="badge-acid">' + esc(e.status) + '</span></div>'
+      + '</div></div>';
+  }
+
+  function row(e){
+    return '<div class="wd-row">' + photo(e)
+      + '<div class="wd-main">'
+      + '<div><span class="wd-name">' + esc(e.name) + '</span><span class="wd-alias">' + esc(e.alias) + '</span></div>'
+      + '<div class="wd-faction">' + esc(e.faction) + '</div>'
+      + '<div class="wd-notes">' + esc(e.notes) + '</div>'
+      + '<div class="wd-meta">' + dot(e.status) + ' <span class="badge-cat">' + esc(e.status) + '</span> ' + threatBadge(e.threat)
+      + (e.wanted ? ' <span class="badge-blood">WANTED</span>' : '') + '</div>'
+      + '</div></div>';
+  }
+
+  function render(){
+    var strip = document.getElementById('wanted-strip');
+    var wanted = [];
+    SECTIONS.forEach(function(sec){
+      var arr = (DB && DB[sec[0]]) || [];
+      arr.forEach(function(e){ if(e.wanted) wanted.push(e); });
+    });
+    strip.innerHTML = wanted.length ? wanted.map(wantedCard).join('')
+      : '<div class="empty-state">REGISTRY EMPTY — THE DESKS ARE BLIND. GOOD.</div>';
+
+    var host = document.getElementById('wd-sections');
+    host.innerHTML = SECTIONS.map(function(sec){
+      var arr = (DB && DB[sec[0]]) || [];
+      var body = arr.length ? arr.map(row).join('')
+        : '<div class="empty-state">NO ENTRIES ON FILE — DESK DARK OR FILED WRONG.</div>';
+      return '<div class="panel"><div class="panel-title">' + esc(sec[1]) + '</div>'
+        + '<p class="page-sub" style="font-size:12px">' + esc(sec[2]) + '</p>'
+        + body + '</div>';
+    }).join('');
+  }
+
+  if(DB && DB.meta){
+    var note = DB.meta.total + ' ENTRIES // ' + DB.meta.wanted + ' WANTED // UPDATED ' + esc(DB.meta.updated);
+    var p = document.createElement('p');
+    p.className = 'page-sub';
+    p.style.cssText = 'font-size:11px;color:var(--muted)';
+    p.textContent = note + ' — ' + DB.meta.classification;
+    var hero = document.querySelector('.wd-hero');
+    if(hero && hero.parentNode) hero.parentNode.insertBefore(p, hero.nextSibling);
+  }
+  render();
+</script>
+</body>
+</html>

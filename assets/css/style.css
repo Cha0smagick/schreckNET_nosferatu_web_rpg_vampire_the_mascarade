@@ -5,21 +5,21 @@
    ============================================================ */
 
 :root {
-  --bg: #060A08;
-  --bg-panel: #0B120E;
-  --bg-panel-2: #0F1A14;
-  --line: #1C2B22;
-  --green: #46E883;
-  --green-dim: #2E9B5C;
-  --bile: #A3B945;
-  --acid: #C6F24E;
+  --bg: #000000;
+  --bg-panel: #050807;
+  --bg-panel-2: #0A110C;
+  --line: #16352A;
+  --green: #39FF14;
+  --green-dim: #22B34A;
+  --bile: #B8E435;
+  --acid: #CCFF33;
   --rust: #B0562F;
-  --blood: #8E2A2A;
-  --bone: #E7E1CE;
-  --bone-dim: #A8A38F;
-  --muted: #6B7A6E;
-  --danger: #FF4D4D;
-  --glow: rgba(70, 232, 131, .35);
+  --blood: #B02222;
+  --bone: #FFFFFF;
+  --bone-dim: #C9C5B4;
+  --muted: #63755F;
+  --danger: #FF3B3B;
+  --glow: rgba(57, 255, 20, .55);
   --font-mono: 'IBM Plex Mono', 'Cascadia Mono', 'Consolas', 'Courier New', monospace;
 }
 
@@ -29,15 +29,15 @@ html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
-  color: var(--green);
+  color: var(--bone);
   font-family: var(--font-mono);
   font-size: 15px;
   line-height: 1.65;
   cursor: crosshair;
   min-height: 100vh;
   background-image:
-    radial-gradient(ellipse at 20% 0%, rgba(70, 232, 131, .05), transparent 60%),
-    radial-gradient(ellipse at 90% 100%, rgba(142, 42, 42, .06), transparent 55%);
+    radial-gradient(ellipse at 20% 0%, rgba(57, 255, 20, .07), transparent 60%),
+    radial-gradient(ellipse at 90% 100%, rgba(176, 34, 34, .08), transparent 55%);
   background-attachment: fixed;
 }
 
@@ -862,6 +862,52 @@ input[type="range"] { accent-color: var(--green); width: 100%; }
   letter-spacing: 1px;
 }
 .sidebar-foot .sig { color: var(--green-dim); display: block; margin-top: 6px; }
+/* ============================================================
+   VISUAL OVERHAUL v2 — true black / white text / neon green
+   Amplified glow, harder CRT, neon logo sigil.
+   ============================================================ */
+
+/* --- neon header glow --- */
+.page-title, h1, h2, h3 { text-shadow: 0 0 14px var(--glow), 0 0 44px rgba(57, 255, 20, .16); }
+.logo { text-shadow: 0 0 12px var(--glow); }
+.logo-sub { text-shadow: none; }
+.panel-title { text-shadow: 0 0 10px var(--glow); }
+
+/* --- logo mark: neon web sigil --- */
+.logo-mark { color: var(--green); border-color: var(--green);
+  box-shadow: 0 0 18px var(--glow), inset 0 0 12px rgba(57, 255, 20, .25); }
+.logo-mark svg { width: 100%; height: 100%; display: block; }
+
+/* --- panels: neon edge, deep shadow --- */
+.panel { box-shadow: 0 0 0 1px rgba(57, 255, 20, .10), 0 0 26px rgba(0, 0, 0, .85); }
+.panel:hover { box-shadow: 0 0 0 1px rgba(57, 255, 20, .30), 0 0 34px rgba(57, 255, 20, .08); }
+
+/* --- active nav burns --- */
+.nav a.active { text-shadow: 0 0 10px var(--glow); }
+
+/* --- buttons: neon edge --- */
+.btn { box-shadow: 0 0 12px rgba(57, 255, 20, .20); }
+.btn:hover { box-shadow: 0 0 18px var(--glow); }
+
+/* --- badges burn --- */
+.badge-acid, .badge-green { text-shadow: 0 0 8px var(--glow); }
+
+/* --- amplified CRT flicker --- */
+@keyframes crt-flicker-hard {
+  0%, 100% { opacity: .96; }
+  8%  { opacity: .88; }
+  9%  { opacity: .97; }
+  38% { opacity: .91; }
+  39% { opacity: .98; }
+  70% { opacity: .90; }
+  71% { opacity: .97; }
+}
+#crt-overlay { animation: crt-flicker-hard 7s infinite; }
+
+/* --- table headers acid, dots glow --- */
+th { color: var(--acid); }
+.dot { box-shadow: 0 0 8px currentColor; }
+
 /* ---------- Red rooms / dark-web accents ---------- */
 .badge-blood { border-color: var(--blood); color: var(--blood); background: rgba(142,42,42,.14); }
 .badge-blood.pulse { animation: blink 2.6s infinite; }

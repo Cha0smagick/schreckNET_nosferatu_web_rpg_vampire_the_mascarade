@@ -1,0 +1,129 @@
+#!/usr/bin/env node
+/**
+ * gen_wod.mjs — SchreckNET "Greater Dark" index generator.
+ * Produces assets/js/wod_data.js (window.WOD_DB) with CURATED entries only.
+ * Lore rule R1: every faction/kith/house/legion/guild/agency below is canon
+ * (Mage: the Ascension, Demon: the Fall, Wraith: the Oblivion,
+ *  Changeling: the Dreaming, Hunter: the Reckoning / V5 Second Inquisition).
+ * Individual characters are original fan-work, placed ONLY inside canon factions.
+ */
+import { writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const OUT = join(ROOT, 'assets', 'js', 'wod_data.js');
+
+const MAGES = [
+  { id:'M001', name:'Corvin Ashe', alias:'THE AUDITOR', faction:'New World Order (Technocracy)', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_mage_1.png', notes:'Methodology desk of the Technocracy\'s information-control convention. Treats unsecured supernatural networks as reality deviance to be catalogued, then erased. The Vienna breach bears his signature: quiet, thorough, almost polite.' },
+  { id:'M002', name:'Sister Anouk Bellamy', alias:'CHOIRVOICE', faction:'Celestial Chorus', status:'ACTIVE', threat:2, notes:'Sings the One Song over crowded blocks. Believes every night-kindred is a note gone flat, not a note gone evil. Useful: her choir warns flocks before our kind feed, and warns us before mobs form.' },
+  { id:'M003', name:'Tomas Greve', alias:'WIREMAN', faction:'Virtual Adepts', status:'ACTIVE', threat:3, notes:'Builds backdoors into mundane networks for fun and doctrine. Trades mirror-relay routes to SchreckNET in exchange for protection from things that eat routers. Keeps a shrine to a 1998 modem.' },
+  { id:'M004', name:'Doctor Rowena Salt', alias:'THE GARDENER', faction:'Progenitors (Technocracy)', status:'ACTIVE', threat:4, notes:'Grows tissue that outlives its donors and calls it medicine. Keeps a specimen vault under a university laboratory. Some of the specimens were filed as missing persons by our own registry.' },
+  { id:'M005', name:'Marlow Quist', alias:'DROWNED CHOIR', faction:'Cult of Ecstasy', status:'ACTIVE', threat:2, notes:'Reads what is coming through rhythm, sweat and deliberate excess. His trance-dreams of the Beckoning predate our elders\' by two years. We pay him in vinyl.' },
+  { id:'M006', name:'Ilsa Brandt', alias:'ASH-THROAT', faction:'Euthanatos', status:'ACTIVE', threat:3, notes:'Grants the Good Death and keeps the wheel turning. Tracks terminally-indexed Kindred the way auditors track bad debt. Has ended three of our registered elders; each ending was, by her ledgers, a mercy.' },
+  { id:'M007', name:'Old Marrow', alias:'MARROW', faction:'Dreamspeakers', status:'ACTIVE', threat:3, notes:'Walks the Umbra and barters in the names of ghosts. Considers our tunnels trespass on his roads but honors old chalk treaties. Feed his fire, mind your step, never take his hand.' },
+  { id:'M008', name:'Rafael Santo', alias:'PYROLOGIST', faction:'Order of Hermes (House Flambeau)', status:'ACTIVE', threat:3, notes:'Writes wards in fire-letters that only burn the unworthy. Hired twice to seal archive vaults; both vaults are still sealed. His invoices arrive pre-burned, which is the point.' },
+  { id:'M009', name:'Nanny Yew', alias:'THE HEDGE-QUEEN', faction:'Verbena', status:'ACTIVE', threat:2, notes:'Keeps the old faith alive in greenhouse covensteads. Trades herbs, blood-rite corrections and harvest gossip. Knows what the roses outside the Prince\'s estate are saying.' },
+  { id:'M010', name:'Warrant Officer Gray', alias:'NULL-SIX', faction:'Iteration X (Technocracy)', status:'ACTIVE', threat:4, notes:'Coordinates machine-logic hunter cells. Finds us by pattern analysis: who never appears in daylight, who owns no reflection on any camera. Counter-pattern discipline is now mandatory at node VLA-7.' },
+  { id:'M011', name:'Corinth Blackletter', alias:'THE QLIPPOTH GARDENER', faction:'Nephandi', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_mage_2.png', notes:'Inverted sphere-craft; speaks to the things below the bottom of the world. Sold the Inquisition a map of our node topography. Every copy of that map must be assumed poisoned until proven otherwise.' },
+  { id:'M012', name:'Bramble Jack', alias:'STILL SINGING', faction:'Marauders', status:'UNKNOWN', threat:4, wanted:true, portrait:'wod_mage_3.png', notes:'A Marauder whose broken Avatar turns every mirror he passes into a listening post. Reality does not agree with him, and keeps losing the argument. If he hums outside your haven, move havens.' },
+  { id:'M013', name:'Navigator Odile Fenn', alias:'STAR-CHART', faction:'Void Engineers (Technocracy)', status:'ACTIVE', threat:3, notes:'Maps the Deep Umbra from an orbital platform. Her star charts sometimes chart our tunnels too — construction survey, she calls it. She is not surveying for roads.' },
+  { id:'M014', name:'Professor Emeric Doss', alias:'ETHERNAUT', faction:'Society of Ether', status:'MISSING', threat:2, notes:'Vanished above the city in a copper dirigible of his own design. Sends postcards from coordinates that do not exist. The postmarks are legible; the dates are not.' }
+];
+
+const DEMONS = [
+  { id:'D001', name:'The Landlord of Carrion Row', alias:'TENANT-ZERO', faction:'Devils (Fallen)', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_demon_1.png', notes:'A Devil-house fallen who buys condemned property cheap and pays rent in favors. Every tenant signs the same lease. Read it twice. Then read the part about what happens to the building.' },
+  { id:'D002', name:'Sister Vespers', alias:'THE LAST CONSULT', faction:'Scourges (Fallen)', status:'ACTIVE', threat:4, wanted:true, portrait:'wod_demon_2.png', notes:'Appears in hospital chapels at 3 a.m. Heals the dying, then keeps the receipt. Scourge-house lore of mending, weaponized as leverage over every family she has ever saved.' },
+  { id:'D003', name:'Gravedance', alias:'MR. SHOVEL', faction:'Slayers (Fallen)', status:'ACTIVE', threat:4, notes:'A Slayer-house fallen who ends things that refuse to end. Sells final options to desperate elders who can no longer face the sun. His clients are never seen again, which is the service.' },
+  { id:'D004', name:'The Switchboard', alias:'LINE-TO-LINE', faction:'Messengers (Fallen)', status:'ACTIVE', threat:3, notes:'Trades in messages that were never sent. If SchreckNET traffic is ever routed through it, we lose the network — not to eavesdropping, but to editing. It only forwards what it approves of.' },
+  { id:'D005', name:'Green Sunday', alias:'THE SPONSOR', faction:'Defilers (Fallen)', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_demon_3.png', notes:'A corporate patron-angel who funds nightclubs, charities and startups. Its gifts corrupt by design: Defiler-house desire-lores wearing a philanthropy smile. Three of our havens lease from its holdings. Audit the leases.' },
+  { id:'D006', name:'Rust Choir', alias:'THE BREAKER OF LINES', faction:'Maulers (Fallen)', status:'ACTIVE', threat:4, notes:'War-lored fallen who breaks siege lines and supply chains for the joy of the breaching. Once contracted by a Sabbat pack and never paid. It remembers. It itemizes.' },
+  { id:'D007', name:'The Anchorite of Ninth and Vine', alias:'ANCHOR-9', faction:'Earthbound', status:'ACTIVE', threat:5, notes:'An Earthbound bound to a demolished church\'s cornerstone, fed on a century of neighborhood fear. Do not build anything on its ground. The city keeps rezoning anyway.' },
+  { id:'D008', name:'The Idol Under the Exchange', alias:'BULL-AND-BEAR', faction:'Earthbound', status:'ACTIVE', threat:5, notes:'Worship fed by market panic; every crash makes it stronger. The Syndicate pretends not to know. Our trader-coteries short its favorite sectors before bad nights and retire early.' },
+  { id:'D009', name:'Mr. Ninefold', alias:'THE ESCROW', faction:'Fallen (unaligned)', status:'ACTIVE', threat:3, notes:'Holds oaths in escrow and breaks neither side of a contract — only the people between them. Nosferatu brokers use it for cross-sect deals. Fee: one secret, kept forever, told to no one.' },
+  { id:'D010', name:'Hymnal', alias:'THE CHOIR THAT COUNTS', faction:'Scourges (Fallen)', status:'BOUND', threat:3, notes:'Bound beneath a seminary since 1974. Counts every prayer said over it. The count recently finished. Nobody remembers what it was counting toward.' },
+  { id:'D011', name:'The Tollman', alias:'BRIDGE-FARE', faction:'Fallen (unaligned)', status:'ACTIVE', threat:3, notes:'Collects a toll on one river crossing, night only. The fare is a secret spoken aloud at mid-span. Our couriers plan detours; our spies plan sentences.' },
+  { id:'D012', name:'Vulture Grace', alias:'THE SIXTH TRUMPET', faction:'Slayers (Fallen — apocrypha)', status:'UNKNOWN', threat:4, notes:'Claims to have flown for Lucifer and preaches the coming Sixth Age. Even other fallen call it a liar — which is itself informative. It has been right exactly once, about Vienna.' }
+];
+
+const WRAITHS = [
+  { id:'W001', name:'The Clerk of Salt', alias:'FORM 9-W', faction:'Hierarchy (Iron Legion)', status:'ACTIVE', threat:3, notes:'Processes paper claims on the dead. Our dossiers of destroyed Kindred attract its interest — it files the paperwork for things that should not be killable. It has begun requesting originals.' },
+  { id:'W002', name:'Echoes-in-Static', alias:'LINE-9', faction:'Hierarchy (Spooks\' Guild)', status:'ACTIVE', threat:3, wanted:true, portrait:'wod_wraith_1.png', notes:'Speaks through dead channels and disconnected phones. The old SchreckNET may still have ghost subscribers. Do not answer lines that ring in empty rooms. Do not call them back either.' },
+  { id:'W003', name:'The Understudy', alias:'SECOND CAST', faction:'Hierarchy (Masquers\' Guild)', status:'ACTIVE', threat:3, notes:'Wears the faces of the recently dead. Several of our terminally-burned aliases have been seen walking afterward. Either it is stealing them or someone is selling them. Both options end in a purge.' },
+  { id:'W004', name:'Tallowman', alias:'CANDLE-COUNT', faction:'Hierarchy (Artificers\' Guild)', status:'ACTIVE', threat:4, wanted:true, portrait:'wod_wraith_2.png', notes:'Forges relics from soulstuff. Pays smugglers in soul-forged steel that cuts things which do not cut. Our weapon-smiths want a billet. Our elders want the smiths to stop asking.' },
+  { id:'W005', name:'Mrs. Hush', alias:'THE QUIET DEED', faction:'Hierarchy (Silent Legion)', status:'ACTIVE', threat:3, notes:'Enforces the Quiet Law against the living knowing too much of the dead. A branch of our archive that described her death no longer exists in any mirror. Consider the lesson filed.' },
+  { id:'W006', name:'Gravewalk Riley', alias:'TOLL-GHOST', faction:'Renegades', status:'ACTIVE', threat:2, notes:'Hierarchy-less smuggler of souls past the tolls. Trades routes through the Shadowlands beneath our cities. Knows a crossing the Hierarchy does not monitor, and rents it by the season.' },
+  { id:'W007', name:'The Pale Auditor', alias:'CENSUS-DEATH', faction:'Hierarchy (Grim Legion)', status:'ACTIVE', threat:4, wanted:true, portrait:'wod_wraith_3.png', notes:'Counts the unquiet dead in every city that hosts a node. Its count is ahead of our registry. We have stopped asking which of the two is wrong, because the answer keeps changing.' },
+  { id:'W008', name:'Mother-of-Rust', alias:'ORACLE OF CINDER', faction:'Oracles (disbanded guild)', status:'UNKNOWN', threat:3, notes:'A foresworn oracle still selling fates in backwater markets. Prophecy priced in memories. The buyer chooses which memories to lose. Our elders advise losing someone else\'s.' },
+  { id:'W009', name:'Centurion Vael', alias:'IRON SHROUD', faction:'Hierarchy (Marble Legion)', status:'ACTIVE', threat:4, notes:'Commands a century of ghost-soldiers and is recruiting for a war against something under Stygia. Declines to name the enemy. The recruitment posters are effective, which is the alarming part.' },
+  { id:'W010', name:'The Weeping Scholiast', alias:'MNEMO-7', faction:'Mnemoi (disbanded guild)', status:'UNKNOWN', threat:2, notes:'Last of the erased memory-keepers. Remembers every name our registry redacts and charges nothing for corrections. The Hierarchy wants it dissolved. We want it subscribed.' },
+  { id:'W011', name:'Whitlock\'s Shadow', alias:'THE PARASITE', faction:'Spectres', status:'ACTIVE', threat:5, notes:'A spectre of Oblivion that follows living mortals who read too deeply of our archive. Its whispers arrive as typos. If a dossier corrects itself while you watch, close the node and walk.' },
+  { id:'W012', name:'Brother Tithe', alias:'THE RECEIPT', faction:'Hierarchy (Pardoners\' Guild)', status:'ACTIVE', threat:3, notes:'Quiets Shadows for a price paid in passions. No refunds, no exceptions, paperwork immaculate. Three of our childer owe it services. The services are scheduled post-Final Death.' }
+];
+
+const CHANGELINGS = [
+  { id:'C001', name:'The Hook-Knight', alias:'RED RENT', faction:'Redcaps (Unseelie)', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_changeling_1.png', notes:'A redcap who takes rent in rumors: anything spoken in his loft becomes his property. Babbler-couriers are forbidden to speak there. The one who did now works for him and does not remember why.' },
+  { id:'C002', name:'Duchess Amaranth of House Eiluned', alias:'THE SEER-DUCHESS', faction:'Sidhe (House Eiluned, Seelie)', status:'ACTIVE', threat:4, wanted:true, portrait:'wod_changeling_2.png', notes:'Her hidden court reads our wire like tea leaves. Prophecy spoken in her court is binding, so choose your questions like your last words. She asked us one, once. We are still deciding whether to answer.' },
+  { id:'C003', name:'Gutterball', alias:'THE TEN-PIN PROPHET', faction:'Pooka (Unseelie)', status:'ACTIVE', threat:2, notes:'Pooka hound who only lies in even numbers. Decode the lie and you have a forecast. His Tuesday frames have been wrong exactly three times, all even, all involving water.' },
+  { id:'C004', name:'Forge-Master Cinder', alias:'SPLINT', faction:'Nockers (Unseelie)', status:'ACTIVE', threat:3, notes:'Builds impossible machines from salvage and complaint. Wants one of our dead relay boards as raw material for a listening engine. The engine will work. That is the problem.' },
+  { id:'C005', name:'Grandmother Stoop', alias:'THE HEARTH-LEDGER', faction:'Boggans (Seelie)', status:'ACTIVE', threat:1, notes:'Her gossip-web is tied to every tenancy in the old quarter. The ledger knows who moved in, what they are, and which drain they never open. Cheapest intelligence we buy. Paid in mended coats.' },
+  { id:'C006', name:'Silas Undermile', alias:'THE UNDER-TOLL', faction:'Sluagh (Unseelie)', status:'ACTIVE', threat:3, wanted:true, portrait:'wod_changeling_3.png', notes:'Sluagh broker of secrets kept in wall-voids and crawlspace archives. Closer to our trade than anyone admits; two elders swear he is a Nosferatu\'s childe wearing glamour. He neither confirms nor collects the bounty.' },
+  { id:'C007', name:'Captain Bramblehart', alias:'THE OATH-HORN', faction:'Satyrs (Seelie)', status:'ACTIVE', threat:2, notes:'Satyr advocate who enforces oaths by satyr-lore. If you sign, you keep. Our negotiators retain him for cross-sect truces and have never once regretted the goats.' },
+  { id:'C008', name:'Warden Karst', alias:'THE GATE-WEIGHT', faction:'Trolls (Seelie)', status:'ACTIVE', threat:3, notes:'Warden of a freehold gate under an overpass. Honors hospitality law to the letter, which is why our couriers crossing his threshold carry nothing written and nothing owed.' },
+  { id:'C009', name:'The Chronicler of Ash', alias:'PAGE-NINE', faction:'Eshu (Unseelie)', status:'ACTIVE', threat:3, notes:'Eshu tale-trader who collects endings. Pays for true stories of Gehenna-grade events. Overpaid once, badly, for a story that has not ended yet. We are living in the sequel and he holds the option.' },
+  { id:'C010', name:'Lady Vesper of House Fiona', alias:'THE DROWNED COURT', faction:'Sidhe (House Fiona, Unseelie)', status:'ACTIVE', threat:4, notes:'Holds court in a flooded nightclub and bans banality at the door. Passionate, duel-happy, generous to a fault — the fault being that the duels are to actual death. RSVP accordingly.' },
+  { id:'C011', name:'The Fading Herald', alias:'WINTER\'S CRIER', faction:'Courtless (Unseelie)', status:'UNKNOWN', threat:4, notes:'Proclaims the coming Long Winter from overpasses and dead airwaves. Every year the dream is smaller, the banality closer, and its voice louder. When it goes silent, start hoarding glamour.' },
+  { id:'C012', name:'The Gray Tutor', alias:'CHALK-AND-RULE', faction:'Mortal (Banality 9)', status:'ACTIVE', threat:5, notes:'Not fae — a walking wellspring of Banality wearing a school-inspector\'s coat. Dampens glamour on contact and, worryingly, our own veil-stories. Do not invite into the warren. Do not argue with it. File and flee.' }
+];
+
+const HUNTERS = [
+  { id:'H001', name:'Deacon Solomon Krieg', alias:'LEOPOLD-PRIME', faction:'Society of Leopold', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_hunter_1.png', notes:'The Society\'s oldest active inquisitor. Keeps a ledger of every Kindred name that ever crossed a confessional. The Vienna breach was his victory. Prague is on page four of his ledger.' },
+  { id:'H002', name:'Major Dee Okonkwo', alias:'SSG-DAKOTA', faction:'Special Situations Group', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_hunter_2.png', notes:'Runs military cells with thermals, bloodhound drones and no imagination. Imagination is what saves us, and she has none. Assume her after-action reports are more accurate than our own.' },
+  { id:'H003', name:'The Analyst Known as AQUARIUM-7', alias:'GLASSHOUSE', faction:'Aquarium (Second Coalition)', status:'ACTIVE', threat:5, wanted:true, portrait:'wod_hunter_3.png', notes:'Signals-intelligence cell that maps Kindred networks from metadata alone. They found the old net by watching who never posts in daylight. We watch them watching. It is not a comfortable symmetry.' },
+  { id:'H004', name:'Hollis Wang', alias:'PATIENT-ZERO-SIGHT', faction:'Imbued (Visionary)', status:'ACTIVE', threat:3, notes:'Imbued seer whose edges show him the second sight of cities. Dreams of our tunnels and draws them accurately. The drawings are filed as art. The accuracy is filed as a problem.' },
+  { id:'H005', name:'Rabbi Shoshanna Vale', alias:'THE UNMAKER-OF-DEATHS', faction:'Imbued (Redeemer)', status:'ACTIVE', threat:2, notes:'Tries to save the soul inside the monster. Convinced at least one elder to sun-walk. We mourn him and we fear her in the same breath, which she would say is the point.' },
+  { id:'H006', name:'Callum Dray', alias:'BONE-COUNT', faction:'Imbued (Judge)', status:'ACTIVE', threat:4, notes:'Hunts by evidence ledger and never kills a monster he cannot convict. He is building a case against node VLA-7. Our counter-strategy is to be, legally speaking, not there.' },
+  { id:'H007', name:'Widow Marchetti', alias:'THE SALT-WIDOW', faction:'Imbued (Avenger)', status:'ACTIVE', threat:4, notes:'Lost a husband to a Toreador\'s kiss. Now unmaking the city\'s beauty-courts one blaze at a time. She leaves the receipts. The courts consider it art. Nobody has corrected them.' },
+  { id:'H008', name:'Brother Anselm', alias:'LAMP-AND-ROPE', faction:'Society of Leopold', status:'ACTIVE', threat:4, notes:'Relic-keeper whose reliquary holds artifacts that smell of our dead. A nail from a drowned saint, they say. He tests every relic on something before he trusts it. We do not volunteer.' },
+  { id:'H009', name:'Agent Faulkner', alias:'COALITION-CLERK', faction:'Second Coalition', status:'ACTIVE', threat:3, notes:'Liaison clerk who stitches Aquarium, Leopold and national agencies into one address book. Kill the address book, not the clerk. Clerks are replaceable; the book took nine years to compile.' },
+  { id:'H010', name:'The Orphan Signal', alias:'HERMIT-9', faction:'Imbued (Hermit)', status:'UNKNOWN', threat:2, notes:'A hermit-imbued who hears the Messengers and tells the truth to no one who believes her. Broadcasts at 3:11 a.m. on dead frequencies. Two of her warnings have already come true.' },
+  { id:'H011', name:'Special Agent Row', alias:'WAYWARD-EAST', faction:'Imbued (Wayward)', status:'ACTIVE', threat:5, notes:'Wayward zealot with an edge for finding havens. He calls the purge housecleaning and means it as a compliment to the house. The Sabbat east-end blackout was his crew. He is heading west.' },
+  { id:'H012', name:'The Coroner of Riverside', alias:'INNOCENT-2', faction:'Imbued (Innocent)', status:'ACTIVE', threat:2, notes:'County coroner who sees too much and reports nothing — to anyone but us. An innocent-creed asset we did not recruit and cannot un-recruit. Do not spook her. Bring her good coffee.' }
+];
+
+const FRINGE = [
+  { id:'F001', name:'Roan of the Bone Roads', alias:'THE WEST-WALKER', faction:'Garou Nation (Bone Gnawers)', status:'ACTIVE', threat:4, wanted:true, notes:'Bone Gnawer theurge who tolerates our tunnels — the sewers are his tribe\'s too. The truce holds while the rats stay neutral. The rats are the senior party to that treaty and they know it.' },
+  { id:'F002', name:'The Sept of the Silent Flue', alias:'CHIMNEY-COUNCIL', faction:'Garou Nation (Silent Striders)', status:'ACTIVE', threat:3, notes:'A hidden Silent Strider sept in the chimney-flues of an abandoned crematorium. They walk the Underworld and leave chalk marks we have learned to read. We have not yet learned to write back.' },
+  { id:'F003', name:'The Pit-Dealer', alias:'BLACKSPIRAL BROKER', faction:'Black Spiral Dancers', status:'ACTIVE', threat:5, wanted:true, notes:'A Black Spiral Dancer who sells wyrm-tainted services to Sabbat packs. The spiral signs are in our storm drains now. Countermeasures: salt, silver-thread snares, and not going out on new moons.' },
+  { id:'F004', name:'Auntie Joss', alias:'THE FIFTH COURT', faction:'Kuei-jin (Ancestor Court — apocrypha)', status:'UNKNOWN', threat:4, notes:'Registered as apocrypha: the Cathayan undead are not real according to three separate Vienna reports. All three reports are now missing. The registry notes this without comment and moves the file to the bottom of the drawer.' },
+  { id:'F005', name:'The Amenti of the Sunken Library', alias:'SPELL-KEEPER', faction:'Amenti (Mummies)', status:'ACTIVE', threat:3, notes:'An undying scholar guarding a library that floods every century. Trades waterlogged knowledge for dry secrets. Our last exchange took eleven years. Worth it. Ask about the First City\'s plumbing.' },
+  { id:'F006', name:'The Long Thing of the East River', alias:'BYGONE-1', faction:'Bygones (unverified megafauna)', status:'ACTIVE', threat:5, notes:'Sonar says whale. Whales do not nest. Logged once, photographed never, fed twice by persons unknown. Node NYC-3 has standing orders: if the nest moves, burn the sonar, keep the readings.' },
+  { id:'F007', name:'The Pentex Intern', alias:'FIRST-DAY', faction:'Pentex (mortal front)', status:'ACTIVE', threat:2, notes:'A Pentex middle-manager who found our archive while doing competitor research. His onboarding paperwork is worse than anything we could do to him. We gave him a fake mirror-node and he promoted it twice.' },
+  { id:'F008', name:'The Nunnehi of the Park', alias:'ROOT-SPEAKER', faction:'Nunnehi (native fae)', status:'ACTIVE', threat:2, notes:'Native fae of the old park who consider our tunnels trespass. Rat-messengers keep the peace: they send herbs, we send news, nobody builds on anybody\'s roots.' },
+  { id:'F009', name:'The Orphan of Stygia', alias:'NO-LEGION', faction:'Hierarchy (unclaimed souls)', status:'UNKNOWN', threat:1, notes:'A soul with no legion, no guild, no harvest. Sends corrections to our obituaries, free of charge, always correct. We have stopped checking how it knows. Gratitude is cheaper than curiosity.' },
+  { id:'F010', name:'The Ghost Train of Line Zero', alias:'THE ZERO', faction:'Bygones / Umbral oddities', status:'ACTIVE', threat:4, notes:'Runs on no line on no schedule. Passengers board with one-way tickets and disembark changed. Do not board. The rats refuse to board, and the rats have never once been wrong about trains.' }
+];
+
+const CATS = [
+  ['mages', MAGES], ['demons', DEMONS], ['wraiths', WRAITHS],
+  ['changelings', CHANGELINGS], ['hunters', HUNTERS], ['fringe', FRINGE]
+];
+
+const db = {
+  meta: {
+    total: CATS.reduce((n, [, a]) => n + a.length, 0),
+    wanted: CATS.reduce((n, [, a]) => n + a.filter(e => e.wanted).length, 0),
+    updated: '2026-10-09',
+    node: 'node VLA-7 (Prague) // greater-dark desk',
+    classification: 'EYES ONLY — CROSS-SHROUD MATERIAL — VERIFY BEFORE TRUSTING',
+    scope: 'World of Darkness consolidated index: mages, demons, wraiths, changelings, hunters, fringe phenomena. Canon factions only; identities are registry attributions, not gospel.'
+  }
+};
+for (const [key, arr] of CATS) db[key] = arr;
+
+const banner = '// SCHRECKNET — WOD_DB (auto-generated by scripts/gen_wod.mjs — DO NOT EDIT BY HAND)\n';
+writeFileSync(OUT, banner + 'window.WOD_DB = ' + JSON.stringify(db, null, 2) + ';\n', 'utf8');
+
+console.log('wod_data.js written:');
+for (const [key, arr] of CATS) console.log('  ' + key + ': ' + arr.length);
+console.log('  total: ' + db.meta.total + ' entries, ' + db.meta.wanted + ' wanted');

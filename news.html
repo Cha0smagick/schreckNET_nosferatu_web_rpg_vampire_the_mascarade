@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCHRECKNET WIRE // SCHRECKNET</title>
+<meta name="description" content="The SCHRECKNET WIRE: Nosferatu news feed — intel, alerts, gossip, obituaries and ratlines across the World of Darkness.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .wire-filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 24px; }
+  .wf-btn {
+    font: inherit; font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); background: transparent; border: 1px solid var(--line);
+    padding: 7px 14px; cursor: pointer;
+  }
+  .wf-btn:hover { color: var(--bone); border-color: var(--green-dim); }
+  .wf-btn.active { color: var(--acid); border-color: var(--acid); text-shadow: 0 0 8px var(--glow); }
+  .wire-item { border: 1px solid var(--line); background: var(--bg-panel); padding: 18px 20px; margin-bottom: 16px; }
+  .wire-item.flash { border-left: 3px solid var(--blood); }
+  .wire-meta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .wire-head { font-size: 17px; font-weight: 700; color: var(--bone); letter-spacing: .5px; margin: 8px 0 10px; }
+  .wire-body { font-size: 13.5px; line-height: 1.65; color: var(--bone-dim); }
+  .wire-src { margin-top: 10px; font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+  .badge-cat { border: 1px solid var(--line); color: var(--acid); padding: 2px 8px; font-size: 10px; letter-spacing: 2px; }
+  .badge-p1 { color: var(--danger); border-color: var(--blood); }
+  .badge-city { color: var(--bile); }
+  .wire-hero { width: 100%; border: 1px solid var(--line); display: block; margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main>
+
+    <h1 class="page-title">SCHRECKNET WIRE</h1>
+    <p class="page-sub">The wire never sleeps. Intel, alerts, gossip, obituaries and ratlines — everything the rats have heard since the last burst uplink. Weight every item accordingly.</p>
+
+    <div class="panel">
+      <div class="panel-title">WIRE STATUS</div>
+      <div id="wire-status" class="wire-meta" style="font-size: 12px; gap: 24px;"></div>
+    </div>
+
+    <img id="wire-hero" class="wire-hero" src="assets/img/news_wire.png" alt="" onerror="this.style.display='none'">
+
+    <div class="wire-filters" id="wire-filters"></div>
+    <div id="wire-feed"></div>
+
+    <div class="panel" style="margin-top: 28px;">
+      <div class="panel-title">SUBMIT TO THE WIRE</div>
+      <p class="muted">Items are submitted through your local custodian only — never through a live uplink. The wire desk reads everything, verifies what it can, and publishes what survives verification. If your item reads like the enemy wrote it, it goes to the burn pile.</p>
+    </div>
+
+    <div class="footer">
+      SCHRECKNET WIRE // node VLA-7 mirror &nbsp;&mdash;&nbsp; TRUST NO NODE. BURN WHAT YOU READ.
+    </div>
+
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/news_data.js"></script>
+<script>
+(function () {
+  'use strict';
+  var WIRE = window.SCHRECKNET_WIRE || { meta: {}, items: [] };
+  var CATS = ['ALL', 'ALERT', 'INTEL', 'RATLINE', 'GOSSIP', 'OBIT'];
+  var current = 'ALL';
+
+  function esc(s) {
+    var AMP = String.fromCharCode(38);
+    return String(s == null ? '' : s)
+      .replace(/&/g, AMP + 'amp;').replace(/</g, AMP + 'lt;').replace(/>/g, AMP + 'gt;')
+      .replace(/"/g, AMP + 'quot;').replace(/'/g, '&#39;');
+  }
+
+  function status() {
+    var m = WIRE.meta;
+    var el = document.getElementById('wire-status');
+    el.innerHTML =
+      '<span>ITEMS: ' + esc(m.count || WIRE.items.length) + '</span>' +
+      '<span>UPDATED: ' + esc(m.updated || 'UNKNOWN') + '</span>' +
+      '<span>DESK: ' + esc(m.node || 'UNKNOWN') + '</span>' +
+      '<span style="color: var(--danger);">' + esc(m.classification || '') + '</span>';
+  }
+
+  function filters() {
+    var box = document.getElementById('wire-filters');
+    var counts = { ALL: WIRE.items.length };
+    WIRE.items.forEach(function (it) {
+      counts[it.cat] = (counts[it.cat] || 0) + 1;
+    });
+    box.innerHTML = CATS.filter(function (c) { return counts[c]; }).map(function (c) {
+      return '<button type="button" class="wf-btn' + (c === current ? ' active' : '')
+        + '" data-cat="' + c + '">' + c + ' (' + counts[c] + ')</button>';
+    }).join('');
+    box.querySelectorAll('.wf-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        current = b.getAttribute('data-cat');
+        filters();
+        feed();
+      });
+    });
+  }
+
+  function feed() {
+    var el = document.getElementById('wire-feed');
+    var items = WIRE.items.filter(function (it) {
+      return current === 'ALL' || it.cat === current;
+    });
+    if (!items.length) {
+      el.innerHTML = '<p class="muted">NO ITEMS ON THIS FREQUENCY. Either the desk is quiet, or the desk is dead.</p>';
+      return;
+    }
+    el.innerHTML = items.map(function (it) {
+      return '<article class="wire-item' + (it.priority === 1 ? ' flash' : '') + '">'
+        + '<div class="wire-meta">'
+        + '<span class="badge-cat' + (it.priority === 1 ? ' badge-p1' : '') + '">' + esc(it.cat) + '</span>'
+        + '<span class="badge-city">' + esc(it.city) + '</span>'
+        + '<span>' + esc(it.ts) + '</span>'
+        + '</div>'
+        + '<div class="wire-head">' + esc(it.headline) + '</div>'
+        + '<div class="wire-body">' + esc(it.body) + '</div>'
+        + '<div class="wire-src">SOURCE: ' + esc(it.source) + '</div>'
+        + '</article>';
+    }).join('');
+  }
+
+  status();
+  filters();
+  feed();
+})();
+</script>
+</body>
+</html>

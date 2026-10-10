@@ -111,6 +111,106 @@
       "file": "inquisition_street.png",
       "size": "1920x1080",
       "prompt": "A deserted European city street at dawn, wet asphalt, unmarked grey van parked facing the exit with its rear doors slightly open, one distant figure in a long coat walking away, fog rolling between the buildings, cold desaturated blue-grey, the moment after something was taken, tense cinematic realism, no text"
+    },
+    {
+      "file": "wod_mage_1.png",
+      "size": "1024x1280",
+      "prompt": "A grey-suited figure standing in a dark government command center, walls of blank pale screens casting cold institutional light, coat immaculate, posture perfectly still, thin silver highlights on the lapels, face half in shadow, oppressive bureaucratic menace, cinematic realism, no text"
+    },
+    {
+      "file": "wod_mage_2.png",
+      "size": "1024x1280",
+      "prompt": "An old hermetic scholar in heavy dark robes standing over a candlelit desk, abstract geometric chalk diagrams drawn on the desk surface, brass instruments and folded parchment, one hand raised mid-gesture, deep shadows swallowing the corners of the stone study, warm candle flame against cold gloom, cinematic realism, no text"
+    },
+    {
+      "file": "wod_mage_3.png",
+      "size": "1024x1280",
+      "prompt": "A barefoot figure in a torn coat standing in a city street that is visibly warping around them, lamp posts bending like wax, brick walls rippling, colors bleeding at the edges of the frame, the figure smiling with unsettling calm, surreal deranged beauty, cinematic realism, no text"
+    },
+    {
+      "file": "wod_demon_1.png",
+      "size": "1024x1280",
+      "prompt": "A colossal blackened iron idol seated on a buried stone throne in a vast vault beneath a city, chains hanging from the ceiling, offerings of melted candle wax pooled at its feet, faint furnace glow inside its chest cavity, oppressive ancient gravity, cinematic realism, no text"
+    },
+    {
+      "file": "wod_demon_2.png",
+      "size": "1024x1280",
+      "prompt": "A tall figure in an expensive dark suit standing with their back to a storm-lit window, the shadow cast on the wall behind them showing vast folded wings that the body does not have, lamplight failing to reach the corners, quiet catastrophic presence, cinematic realism, no text"
+    },
+    {
+      "file": "wod_demon_3.png",
+      "size": "1024x1280",
+      "prompt": "A candlelit basement ritual, a circle of melted wax and ash on the floor, one kneeling figure with head bowed and one standing silhouette holding a small iron bell, smoke curling upward through a shaft of green light, Faustian stillness, cinematic realism, no text"
+    },
+    {
+      "file": "wod_wraith_1.png",
+      "size": "1024x1280",
+      "prompt": "An armored sentry in weathered black basalt plate standing guard on a wall of a dead city built from dark stone, no living light anywhere, pale ghost-fire lanterns along the battlements, the sentry's helmet empty of any face, monumental and sorrowful, cinematic realism, no text"
+    },
+    {
+      "file": "wod_wraith_2.png",
+      "size": "1024x1280",
+      "prompt": "A lone drifting figure above an infinite black sea under a storm sky, tattered clothing streaming in impossible wind, distant lightning splitting the horizon, no land in any direction, the figure pale and slowly dissolving at the edges, vast drowned melancholy, cinematic realism, no text"
+    },
+    {
+      "file": "wod_wraith_3.png",
+      "size": "1024x1280",
+      "prompt": "A dark séance room with a single round mirror covered by a black cloth thrown halfway back, a gaunt figure leaning toward the glass from the far side of the table, candles guttering, dust suspended in the air, the reflection not matching the room, cold dread, cinematic realism, no text"
+    },
+    {
+      "file": "wod_changeling_1.png",
+      "size": "1024x1280",
+      "prompt": "A broad brutal figure in a bloodied butcher apron and flat cap grinning from a basement doorway, knuckles oversized, teeth too wide and too many, dim amber bulb overhead, deep cellar shadows, predatory folk-tale menace, cinematic realism, no text"
+    },
+    {
+      "file": "wod_changeling_2.png",
+      "size": "1024x1280",
+      "prompt": "A tall regal figure in layered moonlit silks standing at the edge of a forest clearing, features too perfect and slightly inhuman, pale silver hair braided with small bells, cold starlight through the trees, haughty otherworldly beauty, cinematic realism, no text"
+    },
+    {
+      "file": "wod_changeling_3.png",
+      "size": "1024x1280",
+      "prompt": "A thin whispering figure crouched in the crawlspace under a tenement stairwell, layered ragged clothing, long fingers pressed to the wall listening, a single candle stub, cobwebs thick across the beams, hungry patient patience, cinematic realism, no text"
+    },
+    {
+      "file": "wod_hunter_1.png",
+      "size": "1024x1280",
+      "prompt": "A weathered inquisitor in a long black coat standing in a small chapel office, shelves of aged files and wax-sealed scrolls behind them, an old iron lantern burning on the desk, one gloved hand resting on the lantern handle, grim sanctified resolve, cinematic realism, no text"
+    },
+    {
+      "file": "wod_hunter_2.png",
+      "size": "1024x1280",
+      "prompt": "A special operations team in grey tactical gear and gas masks moving single file down a flooded parking garage ramp, weapon lights cutting green beams through the mist, no insignia anywhere, sterile institutional menace, cinematic realism, no text"
+    },
+    {
+      "file": "wod_hunter_3.png",
+      "size": "1024x1280",
+      "prompt": "An ordinary person in a wrinkled shirt and loosened tie standing frozen on a subway platform at night, seeing the impossible shapes moving in the tunnel mouth beyond the last light, phone dead in their hand, cold fluorescent flicker, the moment of terrible realization, cinematic realism, no text"
+    },
+    {
+      "file": "news_wire.png",
+      "size": "1920x1080",
+      "prompt": "A flooded basement wire room with banks of dead telegraph equipment and paper tape spools, sparks of green light jumping along severed cables, water ankle-deep on the floor reflecting the machinery, one terminal still faintly glowing green, abandoned urgency, cinematic realism, no text"
+    },
+    {
+      "file": "blackfile.png",
+      "size": "1920x1080",
+      "prompt": "A black document folder lying open on a scarred steel desk in a pitch-dark room, pages of heavy black redaction bars under a single green desk lamp, wax seal broken beside it, dust motes in the light cone, deep shadow swallowing the desk edges, archival menace, cinematic realism, no text"
+    },
+    {
+      "file": "hive_web.png",
+      "size": "1920x1080",
+      "prompt": "A vast server hive wrapped in thousands of hanging fiber-optic cables deep underground, green light pulsing through the cable web like a heartbeat,condensation dripping from the cables, rats' silhouettes on the gravel floor below, cathedral scale, bioluminescent machine nest, cinematic realism, no text"
+    },
+    {
+      "file": "vienna_breach.png",
+      "size": "1920x1080",
+      "prompt": "A breached underground server room, forced steel door hanging from one hinge, smoke drifting between toppled equipment racks, scattered green emergency light, spent ammunition casings on the floor, one rack still glowing faintly green amid the wreckage, the aftermath of a violent takeover, cinematic realism, no text"
+    },
+    {
+      "file": "node_corrupt.png",
+      "size": "1920x1080",
+      "prompt": "A dead terminal in a dark maintenance corridor spraying static snow across its blank screen, cables torn from the wall socket hanging loose, dried green stains on the concrete floor, flickering emergency strip light overhead, corrupted abandonment, cinematic realism, no text"
     }
   ]
 }
