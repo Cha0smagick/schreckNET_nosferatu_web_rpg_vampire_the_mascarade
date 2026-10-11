@@ -917,4 +917,71 @@ th { color: var(--acid); }
 .chronicle { font-style: italic; color: var(--bone-dim); border-left: 3px double var(--blood); padding-left: 16px; }
 .chronicle p { margin: 0 0 10px; }
 
+/* ============================================================
+   VISUAL PASS v3 — OLD NET ERA (2005-2015 handcrafted feel)
+   De-slop: no neon glow, no scanlines, no glitch, no gradients,
+   no crosshair. Flat 1px borders, underlined links, XP-era
+   terminal font. Lore and palette stay; the decay goes.
+   ============================================================ */
+
+:root {
+  --font-mono: 'Lucida Console', 'Courier New', monospace;
+}
+
+body {
+  cursor: default;
+  background-image: none;
+}
+
+/* glow off, everywhere */
+.logo, .page-title, h1, h2, h3, .panel-title, .blog-title,
+.nav a:hover, .nav a.active, .user-badge .handle, .boot-lines,
+.badge-verified, .badge-acid, .badge-green, .badge-decrypt,
+a:hover {
+  text-shadow: none;
+}
+
+.panel, .panel:hover, .btn, .btn:hover, .logo-mark, .dot {
+  box-shadow: none;
+}
+
+/* corner brackets off — plain boxes again */
+.panel::before, .panel::after,
+.panel > .corners::before, .panel > .corners::after,
+.login-box::before, .login-box::after {
+  content: none;
+}
+
+/* glitch headers off */
+.glitch::before, .glitch::after { display: none; }
+
+/* the CRT overlay retires with the monitor */
+#crt-overlay { display: none; }
+
+/* classic underlined links */
+a { border-bottom: none; text-decoration: underline; }
+a:hover { text-decoration: none; }
+
+/* ---------- easter egg: surface cache (type "aero") ---------- */
+#aero-egg {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(0, 0, 0, .92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: fadein .25s ease-out both;
+}
+#aero-egg .aero-frame { max-width: min(860px, 92vw); text-align: center; }
+#aero-egg img { width: 100%; display: block; border: 1px solid var(--line); }
+#aero-egg p {
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 

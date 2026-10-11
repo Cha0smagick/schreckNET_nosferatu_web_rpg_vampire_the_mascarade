@@ -211,6 +211,11 @@
       "file": "node_corrupt.png",
       "size": "1920x1080",
       "prompt": "A dead terminal in a dark maintenance corridor spraying static snow across its blank screen, cables torn from the wall socket hanging loose, dried green stains on the concrete floor, flickering emergency strip light overhead, corrupted abandonment, cinematic realism, no text"
+    },
+    {
+      "file": "aero.png",
+      "size": "1536x688",
+      "prompt": "Frutiger Aero style artwork, a large translucent glass sphere covered in water droplets floating above vivid bright green grass, brilliant blue sky with soft white clouds and a warm lens flare, glossy iridescent bubbles and splashing clear water rising around it, a small orange goldfish leaping between the bubbles, lush optimistic mid 2000s technology aesthetic, hyper glossy glass and plastic, vibrant saturated colors, sunny and clean, no text"
     }
   ]
 }

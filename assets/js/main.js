@@ -238,7 +238,30 @@
         store(OLDNET_KEY, '1');
         renderSidebar();
       }
+      if (buf.slice(-4) === 'aero') { showAero(); }
     });
+  }
+
+  /* ---------- easter egg: type "aero" — cached fragment of the surface ---------- */
+  function showAero() {
+    if (document.getElementById('aero-egg')) { return; }
+    var ov = document.createElement('div');
+    ov.id = 'aero-egg';
+    ov.setAttribute('role', 'dialog');
+    ov.setAttribute('aria-label', 'Archived fragment of the surface');
+    ov.innerHTML =
+      '<div class="aero-frame">' +
+        '<img src="assets/img/aero.png" alt="A glass sphere above green grass and blue sky — a cached memory of the surface, before the embrace.">' +
+        '<p>surface cache // fragment recovered // pre-embrace // click or ESC to return</p>' +
+      '</div>';
+    function close() {
+      if (ov.parentNode) { ov.parentNode.removeChild(ov); }
+      document.removeEventListener('keydown', esc, true);
+    }
+    function esc(e) { if (e.key === 'Escape') { close(); } }
+    ov.addEventListener('click', close);
+    document.addEventListener('keydown', esc, true);
+    document.body.appendChild(ov);
   }
 
   /* ---------- boot ---------- */
