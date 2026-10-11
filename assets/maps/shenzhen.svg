@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — SHENZHEN</text>
+<text x="28" y="68" fill="#63755F" font-size="13">China · Independent · node survey 2026</text>
+<path d="M 74 413 L 50 444 L 111 457 L 50 409 L 50 345 L 131 397 L 56 398" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 543 516 L 667 494 L 625 550 L 649 594 L 559 591 L 610 614 L 732 647" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 336 391 L 396 464 L 274 502 L 157 564 L 163 506 L 50 454 L 176 527" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 828 188 L 911 115 L 880 95 L 858 95 L 950 95 L 845 95 L 787 151" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 725 303 L 825 277 L 926 196 L 828 273 L 878 314 L 931 331 L 950 256" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 223 204 L 138 158 L 151 177 L 50 158 L 50 231 L 50 240 L 116 189" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 808 367 L 855 306 L 854 279 L 930 321 L 821 293 L 921 300 L 947 350" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 56 398 Q 63.92673388123512 519.5568451972213 176 527" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 116 189 Q 416.95281135849655 423.8801916036755 732 647" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 947 350 Q 505.5021717934869 496.43154588295147 176 527" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 176 527 Q 606.7284090141766 335.7533673476428 950 256" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 116 189 Q 483.2956103468314 160.4992118338123 787 151" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 732 647 Q 732.8774499706924 354.0808149240911 787 151" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 787 151 Q 854.1431185486726 224.84984621405602 950 256" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 947 350 Q 891.234943959862 395.48483012244105 947 350" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 787 151 Q 840.6962271081284 157.97249366063625 787 151" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="56" cy="398" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="66" y="402" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="732" cy="647" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="176" cy="527" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="186" y="531" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="787" cy="151" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="950" cy="256" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="960" y="260" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="116" cy="189" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="947" cy="350" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="957" y="354" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="787" cy="151" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="805" y="143" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 8 kindred est. · classify before trusting</text>
+</svg>

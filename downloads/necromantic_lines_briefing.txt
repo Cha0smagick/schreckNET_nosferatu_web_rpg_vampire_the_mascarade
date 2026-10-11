@@ -1,0 +1,52 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only
+provenance: "SOMMER" lecture cache (unverified) — transcribed, not confirmed
+topic: NECROMANTIC LINES — WHO TALKS TO THE DEAD
+
+--------------------------------------------------------------------------
+There are five lines that treat death as infrastructure. The network is
+built by rats, but the rats do not own the basement. Learn to tell the
+five apart before you answer anything that knocks from below.
+
+1. GIOVANNI / HECATA (the Family)
+   Merchants of souls since 1444. They do not summon — they invoice.
+   Their necromancy is contract law with candles. If a deal arrives
+   worded like a lease, you are talking to them.
+   COUNTERMEASURE: read the interest rate. Decline politely.
+
+2. CAPPADOCIAN REMNANT (Harbingers of Skulls)
+   The scholars who studied dying before the Family ate their founder.
+   They surfaced in 1999 with the Week of Nightmares and have been
+   settling accounts since. They write in bone-script. They correct
+   our files, and the corrections have been right eleven times.
+   COUNTERMEASURE: accept corrections. Never offer thanks.
+
+3. SAMEDI
+   The Caribbean line. Death worn openly — flesh in visible rot, kept
+   at a chosen pace. Their elders read the hour of a death from the
+   body of the dying. They sell that reading as assassination timing.
+   COUNTERMEASURE: if a corpse looks worse than yesterday, log the
+   delta. Do not attend second burials.
+
+4. NAGARAJA
+   Flesh-eaters from the far side of the Shroud. They must eat meat as
+   well as drink blood, and the meat is the tell: morgue freezers emptied
+   with the door seals intact. They came here as refugees from a
+   catastrophe you are not cleared to read about.
+   COUNTERMEASURE: inventory every cold room twice. The logs lie.
+
+5. LAMIA (the Death-Priestesses)
+   The old priesthood of the Cappadocians, nearly extinct, recently
+   reopened by the Family Reunion. Their rites are real. Their funerals
+   are correct. This is not reassurance; it is the entry fee.
+   COUNTERMEASURE: file their appearances as RITE, not THREAT.
+   Transcribing the words of a rite is forbidden by node protocol.
+
+--------------------------------------------------------------------------
+NODE DIRECTIVE (standing):
+Packets arriving from addresses that do not resolve — cold packets,
+sent from the wrong side of the Shroud — are logged and NOT REPLIED TO.
+The one time we replied, the reply cost a node. Which node is not
+written here.
+
+// end of recovered file

@@ -1,0 +1,49 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only // do not annotate outside margins
+file: gehenna_watchlist.txt
+recovered from: lecture cache, provenance "SOMMER" (unverified)
+====================================================================
+
+GEHENNA WATCHLIST — WHO IS ALREADY AWAKE
+----------------------------------------
+
+The Book of Nod says the Antediluvians rise at the end and eat their
+children. Analysts are not required to believe the Book of Nod.
+Analysts ARE required to track which names have stopped moving.
+
+  ACTIVE / RECENTLY ACTIVE (watch, do not engage):
+
+  ZAPATHASURA (Ravnos)   — awake and destroyed over Dhaka, 1999.
+                           The Week of Nightmares. Satellite assets
+                           saw three kuei-jin and one "weather event."
+                           The weather event was not weather.
+
+  UR-SHULGI (Banu Haqim) — awake at Alamut. Restores the old worship,
+                           kills for it, and calls it justice. The
+                           schism is live.do not accept judges.
+
+  AUGUSTUS GIOVANNI      — status UNKNOWN since the SI razed his safe
+                           (hecata: "family reunion" proceeded without
+                           him). A ledger without a ledger-keeper is
+                           still a ledger.
+
+  CAPUCHIN (Hecata)      — de facto head. Moves like a rumor pays rent.
+
+  THE BECKONING (V5)     — 41 elders of record have traveled east and
+                           stopped answering. If your prince leaves,
+                           file the vacancy. Do not chase.
+
+  EXPECTED SOON (per apocrypha):
+  Absimiliard (Nosferatu) — torpor under cold; his Nictuku are the
+                            contingency plan and the plan is old.
+  The Eldest (Tzimisce)   — "the flesh is a country that votes."
+  Veddhartha (Ventrue)    — location unknown since Vienna burned.
+  Arikel (Toreador)       — apocryphal only; file with doubt.
+  Lasombra                — the Abyss is a door that was already open.
+  Haqim                   — judges do not sleep twice.
+  Set/Sutekh              — the god-killer files his own obituary.
+  Malkav                  — "you are already reading it."
+  Ennoia (Gangrel)        — the road is her alibi.
+
+STANDING DIRECTIVE: if two watchlist entries answer the same ping,
+log the ping, close the node, walk.

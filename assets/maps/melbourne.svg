@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — MELBOURNE</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Australia · Anarch · node survey 2026</text>
+<path d="M 423 264 L 459 307 L 478 248 L 354 274 L 291 225 L 338 182 L 250 152" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 703 412 L 631 460 L 533 522 L 493 532 L 389 459 L 319 470 L 269 432" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 421 275 L 386 207 L 404 165 L 281 232 L 285 243 L 240 207 L 236 202" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 135 170 L 51 198 L 93 230 L 70 216 L 85 233 L 57 306 L 124 238" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 348 135 L 293 95 L 419 95 L 421 130 L 484 149 L 423 95 L 419 95" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 689 197 L 770 204 L 718 168 L 728 108 L 692 179 L 793 209 L 725 241" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 820 408 L 897 363 L 950 298 L 904 248 L 950 322 L 950 242 L 941 246" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 236 202 Q 197.6347578363493 172.7092289039865 250 152" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 725 241 Q 675.6792544946074 287.1657704235986 725 241" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 941 246 Q 615.3595523978584 344.0248237689957 269 432" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 941 246 Q 905.2113347733393 266.0165886161849 941 246" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 941 246 Q 996.1731034284458 266.008585547097 941 246" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 250 152 Q 299.24795921426266 130.33526888350025 250 152" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 236 202 Q 285.83700130460784 96.94837013143115 419 95" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 269 432 Q 244.7563969506882 302.8009205881972 236 202" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 124 238 Q 162.72576199145988 210.315001020208 236 202" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="250" cy="152" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="260" y="156" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="269" cy="432" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="236" cy="202" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="246" y="206" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="124" cy="238" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="419" cy="95" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="429" y="99" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="725" cy="241" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="941" cy="246" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="951" y="250" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="725" cy="241" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="743" y="233" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 7 kindred est. · classify before trusting</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — BEIRUT</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Lebanon · Contested · node survey 2026</text>
+<path d="M 758 227 L 707 211 L 834 290 L 950 369 L 933 337 L 950 342 L 950 384" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 726 364 L 649 279 L 529 248 L 605 308 L 635 369 L 716 413 L 650 444" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 383 189 L 300 112 L 385 95 L 458 95 L 525 95 L 594 95 L 687 95" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 235 539 L 129 623 L 50 575 L 50 568 L 124 523 L 50 590 L 91 597" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 567 611 L 631 640 L 648 634 L 742 650 L 773 625 L 836 650 L 707 632" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 535 317 L 638 265 L 692 207 L 664 171 L 610 164 L 723 185 L 625 172" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 602 172 L 487 233 L 499 159 L 381 149 L 271 119 L 316 191 L 438 180" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 950 384 Q 804.4890202512033 294.5228392165154 625 172" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 950 384 Q 677.1157724503428 273.23554514558055 438 180" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 650 444 Q 831.939289723523 418.769805500051 950 384" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 687 95 Q 611.4035596628673 84.53542850795202 625 172" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 625 172 Q 313.8633921346627 437.1821295423433 91 597" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 438 180 Q 529.8973744106479 129.7730227780994 625 172" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 91 597 Q 563.5103464173153 534.2894541821443 950 384" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 625 172 Q 680.8970186160877 428.035768349655 707 632" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 687 95 Q 385.8132233703509 393.98782929987647 91 597" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="950" cy="384" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="960" y="388" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="650" cy="444" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="687" cy="95" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="697" y="99" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="91" cy="597" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="707" cy="632" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="717" y="636" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="625" cy="172" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="438" cy="180" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="448" y="184" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="650" cy="444" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="668" y="436" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 5 kindred est. · classify before trusting</text>
+</svg>

@@ -16,6 +16,7 @@
     { file: 'news.html',     label: 'WIRE',       icon: '⚡' },
     { file: 'clan.html',     label: 'THE CLAN',   icon: '☠' },
     { file: 'dossiers.html', label: 'DOSSIERS',   icon: '▤' },
+{ file: 'registry.html', label: 'REGISTRY',   icon: '✪' },
     { file: 'redrooms.html', label: 'RED ROOMS',  icon: '⛧', blood: true },
     { file: 'kindred.html',  label: 'KINDRED',    icon: '☰' },
     { file: 'wod.html',      label: 'GREATER DARK', icon: '✦' },
@@ -233,26 +234,43 @@
     var buf = '';
     document.addEventListener('keydown', function (ev) {
       if (!ev.key || ev.key.length !== 1) { return; }
-      buf = (buf + ev.key.toLowerCase()).slice(-6);
+      buf = (buf + ev.key.toLowerCase()).slice(-10);
       if (buf === 'oldnet' && store(OLDNET_KEY) !== '1') {
         store(OLDNET_KEY, '1');
         renderSidebar();
       }
-      if (buf.slice(-4) === 'aero') { showAero(); }
+      for (var egg in EGGS) {
+        if (buf.slice(-egg.length) === egg) { showEgg(egg); }
+      }
     });
   }
 
-  /* ---------- easter egg: type "aero" — cached fragment of the surface ---------- */
-  function showAero() {
-    if (document.getElementById('aero-egg')) { return; }
+  /* ---------- easter eggs: type the codename anywhere ---------- */
+  var EGGS = {
+    aero: { img: 'assets/img/aero.png', alt: 'A glass sphere above green grass and blue sky — a cached memory of the surface, before the embrace.', cap: 'surface cache // fragment recovered // pre-embrace // click or ESC to return' },
+    terminator: { img: 'assets/img/egg_terminator.png', alt: 'A chrome endoskeleton rising from black sewer water, red eyes lit.', cap: 'asset file // chrome wetwork unit // designation: skynet // click or ESC to return' },
+    dragonball: { img: 'assets/img/egg_dragonball.png', alt: 'Seven glowing orange orbs on mossy stone, crimson stars inside.', cap: 'asset file // seven relics // wish-engine recovered from the sewers // click or ESC to return' },
+    desertpunk: { img: 'assets/img/egg_desertpunk.png', alt: 'A scavenged water runner crossing desert dunes at sunset.', cap: 'asset file // surface convoy // water runners of the ash roads // click or ESC to return' },
+    hokuto: { img: 'assets/img/egg_hokuto.png', alt: 'A scarred lone warrior on a wasteland road, shockwave cracking asphalt.', cap: 'asset file // fist doctrine // pressure-point archive // click or ESC to return' },
+    ippo: { img: 'assets/img/egg_ippo.png', alt: 'A young boxer training with a worn heavy bag in an old gym.', cap: 'asset file // gym fragment // the dreamer of the lower rings // click or ESC to return' },
+    drstone: { img: 'assets/img/egg_drstone.png', alt: 'A stone statue cracking open with green light inside.', cap: 'asset file // petrification event // science child of the new dawn // click or ESC to return' },
+    sailormoon: { img: 'assets/img/egg_sailormoon.png', alt: 'A magical girl silhouette under a huge full moon.', cap: 'asset file // lunar ward // guardian fragment under a full moon // click or ESC to return' },
+    moville: { img: 'assets/img/egg_moville.png', alt: 'Kids with flashlights around a glowing talisman at twilight.', cap: 'asset file // small-town anomaly // talisman case unsolved // click or ESC to return' },
+    duckman: { img: 'assets/img/egg_duckman.png', alt: 'A grumpy detective duck in a noir office.', cap: 'asset file // noir feed // the waterfowl detective, case open // click or ESC to return' },
+    boondocks: { img: 'assets/img/egg_boondocks.png', alt: 'Two brothers on a suburban porch at rainy dusk.', cap: 'asset file // porch surveillance // two watchers, one block // click or ESC to return' }
+  };
+
+  function showEgg(name) {
+    var e = EGGS[name];
+    if (!e || document.getElementById('aero-egg')) { return; }
     var ov = document.createElement('div');
     ov.id = 'aero-egg';
     ov.setAttribute('role', 'dialog');
     ov.setAttribute('aria-label', 'Archived fragment of the surface');
     ov.innerHTML =
       '<div class="aero-frame">' +
-        '<img src="assets/img/aero.png" alt="A glass sphere above green grass and blue sky — a cached memory of the surface, before the embrace.">' +
-        '<p>surface cache // fragment recovered // pre-embrace // click or ESC to return</p>' +
+        '<img src="' + e.img + '" alt="' + e.alt + '">' +
+        '<p>' + e.cap + '</p>' +
       '</div>';
     function close() {
       if (ov.parentNode) { ov.parentNode.removeChild(ov); }

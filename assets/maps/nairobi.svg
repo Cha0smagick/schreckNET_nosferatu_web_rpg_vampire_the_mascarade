@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — NAIROBI</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Kenya · Camarilla · node survey 2026</text>
+<path d="M 153 454 L 94 393 L 50 314 L 143 372 L 50 345 L 50 358 L 97 392" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 901 157 L 950 95 L 843 142 L 749 144 L 727 217 L 808 225 L 813 296" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 461 449 L 359 383 L 339 417 L 408 355 L 430 329 L 439 294 L 390 355" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 896 372 L 911 400 L 950 426 L 950 388 L 950 337 L 950 386 L 874 371" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 142 637 L 96 578 L 206 524 L 269 572 L 322 568 L 307 538 L 377 618" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 661 105 L 723 145 L 788 137 L 812 143 L 769 198 L 863 277 L 883 230" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 210 122 L 94 95 L 205 99 L 166 95 L 272 95 L 309 136 L 391 212" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 813 296 Q 904.8551259469241 280.56039135321043 883 230" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 813 296 Q 422.8600390185602 305.35846560029313 97 392" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 97 392 Q 531.1162669630721 377.37157037947327 874 371" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 874 371 Q 660.5913746799342 262.5892621278763 391 212" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 391 212 Q 353.95787765737623 239.89002389484085 390 355" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 874 371 Q 581.4378334837966 290.61434084549546 391 212" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 391 212 Q 356.3683976745233 328.29142036498524 390 355" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 874 371 Q 655.1863707765006 310.25336656719446 391 212" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 97 392 Q 102.74889073800296 337.5194537010975 97 392" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="97" cy="392" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="107" y="396" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="813" cy="296" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="390" cy="355" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="400" y="359" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="874" cy="371" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="377" cy="618" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="387" y="622" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="883" cy="230" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="391" cy="212" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="401" y="216" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="874" cy="371" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="892" y="363" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 5 kindred est. · classify before trusting</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — NICOSIA</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Cyprus · Contested · node survey 2026</text>
+<path d="M 179 299 L 159 269 L 51 261 L 50 245 L 50 296 L 62 369 L 97 419" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 77 516 L 94 503 L 50 465 L 50 540 L 50 597 L 50 596 L 133 650" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 744 519 L 854 587 L 950 620 L 950 650 L 950 616 L 950 650 L 930 650" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 747 426 L 625 417 L 504 397 L 575 442 L 453 421 L 454 443 L 514 521" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 63 578 L 134 646 L 157 589 L 54 606 L 50 562 L 50 608 L 68 638" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 536 117 L 435 95 L 400 180 L 279 111 L 401 95 L 454 153 L 471 95" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 568 592 L 673 602 L 595 627 L 510 596 L 625 551 L 625 524 L 590 489" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 930 650 Q 532.430959395133 612.5054168829229 68 638" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 471 95 Q 701.0950509924442 429.28701020777225 930 650" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 97 419 Q 157.00121109373868 458.1949735013768 97 419" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 133 650 Q 305.3700408246368 357.1154657471925 471 95" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 68 638 Q 74.0392418159172 647.5335702241864 133 650" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 97 419 Q 122.46621049474925 514.1422589134891 68 638" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 590 489 Q 341.3028719765134 577.5507502409164 68 638" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 590 489 Q 595.4714280553162 477.13247678708285 514 521" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 133 650 Q 326.5598694072105 581.1376733076759 514 521" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="97" cy="419" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="107" y="423" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="133" cy="650" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="930" cy="650" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="940" y="654" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="514" cy="521" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="68" cy="638" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="78" y="642" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="471" cy="95" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="590" cy="489" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="600" y="493" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="68" cy="638" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="86" y="630" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 4 kindred est. · classify before trusting</text>
+</svg>

@@ -1,0 +1,40 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only // provenance "SOMMER" lecture cache (unverified)
+file: technocracy_intercepts.txt
+====================================================================
+
+THE TECNOCRACIA: INTERCEPT SUMMARY
+(The enemy that files reality's paperwork)
+
+NOT THE SI. DO NOT CONFUSE THEM.
+
+  The Second Inquisition hunts vampires with cameras and clergy.
+  The Technocracy hunts EXCEPTIONS TO THE RULES with auditors.
+
+STRUCTURE (per intercepts):
+  - Descends from the Order of Reason (founded 1325), the first
+    organization to argue that miracles are a filing error.
+  - Conventions of record:
+      Iteration X      — machines, and the machine of machines.
+      New World Order  — the story department. Consensus enforcement.
+      The Syndicate    — ownership. Reality follows the money.
+      Progenitors      — biology as engineering. We are a rounding
+                         error in their models.
+      Void Engineers   — the border patrol of consensus.
+
+DOCTRINE, PARAPHRASED FROM A GENEVA INTERCEPT:
+  "Vampires are reality deviants. Deviants are inventory."
+
+WHAT THIS MEANS FOR THE NETWORK:
+  - They do not stake. They RECLASSIFY. A node that appears in a
+    Technocracy census has already been deleted in principle; the
+    deletion arrives on a schedule.
+  - Their weapons are paradox audits: make the exception so
+    improbable that consensus repossesses it.
+  - The Camarilla survives them by being boring. Anarchs survive by
+    being diffuse. We survive by being a rumor with good backups.
+
+COUNTERMEASURE (network doctrine):
+  Never answer a census. Never explain a miracle. If a terminal
+  starts receiving beautifully formatted questionnaires, burn the
+  node and file the burn under weather.

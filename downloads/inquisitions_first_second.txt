@@ -1,0 +1,50 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only
+provenance: "SOMMER" lecture cache (unverified) — transcribed, not confirmed
+topic: THE TWO INQUISITIONS — 1231 AND THE MODERN SWEEP
+
+--------------------------------------------------------------------------
+FIRST INQUISITION (1230s-1400s)
+Not a vampire war. A mortal furnace that happened to cook vampires.
+What it changed:
+- Broke elder power across Europe; torpor and Final Death at scale.
+- Created the conditions for the Anarch Revolt (the young saw the
+  old burn and drew conclusions).
+- Produced the SOCIETY OF LEOPOLD, founded 1231 by Leopold von Murnau
+  under Pope Gregory IX. Roots in the Michaelites. Doctrine text:
+  the TESTAMENT OF LEOPOLD. HQ: Monasterio di San Michele, Rome.
+  They are still there. Bring flowers. Do not sign the guestbook.
+
+--------------------------------------------------------------------------
+SECOND INQUISITION (2008-present)
+The modern sweep: a coalition — Vatican assets, intelligence services,
+special operations — that treats kindred as a solvable intelligence
+problem. Term coined by a Toreador with no name on file, c. 2010s.
+Their slang for us: "blankbody." Our counter-term for them, adopted
+network-wide: "the AUDIENCE."
+
+THE TEXTBOOK CASE — VIENNA, 2008:
+USSOCOM elements + Vatican ESOG destroyed the Tremere chantry in
+Vienna and the world was told it was terrorism. Doctrinal outcome:
+the SI does not defeat kindred, it UNEXISTENCES them — removes the
+person, then removes the record of the person. Files do not burn.
+Files are edited.
+
+WHAT CHANGED FOR THE NETWORK:
+- Camarilla doctrine: ban electronic communications. (The rats did
+  the opposite. That is why the network exists.)
+- Anarchs: embraced the tools. Half the Anarch barons run signal
+  intelligence better than any prince.
+- Node protocol hardened: audio shared, never names; no node keeps
+  a second copy; a watchlist answer closes a node.
+
+--------------------------------------------------------------------------
+COUNTERMEASURES (node law, in order of age)
+1. Never reply to a census.
+2. Never meet in a building photographed twice.
+3. If a face matches a photo that survived the raid, the photo is
+   the survivor, not the face.
+4. Do not transcribe rites.
+5. If the dot opens, close the node.
+
+// end of recovered file

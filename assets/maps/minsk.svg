@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — MINSK</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Belarus · Camarilla · node survey 2026</text>
+<path d="M 570 280 L 689 350 L 633 282 L 638 348 L 614 381 L 526 350 L 631 375" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 727 120 L 606 165 L 505 209 L 473 161 L 502 202 L 471 286 L 512 335" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 566 625 L 524 650 L 465 650 L 495 650 L 509 591 L 444 517 L 503 601" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 494 428 L 375 510 L 257 573 L 258 518 L 371 449 L 485 500 L 584 446" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 259 451 L 315 500 L 376 433 L 473 473 L 351 512 L 417 586 L 391 601" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 225 248 L 281 257 L 352 269 L 394 298 L 395 303 L 352 303 L 243 325" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 644 161 L 767 203 L 858 125 L 730 95 L 825 95 L 935 143 L 950 95" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 950 95 Q 570.4023727867752 211.89837748301215 243 325" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 503 601 Q 567.7607396501116 518.4342224360444 631 375" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 391 601 Q 476.2830703216605 577.2775163303595 503 601" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 950 95 Q 716.6031974530779 347.7691680146381 391 601" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 584 446 Q 546.778314197436 494.98386373510584 584 446" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 631 375 Q 594.2135414713994 336.82411086396314 512 335" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 631 375 Q 424.4462111289613 310.7735872082412 243 325" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 243 325 Q 290.09787323884666 265.95803170697764 243 325" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 512 335 Q 408.8024567393586 446.8212946061976 391 601" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="631" cy="375" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="641" y="379" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="512" cy="335" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="503" cy="601" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="513" y="605" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="584" cy="446" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="391" cy="601" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="401" y="605" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="243" cy="325" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="950" cy="95" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="960" y="99" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="512" cy="335" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="530" y="327" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 6 kindred est. · classify before trusting</text>
+</svg>

@@ -216,6 +216,1806 @@
       "file": "aero.png",
       "size": "1536x688",
       "prompt": "Frutiger Aero style artwork, a large translucent glass sphere covered in water droplets floating above vivid bright green grass, brilliant blue sky with soft white clouds and a warm lens flare, glossy iridescent bubbles and splashing clear water rising around it, a small orange goldfish leaping between the bubbles, lush optimistic mid 2000s technology aesthetic, hyper glossy glass and plastic, vibrant saturated colors, sunny and clean, no text"
+    },
+    {
+      "file": "egg_terminator.png",
+      "size": "1024x1024",
+      "prompt": "A chrome robot endoskeleton skull with glowing red eyes rising from black sewer water, exposed steel jaw and cables, dripping slime, red emergency light in a dark concrete tunnel, cold machine menace, cinematic realism, no text"
+    },
+    {
+      "file": "egg_dragonball.png",
+      "size": "1024x1024",
+      "prompt": "Seven glowing orange crystal orbs arranged in a circle on mossy sewer stone, each orb holding crimson star shapes inside, warm amber light cutting through tunnel darkness, mystical vapor rising, cinematic realism, no text"
+    },
+    {
+      "file": "egg_desertpunk.png",
+      "size": "1024x1024",
+      "prompt": "A rusted motorcycle engine bolted onto a homemade water tanker wagon crossing endless orange desert dunes at sunset, scavenged pipes and tarps, dust storm on the horizon, retro anime cel style, warm haze, no text"
+    },
+    {
+      "file": "egg_hokuto.png",
+      "size": "1024x1024",
+      "prompt": "A scarred muscular lone warrior in a studded leather jacket standing on a post apocalyptic wasteland road, dust and crows around him, a punch shockwave cracking the asphalt, burning orange sky, retro anime cel style, no text"
+    },
+    {
+      "file": "egg_ippo.png",
+      "size": "1024x1024",
+      "prompt": "A young boxer training alone with a worn leather heavy bag in a small old gym, sweat catching dusty light beams from high windows, taped gloves, wooden floor, retro anime cel style, determined mood, no text"
+    },
+    {
+      "file": "egg_drstone.png",
+      "size": "1024x1024",
+      "prompt": "A stone statue of a young scientist cracking open with glowing green light from inside, overgrown post apocalyptic city jungle around it, bamboo laboratory contraptions, vines over cracked asphalt, retro anime cel style, no text"
+    },
+    {
+      "file": "egg_sailormoon.png",
+      "size": "1024x1024",
+      "prompt": "A magical girl silhouette with long twin tails standing on a rooftop under a huge full moon at night, glowing geometric sparkles and ribbons of light swirling around her, city skyline below, retro anime cel style, no text"
+    },
+    {
+      "file": "egg_moville.png",
+      "size": "1024x1024",
+      "prompt": "Kids with flashlights investigating a strange glowing talisman floating above a swampy creek at twilight, twisted bare trees and fireflies, eerie small town mystery mood, deep purple dusk, retro cartoon style, no text"
+    },
+    {
+      "file": "egg_duckman.png",
+      "size": "1024x1024",
+      "prompt": "A grumpy detective duck wearing a suit and thick glasses shouting at a cluttered desk in a dim noir office, stacks of paper, flickering desk lamp, venetian blind shadows, retro adult animation style, no text"
+    },
+    {
+      "file": "egg_boondocks.png",
+      "size": "1024x1024",
+      "prompt": "Two brothers sitting on the porch of a suburban house at rainy summer dusk watching the empty street, moody americana, warm porch light against blue evening rain, retro cartoon style, no text"
+    },
+    {
+      "file": "char_brujah01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Troile, known as \"THE FOUNDER'S BLADE\", a 3rd-generation vampire of the Brujah bloodline, era: Antiquity to present. Setting: Beneath the salt of ruined Carthage, some say, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Menele, known as \"THE PHILOSOPHER TYRANT\", a 4th-generation vampire of the Brujah bloodline, era: Antiquity to present. Setting: Beneath the Loop, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Helena, known as \"THE SLEEPING QUEEN\", a 4th-generation vampire of the Brujah bloodline, era: Antiquity to present (torpor). Setting: Torpor beneath Lake Michigan, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Anath, known as \"THE CHAMPION OF CARTHAGE\", a 4th-generation vampire of the Brujah bloodline, era: Antiquity to present. Setting: Last credible sighting near the old harbor road, Tunis. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Critias, known as \"THE ATHENIAN\", a 5th-generation vampire of the Brujah bloodline, era: Antiquity to present. Setting: A Gold Coast townhouse with a private library, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Tyler, known as \"HARDESTADT'S END\", a 5th-generation vampire of the Brujah bloodline, era: 1400s to present. Setting: Rumored Ventrue custody, unconfirmed, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Theo Bell, known as \"THE ARCHON'S SHADOW\", a 8th-generation vampire of the Brujah bloodline, era: 1800s to present. Setting: A Camarilla chancery near Whitehall, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Smiling Jack, known as \"THE GRINNING ANARCH\", a 7th-generation vampire of the Brujah bloodline, era: 1800s to present. Setting: An abandoned warehouse district near the river, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Jeremy MacNeil, known as \"THE FREE STATES SPEAKER\", a 8th-generation vampire of the Brujah bloodline, era: 1900s to present. Setting: The barony halls of the Anarch Free States, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Salvador Garcia, known as \"THE BARON OF THE SOUTH\", a 8th-generation vampire of the Brujah bloodline, era: 1900s to present. Setting: A fortified waystation on the border barony's edge, San Diego. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Patricia of Bolingbroke, known as \"THE COURT'S THORN\", a 8th-generation vampire of the Brujah bloodline, era: 1600s to present. Setting: A townhouse salon frequented by both sects' couriers, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Hannibal of Tyre, known as \"THE MERCHANT OF BLOOD\", a 5th-generation vampire of the Brujah bloodline, era: Antiquity, presumed destroyed 146 BC. Setting: The ruins of the old harbor quarter, Carthage. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Zenobia the Unchained, known as \"THE BREAKER OF CHAINS\", a 6th-generation vampire of the Brujah bloodline, era: Antiquity to present. Setting: Catacombs beneath the old quarter, Alexandria. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marcel Duret, known as \"THE CITIZEN OF THE TERROR\", a 9th-generation vampire of the Brujah bloodline, era: 1780s to present. Setting: The catacombs below the 5th arrondissement, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Colette Marchand, known as \"THE RED PETAL\", a 10th-generation vampire of the Brujah bloodline, era: 1870s to present. Setting: A Montmartre garret above a shuttered cabaret, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ernst Vogel, known as \"THE SPARTACIST\", a 9th-generation vampire of the Brujah bloodline, era: 1900s to present. Setting: A squatted factory in Wedding, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Rosa Kellner, known as \"THE TYPEWRITER AGITATOR\", a 11th-generation vampire of the Brujah bloodline, era: 1920s to present. Setting: A print shop behind a Kreuzberg laundrette, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Deacon Reyes, known as \"THE STREET PREACHER\", a 10th-generation vampire of the Brujah bloodline, era: 1960s to present. Setting: A South Side community hall, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marla Okafor, known as \"THE UNION ORGANIZER\", a 12th-generation vampire of the Brujah bloodline, era: 1990s to present. Setting: The back room of a West Side bar, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_brujah20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Viktor Havel, known as \"THE PRAGUE BRICK\", a 11th-generation vampire of the Brujah bloodline, era: 1980s to present. Setting: A cellar bar under Wenceslas Square, Prague. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ennoia, known as \"THE MOTHER OF WOLVES\", a 3rd-generation vampire of the Gangrel bloodline, era: Antiquity to present. Setting: Wherever the wild runs deepest, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Beckett, known as \"THE NODDRIST\", a 8th-generation vampire of the Gangrel bloodline, era: 1400s to present. Setting: Wherever old books are sold, Nomadic. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Xaviar, known as \"THE JUSTICAR WHO LEFT\", a 8th-generation vampire of the Gangrel bloodline, era: 1800s to present. Setting: Camarilla courts, when forced, Nomadic. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Karsh, known as \"THE WARLORD\", a 6th-generation vampire of the Gangrel bloodline, era: Antiquity to present. Setting: Wherever the Camarilla's borders bleed, Nomadic. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ramona Vidal, known as \"THE RIDER\", a 9th-generation vampire of the Gangrel bloodline, era: 1900s to present. Setting: The hills above Griffith Park, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Skoll Andersson, known as \"THE LONGSHIP'S SHADOW\", a 7th-generation vampire of the Gangrel bloodline, era: 800s to present. Setting: A turf-roofed longhouse on the Jutland coast, Aalborg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Hulda of the Pines, known as \"THE FOREST WARDEN\", a 8th-generation vampire of the Gangrel bloodline, era: 1200s to present. Setting: A hollow beneath the firs, Black Forest, Freiburg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marcus Fen, known as \"THE LEGION SCOUT\", a 6th-generation vampire of the Gangrel bloodline, era: Antiquity to present. Setting: Remembers the Danube frontier before the walls, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Isabeau Laroche, known as \"THE ROAD OUT OF PARIS\", a 9th-generation vampire of the Gangrel bloodline, era: 1780s to present. Setting: A hay loft on the old road to Orleans, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Dmitri Volkov, known as \"THE WINTER WOLF\", a 9th-generation vampire of the Gangrel bloodline, era: 1900s to present. Setting: The rail yards at Spandau, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Coyote Bill Harlan, known as \"THE DRIFTER\", a 8th-generation vampire of the Gangrel bloodline, era: 1800s to present. Setting: A rusted pickup, no fixed address, Tucson. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sarah Whitfield, known as \"THE CITY WATCHER\", a 10th-generation vampire of the Gangrel bloodline, era: 1960s to present. Setting: Lincoln Park, after midnight, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Elias Thorn, known as \"THE RAIN COUNTRY HERMIT\", a 11th-generation vampire of the Gangrel bloodline, era: 1980s to present. Setting: A cabin in the Hoh rainforest, Seattle. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Nadia Petrova, known as \"THE TAIGA'S TEETH\", a 10th-generation vampire of the Gangrel bloodline, era: 1900s to present. Setting: A trapping cabin on the Yenisei, Krasnoyarsk. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Kwame Adjei, known as \"THE ROAD WARDEN\", a 11th-generation vampire of the Gangrel bloodline, era: 1990s to present. Setting: A lorry park at Tema after close, Accra. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Bruno Ferreira, known as \"THE GREEN INFERNO\", a 9th-generation vampire of the Gangrel bloodline, era: 1900s to present. Setting: A riverbank camp up the Madeira, Manaus. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Yuki Tanaka, known as \"THE MOUNTAIN LISTENER\", a 12th-generation vampire of the Gangrel bloodline, era: 2000s to present. Setting: A shrine storehouse on Mount Takao, Tokyo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Greta Lindqvist, known as \"THE ICE ROADER\", a 10th-generation vampire of the Gangrel bloodline, era: 1900s to present. Setting: A boathouse in the outer archipelago, Stockholm. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Tomas Aguilar, known as \"THE BORDER CROSSER\", a 11th-generation vampire of the Gangrel bloodline, era: 1980s to present. Setting: A dry wash south of the border fence, Nogales. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_gangrel20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Astrid Kolbein, known as \"THE STORM WATCHER\", a 9th-generation vampire of the Gangrel bloodline, era: 1000s to present. Setting: A lava field cave east of the city, Reykjavik. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Malkav, known as \"THE BROKEN PROPHET\", a 3rd-generation vampire of the Malkavian bloodline, era: Antiquity to present. Setting: Inside every Malkavian's head, some say, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Anatole, known as \"THE ORACLE OF GEHENNA\", a 5th-generation vampire of the Malkavian bloodline, era: 1100s to 1999, presumed destroyed. Setting: A walled crypt on the Mount of Olives, Jerusalem. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Netchurch, known as \"THE WIRE GHOST\", a 8th-generation vampire of the Malkavian bloodline, era: 1900s to present. Setting: A server room no map admits to, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marissa, known as \"THE SCHOLAR OF BONES\", a 9th-generation vampire of the Malkavian bloodline, era: 1800s to present. Setting: University library stacks, after hours, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Petronius, known as \"THE SENATOR'S ECHO\", a 6th-generation vampire of the Malkavian bloodline, era: Antiquity to present. Setting: A sealed villa on the Aventine, Rome. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cassandra Vex, known as \"THE GUILLOTINE'S WITNESS\", a 9th-generation vampire of the Malkavian bloodline, era: 1780s to present. Setting: A bone cellar under the Rue de la Huchette, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Augustin Leclair, known as \"THE CLOCKMAKER'S ERROR\", a 10th-generation vampire of the Malkavian bloodline, era: 1800s to present. Setting: A stopped-clock shop in the Marais, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Wilhelm Fassbinder, known as \"THE RADIO ORACLE\", a 9th-generation vampire of the Malkavian bloodline, era: 1900s to present. Setting: A dead frequency from a Wedding attic, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lotte Kranz, known as \"THE NUMBER SEER\", a 11th-generation vampire of the Malkavian bloodline, era: 1920s to present. Setting: A decommissioned telephone exchange in Kreuzberg, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ezekiel Marsh, known as \"THE BAYOU PSALM\", a 8th-generation vampire of the Malkavian bloodline, era: 1800s to present. Setting: A chapel swallowed by the swamp, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Delia Crane, known as \"THE RIOT'S MIRROR\", a 10th-generation vampire of the Malkavian bloodline, era: 1960s to present. Setting: A psychiatric ward, staff side, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Simon Oduya, known as \"THE MARKET CRIER\", a 11th-generation vampire of the Malkavian bloodline, era: 1990s to present. Setting: A stall in the Maasai Market after close, Nairobi. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vera Lindt, known as \"THE STATIC SAINT\", a 12th-generation vampire of the Malkavian bloodline, era: 2000s to present. Setting: A U-Bahn maintenance tunnel, closed section, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Father Ambrose, known as \"THE CONFESSIONAL KEY\", a 9th-generation vampire of the Malkavian bloodline, era: 1700s to present. Setting: A side chapel of a minor basilica, Rome. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Juno Park, known as \"THE NEON DIAGNOSTIC\", a 12th-generation vampire of the Malkavian bloodline, era: 2010s to present. Setting: A PC bang basement in Euljiro, Seoul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Theodora Voss, known as \"THE VIENNESE MIRROR\", a 10th-generation vampire of the Malkavian bloodline, era: 1800s to present. Setting: A mirrored salon above the Graben, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Malcolm Reyes, known as \"THE ORACLE OF THE FREEWAY\", a 11th-generation vampire of the Malkavian bloodline, era: 1980s to present. Setting: Under the 110 overpass, mile marker 22, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ingrid Solberg, known as \"THE FJORD LISTENER\", a 10th-generation vampire of the Malkavian bloodline, era: 1900s to present. Setting: A boathouse on the fjord's edge, Oslo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ptolemy the Lesser, known as \"THE LIBRARY'S GHOST\", a 7th-generation vampire of the Malkavian bloodline, era: Antiquity to present. Setting: The drowned stacks of the old library, Alexandria. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_malkavian20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ophelia Grant, known as \"THE THAMES ORACLE\", a 12th-generation vampire of the Malkavian bloodline, era: 2000s to present. Setting: A night bus that never terminates, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Haqim, known as \"THE JUDGE\", a 3rd-generation vampire of the Banu Haqim bloodline, era: First City — sleeping. Setting: the deepest vault, beneath the hashish gardens, Alamut (presumed). Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ur-Shulgi, known as \"THE CHALDEAN\", a 4th-generation vampire of the Banu Haqim bloodline, era: Second City — 1999 (waking). Setting: the sightless eye chamber, above the old wells, Alamut. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Thetmes, known as \"THE FALCON'S WING\", a 5th-generation vampire of the Banu Haqim bloodline, era: Punic wars — present. Setting: the falcon mews and the killing stair, Alamut. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Fatima al-Faqadi, known as \"THE LAUGHING BLADE\", a 6th-generation vampire of the Banu Haqim bloodline, era: 1100s — present. Setting: a tea house that has burned down four times, Baghdad. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of al-Ashrad, known as \"THE AMR\", a 5th-generation vampire of the Banu Haqim bloodline, era: 1100s — present. Setting: the archive of unsentenced names, Alamut. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Tariq, known as \"THE UNBOWED\", a 7th-generation vampire of the Banu Haqim bloodline, era: 1400s — present. Setting: the train yards and the vault beneath the old bazaar, Ankara. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Zayd al-Khwarizmi, known as \"THE ALCHEMIST OF SALT\", a 6th-generation vampire of the Banu Haqim bloodline, era: 900s — present. Setting: the salt cellar beneath the observatory ruins, Samarkand. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Leyla Nazari, known as \"THE TEHRAN LEDGER\", a 8th-generation vampire of the Banu Haqim bloodline, era: 1600s — present. Setting: the money bazaar, after closing, Tehran. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Yusuf Demir, known as \"THE ISTANBUL CULTIST\", a 9th-generation vampire of the Banu Haqim bloodline, era: 1900s — present. Setting: a cistern chapel beneath the aqueduct, Istanbul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Nadia Osei, known as \"THE ACCRA JUDGE\", a 9th-generation vampire of the Banu Haqim bloodline, era: 1900s — present. Setting: the old fort cells below the lighthouse, Accra. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Karim Al-Masri, known as \"THE CAIRO ARBITER\", a 8th-generation vampire of the Banu Haqim bloodline, era: 1700s — present. Setting: the Coptic quarter, behind a disused bathhouse, Cairo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sana Harbi, known as \"THE CASABLANCA NET-JUDGE\", a 9th-generation vampire of the Banu Haqim bloodline, era: 1900s — present. Setting: the old medina, above a server closet, Casablanca. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Qasim, known as \"THE UNMARKED\", a 7th-generation vampire of the Banu Haqim bloodline, era: unknown — present. Setting: last seen leaving a war that ended thirty years ago, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Farah Zamani, known as \"THE KABUL SILENCE\", a 8th-generation vampire of the Banu Haqim bloodline, era: 1800s — present. Setting: the collapsed palace tunnels, south face, Kabul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Darius Kaldar, known as \"THE YOGYAKARTA ARCHIVIST\", a 8th-generation vampire of the Banu Haqim bloodline, era: 1600s — present. Setting: the temple archives beneath the kraton water gardens, Yogyakarta. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Arslan Bey, known as \"THE VIENNA AVENGER\", a 7th-generation vampire of the Banu Haqim bloodline, era: 1400s — present. Setting: the Ottoman-era cisterns under the old walls, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Halima Zidane, known as \"THE PARIS VIZIER\", a 9th-generation vampire of the Banu Haqim bloodline, era: 1800s — present. Setting: the Algerian archives, 19th arrondissement, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Omar Sabry, known as \"THE DETROIT NEWBLOOD\", a 10th-generation vampire of the Banu Haqim bloodline, era: 2000s — present. Setting: the Packard plant tunnels, east side, Detroit. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Roshan Chandra, known as \"THE MUMBAI SORCERESS\", a 8th-generation vampire of the Banu Haqim bloodline, era: 1700s — present. Setting: the mill district, beneath a working textile floor, Mumbai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_banu20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Weeping Blade, known as \"THE LAST JUDGMENT\", a unknown-generation vampire of the Banu Haqim bloodline, era: unknown — present. Setting: wherever a sentence has gone unserved too long, varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Augustus Giovanni, known as \"THE FOUNDER OF LEDGERS\", a 3rd-generation vampire of the Hecata bloodline, era: 1005 to present (or to 2000). Setting: a palazzo that stays empty on paper, Venice. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Japheth Cappadocian, known as \"THE VIAL\", a 4th-generation vampire of the Hecata bloodline, era: First City to present. Setting: a cellar below the family seat, chained, Venice. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ambrogino Giovanni, known as \"THE AUDITOR OF SOULS\", a 5th-generation vampire of the Hecata bloodline, era: 1400s to present. Setting: the customs house of the dead, Venice. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Isabel Giovanni, known as \"THE DIPLOMAT OF DEATH\", a 6th-generation vampire of the Hecata bloodline, era: 1600s to present. Setting: a consulate with no nation attached, Rome. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Capuchin, known as \"THE HOODED HAND\", a unknown-generation vampire of the Hecata bloodline, era: unknown. Setting: wherever the Family votes, Venice. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Enzo Giovanni, known as \"THE HARBORMASTER OF SOULS\", a 7th-generation vampire of the Hecata bloodline, era: 1800s to present. Setting: the customs wharf, night shift, Venice. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marianna Lucientes, known as \"THE WIDOW CONSULATE\", a 8th-generation vampire of the Hecata bloodline, era: 1850s to present. Setting: Recoleta, above the family vaults, Buenos Aires. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Doctor Marius Walker, known as \"THE GRAFT OF VENICE\", a 8th-generation vampire of the Hecata bloodline, era: 1880s to present. Setting: a surgery above the apothecary, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Antonio della Passaglia, known as \"THE GHOST-SCRIBER\", a 9th-generation vampire of the Hecata bloodline, era: 1900s to present. Setting: a print shop that prints only at night, Milan. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Rosetta Maldonado, known as \"THE PALE UNDERTAKER\", a 10th-generation vampire of the Hecata bloodline, era: 1950s to present. Setting: North Cemetery, family row, Manila. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Constanza di Righetti, known as \"THE LEDGER OF TEARS\", a 9th-generation vampire of the Hecata bloodline, era: 1700s to present. Setting: a chapel bank, foreclosed twice, Florence. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Old Man Prosper, known as \"THE RIVER TICKET-CLERK\", a 8th-generation vampire of the Hecata bloodline, era: 1830s to present. Setting: the last ferry kiosk, east bank, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ariadne Stavros, known as \"THE HELLENIC MEDIUM\", a 9th-generation vampire of the Hecata bloodline, era: 1880s to present. Setting: Kerameikos, the potters' gate, Athens. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Bram Verhoeven, known as \"THE POLDER CORONER\", a 10th-generation vampire of the Hecata bloodline, era: 1970s to present. Setting: the coroner's office below sea level, Rotterdam. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Chen Wei-Lu, known as \"THE JADE AUDITOR\", a 8th-generation vampire of the Hecata bloodline, era: 1890s to present. Setting: a bank vault leased since the war, Hong Kong. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Firuzeh Alavi, known as \"THE QANAT KEEPER\", a 9th-generation vampire of the Hecata bloodline, era: 1600s to present. Setting: the qanat galleries, third fork, Tehran. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Gaspard le Veilleur, known as \"THE PARIS WAKE\", a 8th-generation vampire of the Hecata bloodline, era: 1780s to present. Setting: the catacombs, fourteenth arrondissement, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sister Bernadette Kowalczyk, known as \"THE NUN OF THE SHROUD\", a 9th-generation vampire of the Hecata bloodline, era: 1900s to present. Setting: a convent cellar with two exits, one unholy, Warsaw. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ignacio Ferro, known as \"THE MINE BROKER\", a 8th-generation vampire of the Hecata bloodline, era: 1870s to present. Setting: the mountain, below the eleventh level, Potosí. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_hecata20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Quiet Partner, known as \"THE THIRTEENTH LEDGER\", a unknown-generation vampire of the Hecata bloodline, era: unknown. Setting: the account no one opened, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lasombra, known as \"THE FIRST TIDE\", a 3rd-generation vampire of the Lasombra bloodline, era: First City - 1496. Setting: beyond the final mirror, The Abyss. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Gratiano, known as \"THE SHADOW CONQUEROR\", a 3rd-generation vampire of the Lasombra bloodline, era: 1496-present. Setting: a cathedral of glassless windows, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Montano, known as \"THE ELDER OF NIGHTS\", a 4th-generation vampire of the Lasombra bloodline, era: Antiquity-present. Setting: the drowned chapel beneath the casbah, Algiers. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ambrosio Luis Monçada, known as \"THE GRAND INQUISITOR OF THE SABBAT\", a 5th-generation vampire of the Lasombra bloodline, era: 1500s-1999. Setting: the Monçada library, sealed, Madrid. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Polonia, known as \"THE MOTHER OF KNIVES\", a 5th-generation vampire of the Lasombra bloodline, era: 1400s-present. Setting: a ballroom no projector reaches, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lucita de Aragón, known as \"THE UNREPENTANT\", a 7th-generation vampire of the Lasombra bloodline, era: 1100s-present. Setting: wherever the hunt for the ghost of Monçada leads, Varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Talon, known as \"THE BISHOP OF BROKEN GLASS\", a 8th-generation vampire of the Lasombra bloodline, era: 1900s-present. Setting: the harbor, under the container cranes, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Elda Cailean, known as \"THE CARDINAL OF THE SPILL\", a 6th-generation vampire of the Lasombra bloodline, era: 1700s-present. Setting: the flooded galleries under Pinheiros, São Paulo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marguerite d'Aubigné, known as \"THE BLACK CORSO\", a 7th-generation vampire of the Lasombra bloodline, era: 1600s-present. Setting: the sea caves below the Château d'If, Marseille. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Father Ibarra, known as \"THE CONFESSOR\", a 7th-generation vampire of the Lasombra bloodline, era: 1800s-present. Setting: the crypt of a church that burned twice, Mexico City. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Selim Kara, known as \"THE STRAIT NEGOTIATOR\", a 8th-generation vampire of the Lasombra bloodline, era: 1900s-present. Setting: a ferry that never docks twice, Istanbul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ana Duarte, known as \"THE DEFECTOR\", a 9th-generation vampire of the Lasombra bloodline, era: 1990s-present. Setting: an archive beneath the national theater, Lisbon. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Kasimir Wolff, known as \"THE SHADOW LEDGER\", a 8th-generation vampire of the Lasombra bloodline, era: 1940s-present. Setting: a bank vault the bank forgot it owned, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cassia Umbara, known as \"THE UNWRITTEN\", a 6th-generation vampire of the Lasombra bloodline, era: Antiquity-present. Setting: the fourth level of the catacombs, Rome. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Abigail Halbrook, known as \"THE PRIVATEER'S HEIR\", a 9th-generation vampire of the Lasombra bloodline, era: 1700s-present. Setting: the wreck line past the reefs, Nassau. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Father Emeka Obi, known as \"THE ABYSS SCHOLAR\", a 8th-generation vampire of the Lasombra bloodline, era: 1900s-present. Setting: the below-stacks of a university library, Nairobi. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Miguel Rojas, known as \"THE CONSTABLE\", a 9th-generation vampire of the Lasombra bloodline, era: 1970s-present. Setting: the subte tunnels past the last station, Buenos Aires. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ingrid Dahl, known as \"THE ANTITRIBU WARDEN\", a 8th-generation vampire of the Lasombra bloodline, era: 1900s-present. Setting: a decommissioned weather station, Toronto. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Yuan Wu, known as \"THE PAPER SHADOW\", a 9th-generation vampire of the Lasombra bloodline, era: 1900s-present. Setting: the temple basements of Kennedy Town, Hong Kong. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lasombra20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Silhouette, known as \"THE ONE WHO WATCHES\", a Unknown-generation vampire of the Lasombra bloodline, era: Unknown. Setting: wherever the file is open, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sutekh, known as \"THE GOD-KILLER\", a 3rd-generation vampire of the The Ministry bloodline, era: pre-dynastic Egypt — present. Setting: the unmarked valley where the maps go wrong, The Land of the Black Sand. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Omba, known as \"THE FIRST TEMPTER\", a 4th-generation vampire of the The Ministry bloodline, era: ancient Nubia — present. Setting: the confluence caves, where the rivers argue, Khartoum (approximate). Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Neferu, known as \"THE DECEASED BEAUTY\", a 5th-generation vampire of the The Ministry bloodline, era: New Kingdom — present. Setting: the mummy vaults beneath the Egyptian Museum, after hours, Cairo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Hesha Ruhadze, known as \"THE EXCAVATOR\", a 7th-generation vampire of the The Ministry bloodline, era: 1800s — present. Setting: wherever a dig site has just closed for the season, varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Khalid al-Amin, known as \"THE FERRYMAN\", a 6th-generation vampire of the The Ministry bloodline, era: 1300s — present. Setting: the dry-dock tunnels under the old canal pilot station, Suez. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Yasmin St. John, known as \"THE TAILOR OF DESIRES\", a 8th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: the private atelier floor of a tower with no 13th, Dubai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marko Vesely, known as \"THE DEBT CULTURIST\", a 8th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: a pawnshop on a street the guidebooks skip, Prague. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Rania Farouk, known as \"THE FESTIVAL MOTHER\", a 9th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: the seafront promenade, three nights each spring, Alexandria. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Diego Salas, known as \"THE CONFESSIONAL BROKER\", a 9th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: the confessional of a church that deconsecrated quietly, Bogotá. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Anton Grigoriev, known as \"THE OIL CATECHIST\", a 7th-generation vampire of the The Ministry bloodline, era: 1700s — present. Setting: the petroleum galleries under the old Nobel derricks, Baku. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sir Edmund Vale, known as \"THE MUSEUM CONSULTANT\", a 8th-generation vampire of the The Ministry bloodline, era: 1800s — present. Setting: the storage levels of a great museum, sub-basement 3, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Thandiwe Mabaso, known as \"THE GOLD TEMPTRESS\", a 9th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: the disused levels of a deep-level mine, 2.4 km down, Johannesburg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Wei Lang, known as \"THE SHENZHEN PARTNER\", a 8th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: the 47th floor of a hardware conglomerate, unlisted suite, Shenzhen. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Oksana Biletska, known as \"THE KYIV GARDENER\", a 9th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: the greenhouse of a botanical institute, night wing, Kyiv. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Father Malachi Rowe, known as \"THE APOSTATE SHEPHERD\", a 8th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: a parish rectory, third floor, lights always on, Boston. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Amara Devi, known as \"THE BOLLYWOOD SEED\", a 10th-generation vampire of the The Ministry bloodline, era: 2000s — present. Setting: a film-set trailer park between shoots, Mumbai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Gustavo Prado, known as \"THE CARNAVAL CARDINAL\", a 9th-generation vampire of the The Ministry bloodline, era: 1900s — present. Setting: a samba school warehouse, cold room behind the costumes, Rio de Janeiro. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Seo Yeon-jae, known as \"THE SEOUL CONCIERGE\", a 10th-generation vampire of the The Ministry bloodline, era: 2000s — present. Setting: the midnight concierge desk of a Gangnam tower, Seoul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Idris Aman, known as \"THE ADDIS KEEPER\", a 9th-generation vampire of the The Ministry bloodline, era: 1800s — present. Setting: the old receiving vault beneath Holy Trinity's wall, Addis Ababa. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_mini20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Serpent Under Glass, known as \"THE GLASS GARDEN\", a unknown-generation vampire of the The Ministry bloodline, era: unknown — present. Setting: a private vault below the financial district, climate-sealed, Dubai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Absimiliard, known as \"THE FIRST UGLY\", a 3rd-generation vampire of the Nosferatu bloodline, era: First City to present. Setting: torpor, somewhere cold, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Baba Yaga, known as \"THE GRANDMOTHER\", a 4th-generation vampire of the Nosferatu bloodline, era: Pre-history to 1999. Setting: the forests, and the Metro-2, Russia. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Gary Golden, known as \"THE MAKEUP MAN\", a 8th-generation vampire of the Nosferatu bloodline, era: 1920s to present. Setting: beneath the Hollywood Walk of Fame, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Imalia, known as \"THE EXPOSER\", a 9th-generation vampire of the Nosferatu bloodline, era: 1990s to present. Setting: the Warrens, west gallery, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mitnick, known as \"THE GHOST OF THE WIRE\", a 10th-generation vampire of the Nosferatu bloodline, era: 1990s to present. Setting: a server room she does not own, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Jasper, known as \"THE HAUNT\", a 9th-generation vampire of the Nosferatu bloodline, era: 2000s to present. Setting: the flood channels, stretch 7, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Nelli G, known as \"THE SPIDER OF THE CLUB\", a 9th-generation vampire of the Nosferatu bloodline, era: 2000s to present. Setting: an after-hours club with no address, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Tommy Hinds, known as \"THE SHOP STEWARD\", a 8th-generation vampire of the Nosferatu bloodline, era: 1880s to present. Setting: under the freight tunnels, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ankla, known as \"THE KEEPER OF NAMES\", a 5th-generation vampire of the Nosferatu bloodline, era: Ptolemaic era to present. Setting: below the City of the Dead, Cairo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cock Robin, known as \"THE WHISPER BROKER\", a 7th-generation vampire of the Nosferatu bloodline, era: 1600s to present. Setting: the buried River Fleet, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Wauneka, known as \"THE CANYON VOICE\", a 6th-generation vampire of the Nosferatu bloodline, era: 1500s to present. Setting: the lava tubes below the rim, Flagstaff. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vera Chernaya, known as \"THE BLACK LADY OF METRO-2\", a 8th-generation vampire of the Nosferatu bloodline, era: 1930s to present. Setting: Metro-2, line D-6, Moscow. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Osman Kaya, known as \"THE CISTERN ARCHIVIST\", a 9th-generation vampire of the Nosferatu bloodline, era: 1453 to present. Setting: the Basilica Cistern, far column, Istanbul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Nocturna, known as \"THE SAINT OF THE DRAINS\", a 10th-generation vampire of the Nosferatu bloodline, era: 1900s to present. Setting: the Gran Canal, dry season, Mexico City. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Taro Iwase, known as \"THE COLD SERVER\", a 10th-generation vampire of the Nosferatu bloodline, era: 1980s to present. Setting: a Shinjuku data-center cooling level, Tokyo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Priya Kadam, known as \"THE MONSOON WARDEN\", a 9th-generation vampire of the Nosferatu bloodline, era: 1970s to present. Setting: the British-era storm drains, Mumbai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Silas Greer, known as \"THE RECORD RAT\", a 8th-generation vampire of the Nosferatu bloodline, era: 1901 to present. Setting: the abandoned City Hall station, New York. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cosima Vidal, known as \"THE CARNIVAL EAR\", a 10th-generation vampire of the Nosferatu bloodline, era: 1990s to present. Setting: the favela drainage galleries, Rio de Janeiro. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ezekiel Mokoena, known as \"THE MINE RAT\", a 8th-generation vampire of the Nosferatu bloodline, era: 1886 to present. Setting: the sealed gold-mine levels, Johannesburg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nosferatu20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Cartographer, known as \"NONE ON FILE\", a unknown-generation vampire of the Nosferatu bloodline, era: unknown. Setting: wherever the map ends, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Zapathasura, known as \"THE AWAKENED LIE\", a 3rd-generation vampire of the Ravnos bloodline, era: First City — 1999. Setting: skies over the Bay of Bengal (site of the final pyre), Dhaka. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mayapuresh, known as \"THE TENT COURT\", a 5th-generation vampire of the Ravnos bloodline, era: Antiquity — modern nights. Setting: river ghats and the fair grounds beyond them, Varanasi. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Zelena the Fortune, known as \"THE TENT ORACLE\", a 7th-generation vampire of the Ravnos bloodline, era: Ottoman Balkans — modern nights. Setting: the fairground lot by the Sava confluence, Belgrade. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Dion Baroque, known as \"THE CANDLE CON\", a 9th-generation vampire of the Ravnos bloodline, era: Baroque Vienna — modern nights. Setting: the opera houses and service tunnels beneath them, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mirabelle du Fonc, known as \"THE CARNIVAL QUEEN\", a 8th-generation vampire of the Ravnos bloodline, era: Louisiana 1880s — modern nights. Setting: the fair grounds and canal belts of the carnival circuit, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Alexei Sorokin, known as \"THE WINTER PEDDLER\", a 9th-generation vampire of the Ravnos bloodline, era: Imperial Russia — modern nights. Setting: the flea markets of Udelnaya and the metro beneath, Saint Petersburg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Rani Kaul, known as \"THE MONSOON BROKER\", a 8th-generation vampire of the Ravnos bloodline, era: Raj-era India — modern nights. Setting: the dargah lanes and the rail platforms of the harbor lines, Mumbai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Costa the Longer, known as \"THE STORY OF THE ROAD\", a 8th-generation vampire of the Ravnos bloodline, era: Byzantium — modern nights. Setting: the grand bazaar’s closed arcades after curfew, Istanbul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Old Sarrasine, known as \"THE PAPER THIEF\", a 9th-generation vampire of the Ravnos bloodline, era: Revolutionary Paris — modern nights. Setting: the flea belt of Saint-Ouen and the catacomb mouth beneath it, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Wenceslas the Few, known as \"THE PETTY MONARCH\", a 10th-generation vampire of the Ravnos bloodline, era: Habsburg Bohemia — modern nights. Setting: the fair beneath Vysehrad and the cellar bars of Nove Mesto, Prague. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ankhesen the Kind, known as \"THE PATIENT COIN\", a 8th-generation vampire of the Ravnos bloodline, era: Ptolemaic Egypt — modern nights. Setting: the Khan el-Khalili after midnight and the tombs beneath it, Cairo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Joachim Grey, known as \"THE SECOND RAT\", a 10th-generation vampire of the Ravnos bloodline, era: Victorian London — modern nights. Setting: the betting shops of the East End and the Underground beneath, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ines Duarte, known as \"THE FADO LIE\", a 10th-generation vampire of the Ravnos bloodline, era: Lisbon 1755 — modern nights. Setting: the Alfama stairs and the ferry terminals of the Tagus, Lisbon. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marek the Carnival, known as \"THE GRINNING GLASS\", a 9th-generation vampire of the Ravnos bloodline, era: Wallachia — modern nights. Setting: the abandoned circus lot on the Dambovita, Bucharest. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sayo of the Red Gate, known as \"THE THEATER GHOST\", a 10th-generation vampire of the Ravnos bloodline, era: Edo Japan — modern nights. Setting: the shuttered playhouses of Asakusa, Tokyo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ciro Bellini, known as \"THE OPERA DEBT\", a 9th-generation vampire of the Ravnos bloodline, era: Risorgimento Naples — modern nights. Setting: the Teatro San Carlo’s under-stage and the tuff tunnels around it, Naples. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lucia Mendoza, known as \"THE FIESTA LEDGER\", a 10th-generation vampire of the Ravnos bloodline, era: Colonial Mexico — modern nights. Setting: the fiesta halls of the Centro and the drainage beneath the Zocalo, Mexico City. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ilse the Owl, known as \"THE NIGHT MARKET\", a 10th-generation vampire of the Ravnos bloodline, era: Weimar Berlin — modern nights. Setting: the night market beneath the U-Bahn arches of Warschauer, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Tenzin of the Passes, known as \"THE THIN AIR\", a 9th-generation vampire of the Ravnos bloodline, era: Himalayan courts — modern nights. Setting: the stupa lanes and the pass roads out of the valley, Kathmandu. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ravnos20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Last Illusionist, known as \"THE ENCORE\", a unknown-generation vampire of the Ravnos bloodline, era: 1999 — present?. Setting: a different burned theater each time, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Arikel, known as \"THE FIRST PAINTER\", a 3rd-generation vampire of the Toreador bloodline, era: First City (mythic). Setting: torpor, location unrecorded, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Helena of Troy, known as \"THE FACE\", a 4th-generation vampire of the Toreador bloodline, era: Bronze Age to present. Setting: torpor beneath the Lakeshore, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Victoria Ash, known as \"THE HEADLINE\", a 7th-generation vampire of the Toreador bloodline, era: 1970s to present. Setting: South Beach fashion circuit, Miami. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Annabelle Triabell, known as \"THE MIRROR\", a 8th-generation vampire of the Toreador bloodline, era: 1970s to present. Setting: silver-lake gallery circuit, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marcel Guilbeau, known as \"THE CANVAS\", a 6th-generation vampire of the Toreador bloodline, era: 1700s to present. Setting: garden-district salon, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vitae Astra, known as \"THE PATRON\", a 8th-generation vampire of the Toreador bloodline, era: 1920s to present. Setting: quadrilatero fashion district, Milan. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Rafael de Corazon, known as \"THE ROSE\", a 7th-generation vampire of the Toreador bloodline, era: 1500s to present. Setting: gothic quarter residence, Barcelona. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Elaine Fleming, known as \"THE CURATOR\", a 9th-generation vampire of the Toreador bloodline, era: 1980s to present. Setting: Chelsea gallery district, New York. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Dmitri Kovalenko, known as \"THE DIRECTOR\", a 9th-generation vampire of the Toreador bloodline, era: 1990s to present. Setting: barrandov film studios, Prague. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cecily Bain, known as \"THE ANARCH ROSE\", a 10th-generation vampire of the Toreador bloodline, era: 2000s to present. Setting: koreatown rooftop gardens, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sofia Marchetti, known as \"THE SCULPTOR\", a 8th-generation vampire of the Toreador bloodline, era: 1800s to present. Setting: oltrarno workshop, Florence. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ji-woo Han, known as \"THE MUSE\", a 10th-generation vampire of the Toreador bloodline, era: 2010s to present. Setting: hongdae nightlife district, Seoul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Yves Saint-Clair, known as \"THE SEAMSTRESS\", a 8th-generation vampire of the Toreador bloodline, era: 1900s to present. Setting: marais atelier, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Isabel Cortez, known as \"THE FLAMENCO\", a 9th-generation vampire of the Toreador bloodline, era: 1930s to present. Setting: triana tablao, Seville. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Osric Fenwick, known as \"THE CRITIC\", a 8th-generation vampire of the Toreador bloodline, era: Victorian to present. Setting: west end private boxes, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lucia Vasquez, known as \"THE GRAFFITI QUEEN\", a 10th-generation vampire of the Toreador bloodline, era: 1990s to present. Setting: la boca painted alleys, Buenos Aires. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Aurelien Dubois, known as \"THE SOMMELIER\", a 9th-generation vampire of the Toreador bloodline, era: 1960s to present. Setting: vieux lyon cave restaurant, Lyon. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mei Lin Chow, known as \"THE INK\", a 10th-generation vampire of the Toreador bloodline, era: 2000s to present. Setting: central tattoo studios, Hong Kong. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Bianca Moretti, known as \"THE DIVA\", a 8th-generation vampire of the Toreador bloodline, era: 1930s to present. Setting: arena opera boxes, Verona. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_toreador20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Patron of Glass, known as \"UNNAMED\", a unknown-generation vampire of the Toreador bloodline, era: unknown. Setting: unknown, Dubai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Tremere, known as \"THE USURPER\", a 3rd-generation vampire of the Tremere bloodline, era: 1022 CE · modern nights (awake). Setting: the sleeping court — reached through dreams and bonds, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Etrius, known as \"THE KEEPER\", a 4th-generation vampire of the Tremere bloodline, era: 1022 CE · Final Death (presumed). Setting: the ruins of the Vienna Chantry, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Goratrix, known as \"THE TRAITOR MAGUS\", a 4th-generation vampire of the Tremere bloodline, era: 1022 CE · status contested. Setting: House Goratrix chantries — Mexico City, Amritsar, points east, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Meerlinda, known as \"THE PRAGMATIST\", a 4th-generation vampire of the Tremere bloodline, era: 1022 CE · active. Setting: a merchant-bank chantry above a bullion vault, Toronto. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Abetorius, known as \"THE WATCHER OF THE EAST\", a 5th-generation vampire of the Tremere bloodline, era: antiquity · active. Setting: a drowned observatory beneath the old city, Cairo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Virstania, known as \"MOTHER OF GARGOYLES\", a 5th-generation vampire of the Tremere bloodline, era: medieval · location unknown. Setting: somewhere in the Rhine valley — or inside her children, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Carna, known as \"THE HERETIC REGENT\", a 8th-generation vampire of the Tremere bloodline, era: 19th century · active. Setting: the open chantry — former bottling plant, harbor district, Milwaukee. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Aileen Miles, known as \"THE JUSTICAR'S HAND\", a 8th-generation vampire of the Tremere bloodline, era: modern nights · active. Setting: no fixed haven — court to court, varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Astrid Thomas, known as \"THE CHICAGO QUARTERMASTER\", a 9th-generation vampire of the Tremere bloodline, era: 20th century · active. Setting: a ward-house behind a Hyde Park bookbindery, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ephraim Wainwright, known as \"THE SURVIVOR\", a 7th-generation vampire of the Tremere bloodline, era: 17th century · active. Setting: a hidden chantry beneath a disused Underground goods depot, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Beatrice Lenoir, known as \"REGENT OF THE QUIET CHANTRY\", a 8th-generation vampire of the Tremere bloodline, era: 18th century · active. Setting: an unmarked chantry registered as a wine archive, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Hideo Sato, known as \"THE CORPORATE THAUMATURGE\", a 9th-generation vampire of the Tremere bloodline, era: modern nights · active. Setting: a private research floor in the Shinjuku towers, Tokyo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Iyari Okafor, known as \"THE RENEGADE OF LAGOS\", a 9th-generation vampire of the Tremere bloodline, era: modern nights · active. Setting: a courtyard school behind the lagoon markets, Lagos. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sister Agnes Quill, known as \"THE ARCHIVIST OF ALEXANDRIA\", a 10th-generation vampire of the Tremere bloodline, era: 16th century · active. Setting: a vault beneath the rebuilt library district, Alexandria. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marta Zielinska, known as \"THE WARSAW ARCHIVIST\", a 10th-generation vampire of the Tremere bloodline, era: modern nights · active. Setting: a cellar archive beneath a rebuilding site, Warsaw. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Dmitri Volkov, known as \"WARDEN OF THE FROZEN COURT\", a 8th-generation vampire of the Tremere bloodline, era: 20th century · active. Setting: a decommissioned civil-defense bunker under the river district, Moscow. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lucia Ferreira, known as \"THE RAIN REGENT\", a 9th-generation vampire of the Tremere bloodline, era: modern nights · active. Setting: a storm-drain chantry under the Pinheiros corridor, São Paulo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Wei Chen, known as \"THE TALISMAN BROKER\", a 9th-generation vampire of the Tremere bloodline, era: modern nights · active. Setting: a shop of unmarked lacquered boxes, Mid-Levels, Hong Kong. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Unburned, known as \"THE THIRD FIRE\", a unknown (methuselah)-generation vampire of the Tremere bloodline, era: unknown · presumed active. Setting: no confirmed haven — claimed by three chantries, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tremere20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Quartermaster, known as \"THE SUPPLY LINE\", a unknown-generation vampire of the Tremere bloodline, era: modern nights · active. Setting: the world's freight systems — manifests, holds, and quiet ports, varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Eldest, known as \"THE FIRST FLESH\", a 3rd-generation vampire of the Tzimisce bloodline, era: First City — present. Setting: the deep warrens of the Old Country (alleged), unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lambach, known as \"THE LAST LAUGH\", a 4th-generation vampire of the Tzimisce bloodline, era: medieval — present. Setting: last seen fleeing east of the Carpathians, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vlad Tepes, known as \"THE IMPALER\", a 6th (per some registries)-generation vampire of the Tzimisce bloodline, era: 15th century — Final Death (disputed). Setting: a walled estate outside the city, Bucharest. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sascha Vykos, known as \"THE ANGEL OF VIOLENCE\", a 7th-generation vampire of the Tzimisce bloodline, era: Byzantium — present. Setting: a renovated plantation house with no mirrors, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Yorak, known as \"THE CATHEDRAL BUILDER\", a 5th-generation vampire of the Tzimisce bloodline, era: bronze age — present (disputed). Setting: the Cathedral of Flesh, beneath the Balkans (alleged), unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Velya, known as \"THE FLAYED DOCTOR\", a 6th-generation vampire of the Tzimisce bloodline, era: renaissance — present. Setting: the Buried Clinic beneath the old chantry district, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Myca Vykos, known as \"THE HEIR OF VYKOS\", a 8th-generation vampire of the Tzimisce bloodline, era: 19th century — present. Setting: a Black Sea dredging station, Constanta. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Radu of Sighisoara, known as \"THE PROVINCIAL DRAGON\", a 7th-generation vampire of the Tzimisce bloodline, era: 15th century — present. Setting: the citadel’s lower vaults, Sighisoara. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ilse Drachentöter, known as \"THE DRAGONSLAYER\", a 8th-generation vampire of the Tzimisce bloodline, era: 1940s — present. Setting: a dismantled U-Bahn platform sealed in 1945, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Zelena Vrana, known as \"THE GREEN RAVEN\", a 9th-generation vampire of the Tzimisce bloodline, era: 1980s — present. Setting: the drainage galleries under the center, Sofia. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Andras Kovacs, known as \"THE UNCHANGING\", a 9th-generation vampire of the Tzimisce bloodline, era: 17th century — present. Setting: a cellar under the Castle district, Budapest. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mira of the Reeds, known as \"THE WETLAND VOICE\", a 10th-generation vampire of the Tzimisce bloodline, era: 1970s — present. Setting: the liman channels and reed beds, Odessa. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Bogdan the Builder, known as \"THE TUNNELWRIGHT\", a 8th-generation vampire of the Tzimisce bloodline, era: medieval — present. Setting: the medieval cellars beneath the old market, Krakow. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Elena Dragoslava, known as \"THE SHEPHERD OF REVENANTS\", a 7th-generation vampire of the Tzimisce bloodline, era: 14th century — present. Setting: an estate ringed by family graves, Belgrade. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Piotr Vasiliev, known as \"THE WINTER SURGEON\", a 9th-generation vampire of the Tzimisce bloodline, era: 1900s — present. Setting: a cold-storage annex under an abandoned meat market, Saint Petersburg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Gardener of Zergov, known as \"THE GRAFT\", a 6th-generation vampire of the Tzimisce bloodline, era: unknown — present. Setting: a village that appears on no modern map, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Amara of the Wall, known as \"THE WARDEN OF COLD HARBOR\", a 8th-generation vampire of the Tzimisce bloodline, era: Ottoman era — present. Setting: Theodosian walls, inner galleries, Istanbul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Drazen, known as \"THE HOUND OF THE VOIVODATE\", a 9th-generation vampire of the Tzimisce bloodline, era: 1950s — present. Setting: storm tunnels of the upper city, Zagreb. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vesna the Unmade, known as \"THE INCOMPLETE\", a 10th-generation vampire of the Tzimisce bloodline, era: 1990s — present. Setting: the tunnel of hope, maintenance section, Sarajevo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tzimisce20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Auditor of Meat, known as \"THE INVENTORY\", a unknown (pre-4th claimed)-generation vampire of the Tzimisce bloodline, era: unknown — present. Setting: wherever the Sabbat’s ledgers say nothing, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Veddhartha, known as \"THE FOUNDER\", a 3rd-generation vampire of the Ventrue bloodline, era: Antiquity. Setting: torpor, whereabouts disputed, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Hardestadt the Elder, known as \"THE FATHER OF CAGES\", a 4th-generation vampire of the Ventrue bloodline, era: Anarch Revolt (1200s). Setting: Final Death, 1396-ish, N/A. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Hardestadt the Younger, known as \"THE CHANCELLOR\", a 5th-generation vampire of the Ventrue bloodline, era: 1450–Modern Nights. Setting: presumed Final Death, Second Inquisition first wave, N/A. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mithras, known as \"THE GOD OF LONDON\", a 5th (registry doubt)-generation vampire of the Ventrue bloodline, era: Roman era–1940s. Setting: presumed destroyed, WWII, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Anne Bowesley, known as \"THE QUEEN\", a 7th-generation vampire of the Ventrue bloodline, era: 1900s–Modern Nights. Setting: presumed destroyed, Second Inquisition, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Kemintiri, known as \"THE PERFECT LIAR\", a 4th-generation vampire of the Ventrue bloodline, era: Ancient–Modern Nights. Setting: wherever power needs killing, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Antonius, known as \"THE GAUL\", a 4th-generation vampire of the Ventrue bloodline, era: Roman era. Setting: torpor beneath the old quarter (registry doubt), Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marcus Vitel, known as \"THE SENATOR\", a 4th (registry doubt)-generation vampire of the Ventrue bloodline, era: Roman era–Modern Nights. Setting: bundling the beltway, Washington D.C.. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lucinde, known as \"THE JUSTICAR\", a 7th-generation vampire of the Ventrue bloodline, era: Modern Nights. Setting: wherever the Camarilla’s law travels, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Jan Pieterzoon, known as \"THE DIPLOMAT\", a 8th-generation vampire of the Ventrue bloodline, era: Modern Nights. Setting: canal-house chantry of ledgers, Amsterdam. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue11.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vannevar Thomas, known as \"THE GENTLEMAN\", a 8th-generation vampire of the Ventrue bloodline, era: 1900s–Modern Nights. Setting: the Bay’s oldest hill, San Francisco. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue12.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Kevin Jackson, known as \"THE REBUILDER\", a 9th-generation vampire of the Ventrue bloodline, era: Modern Nights. Setting: prince’s seat, restored tower, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue13.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lodin, known as \"THE LANDLORD\", a 7th-generation vampire of the Ventrue bloodline, era: 1800s–1990s. Setting: Final Death, 1990s, Chicago. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue14.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sebastian LaCroix, known as \"THE ARROGANT\", a 8th-generation vampire of the Ventrue bloodline, era: 1900s–2000s. Setting: presumed Final Death, 2004, Los Angeles. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue15.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Willem van der Meer, known as \"THE ACCOUNTANT\", a 9th-generation vampire of the Ventrue bloodline, era: 1600s–Modern Nights. Setting: a vault under the Herengracht, Amsterdam. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue16.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Catherine Yong, known as \"THE SOVEREIGN\", a 9th-generation vampire of the Ventrue bloodline, era: Modern Nights. Setting: a fund that owns the port, Singapore. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue17.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lucas Ho, known as \"THE HARBORMASTER\", a 10th-generation vampire of the Ventrue bloodline, era: Modern Nights. Setting: a penthouse over the container port, Hong Kong. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue18.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Nadia Al-Rashid, known as \"THE CUSTODIAN\", a 9th-generation vampire of the Ventrue bloodline, era: Modern Nights. Setting: a sovereign-fund tower, Dubai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue19.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Osvaldo Ribeiro, known as \"THE LANDOWNER\", a 8th-generation vampire of the Ventrue bloodline, era: 1800s–Modern Nights. Setting: a fazenda that became a skyline, São Paulo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_ventrue20.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ingrid Sokolova, known as \"THE FIXER\", a 10th-generation vampire of the Ventrue bloodline, era: Modern Nights. Setting: an unmarked floor above the ring road, Moscow. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marthe Voss, known as \"THE FIRST VOICE\", a 8th-generation vampire of the Daughters of Cacophony bloodline, era: 1880s to present. Setting: the old opera bunker under Prenzlauer Berg, Berlin. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Madrigal, known as \"THE UNSUNG\", a unknown-generation vampire of the Daughters of Cacophony bloodline, era: unknown. Setting: wherever a choir rehearses past midnight, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Octavia Rehn, known as \"THE CHOIR DIRECTOR\", a 9th-generation vampire of the Daughters of Cacophony bloodline, era: 1940s to present. Setting: a flooded concert cellar off the Danube canal, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cielo Bautista, known as \"THE FLOOD SINGER\", a 10th-generation vampire of the Daughters of Cacophony bloodline, era: 1970s to present. Setting: the North Cemetery drainage of San Juan del Monte, Manila. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Riko Anzai, known as \"THE GLASS WHISTLER\", a 10th-generation vampire of the Daughters of Cacophony bloodline, era: 1980s to present. Setting: a shuttered planetarium above the Mido-suji line, Osaka. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sadie LaRue, known as \"THE GOSPEL STATIC\", a 9th-generation vampire of the Daughters of Cacophony bloodline, era: 1920s to present. Setting: a pirate-radio rig in the Bywater rafts, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Bernat Solé, known as \"THE TENOR OF RUBBLE\", a 9th-generation vampire of the Daughters of Cacophony bloodline, era: 1930s to present. Setting: the unfinished crypt of the Sagrada Familia, Barcelona. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Maren Kolbeck, known as \"THE ICE ARIA\", a 10th-generation vampire of the Daughters of Cacophony bloodline, era: 1960s to present. Setting: the sea-shelf tunnels of the harbor ice-breakers, Oslo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Yolanda Cruz, known as \"THE S.O.S.\", a 11th-generation vampire of the Daughters of Cacophony bloodline, era: 1990s to present. Setting: the storm-cisterns under the Monserrate funicular, Bogotá. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_doc10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Chorus, known as \"THE MANY-MOUTHED\", a unknown-generation vampire of the Daughters of Cacophony bloodline, era: unknown. Setting: three transmitters, one voice, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Virstania, known as \"THE MOTHER OF GARGOYLES\", a 5th-generation vampire of the Gargoyles bloodline, era: 1200s-present. Setting: the old chantry quarry, Rhine valley. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Granite Halloran, known as \"THE UNION MAN\", a 6th-generation vampire of the Gargoyles bloodline, era: 1840s-present. Setting: Brooklyn Bridge anchorage, New York. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Calx, known as \"THE FIRST MOLD\", a 4th-generation vampire of the Gargoyles bloodline, era: 1200s-present. Setting: beneath the burnt chantry, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Petra Szekely, known as \"THE BELL WARDEN\", a 6th-generation vampire of the Gargoyles bloodline, era: 1300s-present. Setting: Fisherman’s Bastion, Budapest. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Aerial of Salzburg, known as \"THE LISTENING SPIRE\", a 5th-generation vampire of the Gargoyles bloodline, era: 1500s-present. Setting: the fortress bell-tower, Salzburg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Maro, known as \"THE FERRY WING\", a 7th-generation vampire of the Gargoyles bloodline, era: 1600s-present. Setting: the arsenale rooftops, Venice. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Kondrat Smok, known as \"THE DRAGON OF KRAKOW\", a 7th-generation vampire of the Gargoyles bloodline, era: 1300s-present. Setting: Wawel hill, the den beneath, Krakow. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Wing of the Union, known as \"THE FALLEN PATCH\", a 7th-generation vampire of the Gargoyles bloodline, era: 1800s-present. Setting: old city hall gargoyle row, Toronto. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Pair of Marseille, known as \"THE TWO THAT MATCH\", a 7th-generation vampire of the Gargoyles bloodline, era: 1400s-present. Setting: the twin cathedral spires, Marseille. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_garg10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Unfired, known as \"THE ONE THAT WAS NOT POURED\", a unknown-generation vampire of the Gargoyles bloodline, era: unknown. Setting: no fixed roost, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lamia, known as \"THE FIRST PRIESTESS\", a 4th-generation vampire of the Lamia bloodline, era: First City onward. Setting: wherever a rite is owed, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mother Coronis, known as \"THE KEEPER OF RITES\", a 5th-generation vampire of the Lamia bloodline, era: 1200s to present. Setting: the rotunda’s lower gallery, Thessaloniki. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Octavia the Ledgerless, known as \"THE UNPAID DEBT\", a 6th-generation vampire of the Lamia bloodline, era: 1400s to present. Setting: the quarter the Family does not audit, Venice. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sister Nine-Nights, known as \"THE WAKE-KEEPER\", a 8th-generation vampire of the Lamia bloodline, era: 1800s to present. Setting: the above-ground tombs of the old parishes, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Valentina Cruz, known as \"THE GRAVEWARDEN\", a 9th-generation vampire of the Lamia bloodline, era: 1900s to present. Setting: Panteón de Dolores, the unmapped rows, Mexico City. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Theodora Vračar, known as \"THE BALM HAND\", a 8th-generation vampire of the Lamia bloodline, era: 1600s to present. Setting: the Kalemegdan cellars, western wall, Belgrade. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Auntie Sepulchre, known as \"THE BELL OF LAST MEASURES\", a 7th-generation vampire of the Lamia bloodline, era: 1500s to present. Setting: the old bell-tower, ringed shut, London. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marisol of the Third Grave, known as \"THE UNMARKED MOURNER\", a 10th-generation vampire of the Lamia bloodline, era: 1940s to present. Setting: Recoleta, the third row of the unnumbered, Buenos Aires. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Brother Cippus, known as \"THE WALL LISTENER\", a 8th-generation vampire of the Lamia bloodline, era: 1700s to present. Setting: the Appian cellars, beyond the fifth gate, Rome. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_lamia10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Unclaimed Grave, known as \"THE LAST RITE OWED\", a unknown-generation vampire of the Lamia bloodline, era: unknown. Setting: the plot with no stone and no name, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Saulot, known as \"THE THIRD EYE\", a 3rd-generation vampire of the Salubri bloodline, era: First City to 1133 (and after?). Setting: the stolen body of a founder, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Samuel, known as \"THE WANDERING HEALER\", a 7th-generation vampire of the Salubri bloodline, era: Crusades to present. Setting: a hospice off the Via Dolorosa, Jerusalem. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Adonai, known as \"THE REFUSER\", a 6th-generation vampire of the Salubri bloodline, era: Roman era to present. Setting: caves above the old threshing floors, Mount Gerizim. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Zao-Lat, known as \"THE SLEEPING PHYSICIAN\", a 4th-generation vampire of the Salubri bloodline, era: Antiquity to present. Setting: a sealed river-cavern, location salted, under the Yangtze. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Miriam of Bethany, known as \"THE BALM\", a 7th-generation vampire of the Salubri bloodline, era: 1700s to present. Setting: a hospice above the port, Haifa. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ilya Volkov, known as \"THE WALKING REMEDY\", a 8th-generation vampire of the Salubri bloodline, era: 1917 to present. Setting: a metro-side clinic two levels down, Kyiv. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Dr. Esther Nwosu, known as \"THE TRIAGE SAINT\", a 8th-generation vampire of the Salubri bloodline, era: 1960s to present. Setting: an under-bridge clinic that moves, Lagos. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Chen Ruolan, known as \"THE ACUPUNCTURE OF SOULS\", a 9th-generation vampire of the Salubri bloodline, era: 1890s to present. Setting: a teahouse with a back room, Chengdu. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Father Marcos Alvarez, known as \"THE CONFESSIONAL PHYSICIAN\", a 8th-generation vampire of the Salubri bloodline, era: 1521 to present. Setting: a hospital chapel, consecrated twice, Seville. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_salubri10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Fourth Eye, known as \"THE ONE WHO SEES BACK\", a unknown-generation vampire of the Salubri bloodline, era: unknown. Setting: mirrors, occasionally, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Troile, known as \"THE USURPED NAME\", a 3rd-generation vampire of the True Brujah bloodline, era: Carthage and before. Setting: the ruins of Carthage, or wherever history is being corrected, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ilyes, known as \"THE MURDERED FATHER\", a 3rd-generation vampire of the True Brujah bloodline, era: First City. Setting: inside the thief who ate him, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Anath, known as \"THE STILL POINT\", a 4th-generation vampire of the True Brujah bloodline, era: Classical antiquity. Setting: a monastery that no longer appears on maps, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Petrarch of Ravenna, known as \"THE LAST ORATOR\", a 5th-generation vampire of the True Brujah bloodline, era: The fall of Rome to the present. Setting: the Byzantine mosaics of San Vitale, after closing, Ravenna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Hypatia the Younger, known as \"THE COUNTER\", a 6th-generation vampire of the True Brujah bloodline, era: Alexandria to the present. Setting: the drowned stacks beneath the new library, Alexandria. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marcus Vipsanius, known as \"THE HONEST SENATOR\", a 6th-generation vampire of the True Brujah bloodline, era: Republic Rome to the present. Setting: a voting precinct that has never once seen daylight, Rome. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vestia, known as \"THE COLD ORATOR\", a 7th-generation vampire of the True Brujah bloodline, era: The Anarch Revolt to the present. Setting: a shuttered debating hall above the old gothic quarter, Barcelona. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cassian the Blank, known as \"THE ABSENT TEACHER\", a 8th-generation vampire of the True Brujah bloodline, era: The Renaissance to the present. Setting: a lecture hall in the university, booked under a dead man’s name, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sabine of the Long Hour, known as \"THE ARCHIVIST OF THE CRIME\", a 8th-generation vampire of the True Brujah bloodline, era: Carthage legend to the present. Setting: the excavated P districts, sealed by agreement, Tunis. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_tb10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Hour That Was Not, known as \"THE WITNESS\", a unknown-generation vampire of the True Brujah bloodline, era: unknown. Setting: the missing minute of every major Camarilla conclave, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vasuki the Pale, known as \"THE FIRST TO EAT\", a unknown-generation vampire of the Nagaraja bloodline, era: unknown to present. Setting: the crossed threshold, unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Doctor Iyengar, known as \"THE ANATOMY LECTURER\", a 7th-generation vampire of the Nagaraja bloodline, era: 1830s to present. Setting: the sealed vaults of a medical college, Kolkata. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sharadha Kael, known as \"THE CHARNEL LIBRARIAN\", a 8th-generation vampire of the Nagaraja bloodline, era: 1700s to present. Setting: a charnel temple above the valley, Kathmandu. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Pema Dorje, known as \"THE COLD PRAYER\", a 9th-generation vampire of the Nagaraja bloodline, era: 1600s to present. Setting: ruins above the pilgrim road, Lhasa. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ravi Chandrasekar, known as \"THE FREEZER TOLL\", a 8th-generation vampire of the Nagaraja bloodline, era: 1900s to present. Setting: the fish-market freezers, before the ice trucks, Chennai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Madam Yang Xue, known as \"THE BONE LANTERN\", a 9th-generation vampire of the Nagaraja bloodline, era: 1500s to present. Setting: a lantern-shop with a back stair, Chengdu. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ashok the Hollow, known as \"THE QUIET MORTUARY\", a 10th-generation vampire of the Nagaraja bloodline, era: 1950s to present. Setting: a mortuary rail between two cities, Mumbai. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Kali Sundaram, known as \"THE CANAL PSALM\", a 9th-generation vampire of the Nagaraja bloodline, era: 1700s to present. Setting: the canal tombs, below the tide gates, Colombo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ila Bhattacharya, known as \"THE DHAKA SCAR\", a 10th-generation vampire of the Nagaraja bloodline, era: 1999 to present. Setting: the quarter still marked by the Week of Nightmares, Dhaka. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_nag10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Hunger That Speaks, known as \"THE THIRD MEAL\", a unknown-generation vampire of the Nagaraja bloodline, era: unknown. Setting: freezers with sealed doors, varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Baron Samedi, known as \"THE FIRST TO ROT\", a unknown-generation vampire of the Samedi bloodline, era: unknown to present. Setting: every crossroads, briefly, the Caribbean. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Doctor Ferreau, known as \"THE CABINET\", a 8th-generation vampire of the Samedi bloodline, era: 1790s to present. Setting: a clinic that predates the state, Port-au-Prince. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Madame Loa, known as \"THE VEVE WIDOW\", a 7th-generation vampire of the Samedi bloodline, era: 1700s to present. Setting: the above-ground tombs of St. Louis No. 1, New Orleans. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Cornelius Brace, known as \"THE TAXIDERMIST\", a 8th-generation vampire of the Samedi bloodline, era: 1850s to present. Setting: a body shop off the Tamiami Trail, Miami. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Padre Arcángel, known as \"THE LAST RITES\", a 9th-generation vampire of the Samedi bloodline, era: 1800s to present. Setting: a necropolis chapel, Cristo del Buen Viaje, Havana. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Tante Zabel, known as \"THE COFFIN LEDGER\", a 9th-generation vampire of the Samedi bloodline, era: 1700s to present. Setting: a coffin workshop above the mangroves, Guadeloupe. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Jimmy the Wound, known as \"THE SCAR BROKER\", a 10th-generation vampire of the Samedi bloodline, era: 1900s to present. Setting: a sound-system yard, off-season, Kingston. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Odalys Ferrer, known as \"THE DRY SEASON\", a 10th-generation vampire of the Samedi bloodline, era: 1930s to present. Setting: the catacombs under the Sacramente, Mexico City. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Silas Blackwood, known as \"THE PLANTATION AUDIT\", a 8th-generation vampire of the Samedi bloodline, era: 1730s to present. Setting: a ruined sugar-house, second floor intact, Barbados. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_sam10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Second Burial, known as \"THE ONE THE GROUND REJECTED\", a unknown-generation vampire of the Samedi bloodline, era: unknown. Setting: graves that refuse to stay shut, varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Lazarus, known as \"THE PATIENT KING\", a 4th-generation vampire of the Harbingers of Skulls bloodline, era: 1200s-present. Setting: the sunken cistern beneath the old quarter, Istanbul. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Mater Ossia, known as \"THE KEEP OF BONES\", a 6th-generation vampire of the Harbingers of Skulls bloodline, era: 1500s-present. Setting: the Fontanelle cemetery galleries, Naples. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Fray Odioso, known as \"THE SILENT CONFESSOR\", a 7th-generation vampire of the Harbingers of Skulls bloodline, era: 1600s-present. Setting: the Capuchin catacombs, standing row, Palermo. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Octave de la Nuit, known as \"THE CRYPT ORGANIST\", a 8th-generation vampire of the Harbingers of Skulls bloodline, era: 1800s-present. Setting: the catacombs below the 14th, Paris. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Brichta Sedlec, known as \"THE CHANDELIER WARDEN\", a 7th-generation vampire of the Harbingers of Skulls bloodline, era: 1400s-present. Setting: the ossuary chapel of All Saints, Kutná Hora. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Padre Huesos, known as \"THE LIMA ARCHIVIST\", a 8th-generation vampire of the Harbingers of Skulls bloodline, era: 1600s-present. Setting: the monastery catacombs, the circle of bones, Lima. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Domhnaill of the Reef, known as \"THE DROWNED NOTARY\", a 6th-generation vampire of the Harbingers of Skulls bloodline, era: 1300s-present. Setting: St Paul's catacombs, the sealed gallery, Valletta. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Via Appia Antica, known as \"THE ROAD WARDEN\", a 5th-generation vampire of the Harbingers of Skulls bloodline, era: 100s-present. Setting: the mausoleums of the Appian Way, Rome. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Nane Sarma, known as \"THE WINTER MOURNER\", a 7th-generation vampire of the Harbingers of Skulls bloodline, era: 1500s-present. Setting: the old crypts under the monastery hill, Yerevan. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_harbingers10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Tenth Skull, known as \"THE COUNT\", a unknown-generation vampire of the Harbingers of Skulls bloodline, era: unknown. Setting: the ossuary that has one skull too many, varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd01.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Marconius, known as \"THE STRANGE CHILD\", a 4th-generation vampire of the Kiasyd bloodline, era: myth-1400s. Setting: the fae road that crosses no maps, Unknown. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd02.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Gwyllion Crane, known as \"THE CORNERED\", a 6th-generation vampire of the Kiasyd bloodline, era: 1700s-present. Setting: the archive under the coal exchange, Cardiff. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd03.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ephram Tallow, known as \"THE BOOKBINDER OF GLASS\", a 7th-generation vampire of the Kiasyd bloodline, era: 1850s-present. Setting: a bindery with one extra room, Basel. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd04.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Sister Whitechess, known as \"THE ODD NOTATION\", a 8th-generation vampire of the Kiasyd bloodline, era: 1900s-present. Setting: the music library, west stacks, Prague. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd05.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Okonkwo the Tall, known as \"THE TOO-LONG SHADOW\", a 7th-generation vampire of the Kiasyd bloodline, era: 1800s-present. Setting: the lagoon causeway at wrong noon, Lagos. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd06.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Vasily Segment, known as \"THE ANGLED MAN\", a 8th-generation vampire of the Kiasyd bloodline, era: 1920s-present. Setting: the metro tunnel with no station, St Petersburg. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd07.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Miss Perihelion, known as \"THE WRONG NOON\", a 6th-generation vampire of the Kiasyd bloodline, era: 1600s-present. Setting: the headland where noon lasts too long, Reykjavik. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd08.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Ivo the Measured, known as \"THE MEASURER\", a 8th-generation vampire of the Kiasyd bloodline, era: 1900s-present. Setting: the standards bureau, sub-basement, Vienna. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd09.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of Anwyr of the Hollow Hills, known as \"THE HOLLOW HILL\", a 5th-generation vampire of the Kiasyd bloodline, era: 1100s-present. Setting: under the hill that is not on the ordnance survey, Wales. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
+    },
+    {
+      "file": "char_kiasyd10.png",
+      "size": "1024x1024",
+      "prompt": "Cinematic character portrait of The Uninvited Guest, known as \"THE FEAST IS ALREADY SET\", a unknown-generation vampire of the Kiasyd bloodline, era: unknown. Setting: the third mirror in any room with two, Varies. Dark gothic noir atmosphere, chiaroscuro lighting in deep green and black, 35mm film grain, sharp focus on the face, photorealistic, no text, no letters, no watermark"
     }
   ]
 }

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — COLOGNE</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Germany · Camarilla · node survey 2026</text>
+<path d="M 135 535 L 185 503 L 276 460 L 341 487 L 290 526 L 384 602 L 497 621" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 459 114 L 402 154 L 359 120 L 468 95 L 400 95 L 443 95 L 570 106" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 364 435 L 382 353 L 432 389 L 362 429 L 447 388 L 414 343 L 526 366" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 208 460 L 156 442 L 83 421 L 50 397 L 92 343 L 50 275 L 50 281" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 230 473 L 245 527 L 120 512 L 149 427 L 227 388 L 103 423 L 50 353" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 350 584 L 400 548 L 389 473 L 336 518 L 404 473 L 499 549 L 438 606" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 130 136 L 186 188 L 308 237 L 396 213 L 274 247 L 180 275 L 67 294" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 526 366 Q 265.8034106553532 309.8841520829592 50 281" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 67 294 Q 307.81112175202 202.43239460862242 570 106" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 67 294 Q 7.0904298685491085 308.912164720241 67 294" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 50 353 Q 324.73957499023527 501.03411878226325 497 621" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 50 353 Q 347.0235330821015 170.18241566140205 570 106" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 50 353 Q 33.608341864310205 376.97283787070774 67 294" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 497 621 Q 330.4127734526992 484.1700943617616 67 294" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 526 366 Q 264.36415953794494 328.1265552039258 50 353" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 526 366 Q 239.15599453495815 290.55780040682293 50 281" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="497" cy="621" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="507" y="625" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="570" cy="106" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="526" cy="366" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="536" y="370" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="50" cy="281" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="50" cy="353" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="60" y="357" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="438" cy="606" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="67" cy="294" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="77" y="298" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="497" cy="621" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="515" y="613" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 10 kindred est. · classify before trusting</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — RIO DE JANEIRO</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Brazil · Camarilla · node survey 2026</text>
+<path d="M 355 401 L 377 379 L 485 391 L 397 338 L 368 318 L 427 307 L 338 368" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 789 132 L 664 186 L 536 258 L 534 265 L 543 315 L 458 264 L 572 307" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 740 208 L 774 177 L 665 219 L 554 171 L 668 198 L 743 242 L 691 304" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 83 475 L 50 497 L 142 474 L 50 514 L 50 557 L 83 514 L 95 479" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 604 551 L 594 590 L 561 572 L 636 567 L 757 547 L 843 524 L 779 509" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 840 592 L 830 579 L 729 538 L 782 556 L 661 618 L 620 634 L 641 650" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 600 157 L 657 231 L 576 216 L 554 140 L 499 95 L 562 103 L 435 95" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 338 368 Q 180.03998894710094 440.62711076810956 95 479" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 641 650 Q 658.0361818708479 521.8409172352403 779 509" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 572 307 Q 544.0067146811634 265.2668301295489 572 307" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 95 479 Q 382.54240781534463 404.4688483455684 572 307" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 435 95 Q 657.4629850359634 256.0299128200859 779 509" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 641 650 Q 625.2426940295845 699.3858758732677 641 650" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 641 650 Q 584.7836689464748 709.9435454793274 641 650" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 691 304 Q 336.5370546327904 417.1896648488473 95 479" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 572 307 Q 671.5475057158619 336.55038026627153 691 304" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="338" cy="368" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="348" y="372" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="572" cy="307" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="691" cy="304" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="701" y="308" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="95" cy="479" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="779" cy="509" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="789" y="513" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="641" cy="650" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="435" cy="95" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="445" y="99" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="641" cy="650" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="659" y="642" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 16 kindred est. · classify before trusting</text>
+</svg>

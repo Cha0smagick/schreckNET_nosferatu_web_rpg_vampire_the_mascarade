@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — HYDERABAD</text>
+<text x="28" y="68" fill="#63755F" font-size="13">India · Camarilla (franchise) · node survey 2026</text>
+<path d="M 432 326 L 302 368 L 194 387 L 186 393 L 231 398 L 122 388 L 163 418" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 527 603 L 602 650 L 533 650 L 537 650 L 594 596 L 498 527 L 441 579" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 774 344 L 678 329 L 629 332 L 708 278 L 659 339 L 579 263 L 517 343" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 385 270 L 272 282 L 180 255 L 171 171 L 220 157 L 114 138 L 194 95" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 647 402 L 621 484 L 516 413 L 433 390 L 425 332 L 385 399 L 306 339" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 161 487 L 244 500 L 270 546 L 392 564 L 387 626 L 480 600 L 518 520" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 257 319 L 150 393 L 278 435 L 164 363 L 171 407 L 129 465 L 214 529" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 441 579 Q 242.91103807277977 504.40744192688726 163 418" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 214 529 Q 263.31109683960676 490.5537913343869 214 529" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 441 579 Q 477.8749008802697 624.7202694555745 441 579" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 518 520 Q 306.57752696657553 478.01077942480333 163 418" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 214 529 Q 176.49232575669885 528.6205937038176 214 529" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 214 529 Q 404.3341077514924 404.209209010005 517 343" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 306 339 Q 341.4702445268631 354.1813734616153 306 339" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 518 520 Q 320.44229842955247 427.3899056960363 163 418" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 214 529 Q 155.82936993567273 474.0638136258349 163 418" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="163" cy="418" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="173" y="422" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="441" cy="579" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="517" cy="343" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="527" y="347" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="194" cy="95" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="306" cy="339" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="316" y="343" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="518" cy="520" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="214" cy="529" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="224" y="533" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="163" cy="418" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="181" y="410" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 5 kindred est. · classify before trusting</text>
+</svg>

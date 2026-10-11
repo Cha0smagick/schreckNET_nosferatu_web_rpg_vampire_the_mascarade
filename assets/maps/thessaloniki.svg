@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — THESSALONIKI</text>
+<text x="28" y="68" fill="#63755F" font-size="13">Greece · Independent · node survey 2026</text>
+<path d="M 451 197 L 453 213 L 369 199 L 314 156 L 330 199 L 284 133 L 403 118" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 572 182 L 640 193 L 703 207 L 791 187 L 779 223 L 704 211 L 622 294" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 750 529 L 801 509 L 872 463 L 817 466 L 945 432 L 950 384 L 950 382" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 145 282 L 256 252 L 317 222 L 250 286 L 217 353 L 124 341 L 168 389" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
+<path d="M 863 120 L 909 115 L 902 95 L 891 176 L 849 105 L 883 126 L 903 173" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 141 583 L 86 563 L 50 537 L 122 559 L 58 482 L 50 566 L 50 615" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 533 534 L 447 553 L 533 528 L 655 572 L 738 587 L 844 569 L 716 560" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 403 118 Q 649.5266754366457 168.89981714775786 903 173" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 50 615 Q 345.5450385552831 580.6520634039771 716 560" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 168 389 Q 110.78932909294963 518.3496369293425 50 615" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 622 294 Q 459.6968402317725 210.22898032679223 403 118" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 903 173 Q 786.189642532263 191.33112470502965 622 294" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 716 560 Q 589.2341432766989 354.46477613644674 403 118" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 168 389 Q 128.31154628656805 417.49806188745424 168 389" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 403 118 Q 657.3351119295694 234.6491695381701 950 382" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 950 382 Q 637.3254304588772 217.05259155482054 403 118" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="403" cy="118" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="413" y="122" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="622" cy="294" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="950" cy="382" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="960" y="386" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="168" cy="389" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="903" cy="173" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="913" y="177" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="50" cy="615" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="716" cy="560" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="726" y="564" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="950" cy="382" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="968" y="374" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 5 kindred est. · classify before trusting</text>
+</svg>

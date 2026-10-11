@@ -1,0 +1,41 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only // provenance "SOMMER" lecture cache (unverified)
+file: antediluvians_registry.txt
+====================================================================
+
+THE ANTEDILUVIAN REGISTRY (THIRD GENERATION)
+--------------------------------------------
+
+Thirteen of them made the First City possible and the rest of
+history impossible. A field summary, with the standing caveat:
+most of these are stories the elders agree on, which is not the
+same as true.
+
+  VEDDHARTHA — Ventrue. Builder of the Second City's spine. Claims
+               everything; the claim is the discipline.
+  ARIKEL     — Toreador. The first painter. Apocrypha says he invented
+               beauty as an obligation.
+  ENNOIA     — Gangrel. Never built. Walked. The roads are hers.
+  HAQIM      — Banu Haqim. Judge of the Second City; three castes
+               answer to a court that never adjourns.
+  LASOMBRA   — Lasombra. Traded the sea for the shadow behind the sea.
+  MALKAV     — Malkavian. One patient, one diagnosis, distributed.
+  ABSIMILIARD— Nosferatu. Asked for a mirror. The curse answered.
+  TZIMISCE   — Tzimisce. Flesh as a native language.
+  RAVNOS     — Zapathasura. Destroyed 1999 over Dhaka. The oldest
+               confirmed death of an Antediluvian, witnessed by
+               satellites. Verify what satellites can see.
+  SAULOT     — Salubri. Diablerized by Tremere, 1133. The first theft
+               that organized the rest.
+  SET/SUTEKH — Ministry. God-killer by his own account; his account
+               is the only scripture the clan keeps.
+  ILYES      — Brujah. Diablerized by his own childe Troile. Carthage
+               was the argument; Rome was the rebuttal.
+  CAPPADOCIUS— Diablerized by Augustus Giovanni, 1444. The family
+               kept the ledger. The ledger kept the soul. File with
+               DO NOT REPLY.
+
+RULES OF ENGAGEMENT (per Jyhad summary):
+- They die only to each other, or on purpose.
+- Most are in torpor. "Most" is doing structural work in that sentence.
+- Any elder who volunteers their location is lying about something else.

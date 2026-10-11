@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SchreckNET VLA-7 // Kindred Registry</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .site { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  .reg-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+  .reg-controls select { font-family: inherit; font-size: 13px; background: #06120C; color: var(--green); border: 1px solid var(--line); padding: 6px 8px; min-width: 220px; }
+  .reg-detail { display: flex; gap: 18px; margin-top: 14px; flex-wrap: wrap; }
+  .reg-photo { flex: 0 0 220px; }
+  .reg-photo img { width: 100%; border: 1px solid var(--line); display: block; }
+  .reg-photo .ph-note { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  .reg-body { flex: 1 1 320px; }
+  .reg-name { font-size: 22px; font-weight: 700; color: var(--bone); }
+  .reg-alias { color: var(--acid); font-size: 12px; letter-spacing: 2px; margin: 2px 0 8px; }
+  .reg-meta { font-size: 12px; color: var(--muted); line-height: 1.7; }
+  .reg-meta b { color: var(--green); font-weight: 400; }
+  .threat { display: inline-block; padding: 1px 8px; border: 1px solid var(--line); font-size: 11px; letter-spacing: 2px; }
+  .threat.high { color: #F87171; border-color: #F87171; }
+  .threat.mid  { color: #FFB03A; border-color: #FFB03A; }
+  .threat.low  { color: #4ADE80; border-color: #4ADE80; }
+  .reg-lore { margin-top: 10px; font-size: 13px; line-height: 1.65; color: var(--bone); white-space: pre-line; }
+  .reg-citymap { margin-top: 12px; }
+  .reg-citymap img { width: 100%; max-width: 640px; border: 1px solid var(--line); display: block; }
+  .reg-citymap .cm-cap { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  .city-detail { font-size: 12px; color: var(--muted); line-height: 1.7; margin-top: 10px; white-space: pre-line; }
+  .reg-empty { color: var(--muted); font-size: 13px; padding: 20px 0; }
+  h2.sect-title { font-size: 15px; color: var(--acid); letter-spacing: 3px; margin: 26px 0 4px; }
+  .hr-line { border: 0; border-top: 1px solid var(--line); margin: 8px 0 12px; }
+</style>
+</head>
+<body>
+<div id="crt-overlay" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="logo-mark">VLA-7</div>
+  <div class="logo">SCHRECKNET</div>
+  <div class="user-badge"><span class="handle">node-operator</span></div>
+</header>
+<div class="site">
+  <div class="page-head">
+    <h1 class="page-title">KINDRED REGISTRY</h1>
+    <p class="page-sub">The network keeps a card on everyone. This node keeps a card on the cards.</p>
+  </div>
+  <div class="panel">
+    <h2 class="sect-title">KINDRED REGISTRY — 350 FILES ON ICE</h2>
+    <hr class="hr-line">
+    <div class="reg-controls">
+      <select id="reg-group"></select>
+      <select id="reg-char"></select>
+    </div>
+    <div id="reg-detail" class="reg-empty">Select a group, then a file.</div>
+  </div>
+  <div class="panel">
+    <h2 class="sect-title">CITY MAPS — 209 NODES CHARTED</h2>
+    <hr class="hr-line">
+    <div class="reg-controls">
+      <select id="city-select"></select>
+    </div>
+    <div id="city-detail" class="reg-empty">Select a city to pull its subterranean chart.</div>
+  </div>
+</div>
+<footer class="foot">SCHRECKNET VLA-7 // registry build // files recovered, not verified // access logged</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/lore_data.js"></script>
+<script src="assets/js/cities_data.js"></script>
+<script>
+(function () {
+  'use strict';
+  var DB = window.LORE_DB || { clans: [], bloodlines: [] };
+  var CDB = window.CITIES_DB || { cities: [] };
+
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>'); }
+
+  var ALIASES = {
+    'cdmx': 'mexicocity', 'mexico city': 'mexicocity', 'new york': 'newyork', 'nyc': 'newyork',
+    'st petersburg': 'saintpetersburg', 'saint petersburg': 'saintpetersburg', 'st. petersburg': 'saintpetersburg',
+    'rio de janeiro': 'riodejaneiro', 'sao paulo': 'saopaulo', 'são paulo': 'saopaulo',
+    'buenos aires': 'buenosaires', 'hong kong': 'hongkong', 'addis ababa': 'addisababa', 'addis abeba': 'addisababa',
+    'la paz': 'lapaz', 'port-au-prince': 'portauprince', 'port au prince': 'portauprince',
+    'ho chi minh': 'hochiminh', 'ho chi minh city': 'hochiminh', 'kuala lumpur': 'kualalumpur',
+    'santiago de cuba': 'santiago', 'sao tome': 'saotome'
+  };
+  function normCity(city) {
+    var s = String(city || '').toLowerCase().trim();
+    if (ALIASES[s]) { return ALIASES[s]; }
+    s = s.replace(/[^a-z0-9]/g, '');
+    if (ALIASES[s]) { return ALIASES[s]; }
+    return s;
+  }
+  function findCity(city) {
+    var id = normCity(city);
+    if (!id) { return null; }
+    for (var i = 0; i < CDB.cities.length; i++) { if (CDB.cities[i].id === id) { return CDB.cities[i]; } }
+    return null;
+  }
+
+  var GROUPS = [];
+  DB.clans.forEach(function (c) { GROUPS.push({ key: 'clan:' + c.id, label: 'CLAN — ' + c.name.toUpperCase(), clan: c }); });
+  DB.bloodlines.forEach(function (b) { GROUPS.push({ key: 'bl:' + b.id, label: 'BLOODLINE — ' + b.name.toUpperCase(), clan: b }); });
+
+  var groupSel = document.getElementById('reg-group');
+  var charSel = document.getElementById('reg-char');
+  var detail = document.getElementById('reg-detail');
+  var curGroup = null;
+
+  function fillGroups() {
+    groupSel.innerHTML = '<option value="">— choose a registry group —</option>' + GROUPS.map(function (g) {
+      return '<option value="' + esc(g.key) + '">' + esc(g.label) + ' (' + g.clan.chars.length + ' files)</option>';
+    }).join('');
+  }
+  function fillChars() {
+    if (!curGroup) { charSel.innerHTML = '<option value="">— group first —</option>'; return; }
+    charSel.innerHTML = '<option value="">— choose a file —</option>' + curGroup.clan.chars.map(function (ch) {
+      return '<option value="' + esc(ch.id) + '">' + esc(ch.id.toUpperCase()) + ' — ' + esc(ch.name) + '</option>';
+    }).join('');
+  }
+  function showChar(id) {
+    if (!curGroup || !id) { detail.className = 'reg-empty'; detail.textContent = 'Select a group, then a file.'; return; }
+    var ch = null;
+    for (var i = 0; i < curGroup.clan.chars.length; i++) { if (curGroup.clan.chars[i].id === id) { ch = curGroup.clan.chars[i]; break; } }
+    if (!ch) { detail.className = 'reg-empty'; detail.textContent = 'File not found.'; return; }
+    var city = findCity(ch.location && ch.location.city);
+    var mapHtml = '';
+    if (city) {
+      mapHtml = '<div class="reg-citymap"><img src="assets/maps/' + esc(city.id) + '.svg" alt="Subterranean chart of ' + esc(city.name) + '">' +
+        '<div class="cm-cap">chart: ' + esc(city.id) + '.svg // seed-stable // sewer layer</div></div>';
+    } else if (ch.location && ch.location.city) {
+      mapHtml = '<div class="reg-citymap"><div class="cm-cap">no chart on file for ' + esc(ch.location.city) + ' — keep walking</div></div>';
+    }
+    detail.className = 'reg-detail';
+    detail.innerHTML =
+      '<div class="reg-photo"><img src="' + esc(ch.photo) + '" alt="Archive photograph of ' + esc(ch.name) + '">' +
+      '<div class="ph-note">archive photo // node ' + esc(ch.id.toUpperCase()) + '</div></div>' +
+      '<div class="reg-body"><div class="reg-name">' + esc(ch.name) + '</div>' +
+      '<div class="reg-alias">' + esc(ch.alias) + '</div>' +
+      '<div class="reg-meta">' +
+      '<b>GROUP:</b> ' + esc(curGroup.clan.name) + ' (' + esc(curGroup.clan.nickname) + ')<br>' +
+      '<b>GEN:</b> ' + esc(ch.gen) + ' &nbsp; <b>ERA:</b> ' + esc(ch.era) + '<br>' +
+      '<b>LAST SEEN:</b> ' + esc(ch.location && ch.location.place ? ch.location.place + ' — ' : '') + esc(ch.location && ch.location.city ? ch.location.city : 'unknown') + '<br>' +
+      '<b>THREAT:</b> <span class="threat ' + esc(ch.threat) + '">' + esc(String(ch.threat).toUpperCase()) + '</span></div>' +
+      '<div class="reg-lore">' + esc(ch.lore_md) + '</div>' + mapHtml + '</div>';
+  }
+
+  groupSel.addEventListener('change', function () {
+    curGroup = null;
+    for (var i = 0; i < GROUPS.length; i++) { if (GROUPS[i].key === groupSel.value) { curGroup = GROUPS[i]; break; } }
+    fillChars(); showChar('');
+  });
+  charSel.addEventListener('change', function () { showChar(charSel.value); });
+  fillGroups(); fillChars();
+
+  var citySel = document.getElementById('city-select');
+  var cityDetail = document.getElementById('city-detail');
+  citySel.innerHTML = '<option value="">— choose a city —</option>' + CDB.cities.slice().sort(function (a, b) { return a.name < b.name ? -1 : 1; }).map(function (c) {
+    return '<option value="' + esc(c.id) + '">' + esc(c.name) + ' — ' + esc(c.country) + '</option>';
+  }).join('');
+  citySel.addEventListener('change', function () {
+    var c = null;
+    for (var i = 0; i < CDB.cities.length; i++) { if (CDB.cities[i].id === citySel.value) { c = CDB.cities[i]; break; } }
+    if (!c) { cityDetail.className = 'reg-empty'; cityDetail.textContent = 'Select a city to pull its subterranean chart.'; return; }
+    cityDetail.className = 'reg-detail';
+    cityDetail.innerHTML =
+      '<div class="reg-body" style="flex:1 1 100%"><div class="reg-name">' + esc(c.name) + '</div>' +
+      '<div class="reg-meta"><b>COUNTRY:</b> ' + esc(c.country) + ' &nbsp; <b>CONTINENT:</b> ' + esc(c.continent) + '<br>' +
+      '<b>POP:</b> ' + esc(c.pop_m) + 'M &nbsp; <b>SECT:</b> ' + esc(c.sect) + ' &nbsp; <b>KINDRED EST:</b> ' + esc(c.kindred_est) + '<br>' +
+      '<b>PRINCE/CLAIM:</b> ' + esc(c.prince) + '</div>' +
+      '<div class="reg-lore">' + esc(c.notes_md) + '</div>' +
+      '<div class="reg-citymap"><img src="assets/maps/' + esc(c.id) + '.svg" alt="Subterranean chart of ' + esc(c.name) + '">' +
+      '<div class="cm-cap">chart: ' + esc(c.id) + '.svg // seed-stable // collector + tunnel layer // warrens marked</div></div></div>';
+  });
+})();
+</script>
+</body>
+</html>

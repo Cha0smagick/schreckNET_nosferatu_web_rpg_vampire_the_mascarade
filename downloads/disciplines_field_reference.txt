@@ -1,0 +1,44 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only // provenance "SOMMER" lecture cache (unverified)
+file: disciplines_field_reference.txt
+====================================================================
+
+DISCIPLINES — FIELD REFERENCE (COMPRESSED)
+------------------------------------------
+
+PHYSICAL (the fist and the exit):
+  CELERITY   — speed. The camera sees the afterimage.
+  FORTITUDE  — the body files an objection to damage.
+  POTENCE    — the lock was already weak.
+
+COMMON (the conversation and the lie):
+  AUSPEX     — the extra senses. Detects auras, lies, and us.
+  DOMINATE   — command with eye contact. Blink-first doctrine.
+  PRESENCE   — crowd control through charm. The applause is a weapon.
+  OBFUSCATE  — not invisibility; unimportance. Cameras skip us.
+  ANIMALISM  — the rats report. So do the pigeons, poorly.
+
+CLAN EXCLUSIVES (flag on sight):
+  CHIMERSTRY (Ravnos)      — evidence of nothing, perfectly forged.
+  DEMENTATION (Malkavian)  — the madness is contagious, in both
+                             directions.
+  OBTENEBRATION (Lasombra) — the shadow behind the shadow. NO REFLECTION
+                             is a clan tell, not an accident.
+  NECROMANCY (Hecata)      — the dead as correspondence.
+  THAUMATURGY / BLOOD SORCERY (Tremere) — the usurped discipline.
+                             Ritual components are traceable; trace them.
+  VICISSITUDE (Tzimisce)   — flesh as clay. WARNING: if a face does
+                             not match its photo, the photo is the
+                             survivor.
+  QUIETUS (Banu Haqim)     — blood-work assassination. Leaves no
+                             residue; that IS the residue.
+  SERPENTIS (Ministry)     — the eye that files your sins.
+  PROTEAN (Gangrel)        — claws, mist, the exit through the floor.
+  OBEAH / VALEREN (Salubri)— the third eye. Soft flag: healers first.
+  TEMPORIS (True Brujah)   — time off by one. Audit every timestamp.
+  MYTHERCERIA (Kiasyd)     — the fae arithmetic. Measure the doors.
+
+V5 AMALGAMS & OBLIVION:
+  Necromancy + Obtenebration have been consolidating into OBLIVION
+  in modern generations — one discipline, both sides of the Shroud.
+  Elder mastery (level 6+) exists but files like folklore.

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
+<rect width="1000" height="700" fill="#06120C"/>
+<rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — AUCKLAND</text>
+<text x="28" y="68" fill="#63755F" font-size="13">New Zealand · Camarilla · node survey 2026</text>
+<path d="M 679 136 L 573 180 L 569 204 L 609 270 L 665 326 L 588 309 L 704 299" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
+<path d="M 410 504 L 366 557 L 254 554 L 130 629 L 127 549 L 192 590 L 263 624" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 328 366 L 322 376 L 326 450 L 221 391 L 193 405 L 215 439 L 342 365" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 730 437 L 650 474 L 662 529 L 591 500 L 685 517 L 589 468 L 569 443" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 380 281 L 396 262 L 510 304 L 398 223 L 465 199 L 382 166 L 354 175" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 720 569 L 706 598 L 633 547 L 699 623 L 686 568 L 644 528 L 643 519" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
+<path d="M 903 527 L 776 565 L 684 577 L 606 539 L 619 563 L 548 530 L 421 525" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
+<path d="M 421 525 Q 321.68764031259343 452.5410429679323 342 365" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 643 519 Q 451.1579792876728 384.7262510471046 354 175" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 569 443 Q 406.05999297462404 317.70779872778803 354 175" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 704 299 Q 508.1668464280665 226.3685412495397 354 175" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 263 624 Q 448.71257500257343 454.1602027742192 704 299" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 704 299 Q 674.3749921652488 419.96732749743387 643 519" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 704 299 Q 503.6623989511281 415.6986607017461 421 525" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 421 525 Q 342.9094630712643 301.71834963257425 354 175" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M 342 365 Q 533.110922400374 307.296535409987 704 299" fill="none" stroke="#3E7A5B" stroke-width="1.5" stroke-dasharray="5 7"/>
+<circle cx="704" cy="299" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="714" y="303" fill="#8A93B8" font-size="11">ACCESS 01</text>
+<circle cx="263" cy="624" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="342" cy="365" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="352" y="369" fill="#8A93B8" font-size="11">ACCESS 03</text>
+<circle cx="569" cy="443" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="354" cy="175" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="364" y="179" fill="#8A93B8" font-size="11">ACCESS 05</text>
+<circle cx="643" cy="519" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<circle cx="421" cy="525" r="6" fill="#06120C" stroke="#39FF14" stroke-width="2"/>
+<text x="431" y="529" fill="#8A93B8" font-size="11">ACCESS 07</text>
+<circle cx="263" cy="624" r="14" fill="none" stroke="#B0562F" stroke-width="2.5"/>
+<text x="281" y="616" fill="#B0562F" font-size="13">WARREN (HIVE)</text>
+<path d="M 30 610 Q 500 540 970 610" fill="none" stroke="#A78BFA" stroke-width="2" opacity="0.6"/>
+<text x="34" y="600" fill="#A78BFA" font-size="11">ABANDONED METRO LINE (verified)</text>
+<text x="28" y="672" fill="#63755F" font-size="11">SCHRECKNET · VLA-7 survey · 4 kindred est. · classify before trusting</text>
+</svg>
