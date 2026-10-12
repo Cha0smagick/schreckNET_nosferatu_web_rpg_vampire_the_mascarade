@@ -24,7 +24,8 @@
     { file: 'blogs.html',    label: 'BLOGS',      icon: '✎' },
     { file: 'archives.html', label: 'ARCHIVES',   icon: '⛁' },
     { file: 'maps.html',     label: 'MAPS',       icon: '⌖' },
-    { file: 'games.html',    label: 'MINIGAMES',  icon: '▚' }
+    { file: 'games.html',    label: 'MINIGAMES',  icon: '▚' },
+{ file: 'legal.html',    label: 'LEGAL',      icon: '§' }
   ];
 
   var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -99,6 +100,7 @@
       '<div class="sidebar-foot">' +
         'TRUST NO NODE. BURN WHAT YOU READ.' +
         '<span class="sig">— a mirror, bouncing your signal</span>' +
+        '<div id="google_translate_element"></div>' +
       '</div>';
 
     var btn = document.getElementById('logout-btn');
@@ -282,11 +284,27 @@
     document.body.appendChild(ov);
   }
 
+  /* ---------- google translate (powered by Google) ---------- */
+  function injectGoogleTranslate() {
+    if (document.getElementById('google-translate-loader')) { return; }
+    var style = document.createElement('style');
+    style.textContent = '#google_translate_element{margin-top:10px}.goog-te-gadget{font-size:11px!important;color:#8A93B8!important}.goog-te-combo,.goog-te-gadget-simple{background:#050A05!important;color:#B8E356!important;border:1px solid rgba(255,255,255,.18)!important;font-family:inherit!important;font-size:11px!important}';
+    document.head.appendChild(style);
+    var init = document.createElement('script');
+    init.textContent = "function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'es',autoDisplay:false},'google_translate_element');}";
+    document.head.appendChild(init);
+    var loader = document.createElement('script');
+    loader.id = 'google-translate-loader';
+    loader.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(loader);
+  }
+
   /* ---------- boot ---------- */
   function boot() {
     renderSidebar();
     wireNavToggle();
     injectCrt();
+    injectGoogleTranslate();
     wireLogin();
     wireEgg();
 
