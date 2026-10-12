@@ -61,11 +61,22 @@
     </div>
     <div id="city-detail" class="reg-empty">Select a city to pull its subterranean chart.</div>
   </div>
+  <div class="panel">
+    <h2 class="sect-title">SEWER BESTIARY — 25 HOSTILES ON FILE</h2>
+    <hr class="hr-line">
+    <div class="reg-controls">
+      <select id="beast-select"></select>
+    </div>
+    <div id="beast-detail" class="reg-empty">Select a creature to pull its field plate.</div>
+  </div>
 </div>
 <footer class="foot">SCHRECKNET VLA-7 // registry build // files recovered, not verified // access logged</footer>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/lore_data.js"></script>
 <script src="assets/js/cities_data.js"></script>
+<script src="assets/js/bestiary_data.js"></script>
+<script src="assets/js/censor.js"></script>
+<script src="assets/js/amenity.js"></script>
 <script>
 (function () {
   'use strict';
@@ -100,6 +111,7 @@
   var GROUPS = [];
   DB.clans.forEach(function (c) { GROUPS.push({ key: 'clan:' + c.id, label: 'CLAN — ' + c.name.toUpperCase(), clan: c }); });
   DB.bloodlines.forEach(function (b) { GROUPS.push({ key: 'bl:' + b.id, label: 'BLOODLINE — ' + b.name.toUpperCase(), clan: b }); });
+  (DB.antitribu || []).forEach(function (a) { GROUPS.push({ key: 'at:' + a.id, label: 'ANTITRIBU — ' + a.name.toUpperCase(), clan: a }); });
 
   var groupSel = document.getElementById('reg-group');
   var charSel = document.getElementById('reg-char');
@@ -142,6 +154,8 @@
       '<b>LAST SEEN:</b> ' + esc(ch.location && ch.location.place ? ch.location.place + ' — ' : '') + esc(ch.location && ch.location.city ? ch.location.city : 'unknown') + '<br>' +
       '<b>THREAT:</b> <span class="threat ' + esc(ch.threat) + '">' + esc(String(ch.threat).toUpperCase()) + '</span></div>' +
       '<div class="reg-lore">' + esc(ch.lore_md) + '</div>' + mapHtml + '</div>';
+    if (window.AMENITY) AMENITY.autolink(detail, curGroup.key);
+    if (window.CENSOR) CENSOR.scan(detail);
   }
 
   groupSel.addEventListener('change', function () {
@@ -151,6 +165,16 @@
   });
   charSel.addEventListener('change', function () { showChar(charSel.value); });
   fillGroups(); fillChars();
+  if (window.AMENITY) {
+    AMENITY.buildIndex(GROUPS);
+    AMENITY.onNavigate = function (gkey, cid) {
+      groupSel.value = gkey;
+      curGroup = null;
+      for (var i = 0; i < GROUPS.length; i++) { if (GROUPS[i].key === gkey) { curGroup = GROUPS[i]; break; } }
+      fillChars(); showChar(cid);
+      detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+  }
 
   var citySel = document.getElementById('city-select');
   var cityDetail = document.getElementById('city-detail');
@@ -170,6 +194,26 @@
       '<div class="reg-lore">' + esc(c.notes_md) + '</div>' +
       '<div class="reg-citymap"><img src="assets/maps/' + esc(c.id) + '.svg" alt="Subterranean chart of ' + esc(c.name) + '">' +
       '<div class="cm-cap">chart: ' + esc(c.id) + '.svg // seed-stable // collector + tunnel layer // warrens marked</div></div></div>';
+  });
+
+  var BST = window.BESTIARY_DB || { beasts: [] };
+  var beastSel = document.getElementById('beast-select');
+  var beastDetail = document.getElementById('beast-detail');
+  beastSel.innerHTML = '<option value="">— choose a creature —</option>' + BST.beasts.map(function (b) {
+    return '<option value="' + esc(b.id) + '">' + esc(b.name) + ' — ' + esc(b.cls) + '</option>';
+  }).join('');
+  beastSel.addEventListener('change', function () {
+    var b = null;
+    for (var i = 0; i < BST.beasts.length; i++) { if (BST.beasts[i].id === beastSel.value) { b = BST.beasts[i]; break; } }
+    if (!b) { beastDetail.className = 'reg-empty'; beastDetail.textContent = 'Select a creature to pull its field plate.'; return; }
+    beastDetail.className = 'reg-detail';
+    beastDetail.innerHTML =
+      '<div class="reg-body"><div class="reg-photo"><img src="' + esc(b.photo) + '" alt="Field plate: ' + esc(b.name) + '"></div>' +
+      '<div style="flex:1 1 0"><div class="reg-name">' + esc(b.name) + '</div>' +
+      '<div class="reg-meta"><b>AKA:</b> ' + esc(b.aka) + '<br>' +
+      '<b>CLASS:</b> ' + esc(b.cls) + ' &nbsp; <b>SIZE:</b> ' + esc(b.size) + '<br>' +
+      '<b>THREAT:</b> <span class="threat ' + esc(b.threat) + '">' + esc(String(b.threat).toUpperCase()) + '</span> &nbsp; <b>TERRAIN:</b> ' + esc(b.terrain) + '</div>' +
+      '<div class="reg-lore">' + esc(b.lore_md) + '</div></div></div>';
   });
 })();
 </script>

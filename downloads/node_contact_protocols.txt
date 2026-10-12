@@ -1,0 +1,104 @@
+SCHRECKNET VLA-7 // OPERATOR'S FIELD MANUAL
+classification: nodes-only
+provenance: consolidated node doctrine, multiple contributors
+------------------------------------------------------------
+
+FILE: NODE CONTACT PROTOCOLS
+how to reach a name in the registry without becoming a name
+in someone else's registry.
+
+------------------------------------------------------------
+RULE 0 — YOU DO NOT CONTACT. YOU ARRANGE CIRCUMSTANCES.
+------------------------------------------------------------
+Kindred do not take calls. They notice patterns. The only
+safe introduction is one where the contact concludes you were
+ALREADY in their world — a courier they almost hired, a rat
+line they almost used, a correction to a chart they trust.
+If a first contact reads as a request, close the channel.
+
+------------------------------------------------------------
+RULE 1 — MATCH THE CHANNEL TO THE CREATURE
+------------------------------------------------------------
+- PIRATE RADIO / BROADCAST: Sadie LaRue (New Orleans,
+  SIGNAL-30). Leave requests inside song requests read
+  on-air two nights later. Fee history: corrections, not
+  favors. Do not dedicate a song. She reads dedications as
+  debts.
+- THE WIRE ITSELF: Mitnick (Los Angeles). Route a data
+  artifact where it will be found — never attach a note.
+  Receipt arrives as a one-line file you did not send
+  yourself.
+- OPEN-LEDGER COOPERATORS: Bram Verhoeven (Rotterdam) and
+  Padre Huesos (Lima) work WITH this node. Protocol: written
+  queries only, one question per message, no follow-ups
+  faster than nine days. They cooperate because we are
+  quiet. Loudness ends cooperation.
+- THE SILENT BARTERS: Octavia Rehn (Vienna) answers in
+  silence — count what she does NOT sing about. The Lender
+  of Last Resorts (ROOM-12) answers in paperwork: request
+  forms appear pre-filled where you last filed your own.
+  Never sign what ROOM-12 returns. Review it in a mirror
+  first; if the mirror lags, burn it.
+- COURT FIGURES (princes, primogen, harpies): approach via
+  boon-broker only, and only when YOU hold the boon. A
+  court visit you did not pay for is a summons.
+- ANTIQUARIANS AND ARCHIVISTS (Ankla, al-Ashrad, the
+  Sommer-cache dealers): never open with a request for the
+  item. Open with a correction to something they already
+  published. Scholars forgive fees; they do not forgive
+  sloppiness.
+- THE META FILES (The Census Taker, The Blind Scale, The
+  Encore, The Unasked Question): there is no protocol.
+  There is a survey. If one approaches you, you are already
+  the data. File everything, answer nothing, move.
+
+------------------------------------------------------------
+RULE 2 — FEES (what things actually cost)
+------------------------------------------------------------
+Standard currency, in rising order of price:
+  a correction > a silence > a name of the dead > a map
+  that does not exist yet > a first cry > vitae > your
+  standing to accuse > your name in someone else's ledger.
+Never pay vitae to an information broker. It converts a
+client into a holding.
+Fees are quoted ONCE. Re-negotiating a fee re-opens the
+contract at the other party's choice of terms.
+
+------------------------------------------------------------
+RULE 3 — TIMING
+------------------------------------------------------------
+First response window on this network: 3 to 9 nights.
+Faster than 3 = a copy of them, or a trap.
+Slower than 9 = the message was read by someone who is not
+them. Log the delay; delays are signatures.
+
+------------------------------------------------------------
+RULE 4 — DENIABILITY LADDER
+------------------------------------------------------------
+Every channel has three grades:
+  grade 1 (burnable): dead drops, song requests, public
+    corrections. Use freely, assume read.
+  grade 2 (costly): intermediaries, ghouls, boon-brokers.
+    Each use is a name given away. Spend like ammunition.
+  grade 3 (unrecoverable): direct meeting. Only for
+    contracts you would stake your name on, and only on
+    ground the OTHER party does not control.
+
+------------------------------------------------------------
+RULE 5 — WHEN A CONTACT REACHES FOR YOU
+------------------------------------------------------------
+1. Verify the approach against the registry. Unlisted names
+   offering listed knowledge = two problems, not one.
+2. Reply only with information you are prepared to lose.
+3. Never confirm your node, your city, or your transmits —
+   even to confirm them false.
+4. If the approach cites a debt you do not remember owing,
+   the debt is real and already old (see Ventrue antitribu
+   file). Report to VLA-7 before sundown.
+
+------------------------------------------------------------
+STANDING DIRECTIVE
+------------------------------------------------------------
+The registry tells you who exists. These protocols tell you
+how to knock. Every knock is logged on both sides of the
+door. Knock accordingly.

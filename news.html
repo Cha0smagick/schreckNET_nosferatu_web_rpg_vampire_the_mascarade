@@ -59,11 +59,13 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/news_data.js"></script>
 <script src="assets/js/wire_special.js"></script>
+<script src="assets/js/wire_archive.js"></script>
 <script>
 (function () {
   'use strict';
   var WIRE = window.SCHRECKNET_WIRE || { meta: {}, items: [] };
   if (window.WIRE_SPECIAL && window.WIRE_SPECIAL.length) { WIRE.items = (WIRE.items || []).concat(window.WIRE_SPECIAL); WIRE.meta.count = WIRE.items.length; }
+    if (window.WIRE_ARCHIVE && window.WIRE_ARCHIVE.items && window.WIRE_ARCHIVE.items.length) { WIRE.items = (WIRE.items || []).concat(window.WIRE_ARCHIVE.items); WIRE.meta.count = WIRE.items.length; }
   var CATS = ['ALL', 'ALERT', 'INTEL', 'RATLINE', 'GOSSIP', 'OBIT'];
   var current = 'ALL';
 

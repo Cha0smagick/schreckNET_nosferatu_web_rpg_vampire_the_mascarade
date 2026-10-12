@@ -1,0 +1,149 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only
+provenance: operator field notes, pre-collapse (unverified)
+
+====================================================================
+OPERATOR'S BRIEF — GAME HOOKS
+How to start a story on the Net. How to end one.
+====================================================================
+
+The Network does not hand you plots. It hands you discrepancies.
+Below: 12 opening hooks (STARTERS) and 8 closing conditions (ENDINGS),
+recovered from operator logs before the fall. Use them as-is or as
+springs. Every starter names a node, a file class, and the first
+wrong thing a character will notice.
+
+--------------------------------------------------------------------
+STARTERS — WAYS IN
+--------------------------------------------------------------------
+
+S01. THE TIDE THAT COUNTED (STARTER / lima)
+  Harbor logs at the Lima node list one extra ferry crossing per
+  week that no schedule admits. The 8th bell in the Lasombra file
+  rings when it runs. First wrong thing: the crossing has a cargo
+  manifest but no passengers. Pull city map: lima.
+
+S02. A NAME IN YOUR OWN HAND (STARTER / varies)
+  An operator finds a correction note in the archive written in
+  their own hand, dated three days from now. True Brujah files say
+  time is negotiable; the census says otherwise. First wrong thing:
+  the note corrects something the operator has not yet filed wrong.
+
+S03. THE PANTRY ORDER (STARTER / bogota)
+  Recoleta tunnel surplus: eleven place settings, six Kindred in
+  the city. The cannibal dossier (FILE B) says the extra five eat
+  first. First wrong thing: a plate set for someone the table
+  insists is not invited. Pull dossier: cannibal_dossier_medellin.
+
+S04. FEEDS AND SPEEDS (STARTER / detroit)
+  Packard cooling crawlspace: sabotage precedes Technocracy
+  relocations by six weeks (RUST-CADENCE). A Ministry antitribu is
+  selling the schedule. First wrong thing: the buyer list has a
+  Camarilla seal on it.
+
+S05. THE COUNTING HUM (STARTER / kyiv)
+  Metro tunnels hum at 50Hz except one stretch that hums at 49.
+  Nosferatu batch file nosferatu29 marked the stretch COUNTING-HUM
+  and stopped filing. First wrong thing: the hum slows down when
+  you listen carefully. That is not how hums work.
+
+S06. BONE-SCRIPT RATLINE (STARTER / istanbul)
+  Harbinger fees are paid in the names of the dead. A ratline
+  packet crossed the Bosphorus with a fee list that includes a
+  name still breathing. First wrong thing: the living name is the
+  courier carrying it.
+
+S07. THE THIRD MEAL (STARTER / varies)
+  Morgue freezers emptied, doors sealed, access logs intact —
+  FLESH-LEDGER. Nagaraja files say the logs are the point. First
+  wrong thing: the log timestamps run 40 minutes longer than the
+  night itself.
+
+S08. DOOR 41 (STARTER / the land of the black sand)
+  Ministry batch file mini45 names a vault door in the dunes that
+  must never be found open. A drone photograph from 2019 shows it
+  open by one hand-width. First wrong thing: the photograph's
+  metadata says tomorrow.
+
+S09. THE SLEEPER THAT COUNTS (STARTER / prague)
+  Gargoyle census flag WAKE-COUNT reads 14. No one has visited.
+  First wrong thing: after tonight's audit it reads 15, and you
+  were the only one on the ladder.
+
+S10. TWO OF NOTHING (STARTER / odessa)
+  Ravnos twins filed in two cities on the same night, witnessed
+  in both. The dossier says only one of them is real, and refuses
+  to say which. First wrong thing: both signed the same hotel
+  register with the same handwriting and different names.
+
+S11. THE UNHEALED FILE (STARTER / varies)
+  Fourteen Salubri healers in nine countries report the same
+  patient with the same incurable wound. Registry instruction:
+  do not reopen the file. First wrong thing: the patient checked
+  into a safehouse the node does not operate.
+
+S12. SIGNAL-30 GOES QUIET (STARTER / new orleans)
+  Sadie LaRue's pirate radio (SIGNAL-30) has broadcast nightly
+  since 1987. Tonight: silence. Daughters of Cacophony files say
+  the last song she played has not finished yet. First wrong
+  thing: listeners report the song continuing on dead channels.
+
+--------------------------------------------------------------------
+ENDINGS — WAYS OUT (OR DOWN)
+--------------------------------------------------------------------
+
+E01. THE QUIET CLOSE. The file answers. Every question the node
+  asked is now answered, in order, including the one nobody asked.
+  Closing condition: log the answers, close the packet, report
+  VLA-7. Do not thank the source. Sources here count thanks as
+  consent.
+
+E02. THE COSTLY CLOSE. The truth is recovered but the operator's
+  name now appears in a ledger they did not know they were in
+  (FORECLOSE-ECHO, TAB-OPEN). Ending: pay the fee in something
+  renewable — silence, a correction, a map — never in vitae,
+  never in names.
+
+E03. THE UNANSWERED CLOSE. The discrepancy resolves itself the
+  night after you stop investigating. The file heals. Ending:
+  file it as RESOLVED-UNEXPLAINED and never open it again. Three
+  operators did. Their nodes still run. This is presented as
+  reassurance.
+
+E04. THE CASCADE. Two elders, one diablerie, one city (W110
+  pattern). Ending condition: the node does not survive being
+  right. Success = the archive outlives the operator. Ship
+  everything, then go dark.
+
+E05. THE GIFT CLOSE. A Kindred offers help: freely, warmly,
+  with details only a friend would know. Ending condition: it is
+  a Ministry antitribu or a mirror-write. Accept nothing. The
+  story ends when you make them say why they know your node
+  name — and they do, and it is worse than lying.
+
+E06. THE SUNRISE PARADOX. The case closes at dawn. Whatever was
+  wrong with the tunnels is wrong no longer. Ending condition:
+  photograph the fixed stretch. The photograph will show it
+  broken. File both. That pair is the whole story.
+
+E07. THE LEDGER BALANCES. Every fee paid, every name returned,
+  every plate accounted for. The red room plate that matched a
+  haven is re-photographed: empty. Ending condition: total
+  surplus = zero. Nobody has ever reached this ending. The file
+  keeps a blank page for it.
+
+E08. THE SECOND BURIAL. The case ends; the paperwork does not.
+  A Hecata antitribu files the closing report on the node's
+  behalf — correctly, kindly, before the node finishes writing
+  it. Ending condition: accept the filing. Amendment rights are
+  included. So is attendance at the wake.
+
+--------------------------------------------------------------------
+STANDING DIRECTIVE
+--------------------------------------------------------------------
+A story on the Net starts when a count is off by one.
+It ends when you decide whose one it was.
+
+====================================================================
+SCHRECKNET VLA-7 // end of brief // access logged
+====================================================================

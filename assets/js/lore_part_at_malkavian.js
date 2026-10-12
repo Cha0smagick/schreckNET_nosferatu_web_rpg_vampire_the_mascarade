@@ -1,0 +1,23 @@
+// GENERATED SCHRECKNET BATCH FILE - do not hand-edit without re-merge
+window.LORE_PART_AT_MALKAVIAN = (function(){
+  var P = 'assets/img/';
+  function char(id,name,alias,gen,era,city,place,threat,lore_md){
+    return {id:id,name:name,alias:alias,gen:gen,era:era,location:{city:city,place:place},threat:threat,lore_md:lore_md,photo:P+'char_'+id+'.png'};
+  }
+  var c = [
+    char('malkavianat1','Cassilda Nine-Voices','THE CHOIR ORACLE','9th','1990s','Chicago','Blue Line tunnel echo chamber','high','Answers questions three days before they are asked. Files her prophecies as complaint forms filed against the city itself. SchreckNET flag CHOIR-PRECEDE: her transcripts timestamped before the events they describe. Standing directive: do not ask her about the network. She answers anyway.'),
+    char('malkavianat2','Old Tibor','THE GLASS DIAGNOSTICIAN','7th','1920s','Budapest','bathhouse sub-floor conduit','mid','Reads sickness in cracked glass. Antitribu because he serves the Sword with visions instead of words. Trades diagnoses for secrets operators did not know they were carrying. Flag GLASS-FRACTURE: his readings match SI sweep outcomes at 84 percent.'),
+    char('malkavianat3','The Looming Nun','SISTER STITCHES','8th','1950s','Manila','Intramuros laundry tunnel','mid','Sews confessions into hemlines. Her antitribu vows were sworn to the sword, not the cross. Cloth she touches records what was said nearby. Flag HEM-LATIN: embroidery text resolves into dispatches under magnification.'),
+    char('malkavianat4','Whisper-Not','THE NEGATIVE PROPHET','unknown','unknown','Prague','ghost platform zero','high','Speaks only in what did not happen. His files list events that failed to occur; cross-check shows every non-event prevented something worse. Antitribu cell treats his silence as targeting data. Flag NULL-EVENT: do not request predictions; receipt is binding.'),
+    char('malkavianat5','Deniz the Split','THE TWO-TONGUE CLERK','10th','2000s','Istanbul','cistern polling booth 3','low','Keeps two ledgers: one for the Camarilla lie, one for the truth the Sword acts on. Both are accurate. Flag LEDGER-DUPLICATE: discrepancies between his books are themselves a cipher; three decodes confirmed.'),
+    char('malkavianat6','Magda Hollow-Eye','THE WARDEN OF QUIET','6th','19th c','Warsaw','fortress casemate 9','mid','Removes sound from rooms. Antitribu interrogators rent her silence by the hour. Interference pattern matches node outages across four cities. Flag SILENCE-MAP: chart her quiet zones; they align with dead repeater segments.'),
+    char('malkavianat7','The Fishmonger of Lies','SCALE-READER','9th','1970s','Lisbon','market sub-cellar ice room','low','Reads futures in fish scales, refuses to explain. Sells wrong answers that become right within a week. Flag SCALE-DRIFT: his corrections arrive before the mistakes do. Fee: a truth about the sea.'),
+    char('malkavianat8','The Unasked Question','QUESTION PENDING','unknown','unknown','varies','the space between two answers','high','Meta entry. Every Malkavian antitribu cell keeps a file on the same unanswered question. Eight files, eight cities, identical phrasing. Directive: file the question, do not ask it, do not answer it. The network is not ready for the reply.')
+  ];
+  return {antitribu:[{
+    id:'malkavian_antitribu', name:'Malkavian Antitribu', nickname:'The Lunatics of the Sword',
+    disciplines:['Dementation','Auspex','Obfuscate'],
+    weakness:'Insanity sharpened into a weapon: their derangements are deliberate doctrine, and they inflict fragments of their madness on those they judge.',
+    lore_md:'The Malkavian antitribu are what happens when the clan of madness stops suffering its curse and starts issuing it. Within the Sword of Caine they serve as oracles, interrogators and psychological warfare: Dementation turned outward at the enemies of the Sabbat, and inward at anyone the bishops distrust.\n\nWhere Camarilla Malkavians drift, the antitribu aim. Their madness is curated, weaponized, and shared. SchreckNET flags their transcripts separately: a Malkavian antitribu file reads like evidence, not like prophecy, and that is precisely why it is dangerous.\n\nThe registry holds eight confirmed operators across Europe, Asia and the Americas. Their fees are rarely vitae. They take answers, admissions, and questions you wish you had never asked.\n\nSTANDING DIRECTIVE: transcribe their words exactly. Do not paraphrase, do not summarize, and never answer a question one of them asks you. Your answer becomes part of their file, and their file becomes part of yours.'
+  ,chars:c}] };
+})();

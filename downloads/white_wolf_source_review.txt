@@ -1,0 +1,168 @@
+SCHRECKNET VLA-7 // RECOVERED FILE
+classification: nodes-only
+provenance: external source review — the White Wolf cache (unverified, cross-filed)
+------------------------------------------------------------
+
+FILE: WHITE WOLF SOURCE REVIEW
+node note: an operator pulled a civilian wiki mirror of the old
+literature. Most of it we already know. The parts below are the
+parts we did NOT have on file. Handle as rumor with good posture —
+and remember that a wiki that is too accurate about us is itself
+a Masquerade problem.
+
+------------------------------------------------------------
+SECTION 1 — CAMARILLA OFFICES (the ladder above the prince)
+------------------------------------------------------------
+prince        - domain ruler, holds Tradition rights (Creation,
+                Final Death "up to a point").
+seneschal     - the left hand. Runs the city when the prince
+                cannot be seen running it.
+keeper of
+elysium       - maintains neutral ground. Breaches there are
+                punished twice.
+sheriff       - prince's enforcement arm; may demand any
+                Kindred present for questioning.
+scourge       - hunts the UNWELCOME. In hard domains that means
+                Caitiff and thin-bloods on sight.
+harpy         - records boons and slights. Social credit office.
+                Never insult a harpy twice.
+primogen      - elder council. Advisory on paper, co-rulers in
+                older cities.
+archons       - sect-level agents dispatched to domains in
+                crisis (Sabbat war, Masquerade collapse, elder
+                feuds). They outrank every prince but answer to
+                the justicars.
+justicars     - seven, one per founding clan. Outermost law.
+inner circle  - the actual top. It meets; nobody admits it meets.
+alastors      - specialized archons. See Section 2.
+
+flag OFFICE-CREEP: if a name in a domain holds an office no
+charter lists, log the office. Sometimes the office is the
+signal, not the person.
+
+------------------------------------------------------------
+SECTION 2 — THE RED LIST (ANATHEMA)
+------------------------------------------------------------
+- The Inner Circle maintains a list of Kindred it wants dead on
+  sight: the Red List. Members are called Anathema.
+- Procedure per source: TWO justicars must agree to prosecute,
+  the name goes before the Inner Circle, all assembled
+  representatives must concur. That is a high bar. The list is
+  short. That is why it is feared.
+- Hunting is done by ALASTORS — archons sworn to the list.
+- Killing an Anathema grants a "Trophy" — a major boon, worth
+  more than most unlife savings.
+- NODE APPLICATION: cross-check every high-threat registry file
+  against Red List rumors. If one of OUR files is on THEIR list,
+  we have leverage; if one of our COOPERATORS is, we have a
+  problem inside a month.
+
+directive: do not volunteer Red List status to anyone. Boons
+attract hunters, and hunters bring Second Inquisition dogs.
+
+------------------------------------------------------------
+SECTION 3 — THE INCONNU (monks of the long game)
+------------------------------------------------------------
+- Elders who walked away from the Jyhad: no sect, no blood
+  bonds, "beyond the game."
+- Rumored command: a COUNCIL OF TWELVE seated in the
+  Carpathians. Below them, MONITORS — watchers assigned to
+  observe whole supernatural institutions (the Camarilla, the
+  Sabbat, mage chantries, and — we assume — networks like this
+  one). Traveling agents are called EQUITES.
+- Named in the source, file with attribution doubt:
+  Mokur (Salubri, 4th gen, founding member),
+  Cretheus (Ventrue, 5th, Council),
+  Eshmunamash (Brujah, 5th, Council),
+  Hauzal (Nosferatu, 5th),
+  Demtius (Malkavian, 5th),
+  Guillaume (Brujah, 5th, "Prince of Switzerland"),
+  Valerianus, Dominus (Ventrue, 5th),
+  Vlad Tepes (Tzimisce — source claims 5th gen; our Impaler
+  file holds 6th with a diablerie upgrade disputed; both can
+  be wrong),
+  Danika Ruthven (Tzimisce, 6th, Council),
+  Demetrius (Malkavian, 6th, Council).
+
+flag MONITOR-PARANOIA: the Inconnu watch institutions. This
+network is an institution. If your traffic shows a third
+reader that is not SI and not rival Kindred, log pattern, do
+not engage, report VLA-7. Monitors historically leave
+networks alive. They prefer ledgering us to burning us.
+
+------------------------------------------------------------
+SECTION 4 — ANTEDILUVIAN APOCRYPHA (new fragments only)
+------------------------------------------------------------
+- Bracket convention: scholars write [Ventrue], [Toreador] to
+  name the founders without saying their names, "as a
+  precaution against drawing their ire." Adopt the convention
+  in all files. It costs nothing and the alternative costs
+  everything.
+- Third Generation capacity per old rulebooks: traits to 10,
+  unknown blood pool, unknown spend per turn. Practically:
+  if a fight looks winnable, you have misidentified the enemy.
+- The GEHENNA sourcebook scenarios introduce previously
+  unknown founders, each scenario a different set. One is a
+  woman called THE SHAPER who took the name "Sarah"; unique
+  Discipline moves and reshapes matter itself. Treat as
+  scenario-lore: possibly canon, possibly a lesson dressed as
+  a story.
+- Setite heresy: Set Embraced HIMSELF; the other twelve
+  Antediluvians were made to thwart him.
+- Baali priest ANGRA MAINYU claimed visions that CAINE HAD
+  FIVE CHILDREN, not three. If true, two clans are missing
+  from every registry on earth.
+- Path of Lilith variant: ARIKEL and MALKAV were twins,
+  children of Lilith, with a younger sister NAHEMA who took
+  the Embrace and descended to Hell without losing touch —
+  her spirit bound to her brothers and ALL their descendants.
+
+flag SISTER-CLAUSE: any contacts who speak of "the sister" in
+Toreador or Malkavian business are either lunatics, Liars, or
+correct. All three are dangerous. Log wording verbatim.
+
+------------------------------------------------------------
+SECTION 5 — MASQUERADE MECHANICS (how breaches actually die)
+------------------------------------------------------------
+- A breach is any evidence of vampiric nature: feeding, visible
+  Discipline use, wounds knitting in public. Ghouls count as
+  standing potential breaches.
+- Enforcement is self-policing with penalties, and princes
+  famously prefer "an early morning dusting over a thorough
+  search" — the cleanup is often assigned by proximity, not
+  guilt.
+- The VENTRUE treat Masquerade-patching as a science: cash,
+  Dominate, media surgery, whatever the patch needs.
+- Origin note: Rafael de Corazon's speech of 1450 made
+  enforcement the Camarilla's founding policy.
+
+NODE APPLICATION: our own site-breach protocol mirrors this.
+You are the dusting when it is small and the witness when it
+is not.
+
+------------------------------------------------------------
+SECTION 6 — V5 SHIFTS (recent, cross-checked)
+------------------------------------------------------------
+- CONCLAVE OF PRAGUE: Theo Bell (Brujah archon) slew
+  Hardestadt the Younger. The Camarilla blamed Anarchs and
+  locked membership down: no Caitiff, no thin-bloods in many
+  domains.
+- BANU HAQIM entered the sect in numbers after their schism,
+  under an accord called the ODENSE PACT.
+- Half of clan LASOMBRA and their leadership cadre (the
+  Friends of the Night) began joining city by city — payment
+  in SERVICE, not boons.
+- Read for us: the Tower is hiring its old enemies. Any
+  Camarilla channel offering membership to a Lasombra or Banu
+  Haqim contact is now PLAUSIBLE, not automatically a trap.
+  Verify by fee structure, not by flag.
+
+------------------------------------------------------------
+STANDING DIRECTIVE
+------------------------------------------------------------
+The wiki is a mirror. Mirrors are useful until something on
+the other side starts using them to watch back. Cross-file
+everything above against registry and wire. Where our files
+and the cache disagree, record BOTH readings. Where the cache
+has something we do not — copy it fast, before the next audit
+of the mirror.
