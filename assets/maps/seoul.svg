@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — SEOUL</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — SEOUL</text>
 <text x="28" y="68" fill="#63755F" font-size="13">South Korea · Camarilla · node survey 2026</text>
 <path d="M 485 122 L 555 95 L 668 95 L 749 95 L 825 171 L 817 227 L 707 204" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
 <path d="M 440 633 L 312 650 L 187 610 L 273 529 L 317 566 L 354 578 L 262 502" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — MAPUTO</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — MAPUTO</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Mozambique · Independent · node survey 2026</text>
 <path d="M 839 479 L 775 422 L 657 405 L 539 457 L 528 517 L 463 478 L 430 459" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
 <path d="M 450 500 L 352 430 L 380 483 L 306 408 L 405 343 L 296 328 L 351 297" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>

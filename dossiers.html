@@ -13,6 +13,24 @@
   .stat-line { font-size: 12px; letter-spacing: 1px; color: var(--bile); margin-bottom: 14px; }
   .db-photo { width: 46px; height: 58px; object-fit: cover; filter: grayscale(.6) sepia(.2); border: 1px solid #9A9378; background: #4A4636; vertical-align: middle; }
   .no-signal { text-align: center; padding: 60px 20px; border: 1px dashed var(--line); color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+  .db-name-link { cursor: pointer; text-decoration: underline dotted; }
+  .db-name-link:hover { color: #B8E356; }
+  .dossier-modal { position: fixed; inset: 0; background: rgba(3,7,3,.9); display: none; z-index: 999; overflow-y: auto; padding: 40px 16px; }
+  .dossier-modal.open { display: block; }
+  .dossier-sheet { position: relative; max-width: 860px; margin: 0 auto; background: #0B0F0A; border: 1px solid var(--line); padding: 28px; }
+  .dossier-sheet .dossier-photo { width: 160px; height: 200px; float: right; margin: 0 0 14px 18px; }
+  .dossier-head { font-size: 22px; letter-spacing: 3px; color: #B8E356; }
+  .dossier-close { position: absolute; top: 14px; right: 14px; cursor: pointer; background: none; border: 1px solid var(--line); color: var(--muted); padding: 4px 10px; letter-spacing: 2px; }
+  .dossier-close:hover { color: #B8E356; }
+  .dossier-fields { clear: both; margin-top: 14px; font-size: 13px; line-height: 1.7; }
+  .dossier-fields b { color: var(--bile); letter-spacing: 1px; }
+  .classified-block { clear: both; margin-top: 18px; border: 1px dashed #8A2B2B; background: rgba(90,10,10,.12); padding: 16px; }
+  .classified-block.locked .classified-body { filter: blur(5px); user-select: none; }
+  .classified-label { font-size: 11px; letter-spacing: 3px; color: #D9534F; margin-bottom: 8px; }
+  .terminal { margin-top: 12px; font-family: "Courier New", monospace; font-size: 13px; }
+  .terminal input { background: #050A05; border: 1px solid var(--line); color: #B8E356; padding: 6px 10px; width: 180px; font-family: inherit; letter-spacing: 4px; }
+  .terminal button { background: none; border: 1px solid var(--line); color: #B8E356; cursor: pointer; padding: 6px 12px; margin-left: 8px; }
+  .terminal .tlog { margin-top: 8px; white-space: pre-wrap; color: var(--muted); min-height: 16px; }
   .famous-row { border-left: 3px solid var(--bile); padding-left: 16px; margin-bottom: 18px; }
   .famous-row h3 { margin: 0 0 4px; font-size: 14px; color: var(--green); letter-spacing: 1px; }
 </style>
@@ -128,6 +146,8 @@
 </div>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/dossiers_data.js"></script>
+<script src="assets/js/kindred_data.js"></script>
+<script src="assets/js/dossiers_classified.js"></script>
 <script src="assets/js/amenity.js"></script>
 <script>
 (function () {
@@ -150,11 +170,30 @@
             : "dot dot-active";
     return '<span class="' + cls + '"></span>';
   }
+  var PORTRAIT_BY_NAME = (function () {
+    var map = {}, src = window.KINDRED_DB || {};
+    ['vampires', 'ghouls', 'childer'].forEach(function (k) {
+      (src[k] || []).forEach(function (p) {
+        if (p.portrait) {
+          map[p.name.toUpperCase()] = p.portrait;
+          if (p.alias) map[p.alias.toUpperCase()] = p.portrait;
+        }
+      });
+    });
+    return map;
+  })();
+  function portraitFor(entry) {
+    return entry.portrait
+      || PORTRAIT_BY_NAME[entry.name.toUpperCase()]
+      || PORTRAIT_BY_NAME[String(entry.alias || '').toUpperCase()]
+      || '';
+  }
   function photo(entry) {
-    if (!entry.portrait) {
+    var pv = portraitFor(entry);
+    if (!pv) {
       return '<div class="dossier-photo missing">NO IMAGE</div>';
     }
-    return '<img class="dossier-photo" src="assets/img/' + esc(entry.portrait) + '" alt="archive portrait of ' + esc(entry.name) + '"'
+    return '<img class="dossier-photo" src="assets/img/' + esc(pv) + '" alt="archive portrait of ' + esc(entry.name) + '"'
          + ' onerror="this.outerHTML=\'<div class=&quot;dossier-photo missing&quot;>NO IMAGE</div>\'">';
   }
 
@@ -258,14 +297,15 @@
     }
 
     body.innerHTML = rows.map(function (e) {
-      var p = e.portrait
-        ? '<img class="db-photo" src="assets/img/' + esc(e.portrait) + '" alt="" loading="lazy"'
+      var pf = portraitFor(e);
+      var p = pf
+        ? '<img class="db-photo" src="assets/img/' + esc(pf) + '" alt="" loading="lazy"'
           + ' onerror="this.outerHTML=\'<span class=\'\'>—</span>\'">'
         : '<span class="muted">—</span>';
-      return "<tr>"
+      return '<tr data-id="' + esc(e.id) + '">'
         + "<td>" + p + "</td>"
         + '<td class="muted">' + esc(e.id) + "</td>"
-        + '<td class="acid">' + esc(e.name) + "</td>"
+        + '<td class="acid"><span class="db-name-link" data-open="' + esc(e.id) + '" title="open personal dossier">' + esc(e.name) + "</span></td>"
         + '<td class="muted">' + esc(e.alias || "—") + "</td>"
         + "<td>" + esc(e.clan) + "</td>"
         + '<td class="muted">' + esc(e.sect || "—") + "</td>"
@@ -284,6 +324,100 @@
     render();
   });
   render();
+
+  // ---- personal dossier modal + node-cipher minigame (classified layer) ----
+  var CLASSIFIED = window.DOSSIER_CLASSIFIED || {};
+  document.body.insertAdjacentHTML("beforeend",
+    '<div class="dossier-modal" id="dossier-modal">'
+    + '<div class="dossier-sheet" id="dossier-sheet"></div>'
+    + "</div>");
+  var modal = document.getElementById("dossier-modal");
+  var sheet = document.getElementById("dossier-sheet");
+
+  function closeDossier() { modal.classList.remove("open"); }
+  modal.addEventListener("click", function (ev) { if (ev.target === modal) closeDossier(); });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") closeDossier(); });
+  sheet.addEventListener("click", function (ev) {
+    if (ev.target && ev.target.getAttribute && ev.target.getAttribute("data-close") !== null) closeDossier();
+  });
+
+  function openDossier(id) {
+    var e = null;
+    for (var i = 0; i < DB.entries.length; i++) { if (DB.entries[i].id === id) { e = DB.entries[i]; break; } }
+    if (!e) return;
+    var grounds = (e.grounds || []).map(function (g) { return "<li>" + esc(g) + "</li>"; }).join("");
+    var c = CLASSIFIED[e.id] || CLASSIFIED._default || {};
+    sheet.innerHTML =
+      '<button class="dossier-close" data-close>CLOSE ✕</button>'
+      + '<div class="dossier-head">' + esc(e.name) + "</div>"
+      + '<div class="muted" style="letter-spacing:2px;margin-top:4px">' + esc(e.id) + " · " + esc(e.alias || "NO ALIAS ON FILE") + "</div>"
+      + photo(e)
+      + '<div class="dossier-fields">'
+      + "<div><b>CLAN:</b> " + esc(e.clan) + " &nbsp; <b>SECT:</b> " + esc(e.sect || "—") + "</div>"
+      + "<div><b>GENERATION:</b> " + esc(e.generation) + " &nbsp; <b>STATUS:</b> " + dot(e.status) + esc(STATUS_LABEL[e.status] || e.status) + "</div>"
+      + "<div><b>THREAT:</b> " + esc(e.threat) + "/5 &nbsp; <b>LAST SEEN:</b> " + esc(e.lastSeen) + "</div>"
+      + '<div style="margin-top:10px"><b>DISPOSITION:</b><br>' + esc(e.disposition || "—") + "</div>"
+      + '<div style="margin-top:10px"><b>WARRANT GROUNDS:</b><ul style="margin:6px 0 0 18px">' + (grounds || "<li>none on file</li>") + "</ul></div>"
+      + '<div style="margin-top:10px"><b>FIELD NOTES:</b><br>' + esc(e.notes || "—") + "</div>"
+      + "</div>"
+      + '<div class="classified-block locked" id="classified-block">'
+      + '<div class="classified-label">◣ CLASSIFIED — SCHRECKNET NODE VLA-7 ◢ ACCESS RESTRICTED</div>'
+      + '<div class="classified-body">' + esc(c.teaser || "DATA EXPUNGED. Deep-net clearance required. Break the node cipher to decrypt this file.") + "</div>"
+      + '<div class="terminal" id="terminal">'
+      + '<div>NODE CIPHER LOCK — enter 4-digit access code [attempts left: <span id="t-attempts">3</span>]</div>'
+      + '<div style="margin-top:8px"><input id="t-input" maxlength="4" inputmode="numeric" autocomplete="off" placeholder="____">'
+      + '<button id="t-go" type="button">INJECT</button>'
+      + '<button id="t-hint" type="button">TRACE HINT</button></div>'
+      + '<div class="tlog" id="t-log">> schrecknet@vla7:~$ decrypt dossier ' + esc(e.id) + "</div>"
+      + "</div></div>";
+    modal.classList.add("open");
+    window.scrollTo(0, 0);
+
+    var block = document.getElementById("classified-block");
+    var tIn = document.getElementById("t-input");
+    var tLog = document.getElementById("t-log");
+    var tAtt = document.getElementById("t-attempts");
+    var attempts = 3;
+    var code = String(c.code || "1993");
+    tIn.focus();
+
+    function log(line) { tLog.textContent += "\n> " + line; }
+    function win() {
+      block.classList.remove("locked");
+      document.getElementById("terminal").innerHTML =
+        '<div style="color:#B8E356">>> CIPHER BROKEN — FILE DECRYPTED</div>'
+        + '<div class="classified-body" style="margin-top:8px;white-space:pre-wrap">' + esc(c.text || "The file decrypts to static. Whatever the node was hiding was burned before you got here.") + "</div>";
+    }
+    function fail() {
+      attempts--;
+      if (attempts <= 0) {
+        document.getElementById("terminal").innerHTML =
+          '<div style="color:#D9534F">>> TRACE COMPLETE — NODE LOCKED YOU OUT. Close and reopen the dossier to retry.</div>';
+        return;
+      }
+      tAtt.textContent = attempts;
+      log("ACCESS DENIED — counter-intrusion trace +1 (" + attempts + " attempts left)");
+    }
+    document.getElementById("t-go").addEventListener("click", function () {
+      if (attempts <= 0) return;
+      var v = tIn.value.trim();
+      log("inject " + (v ? "****" : "∅"));
+      if (v === code) { win(); } else { fail(); }
+    });
+    document.getElementById("t-hint").addEventListener("click", function () {
+      if (attempts <= 0) return;
+      log("trace hint: " + (c.hint || "Break the cipher the way the old spiders did — guess what the node loves."));
+    });
+    tIn.addEventListener("keydown", function (ev) { if (ev.key === "Enter") document.getElementById("t-go").click(); });
+  }
+
+  body.addEventListener("click", function (ev) {
+    var t = ev.target;
+    while (t && t !== body) {
+      if (t.getAttribute && t.getAttribute("data-open")) { openDossier(t.getAttribute("data-open")); return; }
+      t = t.parentNode;
+    }
+  });
 })();
 </script>
 </body>

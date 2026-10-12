@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — ADDIS ABABA</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — ADDIS ABABA</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Ethiopia · Independent · node survey 2026</text>
 <path d="M 740 157 L 629 112 L 532 169 L 429 123 L 500 170 L 392 186 L 297 245" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
 <path d="M 93 283 L 149 293 L 186 234 L 130 317 L 253 336 L 309 331 L 248 397" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>

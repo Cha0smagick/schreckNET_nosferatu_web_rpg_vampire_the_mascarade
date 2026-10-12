@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — VALLETTA</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — VALLETTA</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Malta · Independent · node survey 2026</text>
 <path d="M 779 531 L 837 549 L 782 622 L 665 634 L 650 616 L 568 531 L 536 494" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
 <path d="M 396 164 L 423 140 L 479 169 L 411 135 L 476 121 L 526 95 L 506 95" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>

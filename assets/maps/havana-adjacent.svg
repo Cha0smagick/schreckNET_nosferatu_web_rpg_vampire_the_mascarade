@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — SANTIAGO DE CUBA</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — SANTIAGO DE CUBA</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Cuba · Sabbat · node survey 2026</text>
 <path d="M 696 264 L 627 282 L 619 331 L 631 366 L 548 344 L 571 340 L 492 271" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
 <path d="M 380 379 L 304 417 L 222 494 L 242 447 L 241 476 L 286 535 L 353 581" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>

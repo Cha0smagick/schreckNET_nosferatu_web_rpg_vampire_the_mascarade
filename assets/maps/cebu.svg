@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — CEBU</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — CEBU</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Philippines · Camarilla (franchise) · node survey 2026</text>
 <path d="M 196 277 L 155 297 L 216 337 L 235 322 L 166 252 L 120 288 L 50 310" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
 <path d="M 547 235 L 432 263 L 409 254 L 439 211 L 539 141 L 430 139 L 513 119" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>

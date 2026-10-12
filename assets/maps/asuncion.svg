@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — ASUNCION</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — ASUNCION</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Paraguay · Independent · node survey 2026</text>
 <path d="M 454 165 L 420 114 L 537 95 L 547 95 L 455 144 L 573 149 L 587 214" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
 <path d="M 249 252 L 241 282 L 331 284 L 430 274 L 489 235 L 441 166 L 384 185" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>

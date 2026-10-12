@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — ABIDJAN</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — ABIDJAN</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Ivory Coast · Camarilla · node survey 2026</text>
 <path d="M 698 213 L 670 151 L 717 205 L 776 281 L 852 229 L 944 169 L 884 103" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
 <path d="M 219 381 L 190 316 L 274 361 L 228 441 L 159 454 L 78 454 L 50 454" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>

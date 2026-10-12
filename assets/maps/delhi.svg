@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — DELHI</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — DELHI</text>
 <text x="28" y="68" fill="#63755F" font-size="13">India · Camarilla (franchise) · node survey 2026</text>
 <path d="M 202 283 L 159 359 L 70 342 L 50 406 L 125 378 L 108 385 L 50 396" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
 <path d="M 667 215 L 771 280 L 847 291 L 883 258 L 913 313 L 922 286 L 891 216" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>

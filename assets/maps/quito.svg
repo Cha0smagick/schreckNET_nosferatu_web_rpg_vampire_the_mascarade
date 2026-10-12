@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — QUITO</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — QUITO</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Ecuador · Camarilla · node survey 2026</text>
 <path d="M 152 410 L 127 442 L 134 376 L 152 342 L 280 269 L 187 333 L 73 281" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
 <path d="M 775 459 L 890 441 L 940 415 L 950 397 L 872 338 L 813 312 L 719 337" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>

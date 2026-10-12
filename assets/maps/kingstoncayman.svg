@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — GEORGE TOWN</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — GEORGE TOWN</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Cayman Islands · Independent · node survey 2026</text>
 <path d="M 404 284 L 458 318 L 568 347 L 686 333 L 784 338 L 793 416 L 783 343" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>
 <path d="M 346 147 L 250 104 L 224 117 L 150 184 L 229 252 L 315 297 L 379 322" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>

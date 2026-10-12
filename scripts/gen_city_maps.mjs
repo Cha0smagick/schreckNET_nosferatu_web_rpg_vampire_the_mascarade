@@ -14,13 +14,16 @@ function hash(s) { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^=
 function rng(seed) { let a = seed; return () => { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
 
 const W = 1000, H = 700;
+// XML-escape text content so SVGs stay parseable when loaded via <img>
+const esc = (s) => String(s).replace(/\u0026/g, '\u0026amp;').replace(/</g, '\u0026lt;');
+
 function cityMap(city) {
   const r = rng(hash(city.id));
   const lines = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" font-family="Courier New, monospace">`,
     `<rect width="${W}" height="${H}" fill="#06120C"/>`,
     `<rect x="10" y="10" width="${W - 20}" height="${H - 20}" fill="none" stroke="#16352A" stroke-width="2"/>`,
-    `<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — ${city.name.toUpperCase()}</text>`,
-    `<text x="28" y="68" fill="#63755F" font-size="13">${city.country} · ${city.sect} · node survey ${new Date().getFullYear()}</text>`];
+    `<text x="28" y="44" fill="#39FF14" font-size="24">SEWER \u0026amp; TUNNEL SURVEY — ${esc(city.name.toUpperCase())}</text>`,
+    `<text x="28" y="68" fill="#63755F" font-size="13">${esc(city.country)} · ${esc(city.sect)} · node survey ${new Date().getFullYear()}</text>`];
   // collector grid: winding main sewers
   const nodes = [];
   for (let i = 0; i < 7; i++) {

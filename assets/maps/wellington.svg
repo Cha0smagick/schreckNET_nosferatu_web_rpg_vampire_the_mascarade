@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — WELLINGTON</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — WELLINGTON</text>
 <text x="28" y="68" fill="#63755F" font-size="13">New Zealand · Anarch · node survey 2026</text>
 <path d="M 771 145 L 715 102 L 637 95 L 573 179 L 452 120 L 445 204 L 449 154" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
 <path d="M 672 309 L 678 266 L 730 322 L 791 258 L 857 263 L 950 239 L 950 240" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>

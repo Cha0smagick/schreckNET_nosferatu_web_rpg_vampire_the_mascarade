@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — ACCRA</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — ACCRA</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Ghana · Independent · node survey 2026</text>
 <path d="M 248 183 L 234 117 L 263 95 L 309 95 L 338 116 L 322 141 L 445 220" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
 <path d="M 250 380 L 155 419 L 272 394 L 228 475 L 274 438 L 379 512 L 369 529" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>

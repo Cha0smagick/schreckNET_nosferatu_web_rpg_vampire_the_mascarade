@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — DAR ES SALAAM</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — DAR ES SALAAM</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Tanzania · Independent · node survey 2026</text>
 <path d="M 797 458 L 842 465 L 720 491 L 731 564 L 663 481 L 652 417 L 536 363" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>
 <path d="M 578 218 L 649 215 L 744 196 L 852 272 L 775 211 L 658 152 L 665 226" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>

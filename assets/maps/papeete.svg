@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — PAPEETE</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — PAPEETE</text>
 <text x="28" y="68" fill="#63755F" font-size="13">French Polynesia · Independent · node survey 2026</text>
 <path d="M 125 580 L 103 566 L 162 509 L 237 476 L 166 508 L 189 450 L 291 399" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
 <path d="M 171 386 L 122 349 L 93 376 L 215 345 L 315 411 L 199 402 L 129 380" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>

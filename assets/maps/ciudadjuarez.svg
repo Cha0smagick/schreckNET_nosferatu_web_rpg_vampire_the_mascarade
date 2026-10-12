@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — CIUDAD JUAREZ</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — CIUDAD JUAREZ</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Mexico · Anarch · node survey 2026</text>
 <path d="M 272 262 L 382 314 L 389 233 L 302 268 L 224 258 L 239 234 L 147 153" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
 <path d="M 795 155 L 780 177 L 805 98 L 835 95 L 938 127 L 950 123 L 851 159" fill="none" stroke="#2E5B44" stroke-width="6" stroke-linecap="round"/>

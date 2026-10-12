@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — MELBOURNE</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — MELBOURNE</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Australia · Anarch · node survey 2026</text>
 <path d="M 423 264 L 459 307 L 478 248 L 354 274 L 291 225 L 338 182 L 250 152" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
 <path d="M 703 412 L 631 460 L 533 522 L 493 532 L 389 459 L 319 470 L 269 432" fill="none" stroke="#2E5B44" stroke-width="4" stroke-linecap="round"/>

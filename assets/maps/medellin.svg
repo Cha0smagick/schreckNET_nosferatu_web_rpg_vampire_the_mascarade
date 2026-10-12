@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="Courier New, monospace">
 <rect width="1000" height="700" fill="#06120C"/>
 <rect x="10" y="10" width="980" height="680" fill="none" stroke="#16352A" stroke-width="2"/>
-<text x="28" y="44" fill="#39FF14" font-size="24">SEWER & TUNNEL SURVEY — MEDELLIN</text>
+<text x="28" y="44" fill="#39FF14" font-size="24">SEWER &amp; TUNNEL SURVEY — MEDELLIN</text>
 <text x="28" y="68" fill="#63755F" font-size="13">Colombia · Anarch · node survey 2026</text>
 <path d="M 329 127 L 399 95 L 408 95 L 295 95 L 379 95 L 442 95 L 434 142" fill="none" stroke="#2E5B44" stroke-width="3" stroke-linecap="round"/>
 <path d="M 355 592 L 379 650 L 365 650 L 384 650 L 442 596 L 343 650 L 417 576" fill="none" stroke="#2E5B44" stroke-width="5" stroke-linecap="round"/>
