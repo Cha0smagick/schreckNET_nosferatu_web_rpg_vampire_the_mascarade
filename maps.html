@@ -476,6 +476,7 @@
     var c = null; for (var i = 0; i < C.length; i++) if (C[i].id === sel.value) { c = C[i]; break; }
     if (!c) { img.style.display = 'none'; meta.textContent = ''; return; }
     meta.innerHTML = 'NODE ' + esc(String(c.id).toUpperCase()) + ' · ' + esc(c.continent || '') + ' · POP ' + esc(c.pop_m || '?') + 'M · SECT: ' + esc(c.sect || '?') + ' · PRINCE: ' + esc(c.prince || 'disputed') + ' · EST. KINDRED: ' + esc(c.kindred_est || '?');
+    if (window.ACH) { window.ACH.act('city_' + c.id); window.ACH.act('map_view'); }
     img.src = 'assets/maps/' + c.id + '.svg'; img.style.display = 'block';
   });
 })();

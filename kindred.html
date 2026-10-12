@@ -339,7 +339,7 @@
   fillSelects();
   update();
 
-  inp.addEventListener('input', update);
+  inp.addEventListener('input', function () { update(); if (window.ACH) { window.ACH.act('kindred_scan'); window.ACH.act('search'); } });
   [selClan, selGen, selStat, selThr].forEach(function (s) { s.addEventListener('change', update); });
   document.getElementById('k-reset').addEventListener('click', function () {
     inp.value = ''; selClan.value = ''; selGen.value = ''; selStat.value = ''; selThr.value = '';

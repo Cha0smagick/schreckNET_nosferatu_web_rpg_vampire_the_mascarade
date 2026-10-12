@@ -126,6 +126,7 @@
       }
       paint(guess, exact, misplaced, absent);
       if (exact === 4) {
+      if (window.ACH) { window.ACH.act('game_win'); }
         locked = true;
         msg.textContent = 'FIREWALL BREACHED in ' + attempts + ' probes. The terminal opens for you.';
         return;
@@ -212,6 +213,7 @@
           matched++;
           paintHud();
           if (matched === 8) {
+        if (window.ACH) { window.ACH.act('game_win'); }
             stopTimer();
             msg.textContent = 'ALL NODES REMEMBERED — ' + moves + ' moves, ' + seconds + 's. The network nods.';
           }
@@ -342,7 +344,8 @@
       ctx.fillRect(player.x, player.y, player.w, player.h);
 
       if (!alive) {
-        msg.textContent = 'PROBE CONTACT — packet burned. Score: ' + score + '.';
+        if (window.ACH) { window.ACH.act('game_loss'); }
+          msg.textContent = 'PROBE CONTACT — packet burned. Score: ' + score + '.';
       }
       raf = requestAnimationFrame(step);
     }
@@ -448,6 +451,7 @@
         storeFlag('1');
         refreshBadges();
         decoded.classList.add('ok-text');
+          if (window.ACH) { window.ACH.act('game_win'); }
       }
     });
 

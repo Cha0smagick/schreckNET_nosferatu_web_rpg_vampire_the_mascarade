@@ -163,7 +163,7 @@
     for (var i = 0; i < GROUPS.length; i++) { if (GROUPS[i].key === groupSel.value) { curGroup = GROUPS[i]; break; } }
     fillChars(); showChar('');
   });
-  charSel.addEventListener('change', function () { showChar(charSel.value); });
+  charSel.addEventListener('change', function () { if (window.ACH) { window.ACH.act('registry_file'); } showChar(charSel.value); });
   fillGroups(); fillChars();
   if (window.AMENITY) {
     AMENITY.buildIndex(GROUPS);
@@ -181,7 +181,7 @@
   citySel.innerHTML = '<option value="">— choose a city —</option>' + CDB.cities.slice().sort(function (a, b) { return a.name < b.name ? -1 : 1; }).map(function (c) {
     return '<option value="' + esc(c.id) + '">' + esc(c.name) + ' — ' + esc(c.country) + '</option>';
   }).join('');
-  citySel.addEventListener('change', function () {
+  citySel.addEventListener('change', function () { if (window.ACH && citySel.value) { window.ACH.act('city_' + citySel.value); window.ACH.act('map_view'); }
     var c = null;
     for (var i = 0; i < CDB.cities.length; i++) { if (CDB.cities[i].id === citySel.value) { c = CDB.cities[i]; break; } }
     if (!c) { cityDetail.className = 'reg-empty'; cityDetail.textContent = 'Select a city to pull its subterranean chart.'; return; }
@@ -202,7 +202,7 @@
   beastSel.innerHTML = '<option value="">— choose a creature —</option>' + BST.beasts.map(function (b) {
     return '<option value="' + esc(b.id) + '">' + esc(b.name) + ' — ' + esc(b.cls) + '</option>';
   }).join('');
-  beastSel.addEventListener('change', function () {
+  beastSel.addEventListener('change', function () { if (window.ACH) { window.ACH.act('bestiary_view'); }
     var b = null;
     for (var i = 0; i < BST.beasts.length; i++) { if (BST.beasts[i].id === beastSel.value) { b = BST.beasts[i]; break; } }
     if (!b) { beastDetail.className = 'reg-empty'; beastDetail.textContent = 'Select a creature to pull its field plate.'; return; }

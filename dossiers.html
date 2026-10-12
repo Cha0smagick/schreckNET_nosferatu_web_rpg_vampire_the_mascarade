@@ -342,6 +342,7 @@
   });
 
   function openDossier(id) {
+    if (window.ACH) { window.ACH.act('dossier_open'); if (id === 'VLA-0008') { window.ACH.unlock('u_egg_null'); window.ACH.act('egg'); } }
     var e = null;
     for (var i = 0; i < DB.entries.length; i++) { if (DB.entries[i].id === id) { e = DB.entries[i]; break; } }
     if (!e) return;
@@ -383,6 +384,7 @@
 
     function log(line) { tLog.textContent += "\n> " + line; }
     function win() {
+      if (window.ACH) { window.ACH.act('dossier_crack'); }
       block.classList.remove("locked");
       document.getElementById("terminal").innerHTML =
         '<div style="color:#B8E356">>> CIPHER BROKEN — FILE DECRYPTED</div>'

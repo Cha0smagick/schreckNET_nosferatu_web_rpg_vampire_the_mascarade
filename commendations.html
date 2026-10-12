@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHRECKNET // COMMENDATIONS</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.ach-progress{border:1px solid var(--line);background:var(--bg-panel);padding:18px 20px;margin-bottom:22px;}
+.ach-progress-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline;}
+.ach-rank{color:var(--acid);font-size:20px;font-weight:700;letter-spacing:2px;text-shadow:0 0 10px var(--glow);}
+.ach-count{color:var(--muted);font-size:12px;letter-spacing:1px;}
+.ach-count b{color:var(--green);}
+.ach-bar{height:10px;border:1px solid var(--line);margin-top:12px;background:#020402;}
+.ach-bar-fill{height:100%;background:linear-gradient(90deg,var(--green-dim),var(--green));box-shadow:0 0 10px var(--glow);transition:width .5s;}
+.ach-cats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.ach-cat{cursor:pointer;border:1px solid var(--line);color:var(--green-dim);background:var(--bg-panel);padding:6px 12px;font-size:11px;letter-spacing:1px;font-family:var(--font-mono);}
+.ach-cat:hover{border-color:var(--acid);color:var(--acid);}
+.ach-cat.active{border-color:var(--green);color:var(--green);background:var(--bg-panel-2);text-shadow:0 0 6px var(--glow);}
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;}
+.ach-card{border:1px solid var(--line);background:var(--bg-panel);padding:12px;display:flex;flex-direction:column;gap:6px;min-height:120px;}
+.ach-card.got{border-color:var(--green-dim);box-shadow:inset 0 0 18px rgba(57,255,20,.07);}
+.ach-card.got .ach-n{color:var(--green);text-shadow:0 0 6px var(--glow);}
+.ach-card .ach-n{color:var(--muted);font-size:13px;font-weight:700;letter-spacing:.5px;}
+.ach-card .ach-d{color:var(--bone-dim);font-size:10.5px;line-height:1.5;flex:1;}
+.ach-card.locked .ach-d{color:var(--muted);}
+.ach-card .ach-f{display:flex;justify-content:space-between;font-size:10px;letter-spacing:1px;}
+.ach-card .ach-p{color:var(--bile);}
+.ach-card.locked .ach-p{color:var(--rust);}
+.ach-card .ach-st{color:var(--green);}
+.ach-card.locked .ach-st{color:var(--muted);}
+.ach-seal{grid-column:1/-1;border-color:var(--blood) !important;background:linear-gradient(180deg,#120404,#050202);}
+.ach-seal .ach-n{color:var(--blood) !important;font-size:16px;}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="page-kicker">SCHRECKNET // NODE VLA-7 — SERVICE RECORD</div>
+      <h1 class="page-title">COMMENDATIONS</h1>
+      <p class="page-sub">Six hundred sixty-six commendations are etched into the warren's ledger. Every roll of the dice, every cracked cipher, every survey charted and every packet sent is remembered by the net. Feed it your work and it will feed you back your name, decorated.</p>
+    </header>
+
+    <section class="ach-progress">
+      <div class="ach-progress-head">
+        <span class="ach-rank" id="achv-rank">—</span>
+        <span class="ach-count" id="achv-count"></span>
+      </div>
+      <div class="ach-bar"><div class="ach-bar-fill" id="achv-bar" style="width:0%"></div></div>
+    </section>
+
+    <div class="ach-cats" id="achv-cats"></div>
+    <div class="ach-grid" id="achv-grid"></div>
+
+    <footer class="footer" style="margin-top:30px">
+      <span>SCHRECKNET // COMMENDATIONS LEDGER — 666 SEALS</span>
+      <span>node VLA-7 · prague</span>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/amenity.js"></script>
+<script>
+(function () {
+  'use strict';
+  var db = null;
+  var curCat = 'ALL';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '\u0026amp;').replace(/</g, '\u0026lt;').replace(/>/g, '\u0026gt;').replace(/"/g, '\u0026quot;');
+  }
+
+  function head() {
+    var n = window.ACH ? window.ACH.count() : 0;
+    var p = window.ACH ? window.ACH.pts() : 0;
+    var total = db.total;
+    document.getElementById('achv-rank').textContent = window.ACH ? window.ACH.rank() : 'CHILDE OF THE WIRE';
+    document.getElementById('achv-count').innerHTML =
+      '<b>' + n + '</b> / ' + total + ' seals &nbsp;·&nbsp; <b>' + p + '</b> pts' +
+      (n >= 666 ? ' &nbsp;·&nbsp; <span style="color:var(--blood)">LEDGER CLOSED</span>' : '');
+    document.getElementById('achv-bar').style.width = (100 * n / total) + '%';
+  }
+
+  function cats() {
+    var wrap = document.getElementById('achv-cats');
+    var names = Object.keys(db.cats).sort();
+    var html = '<button class="ach-cat active" data-cat="ALL">ALL (' + db.total + ')</button>';
+    names.forEach(function (c) {
+      html += '<button class="ach-cat" data-cat="' + esc(c) + '">' + esc(c) + ' (' + db.cats[c] + ')</button>';
+    });
+    wrap.innerHTML = html;
+    wrap.addEventListener('click', function (e) {
+      var b = e.target.closest('.ach-cat');
+      if (!b) { return; }
+      curCat = b.getAttribute('data-cat');
+      wrap.querySelectorAll('.ach-cat').forEach(function (x) { x.classList.remove('active'); });
+      b.classList.add('active');
+      grid();
+    });
+  }
+
+  function grid() {
+    var st = window.ACH ? window.ACH.state() : { unlocked: {} };
+    var html = '';
+    db.list.forEach(function (a) {
+      if (curCat !== 'ALL' && a.cat !== curCat) { return; }
+      var got = !!st.unlocked[a.id];
+      var seal = a.id === 'u_seal666';
+      html += '<div class="ach-card ' + (got ? 'got' : 'locked') + (seal ? ' ach-seal' : '') + '">' +
+        '<div class="ach-n">' + (seal && !got ? '??? — THE 666TH SEAL' : esc(a.name)) + '</div>' +
+        '<div class="ach-d">' + esc(a.desc) + '</div>' +
+        '<div class="ach-f"><span class="ach-p">+' + a.pts + '</span>' +
+        '<span class="ach-st">' + (got ? 'GRANTED ' + esc(st.unlocked[a.id]) : 'SEALED') + '</span></div></div>';
+    });
+    document.getElementById('achv-grid').innerHTML = html;
+  }
+
+  function boot() {
+    var tries = 0;
+    (function poll() {
+      db = window.ACHV_DB || null;
+      if (!db && tries++ < 40) { return setTimeout(poll, 120); }
+      if (!db) {
+        document.getElementById('achv-grid').innerHTML =
+          '<div class="no-signal">LEDGER OFFLINE — achievements_data.js unreachable</div>';
+        return;
+      }
+      cats();
+      grid();
+      head();
+      /* re-render when toasts unlock mid-session */
+      setInterval(function () { grid(); head(); }, 5000);
+    })();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else { boot(); }
+})();
+</script>
+</body>
+</html>

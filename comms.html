@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHRECKNET // DARKLINE</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.dl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:22px;align-items:start;}
+.dl-box{border:1px solid var(--line);background:var(--bg-panel);padding:18px;}
+.dl-box h2{color:var(--bile);font-size:13px;letter-spacing:2px;margin:0 0 12px;}
+.dl-box .f label{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;margin:8px 0 4px;}
+.dl-box .f input,.dl-box .f textarea{width:100%;background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:8px 10px;font-size:13px;box-sizing:border-box;}
+.dl-box .f textarea{color:var(--bone-dim);resize:vertical;word-break:break-all;}
+.btn{cursor:pointer;background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:var(--font-mono);padding:8px 16px;font-size:12px;letter-spacing:1px;}
+.btn:hover{border-color:var(--acid);color:var(--acid);text-shadow:0 0 8px var(--glow);}
+.btn.rust{border-color:var(--rust);color:var(--rust);}
+.btn.blood{border-color:var(--blood);color:var(--blood);}
+.dl-out{margin-top:12px;border:1px dashed var(--line);background:#020402;padding:12px;font-size:12px;color:var(--acid);word-break:break-all;line-height:1.6;min-height:44px;}
+.dl-msg{border:1px dotted var(--line);padding:10px 12px;margin-bottom:8px;font-size:12px;}
+.dl-msg .m-head{display:flex;justify-content:space-between;color:var(--muted);font-size:10px;letter-spacing:1px;margin-bottom:6px;}
+.dl-msg .m-body{color:var(--bone-dim);word-break:break-all;line-height:1.5;}
+.dl-msg.decrypted .m-body{color:var(--green);text-shadow:0 0 6px var(--glow);}
+.dl-hint{color:var(--muted);font-size:11px;line-height:1.6;margin-top:10px;}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="page-kicker">SCHRECKNET // NODE VLA-7 — OFF-GRID CHANNEL</div>
+      <h1 class="page-title">DARKLINE</h1>
+      <p class="page-sub">A player-to-player dead-drop. Messages are shifted ciphers: the sender shares a key phrase out-of-band (at the table, in a whisper, never on the wire), and the receiver decodes. Cracking a packet without the key is not forbidden. It is traditional.</p>
+    </header>
+
+    <div class="dl-grid">
+      <!-- ENCODE -->
+      <section class="dl-box">
+        <h2>⌁ TRANSMIT</h2>
+        <div class="f"><label>CALLSIGN</label><input id="e-who" placeholder="MOUSE"></div>
+        <div class="f"><label>KEY PHRASE (shared with receiver only)</label><input id="e-key" placeholder="the rats remember"></div>
+        <div class="f"><label>PLAINTEXT</label><textarea id="e-msg" rows="4" placeholder="Meet at the freight tunnel. Bring the ledger. Trust the one with no reflection."></textarea></div>
+        <div class="f" style="margin-top:10px"><button class="btn" id="e-go">ENCODE + BURY</button></div>
+        <div class="dl-out" id="e-out">—</div>
+        <p class="dl-hint">Copy the cipher block and paste it to your coterie however you like. Only the key phrase turns it back into words.</p>
+      </section>
+
+      <!-- DECODE -->
+      <section class="dl-box">
+        <h2>⌁ INTERCEPT</h2>
+        <div class="f"><label>CIPHER BLOCK</label><textarea id="d-cipher" rows="4" placeholder="paste an intercepted packet"></textarea></div>
+        <div class="f"><label>KEY PHRASE (if you have it)</label><input id="d-key" placeholder="leave empty to brute-force"></div>
+        <div class="f" style="margin-top:10px">
+          <button class="btn" id="d-go">DECODE</button>
+          <button class="btn rust" id="d-crack">BRUTE-FORCE (26 SHIFTS)</button>
+          <button class="btn blood" id="d-bury">BURY IN DEAD-DROP</button>
+        </div>
+        <div class="dl-out" id="d-out">—</div>
+      </section>
+
+      <!-- DEAD DROP -->
+      <section class="dl-box" style="grid-column:1/-1">
+        <h2>⚰ DEAD-DROP — LOCAL MIRROR</h2>
+        <div id="dl-list"></div>
+      </section>
+    </div>
+
+    <footer class="footer" style="margin-top:30px">
+      <span>SCHRECKNET // DARKLINE — NOTHING LEAVES THIS NODE</span>
+      <span>the wire listens; speak anyway</span>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/amenity.js"></script>
+<script>
+(function () {
+  'use strict';
+  function act(k, n) { if (window.ACH) { window.ACH.act(k, n); } }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '\u0026amp;').replace(/</g, '\u0026lt;').replace(/>/g, '\u0026gt;').replace(/"/g, '\u0026quot;');
+  }
+
+  /* Caesar shift with A1Z26-ish printable-safe alphabet (letters shift, case kept, rest untouched) */
+  function shift(text, k) {
+    var out = '';
+    for (var i = 0; i < text.length; i++) {
+      var c = text.charCodeAt(i);
+      if (c >= 65 && c <= 90) { out += String.fromCharCode(((c - 65 + k) % 26 + 26) % 26 + 65); }
+      else if (c >= 97 && c <= 122) { out += String.fromCharCode(((c - 97 + k) % 26 + 26) % 26 + 97); }
+      else { out += text[i]; }
+    }
+    return out;
+  }
+  function keyToShift(key) {
+    var s = 0;
+    for (var i = 0; i < key.length; i++) { s += key.charCodeAt(i) * (i + 1); }
+    return ((s % 26) + 26) % 26;
+  }
+  function encode(msg, key) { return shift(msg, keyToShift(key)); }
+  function decode(cipher, key) { return shift(cipher, -keyToShift(key)); }
+
+  /* dead-drop */
+  function drop() {
+    try { var r = localStorage.getItem('schrecknet_darkline'); return r ? (JSON.parse(r) || []) : []; } catch (e) { return []; }
+  }
+  function saveDrop(list) { try { localStorage.setItem('schrecknet_darkline', JSON.stringify(list)); } catch (e) { /* full */ } }
+
+  function renderDrop() {
+    var list = drop();
+    var el = document.getElementById('dl-list');
+    if (!list.length) { el.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:14px;border:1px dashed var(--line);text-align:center">The drop is empty. Bury a packet above.</div>'; return; }
+    el.innerHTML = list.map(function (m, i) {
+      return '<div class="dl-msg' + (m.cracked ? ' decrypted' : '') + '">' +
+        '<div class="m-head"><span>' + esc(m.who) + ' — ' + esc(m.date) + (m.cracked ? ' · DECODED' : ' · SEALED') + '</span>' +
+        '<span><button class="btn rust" style="padding:2px 8px;font-size:10px" data-try="' + i + '">TRY KEY</button> <button class="btn blood" style="padding:2px 8px;font-size:10px" data-del="' + i + '">BURN</button></span></div>' +
+        '<div class="m-body">' + esc(m.cracked ? m.plain : m.cipher) + '</div></div>';
+    }).join('');
+    el.querySelectorAll('[data-try]').forEach(function (b) {
+      b.addEventListener('click', function () { tryPacket(parseInt(b.getAttribute('data-try'), 10)); });
+    });
+    el.querySelectorAll('[data-del]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var list2 = drop();
+        list2.splice(parseInt(b.getAttribute('data-del'), 10), 1);
+        saveDrop(list2);
+        renderDrop();
+      });
+    });
+  }
+
+  document.getElementById('e-go').addEventListener('click', function () {
+    var who = document.getElementById('e-who').value.trim() || 'ANONYMOUS';
+    var key = document.getElementById('e-key').value;
+    var msg = document.getElementById('e-msg').value;
+    if (!msg || !key) {
+      document.getElementById('e-out').textContent = 'TRANSMIT FAILED — a packet needs plaintext AND a key phrase.';
+      return;
+    }
+    var cipher = encode(msg, key);
+    document.getElementById('e-out').textContent = cipher;
+    var list = drop();
+    list.unshift({ who: who, cipher: cipher, plain: '', cracked: false, date: new Date().toISOString().slice(0, 10) + ' ' + new Date().toTimeString().slice(0, 5) });
+    saveDrop(list.slice(0, 50));
+    act('comm_send');
+    renderDrop();
+  });
+
+  function decodeFlow(withKey) {
+    var cipher = document.getElementById('d-cipher').value.trim();
+    if (!cipher) {
+      document.getElementById('d-out').textContent = 'Nothing to decode — paste a packet first.';
+      return;
+    }
+    if (withKey) {
+      var key = document.getElementById('d-key').value;
+      if (!key) {
+        document.getElementById('d-out').textContent = 'Provide the key phrase, or use BRUTE-FORCE.';
+        return;
+      }
+      var plain = decode(cipher, key);
+      document.getElementById('d-out').textContent = 'DECODED: ' + plain;
+      saveRecovered(cipher, plain, false);
+    }
+  }
+
+  function saveRecovered(cipher, plain, forced) {
+    var list = drop();
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].cipher === cipher && !list[i].cracked) {
+        list[i].cracked = true;
+        list[i].plain = plain;
+        saveDrop(list);
+        break;
+      }
+    }
+    act('comm_crack');
+    renderDrop();
+  }
+
+  document.getElementById('d-go').addEventListener('click', function () { decodeFlow(true); });
+  document.getElementById('d-crack').addEventListener('click', function () {
+    var cipher = document.getElementById('d-cipher').value.trim();
+    if (!cipher) {
+      document.getElementById('d-out').textContent = 'Nothing to crack — paste a packet first.';
+      return;
+    }
+    var html = [];
+    for (var s = 0; s < 26; s++) {
+      html.push('<div class="dl-crack-row" data-shift="' + s + '" style="cursor:pointer;padding:2px 0;border-bottom:1px dotted var(--line)">' +
+        '<span style="color:var(--muted)">[' + s + ']</span> ' + esc(shift(cipher, -s).slice(0, 120)) + '</div>');
+    }
+    document.getElementById('d-out').innerHTML = '<div style="color:var(--bile);margin-bottom:6px">26 SHIFTS — click the row that reads like human words:</div>' + html.join('');
+    document.querySelectorAll('.dl-crack-row').forEach(function (row) {
+      row.addEventListener('click', function () {
+        var s = parseInt(row.getAttribute('data-shift'), 10);
+        var plain = shift(cipher, -s);
+        document.getElementById('d-out').textContent = 'CRACKED [' + s + ']: ' + plain;
+        saveRecovered(cipher, plain, true);
+      });
+    });
+  });
+  document.getElementById('d-bury').addEventListener('click', function () {
+    var cipher = document.getElementById('d-cipher').value.trim();
+    if (!cipher) { return; }
+    var list = drop();
+    list.unshift({ who: 'INTERCEPT', cipher: cipher, plain: '', cracked: false, date: new Date().toISOString().slice(0, 10) });
+    saveDrop(list.slice(0, 50));
+    renderDrop();
+  });
+
+  function tryPacket(idx) {
+    var key = window.prompt('Key phrase for this packet:');
+    if (key === null || key === '') { return; }
+    var list = drop();
+    var plain = decode(list[idx].cipher, key);
+    if (plain !== list[idx].cipher) {
+      list[idx].cracked = true;
+      list[idx].plain = plain;
+      saveDrop(list);
+      act('comm_crack');
+      renderDrop();
+    }
+  }
+
+  renderDrop();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHRECKNET // MECHANICS</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.tool-grid{display:grid;grid-template-columns:1fr;gap:26px;}
+@media(min-width:1100px){.tool-grid{grid-template-columns:1fr 1fr;}}
+.tool-box{border:1px solid var(--line);background:var(--bg-panel);padding:20px;}
+.tool-box h2{color:var(--bile);font-size:14px;letter-spacing:2px;margin:0 0 14px;}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;align-items:end;}
+.field{display:flex;flex-direction:column;gap:4px;}
+.field label{color:var(--muted);font-size:10px;letter-spacing:1px;}
+.field input,.field select{background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:8px 10px;width:90px;font-size:14px;}
+.field select{width:130px;}
+.btn{cursor:pointer;background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:var(--font-mono);padding:9px 18px;font-size:13px;letter-spacing:1px;}
+.btn:hover{border-color:var(--acid);color:var(--acid);text-shadow:0 0 8px var(--glow);}
+.btn.blood{border-color:var(--blood);color:var(--blood);}
+.dice-out{border:1px dashed var(--line);background:#020402;padding:14px;min-height:64px;margin-top:6px;}
+.dice-face{display:inline-block;width:34px;height:34px;line-height:34px;text-align:center;border:1px solid var(--line);margin:3px 3px 0 0;font-size:15px;background:var(--bg-panel-2);}
+.dice-face.ok{color:var(--green);border-color:var(--green-dim);text-shadow:0 0 6px var(--glow);}
+.dice-face.bad{color:var(--blood);border-color:var(--blood);}
+.dice-face.hunger{border-style:dashed;}
+.dice-verdict{margin-top:10px;color:var(--acid);font-size:14px;letter-spacing:1px;font-weight:700;}
+.dice-verdict.crit{color:var(--green);}
+.dice-verdict.botch{color:var(--blood);}
+.roll-log{margin-top:12px;font-size:11px;color:var(--muted);max-height:150px;overflow:auto;}
+.roll-log div{padding:2px 0;border-bottom:1px dotted var(--line);}
+.hp-track{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0;}
+.hp-box{width:26px;height:26px;border:1px solid var(--line);background:#020402;}
+.hp-box.sup{background:#3d5c17;border-color:var(--green-dim);}
+.hp-box.agg{background:#5c1717;border-color:var(--blood);}
+.hp-state{color:var(--acid);font-size:13px;letter-spacing:1px;}
+.disc-table{width:100%;border-collapse:collapse;font-size:12px;}
+.disc-table td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;}
+.disc-table td:first-child{color:var(--green);white-space:nowrap;font-weight:700;width:150px;}
+.disc-table td:last-child{color:var(--bone-dim);line-height:1.5;}
+.tool-note{color:var(--muted);font-size:11px;margin-top:10px;line-height:1.6;}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="page-kicker">SCHRECKNET // NODE VLA-7 — ST CONSOLE</div>
+      <h1 class="page-title">MECHANICS</h1>
+      <p class="page-sub">Storyteller's field kit. Dice pools, hunger, damage and the blood disciplines — the arithmetic of the Masquerade, executed on the wire so the table stays on the story.</p>
+    </header>
+
+    <div class="tool-grid">
+      <!-- DICE ROLLER -->
+      <section class="tool-box">
+        <h2>♢ DICE POOL — D10</h2>
+        <div class="row">
+          <div class="field"><label>SYSTEM</label>
+            <select id="d-sys"><option value="v5">V5 (hunger)</option><option value="v20">V20 (again 10)</option></select>
+          </div>
+          <div class="field"><label>POOL</label><input type="number" id="d-pool" min="1" max="30" value="5"></div>
+          <div class="field"><label>DIFFICULTY</label><input type="number" id="d-diff" min="2" max="10" value="6"></div>
+          <div class="field" id="d-hunger-wrap"><label>HUNGER</label><input type="number" id="d-hunger" min="0" max="5" value="1"></div>
+          <div class="field"><label>&nbsp;</label><button class="btn" id="d-roll">ROLL</button></div>
+        </div>
+        <div class="dice-out" id="d-out"><span style="color:var(--muted)">no roll logged</span></div>
+        <div class="roll-log" id="d-log"></div>
+        <p class="tool-note">V5: 6+ = success. Pair of 10s = critical (all successes doubled); a critical pair containing a hunger die is a MESSY CRITICAL. Failure with a hunger 1 is a BESTIAL FAILURE — the Beast takes the wheel. V20: every 10 rolls again automatically.</p>
+      </section>
+
+      <!-- DAMAGE -->
+      <section class="tool-box">
+        <h2>✖ DAMAGE RESOLVER</h2>
+        <div class="row">
+          <div class="field"><label>HEALTH BOXES</label><input type="number" id="hp-max" min="3" max="15" value="7"></div>
+          <div class="field"><label>TYPE</label>
+            <select id="hp-type"><option value="sup">Superficial (Lethal/Bashing)</option><option value="agg">Aggravated</option></select>
+          </div>
+          <div class="field"><label>AMOUNT</label><input type="number" id="hp-dmg" min="1" max="15" value="2"></div>
+          <div class="field"><label>&nbsp;</label><button class="btn blood" id="hp-apply">APPLY</button><button class="btn" id="hp-reset">RESET</button></div>
+        </div>
+        <div class="hp-track" id="hp-track"></div>
+        <div class="hp-state" id="hp-state">UNWOUNDED</div>
+        <p class="tool-note">Superficial damage fills boxes (◐) and converts to Aggravated once the track overflows. Aggravated (✖) does not heal without vitae, time, and a good excuse. Track full of Aggravated = torpor.</p>
+      </section>
+
+      <!-- DISCIPLINES -->
+      <section class="tool-box" style="grid-column:1/-1">
+        <h2>☰ DISCIPLINE INDEX — COMMON BLOOD ARTS</h2>
+        <table class="disc-table" id="disc-table"></table>
+        <p class="tool-note">House index, original wording, kept discipline-agnostic on purpose: exact dot effects live at your table, not on a server. For clan discipline spreads see THE CLAN node; for who practices what, see DOSSIERS.</p>
+      </section>
+    </div>
+
+    <footer class="footer" style="margin-top:30px">
+      <span>SCHRECKNET // MECHANICS CONSOLE</span>
+      <span>the arithmetic of hunger</span>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/amenity.js"></script>
+<script>
+(function () {
+  'use strict';
+  function act(k, n) { if (window.ACH) { window.ACH.act(k, n); } }
+
+  /* ---------- dice ---------- */
+  var history = [];
+  function die() { return Math.floor(Math.random() * 10) + 1; }
+
+  function rollV5(pool, diff, hunger) {
+    hunger = Math.min(hunger, pool);
+    var dice = [];
+    for (var i = 0; i < pool; i++) { dice.push({ v: die(), h: i < hunger }); }
+    var tens = dice.filter(function (d) { return d.v === 10; });
+    var critPair = tens.length >= 2;
+    var successes = 0;
+    dice.forEach(function (d) {
+      if (d.v === 10) { successes += critPair ? 2 : 1; }
+      else if (d.v >= 6) { successes += 1; }
+    });
+    var failed = successes < diff;
+    var messy = critPair && tens.some(function (d) { return d.h; });
+    var bestial = failed && dice.some(function (d) { return d.h && d.v === 1; });
+    return { dice: dice, successes: successes, crit: critPair, messy: messy, bestial: bestial, failed: failed };
+  }
+
+  function rollV20(pool, diff) {
+    var dice = [];
+    var pending = pool;
+    while (pending-- > 0) {
+      var v = die();
+      dice.push({ v: v, h: false });
+      if (v === 10) { pending++; }
+    }
+    var successes = dice.filter(function (d) { return d.v >= diff; }).length;
+    var ones = dice.filter(function (d) { return d.v === 1; }).length;
+    return { dice: dice, successes: successes, crit: false, messy: false, bestial: successes === 0 && ones > 0, failed: successes === 0 };
+  }
+
+  function verdict(r, sys, diff) {
+    if (r.messy) { return { t: 'MESSY CRITICAL', c: 'botch' }; }
+    if (r.crit && !r.failed) { return { t: 'CRITICAL SUCCESS', c: 'crit' }; }
+    if (r.bestial) { return { t: 'BESTIAL FAILURE', c: 'botch' }; }
+    if (sys === 'v20' && r.successes === 0 && !r.bestial) { return { t: 'FAILURE', c: 'botch' }; }
+    if (r.failed) { return { t: 'FAILURE', c: 'botch' }; }
+    return { t: 'SUCCESS — ' + (r.successes - diff) + ' margin', c: 'crit' };
+  }
+
+  document.getElementById('d-roll').addEventListener('click', function () {
+    var pool = Math.max(1, Math.min(30, parseInt(document.getElementById('d-pool').value, 10) || 1));
+    var diff = Math.max(2, Math.min(10, parseInt(document.getElementById('d-diff').value, 10) || 6));
+    var sys = document.getElementById('d-sys').value;
+    var hunger = Math.max(0, Math.min(5, parseInt(document.getElementById('d-hunger').value, 10) || 0));
+    var r = sys === 'v5' ? rollV5(pool, diff, hunger) : rollV20(pool, diff);
+    var v = verdict(r, sys, diff);
+
+    var html = r.dice.map(function (d) {
+      var cls = 'dice-face' + (d.v >= 6 ? ' ok' : '') + (d.v === 1 ? ' bad' : '') + (d.h ? ' hunger' : '');
+      return '<span class="' + cls + '" title="' + (d.h ? 'hunger die' : 'regular die') + '">' + d.v + '</span>';
+    }).join('');
+    document.getElementById('d-out').innerHTML = html +
+      '<div class="dice-verdict ' + v.c + '">' + v.t + ' — ' + r.successes + ' vs ' + diff + '</div>';
+
+    var line = sys.toUpperCase() + ' pool ' + pool + (sys === 'v5' ? ' hunger ' + hunger : '') + ' diff ' + diff + ' → ' + r.successes + ' (' + v.t + ')';
+    history.unshift(line);
+    document.getElementById('d-log').innerHTML = history.slice(0, 14).map(function (l) { return '<div>' + l + '</div>'; }).join('');
+
+    act('dice_roll');
+    if (r.crit && !r.failed) { act('dice_crit'); }
+    if (r.bestial || r.failed) { act('dice_botch'); }
+    if (sys === 'v5' && hunger > 0) { act('dice_hunger'); }
+  });
+
+  /* ---------- damage ---------- */
+  var track = [];
+  function paintHp() {
+    var el = document.getElementById('hp-track');
+    el.innerHTML = track.map(function (t) {
+      return '<div class="hp-box ' + (t === 'sup' ? 'sup' : t === 'agg' ? 'agg' : '') + '" title="' + (t === 'sup' ? 'superficial' : t === 'agg' ? 'aggravated' : 'empty') + '"></div>';
+    }).join('');
+    var sup = track.filter(function (t) { return t === 'sup'; }).length;
+    var agg = track.filter(function (t) { return t === 'agg'; }).length;
+    var s = document.getElementById('hp-state');
+    if (agg >= track.length) { s.textContent = 'TORPOR — the long sleep takes you'; s.style.color = 'var(--blood)'; }
+    else if (sup + agg >= track.length) { s.textContent = 'INCAPACITATED — superficial overflow converts to Aggravated'; s.style.color = 'var(--blood)'; }
+    else if (sup + agg > track.length / 2) { s.textContent = 'WOUNDED — dice pools at risk'; s.style.color = 'var(--bile)'; }
+    else if (sup + agg > 0) { s.textContent = 'BRUISED'; s.style.color = 'var(--acid)'; }
+    else { s.textContent = 'UNWOUNDED'; s.style.color = 'var(--acid)'; }
+  }
+  document.getElementById('hp-apply').addEventListener('click', function () {
+    var max = Math.max(3, Math.min(15, parseInt(document.getElementById('hp-max').value, 10) || 7));
+    if (track.length !== max) { track = new Array(max).fill(''); }
+    var type = document.getElementById('hp-type').value;
+    var amt = Math.max(1, Math.min(15, parseInt(document.getElementById('hp-dmg').value, 10) || 1));
+    for (var i = 0; i < track.length && amt > 0; i++) {
+      if (track[i] === '' ) { track[i] = type === 'agg' ? 'agg' : 'sup'; amt--; }
+    }
+    if (amt > 0) {
+      for (var j = 0; j < track.length && amt > 0; j++) {
+        if (track[j] === 'sup') { track[j] = 'agg'; amt--; }
+      }
+    }
+    paintHp();
+    act('dmg_calc');
+  });
+  document.getElementById('hp-reset').addEventListener('click', function () {
+    var max = Math.max(3, Math.min(15, parseInt(document.getElementById('hp-max').value, 10) || 7));
+    track = new Array(max).fill('');
+    paintHp();
+  });
+  document.getElementById('hp-reset').click();
+
+  /* ---------- disciplines ---------- */
+  var DISC = [
+    ['ANIMALISM', 'Commune with and command beasts. Rats, wolves, ravens — the warren listens. Nosferatu staple.'],
+    ['AUSPEX', 'Heightened senses and uncanny perception. Read auras, spirit whispers, and the lie under the words.'],
+    ['CELERITY', 'Vampiric speed. The world slows; you do not.'],
+    ['DOMINATE', 'Force your will through the blood into another mind. Eye contact recommended.'],
+    ['FORTITUDE', 'Supernatural resilience. Damage that drops mortals merely offends you.'],
+    ['OBFUSCATE', 'Vanish from memory and sight. Not invisibility — unnoticeability. Nosferatu birthright.'],
+    ['POTENCE', 'Raw vampiric strength. Doors, jaws, spines — all the same to you.'],
+    ['PRESENCE', 'Emotional dominion. Awe, dread, fascination — the crowd is your instrument.'],
+    ['PROTEAN', 'Shape the flesh: claws, mist, the earth itself. Gangrel heritage.'],
+    ['BLOOD SORCERY', 'Ritual thaumaturgy. Blood as reagent, will as catalyst. Tremere specialty, strictly regulated.'],
+    ['OBTENEBRATION', 'Command the shadow. The darkness obeys the Lasombra.'],
+    ['CHIMERSTRY', 'Conjure sensory illusions. Ravnos trickery — real enough to kill you.'],
+    ['NECROMANCY', 'Sovereignty over the dead beyond the blood. Giovanni doctrine.'],
+    ['SERPENTIS', 'The Serpent\u2019s gifts: the heart of stone, the tongue of the adder, the eyes that paralyze. Setites.'],
+    ['QUIETUS', 'Assamite blood arts — silencing, blood manipulation, the quiet kill.'],
+    ['VICISSITUDE', 'Fleshcraft. Tzimisce sculpture in living meat. Do not ask for a demonstration.'],
+    ['DEMENTATION', 'The Malkavian gift: shatter minds, broadcast madness, listen to what breaks out.'],
+  ];
+  document.getElementById('disc-table').innerHTML = DISC.map(function (d) {
+    return '<tr><td>' + d[0] + '</td><td>' + d[1] + '</td></tr>';
+  }).join('');
+})();
+</script>
+</body>
+</html>

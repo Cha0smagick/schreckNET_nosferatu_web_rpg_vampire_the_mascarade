@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHRECKNET // CHRONICLE</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.ch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px;align-items:start;}
+.ch-box{border:1px solid var(--line);background:var(--bg-panel);padding:18px;}
+.ch-box h2{color:var(--bile);font-size:13px;letter-spacing:2px;margin:0 0 12px;}
+.ch-box .f label{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;margin:8px 0 4px;}
+.ch-box .f input,.ch-box .f select,.ch-box .f textarea{width:100%;background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:8px 10px;font-size:13px;box-sizing:border-box;}
+.ch-box .f textarea{color:var(--bone-dim);resize:vertical;}
+.btn{cursor:pointer;background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:var(--font-mono);padding:8px 16px;font-size:12px;letter-spacing:1px;}
+.btn:hover{border-color:var(--acid);color:var(--acid);text-shadow:0 0 8px var(--glow);}
+.btn.blood{border-color:var(--blood);color:var(--blood);}
+.ch-entries{margin-top:14px;max-height:380px;overflow:auto;}
+.ch-entry{border:1px dotted var(--line);padding:10px 12px;margin-bottom:8px;font-size:12px;}
+.ch-entry .ce-head{display:flex;justify-content:space-between;gap:8px;color:var(--acid);letter-spacing:1px;font-size:11px;}
+.ch-entry .ce-body{color:var(--bone-dim);margin-top:6px;line-height:1.5;white-space:pre-wrap;}
+.ch-entry .ce-xp{color:var(--green);}
+.ch-del{cursor:pointer;background:none;border:1px solid var(--line);color:var(--rust);font-family:var(--font-mono);font-size:10px;padding:2px 8px;}
+.ch-del:hover{border-color:var(--blood);color:var(--blood);}
+.empty-note{color:var(--muted);font-size:12px;padding:16px;border:1px dashed var(--line);text-align:center;margin-top:12px;}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="page-kicker">SCHRECKNET // NODE VLA-7 — STORYTELLER LEDGER</div>
+      <h1 class="page-title">CHRONICLE</h1>
+      <p class="page-sub">The warren keeps three ledgers: the nights as they happened, the experience the blood has earned, and the boons that bind Kindred to Kindred. Boons outlive grudges. XP outlives deaths. Both outlive you.</p>
+    </header>
+
+    <div class="ch-grid">
+      <!-- SESSIONS -->
+      <section class="ch-box">
+        <h2>⧗ NIGHT LOG</h2>
+        <div class="f"><label>SESSION TITLE</label><input id="s-title" placeholder="the ball at the Elysium"></div>
+        <div class="f"><label>DATE</label><input id="s-date" type="date"></div>
+        <div class="f"><label>WHAT HAPPENED (summary for the archive)</label><textarea id="s-body" rows="4" placeholder="The coterie met the Sheriff. The Sheriff did not smile. Two boons changed hands and one of them was lies."></textarea></div>
+        <div class="f"><label>XP AWARDED PER PC (comma-separated: name=amount)</label><input id="s-xp" placeholder="Vlad=3, Mouse=2"></div>
+        <div class="f" style="margin-top:10px"><button class="btn" id="s-add">LOG NIGHT</button></div>
+        <div class="ch-entries" id="s-list"></div>
+      </section>
+
+      <!-- XP -->
+      <section class="ch-box">
+        <h2>✦ EXPERIENCE LEDGER</h2>
+        <div class="f"><label>CHARACTER</label><input id="x-who" placeholder="Mouse"></div>
+        <div class="f"><label>AMOUNT (negative spends XP)</label><input id="x-amt" type="number" value="1"></div>
+        <div class="f"><label>REASON</label><input id="x-why" placeholder="learned Obfuscate ·· from the sewer choir"></div>
+        <div class="f" style="margin-top:10px"><button class="btn" id="x-add">POST ENTRY</button></div>
+        <div class="ch-entries" id="x-list"></div>
+      </section>
+
+      <!-- BOONS -->
+      <section class="ch-box">
+        <h2>↯ BOON LEDGER</h2>
+        <div class="f"><label>DEBTOR → CREDITOR</label><input id="b-who" placeholder="Vlad → the Primogen of Murcia"></div>
+        <div class="f"><label>BOON TYPE</label><select id="b-type"><option>Trivial</option><option>Minor</option><option>Major</option><option>Blood Boon</option><option>Life Boon</option></select></div>
+        <div class="f"><label>WHAT IS OWED</label><input id="b-what" placeholder="one night of silence about the freight tunnel"></div>
+        <div class="f" style="margin-top:10px"><button class="btn" id="b-add">RECORD BOON</button></div>
+        <div class="ch-entries" id="b-list"></div>
+      </section>
+    </div>
+
+    <footer class="footer" style="margin-top:30px">
+      <span>SCHRECKNET // CHRONICLE LEDGERS — LOCAL STORAGE ONLY</span>
+      <span>boons outlive grudges</span>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/amenity.js"></script>
+<script>
+(function () {
+  'use strict';
+  function act(k, n) { if (window.ACH) { window.ACH.act(k, n); } }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '\u0026amp;').replace(/</g, '\u0026lt;').replace(/>/g, '\u0026gt;').replace(/"/g, '\u0026quot;');
+  }
+
+  function load(key, fb) {
+    try { var r = localStorage.getItem(key); return r ? (JSON.parse(r) || fb) : fb; } catch (e) { return fb; }
+  }
+  function persist(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) { /* full */ } }
+
+  var sessions = load('schrecknet_chron_sessions', []);
+  var xps = load('schrecknet_chron_xp', []);
+  var boons = load('schrecknet_chron_boons', []);
+
+
+  function xpTotals() {
+    var t = {};
+    xps.forEach(function (x) { t[x.who] = (t[x.who] || 0) + x.amt; });
+    return Object.keys(t).sort().map(function (w) { return w + ': ' + t[w]; }).join(' · ');
+  }
+
+  /* sessions */
+  function renderSessions() {
+    var el = document.getElementById('s-list');
+    if (!sessions.length) { el.innerHTML = '<div class="empty-note">No nights logged. The chronicle begins with a bad decision.</div>'; return; }
+    el.innerHTML = sessions.map(function (s, i) {
+      return '<div class="ch-entry"><div class="ce-head"><span>' + esc(s.title) + ' — ' + esc(s.date) + '</span>' +
+        '<button class="ch-del" data-s="' + i + '">PURGE</button></div>' +
+        '<div class="ce-body">' + esc(s.body) + (s.xp ? '\nXP: ' + esc(s.xp) : '') + '</div></div>';
+    }).join('');
+    el.querySelectorAll('[data-s]').forEach(function (b) {
+      b.addEventListener('click', function () { sessions.splice(parseInt(b.getAttribute('data-s'), 10), 1); persist('schrecknet_chron_sessions', sessions); renderSessions(); });
+    });
+  }
+  document.getElementById('s-add').addEventListener('click', function () {
+    var title = document.getElementById('s-title').value.trim() || 'UNNAMED NIGHT';
+    var date = document.getElementById('s-date').value || new Date().toISOString().slice(0, 10);
+    sessions.unshift({ title: title, date: date, body: document.getElementById('s-body').value, xp: document.getElementById('s-xp').value });
+    persist('schrecknet_chron_sessions', sessions);
+    document.getElementById('s-body').value = '';
+    act('session_log');
+    renderSessions();
+  });
+
+  /* xp */
+  function renderXp() {
+    var el = document.getElementById('x-list');
+    var totals = xpTotals();
+    var head = totals ? '<div class="ch-entry" style="border-color:var(--green-dim)"><div class="ce-head"><span>BALANCES</span></div><div class="ce-body">' + esc(totals) + '</div></div>' : '';
+    if (!xps.length) { el.innerHTML = head + '<div class="empty-note">No experience posted. Nothing is learned. Nothing changes. Very vampiric.</div>'; return; }
+    el.innerHTML = head + xps.map(function (x, i) {
+      return '<div class="ch-entry"><div class="ce-head"><span>' + esc(x.who) + (x.amt >= 0 ? ' +' : ' ') + x.amt + '</span>' +
+        '<button class="ch-del" data-x="' + i + '">PURGE</button></div>' +
+        '<div class="ce-body">' + esc(x.why) + '</div></div>';
+    }).join('');
+    el.querySelectorAll('[data-x]').forEach(function (b) {
+      b.addEventListener('click', function () { xps.splice(parseInt(b.getAttribute('data-x'), 10), 1); persist('schrecknet_chron_xp', xps); renderXp(); });
+    });
+  }
+  document.getElementById('x-add').addEventListener('click', function () {
+    var who = document.getElementById('x-who').value.trim();
+    if (!who) { return; }
+    var amt = parseInt(document.getElementById('x-amt').value, 10) || 0;
+    xps.unshift({ who: who, amt: amt, why: document.getElementById('x-why').value, date: new Date().toISOString().slice(0, 10) });
+    persist('schrecknet_chron_xp', xps);
+    document.getElementById('x-why').value = '';
+    if (amt > 0) { act('xp_log'); }
+    renderXp();
+  });
+
+  /* boons */
+  function renderBoons() {
+    var el = document.getElementById('b-list');
+    if (!boons.length) { el.innerHTML = '<div class="empty-note">No boons on the ledger. Either your coterie is honest or it is doomed.</div>'; return; }
+    el.innerHTML = boons.map(function (b, i) {
+      return '<div class="ch-entry"' + (b.settled ? ' style="opacity:.5"' : '') + '><div class="ce-head"><span>' + esc(b.who) + ' — ' + esc(b.type).toUpperCase() + (b.settled ? ' [SETTLED]' : '') + '</span>' +
+        '<span><button class="ch-del" data-bset="' + i + '">' + (b.settled ? 'REOPEN' : 'SETTLE') + '</button> <button class="ch-del" data-b="' + i + '">PURGE</button></span></div>' +
+        '<div class="ce-body">' + esc(b.what) + '</div></div>';
+    }).join('');
+    el.querySelectorAll('[data-b]').forEach(function (b) {
+      b.addEventListener('click', function () { boons.splice(parseInt(b.getAttribute('data-b'), 10), 1); persist('schrecknet_chron_boons', boons); renderBoons(); });
+    });
+    el.querySelectorAll('[data-bset]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = parseInt(b.getAttribute('data-bset'), 10);
+        boons[i].settled = !boons[i].settled;
+        persist('schrecknet_chron_boons', boons);
+        renderBoons();
+      });
+    });
+  }
+  document.getElementById('b-add').addEventListener('click', function () {
+    var who = document.getElementById('b-who').value.trim();
+    if (!who) { return; }
+    boons.unshift({ who: who, type: document.getElementById('b-type').value, what: document.getElementById('b-what').value, settled: false, date: new Date().toISOString().slice(0, 10) });
+    persist('schrecknet_chron_boons', boons);
+    document.getElementById('b-what').value = '';
+    act('boon_log');
+    renderBoons();
+  });
+
+  renderSessions();
+  renderXp();
+  renderBoons();
+})();
+</script>
+</body>
+</html>

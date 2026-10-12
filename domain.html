@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHRECKNET // DOMAINS</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.dm-head{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:18px;}
+.dm-head .f label{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;margin-bottom:4px;}
+.dm-head select{background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:9px 12px;font-size:14px;min-width:280px;}
+.btn{cursor:pointer;background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:var(--font-mono);padding:8px 16px;font-size:12px;letter-spacing:1px;}
+.btn:hover{border-color:var(--acid);color:var(--acid);text-shadow:0 0 8px var(--glow);}
+.btn.blood{border-color:var(--blood);color:var(--blood);}
+.dm-city{border:1px solid var(--line);background:var(--bg-panel);padding:18px;margin-bottom:20px;}
+.dm-city h2{color:var(--green);font-size:18px;margin:0 0 4px;letter-spacing:1px;text-shadow:0 0 8px var(--glow);}
+.dm-city .dm-sub{color:var(--muted);font-size:11px;letter-spacing:1px;margin-bottom:14px;}
+.dm-meters{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:16px;}
+.dm-meter{border:1px dashed var(--line);padding:10px 16px;min-width:150px;}
+.dm-meter .mv{color:var(--acid);font-size:20px;font-weight:700;}
+.dm-meter .ml{color:var(--muted);font-size:10px;letter-spacing:2px;margin-top:2px;}
+.dm-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:14px 0;border-top:1px dotted var(--line);padding-top:14px;}
+.dm-form .f label{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;margin-bottom:4px;}
+.dm-form input,.dm-form select{width:100%;background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:8px 10px;font-size:13px;box-sizing:border-box;}
+.dm-ground{border:1px dotted var(--line);padding:12px 14px;margin-bottom:8px;font-size:12px;}
+.dm-ground .g-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;color:var(--acid);letter-spacing:1px;font-size:12px;}
+.dm-ground .g-body{color:var(--bone-dim);margin-top:6px;line-height:1.5;}
+.dm-ground.lost{opacity:.45;}
+.gq{color:var(--green);} .gd{color:var(--blood);} .gr{color:var(--rust);}
+.empty-note{color:var(--muted);font-size:12px;padding:14px;border:1px dashed var(--line);text-align:center;}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="page-kicker">SCHRECKNET // NODE VLA-7 — FEEDING MAP</div>
+      <h1 class="page-title">DOMAINS</h1>
+      <p class="page-sub">Every city on the wire is hunting territory waiting to be claimed. Log your grounds, track the quality of the herd, the risks of the terrain, and how much vitae your coterie draws each night. Feeding rights are the oldest currency — guard yours, covet others.</p>
+    </header>
+
+    <div class="dm-head">
+      <div class="f"><label>SELECT NODE CITY</label><select id="dm-city"></select></div>
+      <button class="btn" id="dm-open">OPEN SURVEY</button>
+    </div>
+
+    <div id="dm-panel"><div class="empty-note">Select a city and open its survey to manage domains.</div></div>
+
+    <footer class="footer" style="margin-top:30px">
+      <span>SCHRECKNET // DOMAIN LEDGERS — LOCAL STORAGE ONLY</span>
+      <span>feeding rights are the oldest currency</span>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cities_data.js"></script>
+<script src="assets/js/amenity.js"></script>
+<script>
+(function () {
+  'use strict';
+  function act(k, n) { if (window.ACH) { window.ACH.act(k, n); } }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '\u0026amp;').replace(/</g, '\u0026lt;').replace(/>/g, '\u0026gt;').replace(/"/g, '\u0026quot;');
+  }
+
+  var cities = (window.CITIES_DB && window.CITIES_DB.cities) || [];
+  var sel = document.getElementById('dm-city');
+  sel.innerHTML = cities.map(function (c) {
+    return '<option value="' + esc(c.id) + '">' + esc(c.name) + ' — ' + esc(c.country) + '</option>';
+  }).join('');
+
+  function grounds() {
+    try { var r = localStorage.getItem('schrecknet_domains'); return r ? (JSON.parse(r) || {}) : {}; } catch (e) { return {}; }
+  }
+  function saveGrounds(g) { try { localStorage.setItem('schrecknet_domains', JSON.stringify(g)); } catch (e) { /* full */ } }
+
+  var curCity = null;
+
+  function renderPanel() {
+    var panel = document.getElementById('dm-panel');
+    if (!curCity) { return; }
+    var db = grounds();
+    var list = db[curCity.id] || [];
+    var active = list.filter(function (g) { return !g.lost; });
+    var quality = active.length ? (active.reduce(function (a, g) { return a + g.quality; }, 0) / active.length) : 0;
+    var danger = active.length ? (active.reduce(function (a, g) { return a + g.danger; }, 0) / active.length) : 0;
+    var draws = active.reduce(function (a, g) { return a + (g.draws || 0); }, 0);
+
+    var meter = function (v, suffix) { return '<div class="dm-meter"><div class="mv">' + v + suffix + '</div><div class="ml">' + (suffix === '%' ? 'BLOOD SUPPLY' : suffix === '/5' ? 'TERRAIN RISK' : 'DRAWS LOGGED') + '</div></div>'; };
+
+    var formHtml =
+      '<div class="dm-form">' +
+        '<div class="f"><label>GROUND NAME</label><input id="g-name" placeholder="the hospital morgue wing"></div>' +
+        '<div class="f"><label>DISTRICT</label><input id="g-district" placeholder="old quarter"></div>' +
+        '<div class="f"><label>HERD QUALITY (1-5)</label><select id="g-quality">' + [1, 2, 3, 4, 5].map(function (n) { return '<option>' + n + '</option>'; }).join('') + '</select></div>' +
+        '<div class="f"><label>RISK (1-5)</label><select id="g-danger">' + [1, 2, 3, 4, 5].map(function (n) { return '<option>' + n + '</option>'; }).join('') + '</select></div>' +
+        '<div class="f"><label>NOTES</label><input id="g-notes" placeholder="morgue shift ends at 4am"></div>' +
+      '</div>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap">' +
+        '<button class="btn" id="g-claim">+ CLAIM GROUND</button>' +
+      '</div>';
+
+    var listHtml = !list.length
+      ? '<div class="empty-note">No grounds claimed in ' + esc(curCity.name) + ' yet. The streets belong to whoever is hungry enough to take them.</div>'
+      : list.map(function (g, i) {
+          return '<div class="dm-ground' + (g.lost ? ' lost' : '') + '">' +
+            '<div class="g-head"><span>' + esc(g.name) + (g.district ? ' — ' + esc(g.district) : '') + (g.lost ? ' [LOST]' : '') + '</span>' +
+            '<span><span class="gq">HERD ' + g.quality + '</span> · <span class="gd">RISK ' + g.danger + '</span> · <span class="gr">' + (g.draws || 0) + ' DRAWS</span> ' +
+            '<button class="btn" style="padding:2px 8px;font-size:10px" data-feed="' + i + '">DRAW</button> ' +
+            '<button class="btn rust" style="padding:2px 8px;font-size:10px" data-lost="' + i + '">' + (g.lost ? 'RECLAIM' : 'CONCEDE') + '</button></span></div>' +
+            (g.notes ? '<div class="g-body">' + esc(g.notes) + '</div>' : '') +
+            '</div>';
+        }).join('');
+
+    panel.innerHTML =
+      '<section class="dm-city">' +
+        '<h2>' + esc(curCity.name.toUpperCase()) + '</h2>' +
+        '<div class="dm-sub">' + esc(curCity.country) + ' · ' + esc(curCity.continent || '') + ' · population ' + esc(curCity.pop_m || '—') + 'M · SEWER SURVEY ON FILE</div>' +
+        '<div class="dm-meters">' + meter(Math.round(quality * 20), '%') + meter(danger.toFixed(1), '/5') + meter(draws, '') + '</div>' +
+        formHtml +
+        listHtml +
+      '</section>';
+
+    document.getElementById('g-claim').addEventListener('click', function () {
+      var name = document.getElementById('g-name').value.trim();
+      if (!name) { return; }
+      db[curCity.id] = db[curCity.id] || [];
+      db[curCity.id].push({
+        name: name,
+        district: document.getElementById('g-district').value.trim(),
+        quality: parseInt(document.getElementById('g-quality').value, 10) || 3,
+        danger: parseInt(document.getElementById('g-danger').value, 10) || 3,
+        notes: document.getElementById('g-notes').value.trim(),
+        draws: 0, lost: false
+      });
+      saveGrounds(db);
+      act('domain_claim');
+      renderPanel();
+    });
+    panel.querySelectorAll('[data-feed]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = parseInt(b.getAttribute('data-feed'), 10);
+        db[curCity.id][i].draws = (db[curCity.id][i].draws || 0) + 1;
+        saveGrounds(db);
+        act('domain_feed');
+        renderPanel();
+      });
+    });
+    panel.querySelectorAll('[data-lost]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = parseInt(b.getAttribute('data-lost'), 10);
+        db[curCity.id][i].lost = !db[curCity.id][i].lost;
+        saveGrounds(db);
+        renderPanel();
+      });
+    });
+  }
+
+  document.getElementById('dm-open').addEventListener('click', function () {
+    var id = sel.value;
+    curCity = cities.filter(function (c) { return c.id === id; })[0] || null;
+    if (!curCity) { return; }
+    act('city_' + id);
+    act('map_view');
+    renderPanel();
+  });
+})();
+</script>
+</body>
+</html>

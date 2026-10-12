@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHRECKNET // CELL FILES</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.sheet-wrap{display:grid;grid-template-columns:280px 1fr;gap:22px;align-items:start;}
+@media(max-width:1000px){.sheet-wrap{grid-template-columns:1fr;}}
+.sheet-list{border:1px solid var(--line);background:var(--bg-panel);padding:16px;}
+.sheet-list h2,.sheet-editor h2{color:var(--bile);font-size:13px;letter-spacing:2px;margin:0 0 12px;}
+.sheet-item{cursor:pointer;padding:9px 10px;border:1px solid var(--line);margin-bottom:6px;font-size:12px;}
+.sheet-item:hover{border-color:var(--acid);}
+.sheet-item.active{border-color:var(--green);color:var(--green);background:var(--bg-panel-2);}
+.sheet-item .si-clan{color:var(--muted);font-size:10px;letter-spacing:1px;}
+.sheet-editor{border:1px solid var(--line);background:var(--bg-panel);padding:20px;}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:16px;}
+.f label{display:block;color:var(--muted);font-size:10px;letter-spacing:1px;margin-bottom:4px;}
+.f input,.f select,.f textarea{width:100%;background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:8px 10px;font-size:13px;box-sizing:border-box;}
+.f textarea{color:var(--bone-dim);resize:vertical;}
+.attr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px 18px;margin-bottom:16px;}
+.attr{display:flex;justify-content:space-between;align-items:center;border:1px dotted var(--line);padding:7px 10px;}
+.attr span{color:var(--bone-dim);font-size:12px;}
+.dots{cursor:pointer;letter-spacing:2px;color:var(--line);font-size:15px;user-select:none;}
+.dots b{color:var(--green);text-shadow:0 0 6px var(--glow);}
+.dots:hover{color:var(--acid);}
+.disc-row{display:flex;gap:8px;align-items:center;margin-bottom:6px;}
+.disc-row select{background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:6px;font-size:12px;}
+.btn{cursor:pointer;background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:var(--font-mono);padding:8px 16px;font-size:12px;letter-spacing:1px;}
+.btn:hover{border-color:var(--acid);color:var(--acid);text-shadow:0 0 8px var(--glow);}
+.btn.blood{border-color:var(--blood);color:var(--blood);}
+.btn-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
+.derived{border:1px dashed var(--line);padding:10px 14px;margin:14px 0;font-size:12px;color:var(--bone-dim);display:flex;gap:22px;flex-wrap:wrap;}
+.derived b{color:var(--acid);}
+.empty-note{color:var(--muted);font-size:12px;padding:20px;border:1px dashed var(--line);text-align:center;}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+    <header class="page-head">
+      <div class="page-kicker">SCHRECKNET // NODE VLA-7 — PLAYER FILES</div>
+      <h1 class="page-title">CELL FILES</h1>
+      <p class="page-sub">Personal sheets for the player characters of your chronicle. Everything is stored locally in this node — the Archivists of VLA-7 cannot read your coterie's files, and neither can anyone else.</p>
+    </header>
+
+    <div class="sheet-wrap">
+      <div class="sheet-list">
+        <h2>☰ STORED FILES</h2>
+        <div id="sheet-items"></div>
+        <div class="btn-row"><button class="btn" id="sheet-new">+ NEW KINDRED</button></div>
+      </div>
+      <div class="sheet-editor" id="sheet-editor">
+        <div class="empty-note">Select a file on the left, or create a new Kindred. The Embrace paperwork takes thirty seconds.</div>
+      </div>
+    </div>
+
+    <footer class="footer" style="margin-top:30px">
+      <span>SCHRECKNET // CELL FILES — LOCAL STORAGE ONLY</span>
+      <span>files never leave node VLA-7</span>
+    </footer>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/amenity.js"></script>
+<script>
+(function () {
+  'use strict';
+  var KEY = 'schrecknet_sheets';
+  var CLANS = ['Ventrue', 'Tremere', 'Toreador', 'Nosferatu', 'Brujah', 'Gangrel', 'Malkavian', 'Ravnos', 'Tzimisce', 'Assamite', 'Followers of Set', 'Lasombra', 'Salubri', 'Caitiff', 'Thin-Blood'];
+  var ATTRS = ['Strength', 'Dexterity', 'Stamina', 'Charisma', 'Manipulation', 'Composure', 'Intelligence', 'Wits', 'Resolve'];
+  var DISCS = ['Animalism', 'Auspex', 'Celerity', 'Dominate', 'Fortitude', 'Obfuscate', 'Potence', 'Presence', 'Protean', 'Blood Sorcery', 'Obtenebration', 'Chimerstry', 'Necromancy', 'Serpentis', 'Quietus', 'Vicissitude', 'Dementation'];
+  function act(k, n) { if (window.ACH) { window.ACH.act(k, n); } }
+
+  var sheets = [];
+  var curId = null;
+  try {
+    var raw = localStorage.getItem(KEY);
+    if (raw) { sheets = JSON.parse(raw) || []; }
+  } catch (e) { sheets = []; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(sheets)); } catch (e) { /* full */ } }
+
+  function blank() {
+    return {
+      id: 'S' + Date.now(), name: '', alias: '', clan: 'Nosferatu', generation: 12, sire: '',
+      concept: '', ambition: '', desire: '',
+      attrs: ATTRS.reduce(function (o, a) { o[a] = 2; return o; }, {}),
+      disciplines: [], humanity: 7, hunger: 1, xp: 0, notes: ''
+    };
+  }
+  function cur() {
+    for (var i = 0; i < sheets.length; i++) { if (sheets[i].id === curId) { return sheets[i]; } }
+    return null;
+  }
+  function dots(v) {
+    var s = '';
+    for (var i = 1; i <= 5; i++) { s += i <= v ? '<b>●</b>' : '○'; }
+    return s;
+  }
+
+  function renderList() {
+    var html = sheets.map(function (s) {
+      return '<div class="sheet-item' + (s.id === curId ? ' active' : '') + '" data-id="' + s.id + '">' +
+        '<div>' + (s.name ? s.name.replace(/</g, '\u0026lt;') : '(unnamed)') + '</div>' +
+        '<div class="si-clan">' + s.clan.toUpperCase() + ' · GEN ' + s.generation + '</div></div>';
+    }).join('') || '<div class="si-clan" style="color:var(--muted)">no files stored</div>';
+    document.getElementById('sheet-items').innerHTML = html;
+  }
+
+  function renderEditor() {
+    var s = cur();
+    var ed = document.getElementById('sheet-editor');
+    if (!s) {
+      ed.innerHTML = '<div class="empty-note">Select a file on the left, or create a new Kindred. The Embrace paperwork takes thirty seconds.</div>';
+      return;
+    }
+    var attrHtml = ATTRS.map(function (a) {
+      return '<div class="attr"><span>' + a + '</span><span class="dots" data-attr="' + a + '">' + dots(s.attrs[a]) + '</span></div>';
+    }).join('');
+    var discHtml = s.disciplines.map(function (d, i) {
+      return '<div class="disc-row"><select data-didx="' + i + '" data-dfield="name">' +
+        DISCS.map(function (x) { return '<option' + (x === d.name ? ' selected' : '') + '>' + x + '</option>'; }).join('') +
+        '</select><span class="dots" data-didx="' + i + '" data-dfield="dots">' + dots(d.dots) + '</span>' +
+        '<button class="btn blood" data-ddel="' + i + '">✖</button></div>';
+    }).join('');
+    ed.innerHTML =
+      '<h2>☩ FILE — ' + (s.name || 'UNNAMED') + '</h2>' +
+      '<div class="fgrid">' +
+        '<div class="f"><label>NAME</label><input id="f-name" value="' + (s.name || '') + '"></div>' +
+        '<div class="f"><label>ALIAS</label><input id="f-alias" value="' + (s.alias || '') + '"></div>' +
+        '<div class="f"><label>CLAN</label><select id="f-clan">' + CLANS.map(function (c) { return '<option' + (c === s.clan ? ' selected' : '') + '>' + c + '</option>'; }).join('') + '</select></div>' +
+        '<div class="f"><label>GENERATION</label><input type="number" id="f-gen" min="4" max="16" value="' + s.generation + '"></div>' +
+        '<div class="f"><label>SIRE</label><input id="f-sire" value="' + (s.sire || '') + '"></div>' +
+        '<div class="f"><label>CONCEPT</label><input id="f-concept" value="' + (s.concept || '') + '"></div>' +
+        '<div class="f"><label>AMBITION (long-term)</label><input id="f-ambition" value="' + (s.ambition || '') + '"></div>' +
+        '<div class="f"><label>DESIRE (short-term)</label><input id="f-desire" value="' + (s.desire || '') + '"></div>' +
+      '</div>' +
+      '<h2 style="margin-top:8px">☰ ATTRIBUTES (1-5)</h2>' +
+      '<div class="attr-grid">' + attrHtml + '</div>' +
+      '<h2>☰ DISCIPLINES</h2>' + (discHtml || '<div class="si-clan" style="color:var(--muted)">none recorded — the blood sleeps</div>') +
+      '<div class="btn-row" style="margin-top:8px"><select id="f-disc-add" style="background:var(--bg-panel-2);border:1px solid var(--line);color:var(--green);font-family:var(--font-mono);padding:6px">' + DISCS.map(function (x) { return '<option>' + x + '</option>'; }).join('') + '</select>' +
+      '<button class="btn" id="f-disc-btn">+ ADD DISCIPLINE</button></div>' +
+      '<div class="derived" id="f-derived"></div>' +
+      '<div class="fgrid">' +
+        '<div class="f"><label>HUMANITY (0-10) — click</label><span class="dots" id="f-humanity" style="font-size:18px">' + dots10(s.humanity) + '</span></div>' +
+        '<div class="f"><label>HUNGER (0-5) — click</label><span class="dots" id="f-hunger" style="font-size:18px">' + dots(s.hunger) + '</span></div>' +
+        '<div class="f"><label>XP BANKED</label><input type="number" id="f-xp" min="0" value="' + s.xp + '"></div>' +
+      '</div>' +
+      '<div class="f"><label>NOTES / WOUNDS / PREDATOR STYLE</label><textarea id="f-notes" rows="3">' + (s.notes || '') + '</textarea></div>' +
+      '<div class="btn-row">' +
+        '<button class="btn" id="f-save">SAVE FILE</button>' +
+        '<button class="btn blood" id="f-delete">DELETE FILE</button>' +
+      '</div>';
+    wireEditor(s);
+  }
+
+  function dots10(v) {
+    var s = '';
+    for (var i = 1; i <= 10; i++) { s += i <= v ? '<b>●</b>' : '○'; }
+    return s;
+  }
+
+  function wireEditor(s) {
+    function field(id, key, num) {
+      var el = document.getElementById(id);
+      if (!el) { return; }
+      el.addEventListener('change', function () {
+        s[key] = num ? (parseInt(el.value, 10) || 0) : el.value;
+      });
+    }
+    field('f-name', 'name'); field('f-alias', 'alias'); field('f-sire', 'sire');
+    field('f-concept', 'concept'); field('f-ambition', 'ambition'); field('f-desire', 'desire');
+    field('f-gen', 'generation', true); field('f-xp', 'xp', true);
+    document.getElementById('f-clan').addEventListener('change', function () {
+      s.clan = this.value;
+    });
+
+    /* dot click handling — click position sets value */
+    ATTRS.forEach(function (a) {
+      var el = document.querySelector('[data-attr="' + a + '"]');
+      if (el) {
+        el.addEventListener('click', function (e) {
+          var r = el.getBoundingClientRect();
+          var frac = (e.clientX - r.left) / r.width;
+          s.attrs[a] = Math.max(1, Math.min(5, Math.round(frac * 5 + 0.5)));
+          renderEditor();
+        });
+      }
+    });
+    document.querySelectorAll('[data-didx][data-dfield="dots"]').forEach(function (el) {
+      var idx = parseInt(el.getAttribute('data-didx'), 10);
+      el.addEventListener('click', function (e) {
+        var r = el.getBoundingClientRect();
+        var frac = (e.clientX - r.left) / r.width;
+        s.disciplines[idx].dots = Math.max(1, Math.min(5, Math.round(frac * 5 + 0.5)));
+        renderEditor();
+      });
+    });
+    document.querySelectorAll('[data-ddel]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        s.disciplines.splice(parseInt(el.getAttribute('data-ddel'), 10), 1);
+        renderEditor();
+      });
+    });
+    document.getElementById('f-disc-btn').addEventListener('click', function () {
+      var name = document.getElementById('f-disc-add').value;
+      s.disciplines.push({ name: name, dots: 1 });
+      act('disc_' + name.toLowerCase().replace(/\s+/g, '_'));
+      renderEditor();
+    });
+    document.getElementById('f-humanity').addEventListener('click', function (e) {
+      var r = this.getBoundingClientRect();
+      s.humanity = Math.max(0, Math.min(10, Math.round((e.clientX - r.left) / r.width * 10)));
+      act('sheet_humanity');
+      renderEditor();
+    });
+    document.getElementById('f-hunger').addEventListener('click', function (e) {
+      var r = this.getBoundingClientRect();
+      s.hunger = Math.max(0, Math.min(5, Math.round((e.clientX - r.left) / r.width * 5)));
+      if (s.hunger > 0) { act('sheet_hunger'); }
+      renderEditor();
+    });
+
+    function derived() {
+      var health = (s.attrs.Stamina || 1) + 3;
+      var will = (s.attrs.Composure || 1) + (s.attrs.Resolve || 1);
+      document.getElementById('f-derived').innerHTML =
+        '<span>HEALTH <b>' + health + '</b></span>' +
+        '<span>WILLPOWER <b>' + will + '</b></span>' +
+        '<span>COMPOSURE+RESOLVE FEEDS WILLPOWER · STAMINA+3 FEEDS HEALTH</span>';
+    }
+    derived();
+
+    document.getElementById('f-save').addEventListener('click', function () {
+      var i = sheets.indexOf(s);
+      if (i >= 0) { sheets[i] = s; }
+      save();
+      act('sheet_save');
+      if (s.clan) { act('clan_' + s.clan.toLowerCase().replace(/\s+/g, '_')); }
+      renderList();
+    });
+    document.getElementById('f-delete').addEventListener('click', function () {
+      if (!window.confirm('Purge this file from node VLA-7? There is no Final Death for data, but close enough.')) { return; }
+      sheets = sheets.filter(function (x) { return x.id !== s.id; });
+      curId = null;
+      save();
+      renderList();
+      renderEditor();
+    });
+  }
+
+  document.getElementById('sheet-items').addEventListener('click', function (e) {
+    var it = e.target.closest('.sheet-item');
+    if (!it) { return; }
+    curId = it.getAttribute('data-id');
+    renderList();
+    renderEditor();
+  });
+  document.getElementById('sheet-new').addEventListener('click', function () {
+    var s = blank();
+    sheets.push(s);
+    curId = s.id;
+    save();
+    act('sheet_create');
+    renderList();
+    renderEditor();
+  });
+
+  renderList();
+  renderEditor();
+})();
+</script>
+</body>
+</html>

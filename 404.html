@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCHRECKNET // 404 — NODE NOT FOUND</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.err-wrap{min-height:60vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:14px;}
+.err-code{font-size:90px;color:var(--green);letter-spacing:12px;text-shadow:0 0 30px var(--glow);}
+.err-sub{color:var(--muted);font-size:13px;max-width:60ch;line-height:1.7;}
+.btn{cursor:pointer;background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:var(--font-mono);padding:9px 20px;font-size:13px;letter-spacing:1px;text-decoration:none;}
+.btn:hover{border-color:var(--acid);color:var(--acid);}
+</style>
+</head>
+<body>
+<div class="site">
+  <aside class="sidebar"><div id="sidebar-root"></div></aside>
+  <main class="main">
+    <div class="err-wrap">
+      <div class="err-code">404</div>
+      <div class="page-kicker">SIGNAL LOST — ROUTE THROUGH THE DARK</div>
+      <div class="err-sub">This node does not exist. Or it exists and the network is lying to you. The Nosferatu have buried a lot of addresses down here — some deliberately, some out of shame, one because what it pointed at stopped being a place. You found the hole where a page should be. Statistically, that still counts as finding something.</div>
+      <a class="btn" href="index.html">RETURN TO THE PORTAL</a>
+    </div>
+  </main>
+</div>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/amenity.js"></script>
+<script>
+(function () {
+  'use strict';
+  function fire() {
+    if (window.ACH) { window.ACH.unlock('u_egg_404'); window.ACH.act('egg'); }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fire);
+  } else { fire(); }
+})();
+</script>
+</body>
+</html>

@@ -25,7 +25,13 @@
     { file: 'archives.html', label: 'ARCHIVES',   icon: '⛁' },
     { file: 'maps.html',     label: 'MAPS',       icon: '⌖' },
     { file: 'games.html',    label: 'MINIGAMES',  icon: '▚' },
-{ file: 'legal.html',    label: 'LEGAL',      icon: '§' }
+    { file: 'tools.html',    label: 'MECHANICS',  icon: '⚂' },
+    { file: 'sheets.html',   label: 'CELL FILES', icon: '☌' },
+    { file: 'chronicle.html', label: 'CHRONICLE', icon: '⧗' },
+    { file: 'comms.html',    label: 'DARKLINE',   icon: '⌁' },
+    { file: 'domain.html',   label: 'DOMAINS',    icon: '⬢' },
+    { file: 'commendations.html', label: 'COMMENDATIONS', icon: '★' },
+    { file: 'legal.html',    label: 'LEGAL',      icon: '§' }
   ];
 
   var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
@@ -240,9 +246,13 @@
       if (buf === 'oldnet' && store(OLDNET_KEY) !== '1') {
         store(OLDNET_KEY, '1');
         renderSidebar();
+        if (window.ACH) { window.ACH.unlock('u_egg_oldnet'); window.ACH.act('egg'); }
       }
+      if (buf === 'orlok') { if (window.ACH) { window.ACH.unlock('u_egg_orlok'); window.ACH.act('egg'); } }
+      if (buf === 'nullpointer') { if (window.ACH) { window.ACH.unlock('u_egg_null'); window.ACH.act('egg'); } }
+      if (buf === '666') { if (window.ACH) { window.ACH.unlock('u_egg_console'); window.ACH.act('egg'); } }
       for (var egg in EGGS) {
-        if (buf.slice(-egg.length) === egg) { showEgg(egg); }
+        if (buf.slice(-egg.length) === egg) { showEgg(egg); if (window.ACH) { window.ACH.act('egg'); } }
       }
     });
   }
@@ -300,6 +310,123 @@
   }
 
   /* ---------- boot ---------- */
+  /* ---------- achievements engine (window.ACH) ---------- */
+  var ACH_KEY = 'schrecknet_achv';
+  var ACH_STATE = { unlocked: {}, acts: {} };
+  try {
+    var _achRaw = store(ACH_KEY);
+    if (_achRaw) {
+      var _achParsed = JSON.parse(_achRaw);
+      ACH_STATE.unlocked = _achParsed.unlocked || {};
+      ACH_STATE.acts = _achParsed.acts || {};
+    }
+  } catch (e) { /* corrupted state: start clean */ }
+
+  var ACH_DB = null;
+
+  function achSave() { try { store(ACH_KEY, JSON.stringify(ACH_STATE)); } catch (e) { /* full */ } }
+
+  function achRank(n) {
+    if (n >= 600) return 'THE 666TH SEAL';
+    if (n >= 400) return 'NOSFERATU PARAGON';
+    if (n >= 300) return 'OLDNET SPIDER';
+    if (n >= 220) return 'WARREN WARDEN';
+    if (n >= 150) return 'WHISPER BROKER';
+    if (n >= 100) return 'NODE ARCHIVIST';
+    if (n >= 60)  return 'WARREN RUNNER';
+    if (n >= 30)  return 'SIGNAL SEEKER';
+    if (n >= 10)  return 'LURKER';
+    return 'CHILDE OF THE WIRE';
+  }
+
+  function achToastWrap() {
+    var w = document.getElementById('ach-toast-wrap');
+    if (!w) {
+      w = document.createElement('div');
+      w.id = 'ach-toast-wrap';
+      document.body.appendChild(w);
+    }
+    return w;
+  }
+
+  function achToast(a) {
+    var t = document.createElement('div');
+    t.className = 'ach-toast';
+    t.innerHTML =
+      '<div class="ach-toast-head">★ COMMENDATION UNLOCKED</div>' +
+      '<div class="ach-toast-name">' + a.name + '</div>' +
+      '<div class="ach-toast-desc">' + a.desc + '</div>' +
+      '<div class="ach-toast-pts">+' + a.pts + ' pts</div>';
+    achToastWrap().appendChild(t);
+    setTimeout(function () { t.classList.add('show'); }, 30);
+    setTimeout(function () {
+      t.classList.remove('show');
+      setTimeout(function () { if (t.parentNode) { t.parentNode.removeChild(t); } }, 500);
+    }, 4200);
+  }
+
+  function achUnlock(id, silent) {
+    if (!ACH_DB) { return; }
+    var rec = null;
+    for (var i = 0; i < ACH_DB.list.length; i++) {
+      if (ACH_DB.list[i].id === id) { rec = ACH_DB.list[i]; break; }
+    }
+    if (!rec || ACH_STATE.unlocked[id]) { return; }
+    ACH_STATE.unlocked[id] = new Date().toISOString().slice(0, 10);
+    if (!silent) { achToast(rec); }
+    /* the final seal: 665 of 666 held */
+    if (id !== 'u_seal666' && Object.keys(ACH_STATE.unlocked).length >= ACH_DB.total - 1 && !ACH_STATE.unlocked.u_seal666) {
+      ACH_STATE.unlocked.u_seal666 = new Date().toISOString().slice(0, 10);
+      achToast(ACH_DB.list[ACH_DB.list.length - 1]);
+    }
+    achSave();
+  }
+
+  function achFlush() {
+    if (!ACH_DB) { return; }
+    for (var i = 0; i < ACH_DB.list.length; i++) {
+      var a = ACH_DB.list[i];
+      if (a.act !== '__seal__' && !ACH_STATE.unlocked[a.id]) {
+        if ((ACH_STATE.acts[a.act] || 0) >= (a.need || 1)) { achUnlock(a.id, true); }
+      }
+    }
+  }
+
+  window.ACH = {
+    db: function () { return ACH_DB; },
+    state: function () { return ACH_STATE; },
+    count: function () { return Object.keys(ACH_STATE.unlocked).length; },
+    pts: function () {
+      if (!ACH_DB) { return 0; }
+      var p = 0;
+      for (var i = 0; i < ACH_DB.list.length; i++) {
+        if (ACH_STATE.unlocked[ACH_DB.list[i].id]) { p += ACH_DB.list[i].pts; }
+      }
+      return p;
+    },
+    rank: function () { return achRank(ACH.count()); },
+    /* count one action occurrence; auto-unlocks at tier thresholds */
+    act: function (key, n) {
+      ACH_STATE.acts[key] = (ACH_STATE.acts[key] || 0) + (n || 1);
+      achSave();
+      if (ACH_DB) { achFlush(); }
+    },
+    /* direct unlock by id (secret triggers) */
+    unlock: function (id) { achUnlock(id, false); }
+  };
+
+  function injectAchievementsData() {
+    if (document.getElementById('achv-data')) { return; }
+    var sc = document.createElement('script');
+    sc.id = 'achv-data';
+    sc.src = 'assets/js/achievements_data.js';
+    sc.onload = function () {
+      ACH_DB = window.ACHV_DB || null;
+      achFlush();
+    };
+    document.head.appendChild(sc);
+  }
+
   function boot() {
     renderSidebar();
     wireNavToggle();
@@ -307,8 +434,17 @@
     injectGoogleTranslate();
     wireLogin();
     wireEgg();
+    injectAchievementsData();
+    ACH.act('page_' + page.replace('.html', ''));
+    var PAGE_ACTS = {
+      'news.html': ['archive_wire'], 'forums.html': ['forum_read'], 'blogs.html': ['blog_read'],
+      'wod.html': ['wod_read'], 'network.html': ['network_check'], 'clan.html': ['clan_read'],
+      'legal.html': ['legal_read'], 'redrooms.html': ['redroom_visit', 'blood_first']
+    };
+    (PAGE_ACTS[page] || []).forEach(function (k) { ACH.act(k); });
 
     if (page === 'index.html') {
+      ACH.act('portal_return');
       var lines = document.querySelector('.boot-lines');
       typeBoot(lines, BOOT_LINES);
     }
