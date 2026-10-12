@@ -84,6 +84,16 @@ const FEATURES = [
   'skin like cracked porcelain', 'mouth slightly too wide with too many teeth',
   'ridged predator brow', 'neck tendons taut like cables'
 ];
+const MFEATS = [
+  'gaunt hairless scalp with skin stretched tight over the skull', 'sunken milky eyes and yellowed fangs',
+  'wet grey-green necrotic flesh', 'rat-like muzzle with rows of small teeth',
+  'furless rat tail twisting out of the spine', 'bloated ghoulish gut under torn clothing',
+  'flesh threaded with pale parasite worms', 'cluster of tiny dark eyes across one cheek',
+  'stitched corpse seams across the jaw', 'translucent grey skin showing dark branching veins',
+  'hunched vulture neck with a bare throat sac', 'whisker follicles fused into the upper lip',
+  'oversized clawed hands dragging the ground', 'mange patches of thin mangy fur',
+  'lipless mouth locked in a wide grin', 'bone horns pushing through the forehead skin'
+];
 const ANGLES = [
   'extreme close-up on the face', 'three-quarter portrait, chest up', 'low angle looking up at the figure',
   'shot from below by gutter light', 'profile emerging half-lit from shadow', 'over-the-shoulder glance back at the viewer'
@@ -110,10 +120,11 @@ for (const k of kindreds) {
       (ch.gen || 'elder') + '-generation vampire of the ' + k.name + ' bloodline, era: ' + (ch.era || 'modern nights') +
       '. Setting: ' + place + (city ? ', ' + city : '');
     const feats = pick3(h, FEATURES).join(', ');
+    const mfeats = pick3(h, MFEATS).join(', ');
     const angle = ANGLES[(h >> 12) % ANGLES.length];
     const tail = ugly
-      ? '. Composition: ' + angle + '. The face is horrifying and monstrous, fully inhuman: gaunt hairless scalp, skin stretched tight over the skull, sunken milky eyes, yellowed fangs, split lips, wet grey-green necrotic flesh, plus ' + feats + '. Body horror that reflects the curse of the Blood. Grotesque dark fantasy, painterly and repulsive, absolutely not a beautiful human face. 35mm film grain, photorealistic horror, no text, no letters, no watermark'
-      : '. Composition: ' + angle + '. The subject is a vampire and must look visibly inhuman despite composure: ' + feats + '. Beautiful-wrong uncanny dark fantasy, painterly, not a generic glamour portrait or a smooth AI-slop face. 35mm film grain, photorealistic, no text, no letters, no watermark';
+      ? '. Composition: ' + angle + '. RPG dark-fantasy monster plate, NOT a human portrait: this is a hybrid horror, part vampire, part ghoul, part rat-beast, part walking corpse — ' + mfeats + ', plus ' + feats + '. Body horror that reflects the curse of the Blood. Grotesque bestiary-style dark fantasy, painterly and repulsive, absolutely not a beautiful human face. 35mm film grain, photorealistic horror, no text, no letters, no watermark'
+      : '. Composition: ' + angle + '. The subject is a vampire — a wrong, predatory hybrid of an attractive person and a fresh corpse: ' + feats + '. Ghoulish distortion under the skin, shadowed predator gaze, uncanny dark fantasy, painterly, never a generic glamour portrait or a smooth AI-slop face. 35mm film grain, photorealistic, no text, no letters, no watermark';
     prompts.push({ file: String(ch.photo).replace('assets/img/', ''), size: '1024x1024', prompt: base + tail });
   }
 }

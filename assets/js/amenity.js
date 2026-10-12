@@ -29,7 +29,7 @@
     var t = e.target;
     if (!t || t.tagName !== 'IMG') return;
     if (t.closest && t.closest('#img-preview')) return;
-    if (!t.src || /\/(aero|egg_)[\w.-]*\.png/i.test(t.src)) return;
+    if (!t.src || /\/(aero|egg_|maps\/)[\w.-]*\.(png|svg)/i.test(t.src)) return;
     ensure();
     if (pvImg.src !== t.src) pvImg.src = t.src;
     pv.className = 'show';

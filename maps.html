@@ -454,5 +454,31 @@
   }
 })();
 </script>
+<section class="panel" style="margin-top:28px">
+  <div class="panel-title">CITY SEWER SURVEYS — 209 NODES CHARTED</div>
+  <p class="page-sub" style="margin-top:6px">Procedural chart of every city node on the registry. Pick a city; its survey renders below. Charts are seeded from the node id — the tunnels are always the same tunnels.</p>
+  <select id="city-map-select" style="width:100%;max-width:560px;background:var(--bg-panel-2);border:1px solid var(--green-dim);color:var(--green);font-family:inherit;font-size:12px;padding:9px 12px;letter-spacing:1px;cursor:pointer"><option value="">— select a city node —</option></select>
+  <div id="city-map-meta" class="page-sub" style="margin:12px 0 0"></div>
+  <img id="city-map-img" alt="city sewer survey" style="display:none;width:100%;max-width:1000px;margin-top:14px;border:1px solid var(--line);background:var(--bg)">
+</section>
+<script src="assets/js/cities_data.js"></script>
+<script>
+(function () {
+  var C = (window.CITIES_DB && window.CITIES_DB.cities) || [];
+  var sel = document.getElementById('city-map-select');
+  var img = document.getElementById('city-map-img');
+  var meta = document.getElementById('city-map-meta');
+  function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"'); }
+  C.slice().sort(function (a, b) { return (a.name || '').localeCompare(b.name || ''); }).forEach(function (c) {
+    var o = document.createElement('option'); o.value = c.id; o.textContent = c.name + ' — ' + (c.country || '') + (c.prince ? ' · ' + c.prince : ''); sel.appendChild(o);
+  });
+  sel.addEventListener('change', function () {
+    var c = null; for (var i = 0; i < C.length; i++) if (C[i].id === sel.value) { c = C[i]; break; }
+    if (!c) { img.style.display = 'none'; meta.textContent = ''; return; }
+    meta.innerHTML = 'NODE ' + esc(String(c.id).toUpperCase()) + ' · ' + esc(c.continent || '') + ' · POP ' + esc(c.pop_m || '?') + 'M · SECT: ' + esc(c.sect || '?') + ' · PRINCE: ' + esc(c.prince || 'disputed') + ' · EST. KINDRED: ' + esc(c.kindred_est || '?');
+    img.src = 'assets/maps/' + c.id + '.svg'; img.style.display = 'block';
+  });
+})();
+</script>
 </body>
 </html>
